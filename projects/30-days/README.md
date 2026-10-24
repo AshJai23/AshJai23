@@ -23,7 +23,7 @@ counts or claims of production experience.
 
 | ID | Project | What ran | Evidence |
 |---|---|---|---|
-| 01 | [Live earthquake analytics](01-live-earthquake-analytics/) | Real USGS snapshot; Python validation, SQLite queries, CSV and HTML report | [6 passing tests](01-live-earthquake-analytics/examples/validation.txt) |
+| 01 | [Country-wise hazard explorer](01-live-earthquake-analytics/) | Country/year earthquakes, local wind and storm forecasts, statistical yearly wind outlook | [24 passing tests](01-live-earthquake-analytics/examples/dashboard-validation.txt) |
 | 02 | [GB carbon-intensity forecasting](02-carbon-intensity-forecast/) | Real 28-day API snapshot; chronological Ridge vs persistence comparison | [6 passing tests](02-carbon-intensity-forecast/examples/validation.txt) |
 
 ### Day-one measured results

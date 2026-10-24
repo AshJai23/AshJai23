@@ -1,0 +1,44 @@
+{
+  "mode": "earthquakes",
+  "country": "United Kingdom",
+  "period": "Historical catalogue: 2025-01-01 to 2025-12-31 inclusive",
+  "source_urls": [
+    "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2025-01-01&endtime=2026-01-01&minmagnitude=2.5&eventtype=earthquake&orderby=time-asc&limit=10000&minlatitude=49.96&maxlatitude=58.635&minlongitude=-7.5722&maxlongitude=1.6815&offset=1"
+  ],
+  "retrieved_at_utc": "2026-10-24T23:34:46.478837+00:00",
+  "quality": {
+    "input_rows": 2,
+    "invalid_rows": 0,
+    "duplicate_ids": 0,
+    "non_earthquakes": 0,
+    "missing_magnitude": 0,
+    "accepted_rows": 2
+  },
+  "count": 2,
+  "truncated": false,
+  "boundary_note": "Approximate Natural Earth 1:110m land boundaries; offshore events are excluded for country selections.",
+  "events": [
+    {
+      "event_id": "us6000ric0",
+      "time_utc": "2025-10-20T17:06:43.364000+00:00",
+      "updated_utc": "2026-01-09T15:38:42.040000+00:00",
+      "magnitude": 3.9,
+      "latitude": 56.5393,
+      "longitude": -4.3366,
+      "depth_km": 10.0,
+      "place": "29 km NW of Comrie, United Kingdom",
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ric0"
+    },
+    {
+      "event_id": "us7000rff7",
+      "time_utc": "2025-12-03T23:23:32.750000+00:00",
+      "updated_utc": "2026-03-04T18:44:24.040000+00:00",
+      "magnitude": 3.4,
+      "latitude": 54.1302,
+      "longitude": -2.7654,
+      "depth_km": 10.0,
+      "place": "0 km ESE of Carnforth, United Kingdom",
+      "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000rff7"
+    }
+  ]
+}

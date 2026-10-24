@@ -1,0 +1,178 @@
+{
+  "mode": "statistical_year_outlook",
+  "target_year": 2028,
+  "training_years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "training_end_year": 2025,
+  "training_daily_rows": 3287,
+  "training_monthly_rows": 108,
+  "backtest_training_months": 84,
+  "timing": {
+    "backtest_fit_seconds": 0.001150803999735217,
+    "final_fit_seconds": 0.0008945290001065587,
+    "total_analysis_seconds": 0.014407604000098218
+  },
+  "holdout_years": [
+    2024,
+    2025
+  ],
+  "holdout_months": 24,
+  "metrics": {
+    "mean_daily_max_wind_kmh": {
+      "ridge_mae": 4.566490476639054,
+      "seasonal_baseline_mae": 4.478864732860143,
+      "unit": "km/h"
+    },
+    "mean_daily_max_gust_kmh": {
+      "ridge_mae": 4.342570765857709,
+      "seasonal_baseline_mae": 4.398437505517594,
+      "unit": "km/h"
+    },
+    "high_gust_day_fraction": {
+      "ridge_mae": 0.053537052990454075,
+      "seasonal_baseline_mae": 0.05378529053445627,
+      "unit": "fraction of days"
+    }
+  },
+  "gust_threshold_kmh": 60.0,
+  "months": [
+    {
+      "month": 1,
+      "month_name": "Jan",
+      "mean_daily_max_wind_kmh": 19.194044290463783,
+      "mean_daily_max_gust_kmh": 38.396089546605296,
+      "high_gust_day_fraction": 0.10734943271113762,
+      "expected_high_gust_days": 3.327832414045266,
+      "wind_error_band_low": 11.643388066026949,
+      "wind_error_band_high": 26.744700514900615
+    },
+    {
+      "month": 2,
+      "month_name": "Feb",
+      "mean_daily_max_wind_kmh": 21.817255000776825,
+      "mean_daily_max_gust_kmh": 43.553192677067706,
+      "high_gust_day_fraction": 0.11998648975865071,
+      "expected_high_gust_days": 3.4796082030008706,
+      "wind_error_band_low": 14.266598776339992,
+      "wind_error_band_high": 29.36791122521366
+    },
+    {
+      "month": 3,
+      "month_name": "Mar",
+      "mean_daily_max_wind_kmh": 20.665334613044426,
+      "mean_daily_max_gust_kmh": 41.641573417573035,
+      "high_gust_day_fraction": 0.1267042714208149,
+      "expected_high_gust_days": 3.9278324140452616,
+      "wind_error_band_low": 13.114678388607592,
+      "wind_error_band_high": 28.215990837481257
+    },
+    {
+      "month": 4,
+      "month_name": "Apr",
+      "mean_daily_max_wind_kmh": 18.09456041949604,
+      "mean_daily_max_gust_kmh": 38.04504653585261,
+      "high_gust_day_fraction": 0.0508978198079119,
+      "expected_high_gust_days": 1.5269345942373571,
+      "wind_error_band_low": 10.543904195059207,
+      "wind_error_band_high": 25.645216643932876
+    },
+    {
+      "month": 5,
+      "month_name": "May",
+      "mean_daily_max_wind_kmh": 17.6472700969154,
+      "mean_daily_max_gust_kmh": 37.85350890144401,
+      "high_gust_day_fraction": 0.04605911013049255,
+      "expected_high_gust_days": 1.427832414045269,
+      "wind_error_band_low": 10.096613872478565,
+      "wind_error_band_high": 25.197926321352234
+    },
+    {
+      "month": 6,
+      "month_name": "Jun",
+      "mean_daily_max_wind_kmh": 17.793893752829376,
+      "mean_daily_max_gust_kmh": 38.07471320251928,
+      "high_gust_day_fraction": 0.0242311531412453,
+      "expected_high_gust_days": 0.726934594237359,
+      "wind_error_band_low": 10.243237528392543,
+      "wind_error_band_high": 25.34454997726621
+    },
+    {
+      "month": 7,
+      "month_name": "Jul",
+      "mean_daily_max_wind_kmh": 17.55049590336701,
+      "mean_daily_max_gust_kmh": 37.3602830949924,
+      "high_gust_day_fraction": 0.026704271420815183,
+      "expected_high_gust_days": 0.8278324140452706,
+      "wind_error_band_low": 9.999839678930178,
+      "wind_error_band_high": 25.101152127803843
+    },
+    {
+      "month": 8,
+      "month_name": "Aug",
+      "mean_daily_max_wind_kmh": 17.76823783885088,
+      "mean_daily_max_gust_kmh": 37.885444385314976,
+      "high_gust_day_fraction": 0.03960749722726673,
+      "expected_high_gust_days": 1.2278324140452688,
+      "wind_error_band_low": 10.217581614414046,
+      "wind_error_band_high": 25.318894063287715
+    },
+    {
+      "month": 9,
+      "month_name": "Sep",
+      "mean_daily_max_wind_kmh": 17.911227086162707,
+      "mean_daily_max_gust_kmh": 38.10671320251927,
+      "high_gust_day_fraction": 0.07089781980791186,
+      "expected_high_gust_days": 2.126934594237356,
+      "wind_error_band_low": 10.360570861725874,
+      "wind_error_band_high": 25.46188331059954
+    },
+    {
+      "month": 10,
+      "month_name": "Oct",
+      "mean_daily_max_wind_kmh": 19.547592677560555,
+      "mean_daily_max_gust_kmh": 40.04963793370207,
+      "high_gust_day_fraction": 0.08154298109823443,
+      "expected_high_gust_days": 2.5278324140452675,
+      "wind_error_band_low": 11.996936453123721,
+      "wind_error_band_high": 27.098248901997387
+    },
+    {
+      "month": 11,
+      "month_name": "Nov",
+      "mean_daily_max_wind_kmh": 18.347227086162707,
+      "mean_daily_max_gust_kmh": 38.15937986918594,
+      "high_gust_day_fraction": 0.0842311531412452,
+      "expected_high_gust_days": 2.526934594237356,
+      "wind_error_band_low": 10.796570861725874,
+      "wind_error_band_high": 25.89788331059954
+    },
+    {
+      "month": 12,
+      "month_name": "Dec",
+      "mean_daily_max_wind_kmh": 19.632431387237975,
+      "mean_daily_max_gust_kmh": 40.549637933702066,
+      "high_gust_day_fraction": 0.10412362625952473,
+      "expected_high_gust_days": 3.2278324140452668,
+      "wind_error_band_low": 12.081775162801142,
+      "wind_error_band_high": 27.183087611674807
+    }
+  ],
+  "interpretation": "Monthly seasonal estimates from historical reanalysis and a regularised year trend; not exact storm dates or a country-wide weather forecast.",
+  "band_note": "Wind bands use the held-out 90th percentile absolute error from 24 months. They are empirical error bands, not calibrated forecast probabilities.",
+  "storm_note": "High-gust-day frequency is a threshold proxy. Historical weather codes do not provide reliable thunderstorm labels; no annual thunderstorm probability is fitted.",
+  "source_url": "https://archive-api.open-meteo.com/v1/archive?latitude=51.5074&longitude=-0.1278&start_date=2017-01-01&end_date=2025-12-31&daily=wind_speed_10m_max%2Cwind_gusts_10m_max%2Cprecipitation_sum&wind_speed_unit=kmh&timezone=UTC",
+  "retrieved_at_utc": "2026-10-24T23:34:51.645082+00:00",
+  "data_kind": "Historical model reanalysis; no target-year observations used",
+  "country_code": "GBR",
+  "latitude": 51.5074,
+  "longitude": -0.1278
+}

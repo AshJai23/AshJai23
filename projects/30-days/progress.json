@@ -1,60 +1,9 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-24T23:03:18.526490+00:00",
+  "updated_at_utc": "2026-10-24T23:42:54.370Z",
   "completed_count": 2,
   "target_count": 44,
   "items": {
-    "01": {
-      "status": "completed",
-      "path": "01-live-earthquake-analytics",
-      "planned_date": "2026-10-24",
-      "evidence": "01-live-earthquake-analytics/examples/validation.txt",
-      "tests_passed": 6,
-      "data_mode": "Real API snapshot with verified source and offline replay"
-    },
-    "02": {
-      "status": "completed",
-      "path": "02-carbon-intensity-forecast",
-      "planned_date": "2026-10-24",
-      "evidence": "02-carbon-intensity-forecast/examples/validation.txt",
-      "tests_passed": 6,
-      "data_mode": "Real API snapshot with verified source and offline replay"
-    },
-    "03": {
-      "status": "planned",
-      "path": "03-weather-quality-monitor",
-      "planned_date": "2026-10-25"
-    },
-    "04": {
-      "status": "planned",
-      "path": "04-bike-availability-forecast",
-      "planned_date": "2026-10-26"
-    },
-    "05": {
-      "status": "planned",
-      "path": "05-air-quality-spatial-analytics",
-      "planned_date": "2026-10-26"
-    },
-    "06": {
-      "status": "planned",
-      "path": "06-rss-topic-clustering",
-      "planned_date": "2026-10-27"
-    },
-    "07": {
-      "status": "planned",
-      "path": "07-river-level-anomaly-detection",
-      "planned_date": "2026-10-28"
-    },
-    "08": {
-      "status": "planned",
-      "path": "08-carbon-bi-data-model",
-      "planned_date": "2026-10-28"
-    },
-    "09": {
-      "status": "planned",
-      "path": "09-weather-lstm-nowcast",
-      "planned_date": "2026-10-29"
-    },
     "10": {
       "status": "planned",
       "path": "10-public-issue-triage",
@@ -229,6 +178,58 @@
       "status": "planned",
       "path": "44-forecast-service-capstone",
       "planned_date": "2026-11-22"
+    },
+    "01": {
+      "status": "completed",
+      "path": "01-live-earthquake-analytics",
+      "planned_date": "2026-10-24",
+      "evidence": "01-live-earthquake-analytics/examples/dashboard-validation.txt",
+      "tests_passed": 24,
+      "data_mode": "Real API snapshot with verified source and offline replay",
+      "feature_update": "Country/area filtering, historical year selection, local wind/thunderstorm provider forecasts and annual statistical wind outlook; 10 real-data HTTP checks and DOM interaction checks."
+    },
+    "02": {
+      "status": "completed",
+      "path": "02-carbon-intensity-forecast",
+      "planned_date": "2026-10-24",
+      "evidence": "02-carbon-intensity-forecast/examples/validation.txt",
+      "tests_passed": 6,
+      "data_mode": "Real API snapshot with verified source and offline replay"
+    },
+    "03": {
+      "status": "planned",
+      "path": "03-weather-quality-monitor",
+      "planned_date": "2026-10-25"
+    },
+    "04": {
+      "status": "planned",
+      "path": "04-bike-availability-forecast",
+      "planned_date": "2026-10-26"
+    },
+    "05": {
+      "status": "planned",
+      "path": "05-air-quality-spatial-analytics",
+      "planned_date": "2026-10-26"
+    },
+    "06": {
+      "status": "planned",
+      "path": "06-rss-topic-clustering",
+      "planned_date": "2026-10-27"
+    },
+    "07": {
+      "status": "planned",
+      "path": "07-river-level-anomaly-detection",
+      "planned_date": "2026-10-28"
+    },
+    "08": {
+      "status": "planned",
+      "path": "08-carbon-bi-data-model",
+      "planned_date": "2026-10-28"
+    },
+    "09": {
+      "status": "planned",
+      "path": "09-weather-lstm-nowcast",
+      "planned_date": "2026-10-29"
     }
   }
 }

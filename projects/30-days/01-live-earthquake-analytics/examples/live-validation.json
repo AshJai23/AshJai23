@@ -1,0 +1,100 @@
+[
+  [
+    {
+      "country": "GBR",
+      "analysis": "forecast",
+      "seconds": 4.182,
+      "rows": 7,
+      "timing": null
+    },
+    {
+      "country": "GBR",
+      "analysis": "earthquakes",
+      "seconds": 4.369,
+      "rows": 2,
+      "timing": null
+    },
+    {
+      "country": "GBR",
+      "analysis": "outlook-2027",
+      "seconds": 5.193,
+      "rows": 12,
+      "timing": {
+        "backtest_fit_seconds": 0.0011729070001820219,
+        "final_fit_seconds": 0.000897691999853123,
+        "total_analysis_seconds": 0.015549484000075608
+      }
+    },
+    {
+      "country": "GBR",
+      "analysis": "outlook-2026",
+      "seconds": 0.03,
+      "rows": 12,
+      "timing": {
+        "backtest_fit_seconds": 0.0012529789996733598,
+        "final_fit_seconds": 0.0009165609999399749,
+        "total_analysis_seconds": 0.015551828000297974
+      }
+    },
+    {
+      "country": "GBR",
+      "analysis": "outlook-2028",
+      "seconds": 0.029,
+      "rows": 12,
+      "timing": {
+        "backtest_fit_seconds": 0.001150803999735217,
+        "final_fit_seconds": 0.0008945290001065587,
+        "total_analysis_seconds": 0.014407604000098218
+      }
+    }
+  ],
+  [
+    {
+      "country": "IND",
+      "analysis": "forecast",
+      "seconds": 4.121,
+      "rows": 7,
+      "timing": null
+    },
+    {
+      "country": "IND",
+      "analysis": "earthquakes",
+      "seconds": 4.662,
+      "rows": 33,
+      "timing": null
+    },
+    {
+      "country": "IND",
+      "analysis": "outlook-2027",
+      "seconds": 4.733,
+      "rows": 12,
+      "timing": {
+        "backtest_fit_seconds": 0.0018290459997842845,
+        "final_fit_seconds": 0.0011661680000543129,
+        "total_analysis_seconds": 0.020175245000245923
+      }
+    },
+    {
+      "country": "IND",
+      "analysis": "outlook-2026",
+      "seconds": 0.027,
+      "rows": 12,
+      "timing": {
+        "backtest_fit_seconds": 0.001150423000126466,
+        "final_fit_seconds": 0.0008781629999248253,
+        "total_analysis_seconds": 0.013997726000070543
+      }
+    },
+    {
+      "country": "IND",
+      "analysis": "outlook-2028",
+      "seconds": 0.027,
+      "rows": 12,
+      "timing": {
+        "backtest_fit_seconds": 0.001068691000000399,
+        "final_fit_seconds": 0.0009228909998455492,
+        "total_analysis_seconds": 0.014606972999899881
+      }
+    }
+  ]
+]
