@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "updated_at_utc": "2026-10-24T23:03:18.526490+00:00",
+  "completed_count": 2,
+  "target_count": 44,
+  "items": {
+    "01": {
+      "status": "completed",
+      "path": "01-live-earthquake-analytics",
+      "planned_date": "2026-10-24",
+      "evidence": "01-live-earthquake-analytics/examples/validation.txt",
+      "tests_passed": 6,
+      "data_mode": "Real API snapshot with verified source and offline replay"
+    },
+    "02": {
+      "status": "completed",
+      "path": "02-carbon-intensity-forecast",
+      "planned_date": "2026-10-24",
+      "evidence": "02-carbon-intensity-forecast/examples/validation.txt",
+      "tests_passed": 6,
+      "data_mode": "Real API snapshot with verified source and offline replay"
+    },
+    "03": {
+      "status": "planned",
+      "path": "03-weather-quality-monitor",
+      "planned_date": "2026-10-25"
+    },
+    "04": {
+      "status": "planned",
+      "path": "04-bike-availability-forecast",
+      "planned_date": "2026-10-26"
+    },
+    "05": {
+      "status": "planned",
+      "path": "05-air-quality-spatial-analytics",
+      "planned_date": "2026-10-26"
+    },
+    "06": {
+      "status": "planned",
+      "path": "06-rss-topic-clustering",
+      "planned_date": "2026-10-27"
+    },
+    "07": {
+      "status": "planned",
+      "path": "07-river-level-anomaly-detection",
+      "planned_date": "2026-10-28"
+    },
+    "08": {
+      "status": "planned",
+      "path": "08-carbon-bi-data-model",
+      "planned_date": "2026-10-28"
+    },
+    "09": {
+      "status": "planned",
+      "path": "09-weather-lstm-nowcast",
+      "planned_date": "2026-10-29"
+    },
+    "10": {
+      "status": "planned",
+      "path": "10-public-issue-triage",
+      "planned_date": "2026-10-30"
+    },
+    "11": {
+      "status": "planned",
+      "path": "11-earthquake-spatial-clustering",
+      "planned_date": "2026-10-31"
+    },
+    "12": {
+      "status": "planned",
+      "path": "12-api-latency-monitor",
+      "planned_date": "2026-10-31"
+    },
+    "13": {
+      "status": "planned",
+      "path": "13-weather-tabular-forecast",
+      "planned_date": "2026-11-01"
+    },
+    "14": {
+      "status": "planned",
+      "path": "14-carbon-autoencoder",
+      "planned_date": "2026-11-02"
+    },
+    "15": {
+      "status": "planned",
+      "path": "15-air-quality-forecast",
+      "planned_date": "2026-11-02"
+    },
+    "16": {
+      "status": "planned",
+      "path": "16-rss-sentiment-trends",
+      "planned_date": "2026-11-03"
+    },
+    "17": {
+      "status": "planned",
+      "path": "17-river-observation-etl",
+      "planned_date": "2026-11-04"
+    },
+    "18": {
+      "status": "planned",
+      "path": "18-transport-bi-kpis",
+      "planned_date": "2026-11-04"
+    },
+    "19": {
+      "status": "planned",
+      "path": "19-weather-temporal-cnn",
+      "planned_date": "2026-11-05"
+    },
+    "20": {
+      "status": "planned",
+      "path": "20-bike-occupancy-classifier",
+      "planned_date": "2026-11-06"
+    },
+    "21": {
+      "status": "planned",
+      "path": "21-semantic-news-search",
+      "planned_date": "2026-11-07"
+    },
+    "22": {
+      "status": "planned",
+      "path": "22-rss-quality-profiler",
+      "planned_date": "2026-11-07"
+    },
+    "23": {
+      "status": "planned",
+      "path": "23-carbon-lstm-forecast",
+      "planned_date": "2026-11-08"
+    },
+    "24": {
+      "status": "planned",
+      "path": "24-weather-quantile-forecast",
+      "planned_date": "2026-11-09"
+    },
+    "25": {
+      "status": "planned",
+      "path": "25-transport-sql-warehouse",
+      "planned_date": "2026-11-09"
+    },
+    "26": {
+      "status": "planned",
+      "path": "26-semantic-news-deduplication",
+      "planned_date": "2026-11-10"
+    },
+    "27": {
+      "status": "planned",
+      "path": "27-forecast-drift-monitor",
+      "planned_date": "2026-11-11"
+    },
+    "28": {
+      "status": "planned",
+      "path": "28-containerised-forecast-api",
+      "planned_date": "2026-11-11"
+    },
+    "29": {
+      "status": "planned",
+      "path": "29-carbon-transformer-forecast",
+      "planned_date": "2026-11-12"
+    },
+    "30": {
+      "status": "planned",
+      "path": "30-weather-model-explanations",
+      "planned_date": "2026-11-13"
+    },
+    "31": {
+      "status": "planned",
+      "path": "31-online-carbon-regression",
+      "planned_date": "2026-11-14"
+    },
+    "32": {
+      "status": "planned",
+      "path": "32-energy-sequence-classifier",
+      "planned_date": "2026-11-14"
+    },
+    "33": {
+      "status": "planned",
+      "path": "33-news-cooccurrence-network",
+      "planned_date": "2026-11-15"
+    },
+    "34": {
+      "status": "planned",
+      "path": "34-forecast-model-audit",
+      "planned_date": "2026-11-16"
+    },
+    "35": {
+      "status": "planned",
+      "path": "35-source-grounded-docs-retrieval",
+      "planned_date": "2026-11-16"
+    },
+    "36": {
+      "status": "planned",
+      "path": "36-carbon-tabular-neural-network",
+      "planned_date": "2026-11-17"
+    },
+    "37": {
+      "status": "planned",
+      "path": "37-rolling-forecast-backtester",
+      "planned_date": "2026-11-18"
+    },
+    "38": {
+      "status": "planned",
+      "path": "38-live-data-dashboard",
+      "planned_date": "2026-11-18"
+    },
+    "39": {
+      "status": "planned",
+      "path": "39-rss-text-cnn",
+      "planned_date": "2026-11-19"
+    },
+    "40": {
+      "status": "planned",
+      "path": "40-open-data-observability",
+      "planned_date": "2026-11-20"
+    },
+    "41": {
+      "status": "planned",
+      "path": "41-sequence-anomaly-reconstruction",
+      "planned_date": "2026-11-21"
+    },
+    "42": {
+      "status": "planned",
+      "path": "42-portfolio-model-benchmark",
+      "planned_date": "2026-11-21"
+    },
+    "43": {
+      "status": "planned",
+      "path": "43-cross-source-event-analytics",
+      "planned_date": "2026-11-22"
+    },
+    "44": {
+      "status": "planned",
+      "path": "44-forecast-service-capstone",
+      "planned_date": "2026-11-22"
+    }
+  }
+}

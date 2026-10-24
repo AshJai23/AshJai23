@@ -1,0 +1,24 @@
+Executed at 2026-10-24T23:03:14.138743+00:00
+Tests: python -m unittest discover -s tests -v
+test_database_reload_is_idempotent_and_html_is_escaped (test_pipeline.PipelineTests.test_database_reload_is_idempotent_and_html_is_escaped) ... ok
+test_empty_input_does_not_replace_existing_outputs (test_pipeline.PipelineTests.test_empty_input_does_not_replace_existing_outputs) ... ok
+test_invalid_coordinate_and_nan_are_rejected (test_pipeline.PipelineTests.test_invalid_coordinate_and_nan_are_rejected) ... ok
+test_latest_revision_wins_regardless_of_input_order (test_pipeline.PipelineTests.test_latest_revision_wins_regardless_of_input_order) ... ok
+test_negative_magnitude_and_depth_are_not_discarded (test_pipeline.PipelineTests.test_negative_magnitude_and_depth_are_not_discarded) ... ok
+test_null_magnitude_is_preserved (test_pipeline.PipelineTests.test_null_magnitude_is_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.012s
+
+OK
+
+Smoke test: python main.py --input examples/source_snapshot.json --output outputs
+{
+  "event_count": 185,
+  "mean_magnitude": 2.538,
+  "largest_magnitude": 6.9,
+  "first_event_utc": "2026-10-23T22:57:18.950000+00:00",
+  "latest_event_utc": "2026-10-24T22:37:54.110000+00:00"
+}
+
+Both commands exited 0. Source provenance is in provenance.json.

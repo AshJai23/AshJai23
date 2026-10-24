@@ -1,0 +1,111 @@
+{
+  "built_at_utc": "2026-10-24T23:03:14.130422+00:00",
+  "source": "examples/source_snapshot.json",
+  "feed_generated_utc": "2026-10-24T22:56:35+00:00",
+  "scope": "Current USGS past-day snapshot, earthquake events only",
+  "quality": {
+    "input_rows": 185,
+    "invalid_rows": 0,
+    "duplicate_ids": 0,
+    "non_earthquakes": 0,
+    "missing_magnitude": 0,
+    "accepted_rows": 185
+  },
+  "statistics": {
+    "event_count": 185,
+    "mean_magnitude": 2.538,
+    "largest_magnitude": 6.9,
+    "first_event_utc": "2026-10-23T22:57:18.950000+00:00",
+    "latest_event_utc": "2026-10-24T22:37:54.110000+00:00"
+  },
+  "magnitude_distribution": [
+    {
+      "magnitude_band": "2 to below 4",
+      "event_count": 36
+    },
+    {
+      "magnitude_band": "4 to below 6",
+      "event_count": 49
+    },
+    {
+      "magnitude_band": "6 and above",
+      "event_count": 2
+    },
+    {
+      "magnitude_band": "Below 2",
+      "event_count": 98
+    }
+  ],
+  "largest_events": [
+    {
+      "event_id": "us6000u4j2",
+      "time_utc": "2026-10-24T02:31:28.641000+00:00",
+      "place": "197 km WNW of Port-Olry, Vanuatu",
+      "magnitude": 6.9,
+      "depth_km": 10.0
+    },
+    {
+      "event_id": "us6000u4jb",
+      "time_utc": "2026-10-24T02:35:57.362000+00:00",
+      "place": "170 km NW of Port-Olry, Vanuatu",
+      "magnitude": 6.3,
+      "depth_km": 10.0
+    },
+    {
+      "event_id": "us6000u4lm",
+      "time_utc": "2026-10-24T08:56:28.815000+00:00",
+      "place": "196 km NW of Port-Olry, Vanuatu",
+      "magnitude": 5.9,
+      "depth_km": 10.0
+    },
+    {
+      "event_id": "us6000u4mn",
+      "time_utc": "2026-10-24T15:24:19.882000+00:00",
+      "place": "Bouvet Island region",
+      "magnitude": 5.8,
+      "depth_km": 12.486
+    },
+    {
+      "event_id": "us6000u4k6",
+      "time_utc": "2026-10-24T05:23:40.747000+00:00",
+      "place": "182 km NW of Port-Olry, Vanuatu",
+      "magnitude": 5.8,
+      "depth_km": 10.0
+    },
+    {
+      "event_id": "us6000u4jw",
+      "time_utc": "2026-10-24T04:12:05.337000+00:00",
+      "place": "203 km NW of Port-Olry, Vanuatu",
+      "magnitude": 5.8,
+      "depth_km": 10.0
+    },
+    {
+      "event_id": "us6000u4ju",
+      "time_utc": "2026-10-24T04:05:36.800000+00:00",
+      "place": "205 km NW of Port-Olry, Vanuatu",
+      "magnitude": 5.7,
+      "depth_km": 10.0
+    },
+    {
+      "event_id": "us6000u4kq",
+      "time_utc": "2026-10-24T06:43:09.602000+00:00",
+      "place": "55 km NNE of Port-Olry, Vanuatu",
+      "magnitude": 5.5,
+      "depth_km": 194.632
+    },
+    {
+      "event_id": "us6000u4pa",
+      "time_utc": "2026-10-24T20:35:04.576000+00:00",
+      "place": "101 km SSE of Vilyuchinsk, Russia",
+      "magnitude": 5.3,
+      "depth_km": 70.184
+    },
+    {
+      "event_id": "us6000u4lg",
+      "time_utc": "2026-10-24T08:39:53.139000+00:00",
+      "place": "223 km ENE of Nagqu, China",
+      "magnitude": 5.3,
+      "depth_km": 10.0
+    }
+  ]
+}

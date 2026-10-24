@@ -1,0 +1,8 @@
+**/__pycache__/
+**/.venv/
+**/outputs/
+**/*.sqlite
+**/.DS_Store
+**/.env
+**/.env.*
+!**/.env.example

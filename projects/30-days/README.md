@@ -1,0 +1,57 @@
+# 30 days of practical data science, ML and deep learning
+
+**24 October–22 November 2026 · 44 planned projects · 2 completed**
+
+A portfolio sprint built with AI assistance. Each completed item contains runnable
+code, a source-attributed data example, validation evidence and an honest account
+of limitations. The goal is practical skill development, not inflated commit
+counts or claims of production experience.
+
+## Schedule
+
+- At least **one project every day**.
+- Two projects on days **1, 3 and 5 of each seven-day block**, plus two on days
+  **29 and 30**. This gives **10 projects per full week** and **44 over 30 days**.
+- The remaining work is scheduled for daily morning builds in Europe/London.
+- The plan is a target. API failures, inaccessible dependencies or failed tests
+  must be reported; incomplete work is not counted as delivered.
+
+[Full 30-day roadmap](ROADMAP.md) · [Machine-readable plan](plan.json) ·
+[Progress tracker](progress.json) · [Build guide](BUILD_GUIDE.md)
+
+## Completed projects
+
+| ID | Project | What ran | Evidence |
+|---|---|---|---|
+| 01 | [Live earthquake analytics](01-live-earthquake-analytics/) | Real USGS snapshot; Python validation, SQLite queries, CSV and HTML report | [6 passing tests](01-live-earthquake-analytics/examples/validation.txt) |
+| 02 | [GB carbon-intensity forecasting](02-carbon-intensity-forecast/) | Real 28-day API snapshot; chronological Ridge vs persistence comparison | [6 passing tests](02-carbon-intensity-forecast/examples/validation.txt) |
+
+### Day-one measured results
+
+- Earthquake pipeline: **185 events** in the
+  captured past-day feed. Inspect the [quality summary](01-live-earthquake-analytics/examples/summary.json)
+  for source and event timestamps.
+- Carbon model: **1344 actual half-hour intervals**,
+  **260 held-out predictions**. Ridge MAE:
+  **4.556 gCO2/kWh**;
+  persistence MAE: **5.096 gCO2/kWh**.
+  See the [full metrics](02-carbon-intensity-forecast/examples/metrics.json).
+
+These are measured results from one saved time window. They do not guarantee
+future performance. The carbon experiment is a rolling one-step backtest and
+does not simulate historical publication delays.
+
+## Focus areas
+
+Data quality, Python/SQL pipelines, Power BI/Tableau-ready datasets, forecasting,
+classification, clustering, neural sequence models, NLP/retrieval, containerised
+local serving, monitoring and model evaluation. Planned deep-learning work must
+train and evaluate real small neural models against simpler baselines.
+
+## Real-time data policy
+
+Prefer public live or regularly refreshed sources. Each README must say whether
+the project polls live data, replays historical observations or uses a static
+snapshot. Source outages must not be concealed with fabricated data. Test-only
+synthetic fixtures are labelled. No paid services or always-on deployment are
+part of this sprint.

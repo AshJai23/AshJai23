@@ -1,0 +1,28 @@
+Executed at 2026-10-24T23:03:18.525964+00:00
+Tests: python -m unittest discover -s tests -v
+test_features_do_not_depend_on_target_or_future (test_forecast.ForecastTests.test_features_do_not_depend_on_target_or_future) ... ok
+test_gap_is_not_backfilled_with_future_observations (test_forecast.ForecastTests.test_gap_is_not_backfilled_with_future_observations) ... ok
+test_next_forecast_is_one_half_hour_after_latest_actual (test_forecast.ForecastTests.test_next_forecast_is_one_half_hour_after_latest_actual) ... ok
+test_short_dataset_fails_instead_of_reporting_fake_metrics (test_forecast.ForecastTests.test_short_dataset_fails_instead_of_reporting_fake_metrics) ... ok
+test_supplier_forecast_is_never_used_as_actual (test_forecast.ForecastTests.test_supplier_forecast_is_never_used_as_actual) ... ok
+test_training_and_scaling_are_chronological (test_forecast.ForecastTests.test_training_and_scaling_are_chronological) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.270s
+
+OK
+
+Smoke test: python main.py --input examples/source_snapshot.json --output outputs
+{
+  "ridge": {
+    "mae_gco2_per_kwh": 4.556432496724723,
+    "rmse_gco2_per_kwh": 6.2994468555266
+  },
+  "persistence_baseline": {
+    "mae_gco2_per_kwh": 5.096153846153846,
+    "rmse_gco2_per_kwh": 7.206033796543219
+  },
+  "ridge_beats_persistence_on_mae": true
+}
+
+Both commands exited 0. Source provenance is in provenance.json.

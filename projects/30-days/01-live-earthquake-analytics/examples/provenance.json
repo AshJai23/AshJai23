@@ -1,0 +1,7 @@
+{
+  "source_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
+  "retrieved_at_utc": "2026-10-24T22:57:16.959352+00:00",
+  "mode": "Real public API response, stored for offline replay",
+  "attribution": "U.S. Geological Survey",
+  "synthetic": false
+}

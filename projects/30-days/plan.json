@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "repository": "AshJai23/AshJai23",
+  "root_path": "projects/30-days",
+  "start_date": "2026-10-24",
+  "end_date": "2026-11-22",
+  "timezone": "Europe/London",
+  "target_projects": 44,
+  "minimum_per_day": 1,
+  "minimum_per_seven_days": 10,
+  "note": "Independent portfolio prototypes; planned scopes are not completed work or a claim of production experience.",
+  "acceptance": [
+    "runnable implementation",
+    "primary data-source attribution",
+    "documented dependencies and exact commands",
+    "meaningful tests plus real-data or labelled replay smoke test",
+    "measured baseline comparison for ML/DL",
+    "sample outputs and limitations",
+    "successful GitHub commit and readback"
+  ],
+  "projects": [
+    {
+      "id": "01",
+      "day": 1,
+      "date": "2026-10-24",
+      "title": "Live earthquake analytics",
+      "category": "Data science",
+      "path": "01-live-earthquake-analytics",
+      "scope": "USGS GeoJSON ingestion, data-quality audit, SQLite aggregates and CSV/HTML report"
+    },
+    {
+      "id": "02",
+      "day": 1,
+      "date": "2026-10-24",
+      "title": "GB carbon-intensity forecast",
+      "category": "Machine learning",
+      "path": "02-carbon-intensity-forecast",
+      "scope": "Actual half-hour carbon data, lagged Ridge model and chronological persistence comparison"
+    },
+    {
+      "id": "03",
+      "day": 2,
+      "date": "2026-10-25",
+      "title": "Live weather quality monitor",
+      "category": "Data science",
+      "path": "03-weather-quality-monitor",
+      "scope": "Validate a public weather API; timestamp freshness, missingness and station-level summary"
+    },
+    {
+      "id": "04",
+      "day": 3,
+      "date": "2026-10-26",
+      "title": "Bike availability forecast",
+      "category": "Machine learning",
+      "path": "04-bike-availability-forecast",
+      "scope": "Public station availability snapshots or explicitly labelled historical replay; lagged regression and baseline"
+    },
+    {
+      "id": "05",
+      "day": 3,
+      "date": "2026-10-26",
+      "title": "Air-quality spatial analytics",
+      "category": "Data science",
+      "path": "05-air-quality-spatial-analytics",
+      "scope": "Public air-quality observations with location, coverage and unit checks; spatial summaries"
+    },
+    {
+      "id": "06",
+      "day": 4,
+      "date": "2026-10-27",
+      "title": "RSS topic clustering",
+      "category": "Machine learning",
+      "path": "06-rss-topic-clustering",
+      "scope": "Public RSS ingestion, TF-IDF topics, clustering and human-readable cluster inspection"
+    },
+    {
+      "id": "07",
+      "day": 5,
+      "date": "2026-10-28",
+      "title": "River-level anomaly detection",
+      "category": "Machine learning",
+      "path": "07-river-level-anomaly-detection",
+      "scope": "Public river observations with robust anomaly scoring and an inspected validation sample"
+    },
+    {
+      "id": "08",
+      "day": 5,
+      "date": "2026-10-28",
+      "title": "Carbon intensity BI data model",
+      "category": "Data science",
+      "path": "08-carbon-bi-data-model",
+      "scope": "SQL fact/dimension modelling, Power BI/Tableau-ready exports and documented measures"
+    },
+    {
+      "id": "09",
+      "day": 6,
+      "date": "2026-10-29",
+      "title": "Weather LSTM nowcast",
+      "category": "Deep learning",
+      "path": "09-weather-lstm-nowcast",
+      "scope": "Train a compact LSTM on public weather history; chronological one-step evaluation versus persistence"
+    },
+    {
+      "id": "10",
+      "day": 7,
+      "date": "2026-10-30",
+      "title": "Public issue triage classifier",
+      "category": "Machine learning",
+      "path": "10-public-issue-triage",
+      "scope": "Public GitHub issue text; defensible labels, source-aware split and classification baseline"
+    },
+    {
+      "id": "11",
+      "day": 8,
+      "date": "2026-10-31",
+      "title": "Earthquake spatial clustering",
+      "category": "Machine learning",
+      "path": "11-earthquake-spatial-clustering",
+      "scope": "Geographic DBSCAN on recent events with distance units and cluster-stability checks"
+    },
+    {
+      "id": "12",
+      "day": 8,
+      "date": "2026-10-31",
+      "title": "API latency anomaly monitor",
+      "category": "MLOps",
+      "path": "12-api-latency-monitor",
+      "scope": "Low-rate measurements of documented public APIs; latency distribution, errors and robust thresholds"
+    },
+    {
+      "id": "13",
+      "day": 9,
+      "date": "2026-11-01",
+      "title": "Weather tabular forecast",
+      "category": "Machine learning",
+      "path": "13-weather-tabular-forecast",
+      "scope": "Time-aware gradient boosting against seasonal/persistence baselines using archived weather"
+    },
+    {
+      "id": "14",
+      "day": 10,
+      "date": "2026-11-02",
+      "title": "Carbon profile autoencoder",
+      "category": "Deep learning",
+      "path": "14-carbon-autoencoder",
+      "scope": "Train a small neural autoencoder on prior daily profiles; held-out reconstruction and anomaly inspection"
+    },
+    {
+      "id": "15",
+      "day": 10,
+      "date": "2026-11-02",
+      "title": "Air-quality forecast",
+      "category": "Machine learning",
+      "path": "15-air-quality-forecast",
+      "scope": "Observed pollution time series, lag-safe features and time-based error analysis"
+    },
+    {
+      "id": "16",
+      "day": 11,
+      "date": "2026-11-03",
+      "title": "RSS sentiment trends",
+      "category": "Machine learning",
+      "path": "16-rss-sentiment-trends",
+      "scope": "Public feed sentiment with lexical baseline, manual sample review and clear label limitations"
+    },
+    {
+      "id": "17",
+      "day": 12,
+      "date": "2026-11-04",
+      "title": "River observation ETL",
+      "category": "Data engineering",
+      "path": "17-river-observation-etl",
+      "scope": "Incremental timestamped river ingestion, deduplication, schema validation and SQL query examples"
+    },
+    {
+      "id": "18",
+      "day": 12,
+      "date": "2026-11-04",
+      "title": "Transport BI KPI exports",
+      "category": "Data science",
+      "path": "18-transport-bi-kpis",
+      "scope": "Public transport status data; SQL KPI definitions and Power BI/Tableau-ready tables"
+    },
+    {
+      "id": "19",
+      "day": 13,
+      "date": "2026-11-05",
+      "title": "Weather temporal CNN",
+      "category": "Deep learning",
+      "path": "19-weather-temporal-cnn",
+      "scope": "Train a temporal 1D CNN with genuine holdout evaluation and a simple autoregressive baseline"
+    },
+    {
+      "id": "20",
+      "day": 14,
+      "date": "2026-11-06",
+      "title": "Bike occupancy classifier",
+      "category": "Machine learning",
+      "path": "20-bike-occupancy-classifier",
+      "scope": "Predict a future station occupancy band from earlier observations; time split and class-balance checks"
+    },
+    {
+      "id": "21",
+      "day": 15,
+      "date": "2026-11-07",
+      "title": "Semantic news search",
+      "category": "AI",
+      "path": "21-semantic-news-search",
+      "scope": "Public RSS semantic retrieval with local embeddings, source links and a small relevance evaluation"
+    },
+    {
+      "id": "22",
+      "day": 15,
+      "date": "2026-11-07",
+      "title": "RSS data-quality profiler",
+      "category": "Data science",
+      "path": "22-rss-quality-profiler",
+      "scope": "Feed freshness, duplicates, parsing failures and a reproducible source-quality scorecard"
+    },
+    {
+      "id": "23",
+      "day": 16,
+      "date": "2026-11-08",
+      "title": "Carbon LSTM forecast",
+      "category": "Deep learning",
+      "path": "23-carbon-lstm-forecast",
+      "scope": "Train a compact sequence model; time-based holdout and comparison with the day-one model/baseline"
+    },
+    {
+      "id": "24",
+      "day": 17,
+      "date": "2026-11-09",
+      "title": "Weather quantile forecast",
+      "category": "Machine learning",
+      "path": "24-weather-quantile-forecast",
+      "scope": "Quantile regression with pinball loss and interval-coverage checks on a held-out period"
+    },
+    {
+      "id": "25",
+      "day": 17,
+      "date": "2026-11-09",
+      "title": "Transport SQL warehouse",
+      "category": "Data engineering",
+      "path": "25-transport-sql-warehouse",
+      "scope": "Public status snapshots, snapshot history, window queries and a reproducible mini warehouse"
+    },
+    {
+      "id": "26",
+      "day": 18,
+      "date": "2026-11-10",
+      "title": "Semantic news deduplication",
+      "category": "AI",
+      "path": "26-semantic-news-deduplication",
+      "scope": "Compare lexical and embedding similarity; inspected pairs, thresholds and source attribution"
+    },
+    {
+      "id": "27",
+      "day": 19,
+      "date": "2026-11-11",
+      "title": "Forecast drift monitor",
+      "category": "MLOps",
+      "path": "27-forecast-drift-monitor",
+      "scope": "Monitor prediction and feature drift with replay windows, false-alarm examples and baseline thresholds"
+    },
+    {
+      "id": "28",
+      "day": 19,
+      "date": "2026-11-11",
+      "title": "Containerised forecast API",
+      "category": "ML engineering",
+      "path": "28-containerised-forecast-api",
+      "scope": "Serve an existing validated model behind a local API with input validation, Docker and smoke tests"
+    },
+    {
+      "id": "29",
+      "day": 20,
+      "date": "2026-11-12",
+      "title": "Carbon transformer forecast",
+      "category": "Deep learning",
+      "path": "29-carbon-transformer-forecast",
+      "scope": "Train a small CPU-friendly transformer with chronological evaluation; compare to simpler models"
+    },
+    {
+      "id": "30",
+      "day": 21,
+      "date": "2026-11-13",
+      "title": "Weather model explanations",
+      "category": "Machine learning",
+      "path": "30-weather-model-explanations",
+      "scope": "Permutation importance and grouped error analysis on a held-out weather forecast model"
+    },
+    {
+      "id": "31",
+      "day": 22,
+      "date": "2026-11-14",
+      "title": "Online carbon regression",
+      "category": "Machine learning",
+      "path": "31-online-carbon-regression",
+      "scope": "Prequential online regression with update ordering, replay evaluation and concept-drift discussion"
+    },
+    {
+      "id": "32",
+      "day": 22,
+      "date": "2026-11-14",
+      "title": "Energy sequence classifier",
+      "category": "Deep learning",
+      "path": "32-energy-sequence-classifier",
+      "scope": "Train a neural sequence classifier for future observed regimes; leakage-safe targets and baseline"
+    },
+    {
+      "id": "33",
+      "day": 23,
+      "date": "2026-11-15",
+      "title": "News co-occurrence analytics",
+      "category": "Data science",
+      "path": "33-news-cooccurrence-network",
+      "scope": "Public feed entities or terms, co-occurrence graph, frequency checks and temporal comparisons"
+    },
+    {
+      "id": "34",
+      "day": 24,
+      "date": "2026-11-16",
+      "title": "Forecast model audit",
+      "category": "MLOps",
+      "path": "34-forecast-model-audit",
+      "scope": "Reproducible slice, residual and data-leakage audit of completed sprint models"
+    },
+    {
+      "id": "35",
+      "day": 24,
+      "date": "2026-11-16",
+      "title": "Source-grounded documentation retrieval",
+      "category": "AI",
+      "path": "35-source-grounded-docs-retrieval",
+      "scope": "Retrieve public API documentation with exact source links and retrieval evaluation; label any generation"
+    },
+    {
+      "id": "36",
+      "day": 25,
+      "date": "2026-11-17",
+      "title": "Carbon tabular neural network",
+      "category": "Deep learning",
+      "path": "36-carbon-tabular-neural-network",
+      "scope": "Train a small MLP on lag-safe features, save real learning curves and compare with Ridge"
+    },
+    {
+      "id": "37",
+      "day": 26,
+      "date": "2026-11-18",
+      "title": "Rolling forecast backtester",
+      "category": "MLOps",
+      "path": "37-rolling-forecast-backtester",
+      "scope": "Expanding-window evaluation utility, reproducible model comparison and regression tests"
+    },
+    {
+      "id": "38",
+      "day": 26,
+      "date": "2026-11-18",
+      "title": "Live data dashboard",
+      "category": "Data science",
+      "path": "38-live-data-dashboard",
+      "scope": "Streamlit dashboard over validated sprint sources with cached pulls, freshness and error states"
+    },
+    {
+      "id": "39",
+      "day": 27,
+      "date": "2026-11-19",
+      "title": "RSS text CNN",
+      "category": "Deep learning",
+      "path": "39-rss-text-cnn",
+      "scope": "Train a compact text CNN on explicit weak feed labels; source/time splits and baseline limitations"
+    },
+    {
+      "id": "40",
+      "day": 28,
+      "date": "2026-11-20",
+      "title": "Open-data observability",
+      "category": "MLOps",
+      "path": "40-open-data-observability",
+      "scope": "Schema, freshness, missingness and distribution checks across multiple real source snapshots"
+    },
+    {
+      "id": "41",
+      "day": 29,
+      "date": "2026-11-21",
+      "title": "Sequence anomaly reconstruction",
+      "category": "Deep learning",
+      "path": "41-sequence-anomaly-reconstruction",
+      "scope": "Train a sequence autoencoder; distinguish historical reconstruction from causal online detection"
+    },
+    {
+      "id": "42",
+      "day": 29,
+      "date": "2026-11-21",
+      "title": "Portfolio model benchmark",
+      "category": "MLOps",
+      "path": "42-portfolio-model-benchmark",
+      "scope": "Runnable benchmark over existing predictions, common metrics, compute notes and honest model ranking"
+    },
+    {
+      "id": "43",
+      "day": 30,
+      "date": "2026-11-22",
+      "title": "Cross-source event analytics",
+      "category": "Data science",
+      "path": "43-cross-source-event-analytics",
+      "scope": "Align public weather, energy and news observations; demonstrate join coverage and avoid causal claims"
+    },
+    {
+      "id": "44",
+      "day": 30,
+      "date": "2026-11-22",
+      "title": "Forecast service capstone",
+      "category": "ML engineering",
+      "path": "44-forecast-service-capstone",
+      "scope": "Integrate validated model, ingestion, local API, monitoring and reproducible Docker run; final smoke test"
+    }
+  ]
+}

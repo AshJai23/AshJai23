@@ -1,0 +1,54 @@
+{
+  "built_at_utc": "2026-10-24T23:03:18.380689+00:00",
+  "source": "examples/source_snapshot.json",
+  "data_attribution": "NESO Carbon Intensity API, CC BY 4.0; https://carbonintensity.org.uk/",
+  "quality": {
+    "input_rows": 1344,
+    "missing_actual": 0,
+    "invalid_rows": 0,
+    "duplicate_timestamps": 0,
+    "observed_intervals": 1344,
+    "unobserved_intervals_inside_window": 0
+  },
+  "features": [
+    "lag_1",
+    "lag_2",
+    "lag_48",
+    "past_3h_mean",
+    "past_3h_std",
+    "hour_sin",
+    "hour_cos",
+    "weekday_sin",
+    "weekday_cos"
+  ],
+  "evaluation": "Chronological 80/20 rolling one-step holdout; no shuffled split",
+  "split": {
+    "training_examples": 1036,
+    "test_examples": 260,
+    "train_last_target_utc": "2026-10-19T12:00:00+00:00",
+    "test_first_target_utc": "2026-10-19T12:30:00+00:00",
+    "test_last_target_utc": "2026-10-24T22:00:00+00:00"
+  },
+  "metrics": {
+    "ridge": {
+      "mae_gco2_per_kwh": 4.556432496724723,
+      "rmse_gco2_per_kwh": 6.2994468555266
+    },
+    "persistence_baseline": {
+      "mae_gco2_per_kwh": 5.096153846153846,
+      "rmse_gco2_per_kwh": 7.206033796543219
+    },
+    "ridge_beats_persistence_on_mae": true
+  },
+  "next_forecast": {
+    "available": true,
+    "interval_from_utc": "2026-10-24T22:30:00+00:00",
+    "interval_to_utc": "2026-10-24T23:00:00+00:00",
+    "issued_at_utc": "2026-10-24T23:03:18.380726+00:00",
+    "estimate_kind": "historical_gap_estimate_due_to_data_delay",
+    "ridge_gco2_per_kwh": 71.78230256347885,
+    "persistence_gco2_per_kwh": 74.0,
+    "last_observed_interval_from_utc": "2026-10-24T22:00:00+00:00",
+    "note": "One interval after the latest available actual; check its timestamp for staleness."
+  }
+}

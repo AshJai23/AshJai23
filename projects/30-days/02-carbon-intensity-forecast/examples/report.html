@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>Carbon intensity forecast</title>
+    <style>body{font:16px/1.6 system-ui;background:#101c2a;color:#e2edf0;max-width:920px;margin:40px auto;padding:24px}
+    h1,h2{color:#63e3cb}th,td{padding:14px;text-align:left;border-bottom:1px solid #345}pre{white-space:pre-wrap;background:#142d3a;padding:24px}</style>
+    <h1>GB carbon-intensity forecasting</h1><p>Built 2026-10-24T23:03:18.380689+00:00 · unit: gCO₂/kWh</p>
+    <h2>Chronological holdout</h2><table><tr><th>Model</th><th>MAE</th><th>RMSE</th></tr><tr><td>ridge</td><td>4.556</td><td>6.299</td></tr><tr><td>persistence_baseline</td><td>5.096</td><td>7.206</td></tr></table>
+    <p>Ridge beats persistence on MAE: <b>True</b>.
+    Negative results are retained; this prototype does not promise a forecasting improvement.</p>
+    <h2>Next interval after the latest actual</h2><pre>{
+  &quot;available&quot;: true,
+  &quot;interval_from_utc&quot;: &quot;2026-10-24T22:30:00+00:00&quot;,
+  &quot;interval_to_utc&quot;: &quot;2026-10-24T23:00:00+00:00&quot;,
+  &quot;issued_at_utc&quot;: &quot;2026-10-24T23:03:18.380726+00:00&quot;,
+  &quot;estimate_kind&quot;: &quot;historical_gap_estimate_due_to_data_delay&quot;,
+  &quot;ridge_gco2_per_kwh&quot;: 71.78230256347885,
+  &quot;persistence_gco2_per_kwh&quot;: 74.0,
+  &quot;last_observed_interval_from_utc&quot;: &quot;2026-10-24T22:00:00+00:00&quot;,
+  &quot;note&quot;: &quot;One interval after the latest available actual; check its timestamp for staleness.&quot;
+}</pre>
+    <p>Evaluation uses the actual previous intervals at every forecast origin. It is a rolling one-step backtest,
+    not a blind forecast for the entire holdout. Scaling is fitted on training data only.</p></html>

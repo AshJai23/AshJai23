@@ -72,6 +72,14 @@ My work spans fraud detection, cyber threat analysis, time-series forecasting, h
 
 ---
 
+<!-- data-science-sprint:start -->
+### 🚀 30-day data science sprint
+**24 October–22 November 2026 · 2 of 44 projects completed**
+
+[Explore the projects](projects/30-days/) · [30-day roadmap](projects/30-days/ROADMAP.md) · [Progress](projects/30-days/progress.json)
+
+<!-- data-science-sprint:end -->
+
 ### Featured projects:
 <p>
   <a href="https://github.com/AshJai23/JAIATD3"><img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=AshJai23&amp;repo=JAIATD3&amp;bg_color=14212E&amp;hide_border=true&amp;title_color=63E3CB&amp;text_color=FFFFFF&amp;icon_color=F6C66A" alt="JAIATD3 — real-time cyber threat detection and automated response" /></a>
