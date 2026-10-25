@@ -1,0 +1,98 @@
+Executed at 2026-10-25T23:14:04.511562+00:00
+COMMAND: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python -m unittest discover -s tests -v
+
+test_all_five_real_snapshots_match_reviewed_sources (test_copilot.CopilotTests.test_all_five_real_snapshots_match_reviewed_sources) ... ok
+test_cache_reports_age_and_original_check_time (test_copilot.CopilotTests.test_cache_reports_age_and_original_check_time) ... ok
+test_changed_source_even_with_same_keywords_withholds_summary (test_copilot.CopilotTests.test_changed_source_even_with_same_keywords_withholds_summary) ... ok
+test_council_tax_content_api_parent_alias (test_copilot.CopilotTests.test_council_tax_content_api_parent_alias) ... ok
+test_does_not_assume_every_student_can_work_20_hours (test_copilot.CopilotTests.test_does_not_assume_every_student_can_work_20_hours) ... ok
+test_email_is_blocked_before_model_or_network (test_copilot.CopilotTests.test_email_is_blocked_before_model_or_network) ... ok
+test_explicit_baseline_and_replay_labels (test_copilot.CopilotTests.test_explicit_baseline_and_replay_labels) ... ok
+test_feedback_support_reference_and_metrics (test_copilot.CopilotTests.test_feedback_support_reference_and_metrics) ... ok
+test_graduate_2027_change_is_visible (test_copilot.CopilotTests.test_graduate_2027_change_is_visible) ... ok
+test_identifier_pattern_is_blocked (test_copilot.CopilotTests.test_identifier_pattern_is_blocked) ... ok
+test_injection_cannot_add_a_tool_url_or_claim (test_copilot.CopilotTests.test_injection_cannot_add_a_tool_url_or_claim) ... ok
+test_live_failure_never_falls_back_to_saved_replay (test_copilot.CopilotTests.test_live_failure_never_falls_back_to_saved_replay) ... ok
+test_model_exception_is_an_explicit_fallback (test_copilot.CopilotTests.test_model_exception_is_an_explicit_fallback) ... ok
+test_northern_ireland_council_tax_is_withheld (test_copilot.CopilotTests.test_northern_ireland_council_tax_is_withheld) ... ok
+test_origin_and_host_restrictions (test_copilot.CopilotTests.test_origin_and_host_restrictions) ... ok
+test_question_length_validation (test_copilot.CopilotTests.test_question_length_validation) ... ok
+test_rate_limit (test_copilot.CopilotTests.test_rate_limit) ... ok
+test_removed_anchor_withholds_summary (test_copilot.CopilotTests.test_removed_anchor_withholds_summary) ... ok
+test_request_body_limit (test_copilot.CopilotTests.test_request_body_limit) ... ok
+test_scotland_housing_does_not_assume_english_rules (test_copilot.CopilotTests.test_scotland_housing_does_not_assume_english_rules) ... ok
+test_static_assets_and_csp (test_copilot.CopilotTests.test_static_assets_and_csp) ... ok
+test_telemetry_stores_no_question_or_ip (test_copilot.CopilotTests.test_telemetry_stores_no_question_or_ip) ... ok
+test_unknown_nation_rejected (test_copilot.CopilotTests.test_unknown_nation_rejected) ... ok
+test_unknown_questions_abstain (test_copilot.CopilotTests.test_unknown_questions_abstain) ... ok
+test_untrusted_topic_rejected (test_copilot.CopilotTests.test_untrusted_topic_rejected) ... ok
+test_withdrawn_source_is_not_used (test_copilot.CopilotTests.test_withdrawn_source_is_not_used) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.220s
+
+OK
+
+EXIT CODE: 0
+COMMAND: node --check static/app.js
+
+
+EXIT CODE: 0
+COMMAND: node tests/ui.mjs
+UI DOM checks passed: examples, submission, busy state, real-source card rendering, provenance link, feedback, rate-limit recovery. HTTP mocked; no browser rendering claimed.
+
+
+EXIT CODE: 0
+
+REAL MODEL EVALUATION: python evaluate.py
+{
+  "evaluated_at_utc": "2026-10-25T23:13:57.075580+00:00",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "training": "Pretrained model inference only; no local training or fine-tuning.",
+  "evaluation": "24 small author-written routing cases created during implementation; development smoke set, NOT held-out/generalisation evidence.",
+  "device": "CPU, 2 torch threads",
+  "python": "3.12.14",
+  "cases": 24,
+  "prompt_examples": "Six fixed few-shot examples in router.py; this smoke set was used during prompt development.",
+  "baseline_correct": 24,
+  "llm_correct": 8,
+  "guarded_correct": 24,
+  "llm_median_ms": 877.755,
+  "llm_cold_first_ms": 10584.51
+}
+
+LIVE API SMOKE: python smoke.py --mode live --output examples/live-smoke.json
+Executed: 2026-10-25T23:14:26.216331+00:00
+{"status": "answered", "model_mode": "local_llm", "model": "Qwen/Qwen2.5-0.5B-Instruct", "topics": [{"topic": "graduate", "source_status": "verified", "transport": "network"}]}
+{"status": "answered", "model_mode": "local_llm", "model": "Qwen/Qwen2.5-0.5B-Instruct", "topics": [{"topic": "work", "source_status": "verified", "transport": "network"}]}
+{"status": "answered", "model_mode": "local_llm", "model": "Qwen/Qwen2.5-0.5B-Instruct", "topics": [{"topic": "housing", "source_status": "verified", "transport": "network"}]}
+{"status": "answered", "model_mode": "local_llm", "model": "Qwen/Qwen2.5-0.5B-Instruct", "topics": [{"topic": "tax", "source_status": "verified", "transport": "network"}]}
+{"status": "answered", "model_mode": "local_llm", "model": "Qwen/Qwen2.5-0.5B-Instruct", "topics": [{"topic": "scams", "source_status": "verified", "transport": "network"}]}
+
+LOCALHOST HTTP SMOKE: actual Uvicorn process + urllib requests; explicit source replay; real local model.
+[
+  {
+    "endpoint": "/",
+    "status": 200,
+    "bytes": 3075
+  },
+  {
+    "endpoint": "/static/style.css",
+    "status": 200,
+    "bytes": 5248
+  },
+  {
+    "endpoint": "/static/app.js",
+    "status": 200,
+    "bytes": 3752
+  },
+  {
+    "endpoint": "/metrics",
+    "status": 200,
+    "bytes": 190
+  }
+]
+POST /api/ask: answered; local_llm; data_mode=replay
+
+LIMITS: Docker unavailable, so image/Compose not built or run. No full-browser visual/accessibility audit. No public hosting or real-user pilot. Model benchmark is development-only.

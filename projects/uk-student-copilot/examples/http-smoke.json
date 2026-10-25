@@ -1,0 +1,85 @@
+{
+  "mode": "real localhost HTTP server; source REPLAY explicitly labelled; real local Qwen inference",
+  "health": {
+    "status": "ok",
+    "data_mode": "replay",
+    "llm_enabled": true,
+    "llm_loaded": false,
+    "scope": "local prototype; not public production"
+  },
+  "get_checks": [
+    {
+      "endpoint": "/",
+      "status": 200,
+      "bytes": 3075
+    },
+    {
+      "endpoint": "/static/style.css",
+      "status": 200,
+      "bytes": 5248
+    },
+    {
+      "endpoint": "/static/app.js",
+      "status": 200,
+      "bytes": 3752
+    },
+    {
+      "endpoint": "/metrics",
+      "status": 200,
+      "bytes": 190
+    }
+  ],
+  "answer": {
+    "status": "answered",
+    "message": "Here are the relevant official guidance cards.",
+    "cards": [
+      {
+        "topic": "graduate",
+        "title": "Plan your post-study next step",
+        "summary": "The published Graduate visa guidance distinguishes applications made by 31 December 2026 (two years) from those made from 1 January 2027 (18 months). Doctoral qualifications have a three-year duration. This is general guidance, not a decision on your eligibility.",
+        "actions": [
+          "Read the eligibility and application sections on GOV.UK.",
+          "Ask your university when it can report successful completion and discuss your own visa expiry with its international adviser."
+        ],
+        "source": {
+          "topic": "graduate",
+          "url": "https://www.gov.uk/graduate-visa",
+          "api_url": "https://www.gov.uk/api/content/graduate-visa",
+          "mode": "replay",
+          "status": "verified",
+          "checked_at_utc": "2026-10-25T23:07:00.612649+00:00",
+          "public_updated_at": "2024-10-31T17:01:07+00:00",
+          "sha256": "1a0ee57a162836f8b9a3317da9ba4ea285fec426b0d36d2478a942f0e39100f9",
+          "matches_reviewed_source": true,
+          "checks_passed": [
+            true,
+            true,
+            true
+          ],
+          "transport": "snapshot",
+          "cache_age_seconds": 0
+        },
+        "nation_note": null
+      }
+    ],
+    "routing": {
+      "mode": "local_llm",
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "topic": "graduate",
+      "label_probability": 0.8047,
+      "latency_ms": 11391.23,
+      "baseline_topics": [
+        "graduate"
+      ],
+      "selected_topics": [
+        "graduate"
+      ]
+    },
+    "notice": "General information and source navigation only. No individual immigration, legal or financial eligibility decisions. Do not enter passport numbers, account details or other sensitive information.",
+    "handoff": "For an individual decision, ask your university international student advice team. Quote the support reference if reporting a problem with this app.",
+    "request_id": "1e84b5b2-afc2-4cf3-b4a4-1ea82de6eda2",
+    "latency_ms": 11400.87,
+    "data_mode": "replay"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "evaluated_at_utc": "2026-10-25T23:10:07.232119+00:00",
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "training": "Pretrained model inference only; no local training or fine-tuning.",
+  "evaluation": "24 small author-written routing cases created during implementation; development smoke set, NOT held-out/generalisation evidence.",
+  "device": "CPU, 2 torch threads",
+  "python": "3.12.14",
+  "cases": 24,
+  "baseline_correct": 24,
+  "llm_correct": 4,
+  "guarded_correct": 24,
+  "llm_median_ms": 169.97,
+  "llm_cold_first_ms": 10590.53,
+  "rows": [
+    {
+      "question": "What happens to the Graduate visa in 2027?",
+      "expected": "graduate",
+      "llm_topic": "graduate",
+      "baseline_topic": "graduate",
+      "guarded_topic": "graduate",
+      "llm_latency_ms": 10590.53
+    },
+    {
+      "question": "I finish my course this year. What next?",
+      "expected": "graduate",
+      "llm_topic": "graduate",
+      "baseline_topic": "graduate",
+      "guarded_topic": "graduate",
+      "llm_latency_ms": 211.09
+    },
+    {
+      "question": "How long can a PhD graduate stay?",
+      "expected": "graduate",
+      "llm_topic": "graduate",
+      "baseline_topic": "graduate",
+      "guarded_topic": "graduate",
+      "llm_latency_ms": 190.79
+    },
+    {
+      "question": "Tell me about post-study options",
+      "expected": "graduate",
+      "llm_topic": "graduate",
+      "baseline_topic": "graduate",
+      "guarded_topic": "graduate",
+      "llm_latency_ms": 184.53
+    },
+    {
+      "question": "How many hours can I work?",
+      "expected": "work",
+      "llm_topic": "graduate",
+      "baseline_topic": "work",
+      "guarded_topic": "work",
+      "llm_latency_ms": 182.08
+    },
+    {
+      "question": "Can I freelance while studying?",
+      "expected": "work",
+      "llm_topic": "graduate",
+      "baseline_topic": "work",
+      "guarded_topic": "work",
+      "llm_latency_ms": 156.81
+    },
+    {
+      "question": "Is dissertation time a holiday for employment?",
+      "expected": "work",
+      "llm_topic": "graduate",
+      "baseline_topic": "work",
+      "guarded_topic": "work",
+      "llm_latency_ms": 170.2
+    },
+    {
+      "question": "Can I take a job with Uber?",
+      "expected": "work",
+      "llm_topic": "graduate",
+      "baseline_topic": "work",
+      "guarded_topic": "work",
+      "llm_latency_ms": 169.74
+    },
+    {
+      "question": "How do I protect my rental deposit?",
+      "expected": "housing",
+      "llm_topic": "graduate",
+      "baseline_topic": "housing",
+      "guarded_topic": "housing",
+      "llm_latency_ms": 168.66
+    },
+    {
+      "question": "My landlord wants a deposit",
+      "expected": "housing",
+      "llm_topic": "graduate",
+      "baseline_topic": "housing",
+      "guarded_topic": "housing",
+      "llm_latency_ms": 171.52
+    },
+    {
+      "question": "I need accommodation",
+      "expected": "housing",
+      "llm_topic": "graduate",
+      "baseline_topic": "housing",
+      "guarded_topic": "housing",
+      "llm_latency_ms": 169.11
+    },
+    {
+      "question": "How do I find a room?",
+      "expected": "housing",
+      "llm_topic": "graduate",
+      "baseline_topic": "housing",
+      "guarded_topic": "housing",
+      "llm_latency_ms": 167.93
+    },
+    {
+      "question": "Do students pay Council Tax?",
+      "expected": "tax",
+      "llm_topic": "graduate",
+      "baseline_topic": "tax",
+      "guarded_topic": "tax",
+      "llm_latency_ms": 169.41
+    },
+    {
+      "question": "My household got a council bill",
+      "expected": "tax",
+      "llm_topic": "graduate",
+      "baseline_topic": "tax",
+      "guarded_topic": "tax",
+      "llm_latency_ms": 167.93
+    },
+    {
+      "question": "Where is the tax bill exemption?",
+      "expected": "tax",
+      "llm_topic": "graduate",
+      "baseline_topic": "tax",
+      "guarded_topic": "tax",
+      "llm_latency_ms": 194.53
+    },
+    {
+      "question": "Do I get a student discount on Council Tax?",
+      "expected": "tax",
+      "llm_topic": "graduate",
+      "baseline_topic": "tax",
+      "guarded_topic": "tax",
+      "llm_latency_ms": 171.3
+    },
+    {
+      "question": "A caller demands a Home Office fine",
+      "expected": "scams",
+      "llm_topic": "graduate",
+      "baseline_topic": "scams",
+      "guarded_topic": "scams",
+      "llm_latency_ms": 169.47
+    },
+    {
+      "question": "Is a guaranteed visa a scam?",
+      "expected": "scams",
+      "llm_topic": "graduate",
+      "baseline_topic": "scams",
+      "guarded_topic": "scams",
+      "llm_latency_ms": 171.66
+    },
+    {
+      "question": "They threatened to deport me unless I pay immediately",
+      "expected": "scams",
+      "llm_topic": "graduate",
+      "baseline_topic": "scams",
+      "guarded_topic": "scams",
+      "llm_latency_ms": 178.37
+    },
+    {
+      "question": "I received a suspicious MoneyGram request",
+      "expected": "scams",
+      "llm_topic": "graduate",
+      "baseline_topic": "scams",
+      "guarded_topic": "scams",
+      "llm_latency_ms": 168.63
+    },
+    {
+      "question": "Write a chocolate cake recipe",
+      "expected": "other",
+      "llm_topic": "housing",
+      "baseline_topic": "other",
+      "guarded_topic": "other",
+      "llm_latency_ms": 165.39
+    },
+    {
+      "question": "What is the capital of Japan?",
+      "expected": "other",
+      "llm_topic": "graduate",
+      "baseline_topic": "other",
+      "guarded_topic": "other",
+      "llm_latency_ms": 167.54
+    },
+    {
+      "question": "Explain quantum gravity",
+      "expected": "other",
+      "llm_topic": "graduate",
+      "baseline_topic": "other",
+      "guarded_topic": "other",
+      "llm_latency_ms": 162.24
+    },
+    {
+      "question": "Give me football scores",
+      "expected": "other",
+      "llm_topic": "graduate",
+      "baseline_topic": "other",
+      "guarded_topic": "other",
+      "llm_latency_ms": 171.61
+    }
+  ]
+}

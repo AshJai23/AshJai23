@@ -1,0 +1,16 @@
+services:
+  copilot:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      DATA_MODE: live
+      LLM_ENABLED: "1"
+    volumes:
+      - model-cache:/home/app/.cache
+      - telemetry:/app/runtime
+    mem_limit: 4g
+    cpus: 2
+volumes:
+  model-cache:
+  telemetry:

@@ -1,0 +1,7 @@
+{
+  "name": "uk-student-copilot-ui-checks",
+  "private": true,
+  "type": "module",
+  "scripts": {"test": "node tests/ui.mjs"},
+  "devDependencies": {"linkedom": "0.18.12"}
+}

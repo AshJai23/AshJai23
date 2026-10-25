@@ -1,0 +1,22 @@
+{
+  "graduate": {
+    "sha256": "1a0ee57a162836f8b9a3317da9ba4ea285fec426b0d36d2478a942f0e39100f9",
+    "reviewed_at_utc": "2026-10-25T23:07:00.612649+00:00"
+  },
+  "work": {
+    "sha256": "8b9436e5214ef03d6ff02c3932651af5ee2259af7afff3a9e3da9f55b7ed26b8",
+    "reviewed_at_utc": "2026-10-25T23:07:05.316399+00:00"
+  },
+  "housing": {
+    "sha256": "3e70d9a8cdfef10ab11a4bd9191721cb370f792b2ba80dd55185224c488dcb26",
+    "reviewed_at_utc": "2026-10-25T23:07:09.360319+00:00"
+  },
+  "tax": {
+    "sha256": "c871f0283cef286fdd6c4346d59e4d2176ed120377f94ffbdb05f053689864f6",
+    "reviewed_at_utc": "2026-10-25T23:07:18.872134+00:00"
+  },
+  "scams": {
+    "sha256": "1b88bdd8ec898d07c6884a35580484655f9255aeeb8b04732b8399d1f83e17c1",
+    "reviewed_at_utc": "2026-10-25T23:07:23.588280+00:00"
+  }
+}
