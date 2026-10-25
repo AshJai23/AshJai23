@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-24T23:42:54.370Z",
-  "completed_count": 2,
+  "updated_at_utc": "2026-10-25T09:21:52.018Z",
+  "completed_count": 3,
   "target_count": 44,
   "items": {
     "10": {
@@ -197,9 +197,14 @@
       "data_mode": "Real API snapshot with verified source and offline replay"
     },
     "03": {
-      "status": "planned",
+      "status": "completed",
       "path": "03-weather-quality-monitor",
-      "planned_date": "2026-10-25"
+      "planned_date": "2026-10-25",
+      "completed_at_utc": "2026-10-25T09:21:52.018Z",
+      "tests_passed": 12,
+      "evidence": "03-weather-quality-monitor/examples/validation.txt",
+      "data_mode": "Live NOAA/NWS station METAR observations plus exact frozen-clock replay",
+      "summary": "30 reports across 5 requested UK/India stations; latest observations PASS=5, WARN=0, FAIL=0 at 2026-10-25T09:19:19.485320+00:00"
     },
     "04": {
       "status": "planned",

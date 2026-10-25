@@ -1,0 +1,7 @@
+{
+  "source_url": "https://aviationweather.gov/api/data/metar?ids=EGLL%2CEGCC%2CEGPH%2CVIDP%2CVABB&format=json&hours=3",
+  "evaluated_at_utc": "2026-10-25T09:19:19.485320+00:00",
+  "mode": "Actual CLI live pull on 2026-10-25 followed by frozen-clock replay",
+  "attribution": "NOAA/NWS Aviation Weather Center; no endorsement implied",
+  "synthetic": false
+}

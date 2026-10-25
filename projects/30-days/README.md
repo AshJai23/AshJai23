@@ -1,6 +1,6 @@
 # 30 days of practical data science, ML and deep learning
 
-**24 October–22 November 2026 · 44 planned projects · 2 completed**
+**24 October–22 November 2026 · 44 planned projects · 3 completed**
 
 A portfolio sprint built with AI assistance. Each completed item contains runnable
 code, a source-attributed data example, validation evidence and an honest account
@@ -25,6 +25,7 @@ counts or claims of production experience.
 |---|---|---|---|
 | 01 | [Country-wise hazard explorer](01-live-earthquake-analytics/) | Country/year earthquakes, local wind and storm forecasts, statistical yearly wind outlook | [24 passing tests](01-live-earthquake-analytics/examples/dashboard-validation.txt) |
 | 02 | [GB carbon-intensity forecasting](02-carbon-intensity-forecast/) | Real 28-day API snapshot; chronological Ridge vs persistence comparison | [6 passing tests](02-carbon-intensity-forecast/examples/validation.txt) |
+| 03 | [Live weather quality monitor](03-weather-quality-monitor/) | 30 real station reports; freshness, missingness, duplicates and consistency checks; 5/5 latest station records passed | [12 passing tests + live/replay evidence](03-weather-quality-monitor/examples/validation.txt) |
 
 ### Day-one measured results
 

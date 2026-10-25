@@ -1,0 +1,40 @@
+Executed at 2026-10-25T09:19:19.485320+00:00
+Live CLI: python main.py --live --output outputs
+Live CLI exited 0; real raw response and provenance saved.
+
+test_duplicates_conflicts_and_history_are_different (test_monitor.MonitorTests.test_duplicates_conflicts_and_history_are_different) ... ok
+test_empty_valid_response_fails_all_expected_stations (test_monitor.MonitorTests.test_empty_valid_response_fails_all_expected_stations) ... ok
+test_future_timestamp_fails (test_monitor.MonitorTests.test_future_timestamp_fails) ... ok
+test_html_escapes_external_strings_and_exports_no_nan (test_monitor.MonitorTests.test_html_escapes_external_strings_and_exports_no_nan) ... ok
+test_input_timestamp_and_station_validation (test_monitor.MonitorTests.test_input_timestamp_and_station_validation) ... ok
+test_latest_bad_record_does_not_fall_back_to_older_good_record (test_monitor.MonitorTests.test_latest_bad_record_does_not_fall_back_to_older_good_record) ... ok
+test_malformed_timestamp_is_quarantined_and_visible (test_monitor.MonitorTests.test_malformed_timestamp_is_quarantined_and_visible) ... ok
+test_missing_station_is_not_silently_ignored (test_monitor.MonitorTests.test_missing_station_is_not_silently_ignored) ... ok
+test_nan_boolean_and_missing_core_field_are_distinguished (test_monitor.MonitorTests.test_nan_boolean_and_missing_core_field_are_distinguished) ... ok
+test_optional_gust_and_variable_or_calm_wind_are_valid (test_monitor.MonitorTests.test_optional_gust_and_variable_or_calm_wind_are_valid) ... ok
+test_physical_relationship_checks (test_monitor.MonitorTests.test_physical_relationship_checks) ... ok
+test_real_observation_age_is_used_not_receipt_time (test_monitor.MonitorTests.test_real_observation_age_is_used_not_receipt_time) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.005s
+
+OK
+
+Replay command: main.py --input examples/source_snapshot.json --as-of 2026-10-25T09:19:19.485320+00:00 --output outputs/replay
+{
+  "quality": {
+    "input_records": 30,
+    "unique_usable_timestamp_records": 30,
+    "rejected_timestamp_or_structure_records": 0,
+    "unexpected_station_records": 0,
+    "duplicate_records": 0,
+    "conflicting_duplicate_stations": []
+  },
+  "statuses": {
+    "PASS": 5,
+    "WARN": 0,
+    "FAIL": 0
+  }
+}
+
+Replay exit 0. All station rows and quality counts exactly match the live run.

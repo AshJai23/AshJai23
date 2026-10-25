@@ -4,13 +4,13 @@
 
 44 scoped prototypes: at least one per day and at least ten in each seven-day window.
 
-Items after the first two are planned. Sources and technical details must be verified when built.
+Completed items are linked below. Sources and technical details for remaining planned work must be verified when built.
 
 | Day | Date | ID | Project | Area | Status |
 |---|---|---|---|---|---|
 | 1 | 2026-10-24 | 01 | Live earthquake analytics | Data science | [Complete](01-live-earthquake-analytics/) |
 | 1 | 2026-10-24 | 02 | GB carbon-intensity forecast | Machine learning | [Complete](02-carbon-intensity-forecast/) |
-| 2 | 2026-10-25 | 03 | Live weather quality monitor | Data science | Planned |
+| 2 | 2026-10-25 | 03 | Live weather quality monitor | Data science | [Complete](03-weather-quality-monitor/) |
 | 3 | 2026-10-26 | 04 | Bike availability forecast | Machine learning | Planned |
 | 3 | 2026-10-26 | 05 | Air-quality spatial analytics | Data science | Planned |
 | 4 | 2026-10-27 | 06 | RSS topic clustering | Machine learning | Planned |
