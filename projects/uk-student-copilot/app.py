@@ -15,7 +15,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 from agent import build_agent
-from router import LocalRouter
+from trained_router import TrainedRouter
 from sources import ROOT, SourceStore
 
 
@@ -55,7 +55,7 @@ class Telemetry:
 def create_app(store=None, router=None, db_path=None, rate_limit=20):
     store = store or SourceStore(os.getenv("DATA_MODE", "live"))
     # Explicit model opt-out is visible in every response, never advertised as LLM.
-    router = router or LocalRouter(enabled=os.getenv("LLM_ENABLED", "1") == "1", revision=os.getenv("MODEL_REVISION"))
+    router = router or TrainedRouter(enabled=os.getenv("LLM_ENABLED", "1") == "1")
     telemetry = Telemetry(db_path or os.getenv("TELEMETRY_DB", str(ROOT / "telemetry.sqlite3")))
     graph = build_agent(store, router)
     app = FastAPI(title="UK Student Copilot", docs_url="/docs")

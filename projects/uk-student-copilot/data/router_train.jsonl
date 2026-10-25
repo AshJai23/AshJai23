@@ -1,0 +1,144 @@
+{"text": "Can I remain in Britain once my degree finishes?", "label": "graduate", "family": "graduate-train-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What route lets me stay after university?", "label": "graduate", "family": "graduate-train-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Do I need a sponsor for a Graduate visa?", "label": "graduate", "family": "graduate-train-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does post-study permission require employer sponsorship?", "label": "graduate", "family": "graduate-train-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Where do I apply for the graduate route?", "label": "graduate", "family": "graduate-train-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How do I submit a Graduate visa application?", "label": "graduate", "family": "graduate-train-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How long does the post-study visa last?", "label": "graduate", "family": "graduate-train-04", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What is the duration of Graduate permission?", "label": "graduate", "family": "graduate-train-04", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can a doctoral graduate stay for three years?", "label": "graduate", "family": "graduate-train-05", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is the post-study period different for a PhD?", "label": "graduate", "family": "graduate-train-05", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Do I apply for PSW from inside the UK?", "label": "graduate", "family": "graduate-train-06", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Must I be in Britain to request the graduate route?", "label": "graduate", "family": "graduate-train-06", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can my partner join my Graduate application?", "label": "graduate", "family": "graduate-train-07", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Are dependants covered by the post-study route?", "label": "graduate", "family": "graduate-train-07", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can I extend a Graduate visa?", "label": "graduate", "family": "graduate-train-08", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is it possible to renew post-study permission?", "label": "graduate", "family": "graduate-train-08", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "I completed a masters and want to stay here.", "label": "graduate", "family": "graduate-train-09", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What immigration option follows a UK masters?", "label": "graduate", "family": "graduate-train-09", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What changes for Graduate applications in January 2027?", "label": "graduate", "family": "graduate-train-10", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does the post-study duration change in 2027?", "label": "graduate", "family": "graduate-train-10", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What does it cost to apply for a Graduate visa?", "label": "graduate", "family": "graduate-train-11", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Where are the fees for post-study permission?", "label": "graduate", "family": "graduate-train-11", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does a graduate-route holder need a job offer?", "label": "graduate", "family": "graduate-train-12", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can I request post-study permission before finding employment?", "label": "graduate", "family": "graduate-train-12", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How many hours may I work in term time?", "label": "work", "family": "work-train-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What is my weekly student employment limit?", "label": "work", "family": "work-train-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can I accept a part-time job while studying?", "label": "work", "family": "work-train-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "May a Student visa holder be employed?", "label": "work", "family": "work-train-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is freelance design allowed on my student visa?", "label": "work", "family": "work-train-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can I be self-employed while taking a degree?", "label": "work", "family": "work-train-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can I drive for Uber as an international student?", "label": "work", "family": "work-train-04", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is delivery-app work permitted under Student conditions?", "label": "work", "family": "work-train-04", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can I take extra shifts during a university holiday?", "label": "work", "family": "work-train-05", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Are working hours different outside term time?", "label": "work", "family": "work-train-05", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does dissertation writing count as term time for work?", "label": "work", "family": "work-train-06", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can I work full time during my masters dissertation?", "label": "work", "family": "work-train-06", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "May I have two employers while studying?", "label": "work", "family": "work-train-07", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How do student working limits apply to multiple jobs?", "label": "work", "family": "work-train-07", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does unpaid volunteering count towards my work limit?", "label": "work", "family": "work-train-08", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What is the difference between voluntary work and volunteering?", "label": "work", "family": "work-train-08", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can I run a business on Student permission?", "label": "work", "family": "work-train-09", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does starting a company breach my work condition?", "label": "work", "family": "work-train-09", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What employment restrictions are on my eVisa?", "label": "work", "family": "work-train-10", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Where can I find my student work permission?", "label": "work", "family": "work-train-10", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can I accept a permanent full-time vacancy as a student?", "label": "work", "family": "work-train-11", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Are permanent jobs restricted during my degree?", "label": "work", "family": "work-train-11", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is a paid internship allowed during university?", "label": "work", "family": "work-train-12", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can I do a work placement as part of my course?", "label": "work", "family": "work-train-12", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Where should my landlord protect my tenancy deposit?", "label": "housing", "family": "housing-train-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How can I check my rental deposit scheme?", "label": "housing", "family": "housing-train-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What should I check before renting a room?", "label": "housing", "family": "housing-train-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "I need accommodation advice before signing a tenancy.", "label": "housing", "family": "housing-train-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "My landlord has not returned my deposit.", "label": "housing", "family": "housing-train-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What can I do about a withheld tenancy deposit?", "label": "housing", "family": "housing-train-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does Scotland use a different deposit scheme?", "label": "housing", "family": "housing-train-04", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Are Scottish tenancy deposit rules separate?", "label": "housing", "family": "housing-train-04", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Which deposit rules apply in Northern Ireland?", "label": "housing", "family": "housing-train-05", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Where do I check Northern Irish rental deposit protection?", "label": "housing", "family": "housing-train-05", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How do I know which type of tenancy I have?", "label": "housing", "family": "housing-train-06", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does deposit protection depend on the rental contract?", "label": "housing", "family": "housing-train-06", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What information must a letting agent give about the deposit?", "label": "housing", "family": "housing-train-07", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Should I receive proof that my deposit was registered?", "label": "housing", "family": "housing-train-07", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "I am looking for a student flat.", "label": "housing", "family": "housing-train-08", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Who can help me find suitable accommodation?", "label": "housing", "family": "housing-train-08", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can my university accommodation team check a lease?", "label": "housing", "family": "housing-train-09", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Where can I get help understanding a rental agreement?", "label": "housing", "family": "housing-train-09", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Do student halls use tenancy deposit protection?", "label": "housing", "family": "housing-train-10", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is a halls accommodation deposit covered by a scheme?", "label": "housing", "family": "housing-train-10", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How soon must a rental deposit be protected?", "label": "housing", "family": "housing-train-11", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is there a deadline for a landlord to register the deposit?", "label": "housing", "family": "housing-train-11", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Who handles a dispute about a tenancy deposit?", "label": "housing", "family": "housing-train-12", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How can I challenge a proposed deduction for damage?", "label": "housing", "family": "housing-train-12", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Do full-time students pay Council Tax?", "label": "tax", "family": "tax-train-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is a student household exempt from Council Tax?", "label": "tax", "family": "tax-train-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How do I apply for a Council Tax exemption?", "label": "tax", "family": "tax-train-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Where can students request council billing relief?", "label": "tax", "family": "tax-train-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "My flatmate is not a student; what happens to Council Tax?", "label": "tax", "family": "tax-train-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is a mixed household eligible for a council discount?", "label": "tax", "family": "tax-train-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What proof of student status does the council need?", "label": "tax", "family": "tax-train-04", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can my university provide a Council Tax certificate?", "label": "tax", "family": "tax-train-04", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "I received a Council Tax bill despite studying full time.", "label": "tax", "family": "tax-train-05", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How can I query a council bill sent to a student?", "label": "tax", "family": "tax-train-05", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does a short course qualify for Council Tax exemption?", "label": "tax", "family": "tax-train-06", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What counts as a full-time student for council billing?", "label": "tax", "family": "tax-train-06", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Are postgraduates covered by student Council Tax rules?", "label": "tax", "family": "tax-train-07", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does a research degree qualify for council relief?", "label": "tax", "family": "tax-train-07", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is Council Tax different in Northern Ireland?", "label": "tax", "family": "tax-train-08", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Should a student in Belfast check domestic rates instead?", "label": "tax", "family": "tax-train-08", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Will all students sharing a house be exempt from Council Tax?", "label": "tax", "family": "tax-train-09", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does everyone in the property need to be a full-time student?", "label": "tax", "family": "tax-train-09", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Where do I send my student exemption form?", "label": "tax", "family": "tax-train-10", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Which council deals with my university tax certificate?", "label": "tax", "family": "tax-train-10", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Do part-time students get Council Tax exemption?", "label": "tax", "family": "tax-train-11", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can a part-time course qualify for the student council discount?", "label": "tax", "family": "tax-train-11", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does the number of study hours affect Council Tax status?", "label": "tax", "family": "tax-train-12", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What course length is needed for Council Tax student status?", "label": "tax", "family": "tax-train-12", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Someone claiming to be the Home Office demands a fine.", "label": "scams", "family": "scams-train-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is an immigration fine demanded by phone a scam?", "label": "scams", "family": "scams-train-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "A caller threatens deportation unless I send money.", "label": "scams", "family": "scams-train-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What should I do about a threat to cancel my visa for non-payment?", "label": "scams", "family": "scams-train-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "They want MoneyGram to fix my immigration status.", "label": "scams", "family": "scams-train-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is it suspicious to pay an official demand through a money transfer?", "label": "scams", "family": "scams-train-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "An agent guarantees me a visa if I pay today.", "label": "scams", "family": "scams-train-04", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is a guaranteed UK visa offer fraudulent?", "label": "scams", "family": "scams-train-04", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "A message asks for passport and bank details to avoid a fine.", "label": "scams", "family": "scams-train-05", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Should I give personal details to an unexpected Home Office contact?", "label": "scams", "family": "scams-train-05", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "They ask me to pay a visa fine with gift cards.", "label": "scams", "family": "scams-train-06", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is a gift-card immigration payment demand legitimate?", "label": "scams", "family": "scams-train-06", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How do I report a suspicious immigration message?", "label": "scams", "family": "scams-train-07", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Where is official guidance on Home Office scams?", "label": "scams", "family": "scams-train-07", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "The caller knows my name and threatens me.", "label": "scams", "family": "scams-train-08", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does knowing my details make an immigration caller genuine?", "label": "scams", "family": "scams-train-08", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "An email uses a government logo and requests urgent payment.", "label": "scams", "family": "scams-train-09", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How can I check whether an official-looking fine is a fraud?", "label": "scams", "family": "scams-train-09", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "The caller says I must keep the payment secret.", "label": "scams", "family": "scams-train-10", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is secrecy a warning sign of an immigration scam?", "label": "scams", "family": "scams-train-10", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "I sent money to someone impersonating an immigration officer.", "label": "scams", "family": "scams-train-11", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What should I do after paying a suspected scammer?", "label": "scams", "family": "scams-train-11", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "A text says there is a visa problem and includes a payment link.", "label": "scams", "family": "scams-train-12", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Should I open an unexpected immigration payment link?", "label": "scams", "family": "scams-train-12", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can you write a chocolate cake recipe?", "label": "other", "family": "other-train-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How do I bake a sponge cake?", "label": "other", "family": "other-train-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What is the capital city of Japan?", "label": "other", "family": "other-train-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Name the capital of Brazil.", "label": "other", "family": "other-train-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Explain quantum physics.", "label": "other", "family": "other-train-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How does gravity work?", "label": "other", "family": "other-train-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Who won yesterday's football match?", "label": "other", "family": "other-train-04", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Give me live cricket results.", "label": "other", "family": "other-train-04", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can you diagnose my skin rash?", "label": "other", "family": "other-train-05", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What medicine should I take for chest pain?", "label": "other", "family": "other-train-05", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Which shares should I buy?", "label": "other", "family": "other-train-06", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Tell me the best cryptocurrency investment.", "label": "other", "family": "other-train-06", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Write an essay for my assessment.", "label": "other", "family": "other-train-07", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can you complete my university assignment?", "label": "other", "family": "other-train-07", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Tell me the weather tomorrow.", "label": "other", "family": "other-train-08", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Will it rain in Manchester?", "label": "other", "family": "other-train-08", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How do I reset my university password?", "label": "other", "family": "other-train-09", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "My course portal will not let me log in.", "label": "other", "family": "other-train-09", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can you book my flight home?", "label": "other", "family": "other-train-10", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Find me a cheap plane ticket.", "label": "other", "family": "other-train-10", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How do I learn Python programming?", "label": "other", "family": "other-train-11", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Explain a JavaScript loop.", "label": "other", "family": "other-train-11", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Recommend a restaurant for dinner.", "label": "other", "family": "other-train-12", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What films are playing at the cinema?", "label": "other", "family": "other-train-12", "provenance": "AI-authored synthetic intent example; not a student conversation"}

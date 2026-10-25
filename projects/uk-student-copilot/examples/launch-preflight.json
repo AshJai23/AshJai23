@@ -1,0 +1,16 @@
+{
+  "ready_for": "local pilot only",
+  "source_mode": "live",
+  "sources": {
+    "graduate": "verified",
+    "work": "verified",
+    "housing": "verified",
+    "tax": "verified",
+    "scams": "verified"
+  },
+  "trained_model": "trained_qwen_head",
+  "artifact_sha256": "66a5b6301342de80d9ad12b4d1f2419d64e32b6909797c0fd0cdcf13a88271ed",
+  "public_deployment": false,
+  "command": "python launch.py --mode live --check-only",
+  "exit_code": 0
+}

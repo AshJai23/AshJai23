@@ -52,15 +52,31 @@ from retrieval time and is not treated as proof of freshness.
 
 ## Model outage or poor routing
 
-The pinned Apache-2.0 Qwen2.5-0.5B-Instruct model runs on CPU. It proposes one
-topic using constrained next-token scoring, not an open-ended chat answer. A
-transparent lexical guard controls the supported topics and stops unknown
-questions; the LLM may only order tied matching topics. A failed model load is
-labelled `baseline_fallback`. `LLM_ENABLED=0` explicitly runs baseline mode.
+The pinned Apache-2.0 Qwen2.5-0.5B-Instruct model runs on CPU as a frozen
+feature extractor. A supervised 10,758-parameter routing head was fitted on
+144 authored examples; validation chose epoch 400 and confidence threshold 0.90.
+The published head and training mean are plain JSON, not executable pickle.
+The fitted artifact must match the SHA-256 in the saved held-out report and pass
+its local-pilot gate before it can add a fixed-source topic. This gate is an
+engineering check, not public-launch or legal certification.
 
-Small models can route badly. The checked-in smoke evaluation compares raw LLM,
-lexical baseline and guarded routing; it is not a representative held-out user
-study. Do not claim this model outperforms the baseline or is legally accurate.
+A confident proposal may select one of the five allowlisted official topics.
+It cannot create URLs, generate legal text or take actions. Uncertain/failed
+inference uses the visible keyword fallback. Set `ROUTING_POLICY=keyword_guard`
+to keep all trained proposals in shadow mode. Set `LLM_ENABLED=0` for explicit
+baseline-only operation. The previous prompt-only router remains in `router.py`
+for historical evaluation; it is no longer the app default.
+
+Training/validation/test data are synthetic, authored by the same AI and grouped
+by paired scenario family. Held-out performance is not evidence about a
+representative student population. One accepted test question was misrouted.
+Review failures in `examples/heldout-evaluation.json`. Do not claim 100% accuracy,
+that Qwen itself was fully fine-tuned, or that the model learned visa rules.
+
+Run `python launch.py --mode live --check-only` for artifact, real model and
+source checks, then `python launch.py --mode live` to start a warmed local pilot.
+These commands bind only to 127.0.0.1. Use an explicitly labelled replay for
+offline demos. See `TRAINING.md` for the actual fit and test measurements.
 
 ## Public pilot requirements
 

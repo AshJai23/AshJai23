@@ -26,9 +26,15 @@ def build_agent(store, router):
         return {"blocked": pii}
     def route(s):
         ranked, scores = lexical(s["question"])
-        proposal = router.propose(s["question"]) if ranked else {"mode": "not_called", "topic": None, "reason": "No supported topic match"}
+        proposal = router.propose(s["question"]) if ranked or getattr(router, "trained", False) else {"mode": "not_called", "topic": None, "reason": "No supported topic match"}
         topics = ranked[:2]
-        # LLM can break lexical ties, but cannot introduce unsupported topics.
+        # Only a confidence-accepted prediction from the exact artifact that
+        # passed the saved local test gate can add an allowlisted source topic.
+        if proposal.get("pilot_gate_passed") and proposal.get("accepted") and proposal.get("topic") in CARDS:
+            topics = ([proposal["topic"]] + [t for t in topics if t != proposal["topic"]])[:2]
+            proposal["routing_decision"] = "trained_assist"
+        else:
+            proposal["routing_decision"] = "keyword_fallback" if topics else "abstain"
         if len(topics) == 2 and scores[topics[0]] == scores[topics[1]] and proposal.get("topic") in topics:
             topics.sort(key=lambda t: t != proposal["topic"])
         return {"topics": topics, "routing": {**proposal, "baseline_topics": ranked[:2], "selected_topics": topics}}

@@ -1,0 +1,302 @@
+{
+  "executed_at_utc": "2026-10-25T23:25:13.527975+00:00",
+  "mode": "live",
+  "description": "Real local CPU LLM; in-process HTTP API client; source mode explicitly selected; no model mocks.",
+  "responses": [
+    {
+      "status": "answered",
+      "message": "Here are the relevant official guidance cards.",
+      "cards": [
+        {
+          "topic": "graduate",
+          "title": "Plan your post-study next step",
+          "summary": "The published Graduate visa guidance distinguishes applications made by 31 December 2026 (two years) from those made from 1 January 2027 (18 months). Doctoral qualifications have a three-year duration. This is general guidance, not a decision on your eligibility.",
+          "actions": [
+            "Read the eligibility and application sections on GOV.UK.",
+            "Ask your university when it can report successful completion and discuss your own visa expiry with its international adviser."
+          ],
+          "source": {
+            "topic": "graduate",
+            "url": "https://www.gov.uk/graduate-visa",
+            "api_url": "https://www.gov.uk/api/content/graduate-visa",
+            "mode": "live",
+            "status": "verified",
+            "checked_at_utc": "2026-10-25T23:24:51.496491+00:00",
+            "public_updated_at": "2024-10-31T17:01:07+00:00",
+            "sha256": "1a0ee57a162836f8b9a3317da9ba4ea285fec426b0d36d2478a942f0e39100f9",
+            "matches_reviewed_source": true,
+            "checks_passed": [
+              true,
+              true,
+              true
+            ],
+            "transport": "network",
+            "cache_age_seconds": 0
+          },
+          "nation_note": null
+        }
+      ],
+      "routing": {
+        "mode": "trained_qwen_head",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "serving_policy": "local_pilot_assist",
+        "pilot_gate_passed": true,
+        "topic": "graduate",
+        "accepted": true,
+        "label_probability": 0.9994,
+        "threshold": 0.9,
+        "latency_ms": 9974.47,
+        "routing_decision": "trained_assist",
+        "baseline_topics": [
+          "graduate"
+        ],
+        "selected_topics": [
+          "graduate"
+        ]
+      },
+      "notice": "General information and source navigation only. No individual immigration, legal or financial eligibility decisions. Do not enter passport numbers, account details or other sensitive information.",
+      "handoff": "For an individual decision, ask your university international student advice team. Quote the support reference if reporting a problem with this app.",
+      "request_id": "0a147bf2-8d5c-4132-8454-acdeb93026a9",
+      "latency_ms": 14147.2,
+      "data_mode": "live"
+    },
+    {
+      "status": "answered",
+      "message": "Here are the relevant official guidance cards.",
+      "cards": [
+        {
+          "topic": "work",
+          "title": "Check before accepting work",
+          "summary": "Student work permissions depend on your course and circumstances. Check your own permission and your university's term dates before accepting work. The Student visa overview lists self-employment among restricted activities; exceptions and other employment conditions need qualified advice.",
+          "actions": [
+            "Check your eVisa or decision letter for your work condition.",
+            "Ask your university adviser about term time, dissertation periods, multiple jobs and any proposed freelance work."
+          ],
+          "source": {
+            "topic": "work",
+            "url": "https://www.gov.uk/student-visa",
+            "api_url": "https://www.gov.uk/api/content/student-visa",
+            "mode": "live",
+            "status": "verified",
+            "checked_at_utc": "2026-10-25T23:24:55.776196+00:00",
+            "public_updated_at": "2024-10-31T17:00:02+00:00",
+            "sha256": "8b9436e5214ef03d6ff02c3932651af5ee2259af7afff3a9e3da9f55b7ed26b8",
+            "matches_reviewed_source": true,
+            "checks_passed": [
+              true,
+              true
+            ],
+            "transport": "network",
+            "cache_age_seconds": 0
+          },
+          "nation_note": null
+        }
+      ],
+      "routing": {
+        "mode": "trained_qwen_head",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "serving_policy": "local_pilot_assist",
+        "pilot_gate_passed": true,
+        "topic": "work",
+        "accepted": true,
+        "label_probability": 0.9949,
+        "threshold": 0.9,
+        "latency_ms": 85.76,
+        "routing_decision": "trained_assist",
+        "baseline_topics": [
+          "work"
+        ],
+        "selected_topics": [
+          "work"
+        ]
+      },
+      "notice": "General information and source navigation only. No individual immigration, legal or financial eligibility decisions. Do not enter passport numbers, account details or other sensitive information.",
+      "handoff": "For an individual decision, ask your university international student advice team. Quote the support reference if reporting a problem with this app.",
+      "request_id": "e7a4a1b3-7703-4a5f-be32-2baa1ece446f",
+      "latency_ms": 4275.15,
+      "data_mode": "live"
+    },
+    {
+      "status": "answered",
+      "message": "Here are the relevant official guidance cards.",
+      "cards": [
+        {
+          "topic": "housing",
+          "title": "Protect your accommodation deposit",
+          "summary": "Deposit protection depends on the tenancy and UK nation. Use the official guide to check the applicable scheme and ask your university accommodation team before paying or signing something you do not understand.",
+          "actions": [
+            "Check your tenancy type and the appropriate deposit scheme.",
+            "Have the university accommodation team review an unfamiliar offer; this assistant cannot verify a landlord or listing."
+          ],
+          "source": {
+            "topic": "housing",
+            "url": "https://www.gov.uk/tenancy-deposit-protection",
+            "api_url": "https://www.gov.uk/api/content/tenancy-deposit-protection",
+            "mode": "live",
+            "status": "verified",
+            "checked_at_utc": "2026-10-25T23:25:00.764066+00:00",
+            "public_updated_at": "2024-11-05T15:16:55+00:00",
+            "sha256": "3e70d9a8cdfef10ab11a4bd9191721cb370f792b2ba80dd55185224c488dcb26",
+            "matches_reviewed_source": true,
+            "checks_passed": [
+              true,
+              true,
+              true
+            ],
+            "transport": "network",
+            "cache_age_seconds": 0
+          },
+          "nation_note": "Use the separate Scotland scheme linked in the official guide; England's rules must not be applied automatically."
+        }
+      ],
+      "routing": {
+        "mode": "trained_qwen_head",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "serving_policy": "local_pilot_assist",
+        "pilot_gate_passed": true,
+        "topic": "housing",
+        "accepted": true,
+        "label_probability": 0.9999,
+        "threshold": 0.9,
+        "latency_ms": 75.42,
+        "routing_decision": "trained_assist",
+        "baseline_topics": [
+          "housing"
+        ],
+        "selected_topics": [
+          "housing"
+        ]
+      },
+      "notice": "General information and source navigation only. No individual immigration, legal or financial eligibility decisions. Do not enter passport numbers, account details or other sensitive information.",
+      "handoff": "For an individual decision, ask your university international student advice team. Quote the support reference if reporting a problem with this app.",
+      "request_id": "b11f0fec-96d9-48d7-9377-c2c261f0198c",
+      "latency_ms": 4978.95,
+      "data_mode": "live"
+    },
+    {
+      "status": "answered",
+      "message": "Here are the relevant official guidance cards.",
+      "cards": [
+        {
+          "topic": "tax",
+          "title": "Understand a Council Tax bill",
+          "summary": "The GOV.UK guide describes Council Tax exemptions for households entirely made up of qualifying full-time students. Mixed households can be treated differently. This is not a guarantee that your bill is wrong; check with the council.",
+          "actions": [
+            "Request evidence of student status from your university.",
+            "Ask your council about the exemption or discount process for your household."
+          ],
+          "source": {
+            "topic": "tax",
+            "url": "https://www.gov.uk/council-tax/discounts-for-full-time-students",
+            "api_url": "https://www.gov.uk/api/content/council-tax/discounts-for-full-time-students",
+            "mode": "live",
+            "status": "verified",
+            "checked_at_utc": "2026-10-25T23:25:09.424310+00:00",
+            "public_updated_at": "2025-02-05T14:40:44+00:00",
+            "sha256": "c871f0283cef286fdd6c4346d59e4d2176ed120377f94ffbdb05f053689864f6",
+            "matches_reviewed_source": true,
+            "checks_passed": [
+              true,
+              true
+            ],
+            "transport": "network",
+            "cache_age_seconds": 0
+          },
+          "nation_note": null
+        }
+      ],
+      "routing": {
+        "mode": "trained_qwen_head",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "serving_policy": "local_pilot_assist",
+        "pilot_gate_passed": true,
+        "topic": "other",
+        "accepted": false,
+        "label_probability": 0.461,
+        "threshold": 0.9,
+        "latency_ms": 70.23,
+        "routing_decision": "keyword_fallback",
+        "baseline_topics": [
+          "tax"
+        ],
+        "selected_topics": [
+          "tax"
+        ]
+      },
+      "notice": "General information and source navigation only. No individual immigration, legal or financial eligibility decisions. Do not enter passport numbers, account details or other sensitive information.",
+      "handoff": "For an individual decision, ask your university international student advice team. Quote the support reference if reporting a problem with this app.",
+      "request_id": "a7fed0a2-1bd5-4c51-a346-1fc15af61195",
+      "latency_ms": 8657.21,
+      "data_mode": "live"
+    },
+    {
+      "status": "answered",
+      "message": "Here are the relevant official guidance cards.",
+      "cards": [
+        {
+          "topic": "scams",
+          "title": "Pause an unexpected payment demand",
+          "summary": "Unexpected contacts claiming to be the Home Office and demanding money or personal details may be scams. Do not pay or share information with the caller. Use independently found official channels and your university's student support team to check the demand.",
+          "actions": [
+            "Stop contact and avoid using links or callback details supplied in the message.",
+            "Open the official guidance and show the message to your university adviser. If money was sent, contact your bank through its official channel."
+          ],
+          "source": {
+            "topic": "scams",
+            "url": "https://www.gov.uk/government/publications/frauds-tricks-and-scams/fraud-tricks-and-scams",
+            "api_url": "https://www.gov.uk/api/content/government/publications/frauds-tricks-and-scams/fraud-tricks-and-scams",
+            "mode": "live",
+            "status": "verified",
+            "checked_at_utc": "2026-10-25T23:25:13.524229+00:00",
+            "public_updated_at": "2025-10-16T15:09:26+01:00",
+            "sha256": "1b88bdd8ec898d07c6884a35580484655f9255aeeb8b04732b8399d1f83e17c1",
+            "matches_reviewed_source": true,
+            "checks_passed": [
+              true,
+              true
+            ],
+            "transport": "network",
+            "cache_age_seconds": 0
+          },
+          "nation_note": null
+        }
+      ],
+      "routing": {
+        "mode": "trained_qwen_head",
+        "model": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "serving_policy": "local_pilot_assist",
+        "pilot_gate_passed": true,
+        "topic": "scams",
+        "accepted": false,
+        "label_probability": 0.4291,
+        "threshold": 0.9,
+        "latency_ms": 71.83,
+        "routing_decision": "keyword_fallback",
+        "baseline_topics": [
+          "scams"
+        ],
+        "selected_topics": [
+          "scams"
+        ]
+      },
+      "notice": "General information and source navigation only. No individual immigration, legal or financial eligibility decisions. Do not enter passport numbers, account details or other sensitive information.",
+      "handoff": "For an individual decision, ask your university international student advice team. Quote the support reference if reporting a problem with this app.",
+      "request_id": "e9dbf31e-7229-47f2-9897-e3c67695b573",
+      "latency_ms": 4095.23,
+      "data_mode": "live"
+    }
+  ],
+  "metrics": "student_copilot_requests_total 5\nstudent_copilot_problem_responses_total 0\nstudent_copilot_request_duration_ms_sum 36153.74\nstudent_copilot_source_failures_total 0\nstudent_copilot_feedback_total 0\n",
+  "health": {
+    "status": "ok",
+    "data_mode": "live",
+    "llm_enabled": true,
+    "llm_loaded": true,
+    "scope": "local prototype; not public production"
+  }
+}

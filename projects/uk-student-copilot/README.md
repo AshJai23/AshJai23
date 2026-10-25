@@ -4,9 +4,9 @@ A runnable, source-grounded support assistant for international students in the
 UK. It helps visitors find a useful next step about student work, post-study
 plans, tenancy deposits, Council Tax and suspicious payment demands.
 
-**Status:** tested local prototype with real CPU LLM inference and real GOV.UK
-source requests. Not publicly deployed, legally reviewed or operated for real
-users. This is an additional user-requested project, outside the 44-project
+**Status:** trained local-pilot prototype with a fitted Qwen-based routing head
+and real GOV.UK source requests. It passed the saved local test gate. Not publicly
+deployed, independently legally reviewed or operated for real users. This is an additional user-requested project, outside the 44-project
 sprint; it does not increase that sprint's completed count.
 
 ## Try it
@@ -21,11 +21,11 @@ source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
 python -m pip install -r requirements.txt -r requirements-llm.txt
-python -m uvicorn app:app --host 127.0.0.1 --port 8000 --no-access-log --limit-concurrency 8
+python launch.py --mode live
 ```
 
 Open **http://127.0.0.1:8000**. API documentation is at `/docs`. No API key or
-account is needed. The first supported question downloads the pinned public
+account is needed. The first launch downloads the pinned public
 Qwen2.5-0.5B-Instruct model (about 1 GB of weights plus tokenizer), then runs
 locally. Allow several minutes and at least 4 GB available RAM. Subsequent
 questions reuse it. No questions are sent to Hugging Face: it supplies model
@@ -57,9 +57,11 @@ LangGraph orchestrates four bounded steps:
 
 1. **Guard:** reject a few common personal identifier patterns. This is not a
    comprehensive privacy filter; ask general questions only.
-2. **Route:** a lexical baseline finds supported topics. A real local LLM
-   proposes one of six labels by constrained next-token scoring. It may order
-   tied matching topics, but cannot add an unsupported source or write advice.
+2. **Route:** a trained 10,758-parameter classifier uses frozen Qwen language
+   features to propose one of six topics. Confidence of at least 0.90 and the
+   matching saved local-pilot gate allow an official topic to be selected.
+   Uncertain or failed model requests use the explicit keyword fallback. The
+   model cannot invent source URLs or write immigration advice.
 3. **Read:** fetch up to two fixed resources from the public GOV.UK Content API.
    Cache successes for 15 minutes and failures for 60 seconds. Check source
    identity, withdrawal, required phrases and the reviewed text SHA-256.
@@ -81,7 +83,7 @@ official source and ask an adviser about individual circumstances.
 
 ```bash
 python -m unittest discover -s tests -v
-python evaluate.py
+python train_router.py --evaluate-test
 python smoke.py --mode live --output outputs/live-smoke.json
 python smoke.py --mode replay --output outputs/replay-smoke.json
 # Optional front-end DOM checks; Node.js 20+:
@@ -89,20 +91,35 @@ npm install
 npm test
 ```
 
-`evaluate.py` requires the real local model and raises an error if it cannot run;
-it never substitutes mock model results. Its 24 author-written questions are a
-development smoke set, not a representative held-out benchmark. This project
-uses an existing pretrained model; **no local training/fine-tuning took place**.
+`train_router.py --evaluate-test` loads the published trained head and evaluates
+48 held-out authored questions; it fails if the model cannot run. To reproduce
+training from the fixed data, run `python train_router.py` before evaluation.
+That creates a new head, selects its epoch and confidence threshold on validation
+only, and records timings and hashes. Never tune on the final test results.
+
+Training used 144 AI-authored synthetic intent examples, 36 validation examples
+and 48 test examples, with paired paraphrase families kept in separate splits.
+These are not real student conversations or an independent human benchmark.
+Only the classification head was fitted; **the base Qwen weights were frozen**.
+Official immigration guidance remains fetched content, not model training data.
+See [TRAINING.md](TRAINING.md) for measured results and launch limits.
 
 Actual evidence:
 
-- [Validation log](examples/validation.txt): executed checks and their limits.
+- [Training validation log](examples/training-validation.txt): 35 tests, UI
+  checks, measured fitting/evaluation, live source checks and launch evidence.
+- [Earlier validation log](examples/validation.txt): historical checks and limits.
 - [Routing evaluation](examples/routing-evaluation.json): raw LLM, lexical and
   guarded routes, timings, model revision and every question/result.
-- [Live smoke run](examples/live-smoke.json): real source requests and local LLM
-  responses through the web API, plus operational metrics.
-- [Localhost HTTP smoke](examples/http-smoke.json): a real Uvicorn server and
-  HTTP requests, with explicit replay sources and actual local model inference.
+- [Trained live smoke run](examples/trained-live-smoke.json): current trained
+  router with real source requests through the web API and operational metrics.
+- [Training report](examples/training-report.json) and [held-out results](examples/heldout-evaluation.json): fitted parameters, epochs, losses, baselines and individual failures.
+- [Earlier prompt-model live smoke](examples/live-smoke.json): retained historical evidence from before supervised training.
+- [Trained launch HTTP smoke](examples/trained-http-smoke.json): the new launch
+  command starts a real server; HTTP requests use the actual trained model and
+  explicitly replayed source data.
+- [Earlier localhost HTTP smoke](examples/http-smoke.json): retained historical
+  server check from before supervised training.
 - [Real source snapshot](examples/source_snapshot.json): reproducible replay,
   captured with timestamps; no synthetic fallback data.
 - [Initial model trial](examples/initial-small-model-evaluation.json): poor
@@ -112,14 +129,18 @@ The test suite uses the saved real snapshot and explicit failure/changed-content
 fixtures. DOM checks mock HTTP with the saved real smoke responses. They do not
 establish visual layout, screen-reader or cross-browser correctness.
 
-Measured on the 24 development questions: the raw small Qwen model selected the
-expected topic **8/24** times, versus **24/24** for the lexical baseline and
-guarded workflow. Median measured model-call time was **878 ms**, with **10.6 s**
-for the first call in that evaluation (weights already cached). These questions
-were used during prompt development, so these are smoke results, not held-out
-accuracy. The LLM did not improve on the baseline and is not ready for unrestricted
-answer generation. It remains constrained to a topic proposal. No local model
-training took place; the six prompt examples are not gradient training.
+The trained head scored **43/48 (89.6%)** on the held-out synthetic test, versus
+**40/48 (83.3%)** for the lexical baseline. At the validation-chosen threshold,
+**33/34 accepted proposals were correct (97.1%)**; it covered 85% of the 40
+in-scope questions and falsely accepted none of the eight out-of-scope questions.
+One high-confidence error remains: a postgraduate vacation/shift question was
+routed to Graduate guidance rather than work guidance. This is not proof of
+performance on real student questions or of immigration/legal accuracy.
+
+The older 24-question prompt-model development results remain in
+`examples/routing-evaluation.json`; they measure the previous untrained router
+and must not be compared directly with the new held-out test as a controlled
+before/after experiment.
 
 ## Monitoring, feedback and support
 
@@ -147,7 +168,8 @@ No cloud deployment or paid service was created.
 ## Limits and useful next work
 
 Coverage is five topics, English only, and no university-specific services. The
-LLM cannot add sources, so unfamiliar wording may be rejected. Reviewed hashes
+trained classifier selects only fixed source topics, so unfamiliar wording may
+be rejected or fall back to keywords. Reviewed hashes
 protect against silently serving outdated summaries but can suppress useful
 answers after any source change. Source checks are not a legal audit. Public
 guidance may lag policy; source timestamps are displayed exactly as supplied.

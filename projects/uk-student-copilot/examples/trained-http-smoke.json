@@ -1,0 +1,91 @@
+{
+  "executed_at_utc": "2026-10-25T23:27:13.712804+00:00",
+  "command": "python launch.py --mode replay",
+  "mode": "Real localhost HTTP server, actual trained Qwen head; explicitly replayed source data",
+  "health": {
+    "status": "ok",
+    "data_mode": "replay",
+    "llm_enabled": true,
+    "llm_loaded": true,
+    "scope": "local prototype; not public production"
+  },
+  "get_checks": [
+    {
+      "endpoint": "/",
+      "status": 200,
+      "bytes": 3075
+    },
+    {
+      "endpoint": "/static/style.css",
+      "status": 200,
+      "bytes": 5248
+    },
+    {
+      "endpoint": "/static/app.js",
+      "status": 200,
+      "bytes": 3794
+    },
+    {
+      "endpoint": "/metrics",
+      "status": 200,
+      "bytes": 190
+    }
+  ],
+  "answer": {
+    "status": "answered",
+    "message": "Here are the relevant official guidance cards.",
+    "cards": [
+      {
+        "topic": "work",
+        "title": "Check before accepting work",
+        "summary": "Student work permissions depend on your course and circumstances. Check your own permission and your university's term dates before accepting work. The Student visa overview lists self-employment among restricted activities; exceptions and other employment conditions need qualified advice.",
+        "actions": [
+          "Check your eVisa or decision letter for your work condition.",
+          "Ask your university adviser about term time, dissertation periods, multiple jobs and any proposed freelance work."
+        ],
+        "source": {
+          "topic": "work",
+          "url": "https://www.gov.uk/student-visa",
+          "api_url": "https://www.gov.uk/api/content/student-visa",
+          "mode": "replay",
+          "status": "verified",
+          "checked_at_utc": "2026-10-25T23:07:05.316399+00:00",
+          "public_updated_at": "2024-10-31T17:00:02+00:00",
+          "sha256": "8b9436e5214ef03d6ff02c3932651af5ee2259af7afff3a9e3da9f55b7ed26b8",
+          "matches_reviewed_source": true,
+          "checks_passed": [
+            true,
+            true
+          ],
+          "transport": "cache",
+          "cache_age_seconds": 10.83
+        },
+        "nation_note": null
+      }
+    ],
+    "routing": {
+      "mode": "trained_qwen_head",
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "serving_policy": "local_pilot_assist",
+      "pilot_gate_passed": true,
+      "topic": "work",
+      "accepted": true,
+      "label_probability": 0.9949,
+      "threshold": 0.9,
+      "latency_ms": 77.9,
+      "routing_decision": "trained_assist",
+      "baseline_topics": [
+        "work"
+      ],
+      "selected_topics": [
+        "work"
+      ]
+    },
+    "notice": "General information and source navigation only. No individual immigration, legal or financial eligibility decisions. Do not enter passport numbers, account details or other sensitive information.",
+    "handoff": "For an individual decision, ask your university international student advice team. Quote the support reference if reporting a problem with this app.",
+    "request_id": "e1d1a803-8c27-4cfb-9dbe-6db0f0d786be",
+    "latency_ms": 82.96,
+    "data_mode": "replay"
+  }
+}

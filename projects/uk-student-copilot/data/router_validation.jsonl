@@ -1,0 +1,36 @@
+{"text": "Can I switch from Student permission after my award?", "label": "graduate", "family": "graduate-validation-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Which immigration route follows a successful UK qualification?", "label": "graduate", "family": "graduate-validation-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "My bachelors is over and I want time to find employment.", "label": "graduate", "family": "graduate-validation-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is there permission to look for work after graduating?", "label": "graduate", "family": "graduate-validation-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does the date of my Graduate application affect its length?", "label": "graduate", "family": "graduate-validation-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Will applying for the graduate route next year change the duration?", "label": "graduate", "family": "graduate-validation-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can my employer average my hours over a month?", "label": "work", "family": "work-validation-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "May I compensate for a long shift week by working less later?", "label": "work", "family": "work-validation-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "A shop offered me weekend shifts; what permission should I check?", "label": "work", "family": "work-validation-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What should I check before joining a cafe as staff?", "label": "work", "family": "work-validation-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "May I sell services online while studying in Britain?", "label": "work", "family": "work-validation-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does doing paid projects for clients count as self-employment?", "label": "work", "family": "work-validation-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "The agent says my deposit is held securely but has not named a scheme.", "label": "housing", "family": "housing-validation-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Where should a tenancy contract name the deposit provider?", "label": "housing", "family": "housing-validation-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "My room contract is difficult to understand.", "label": "housing", "family": "housing-validation-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can someone check my accommodation agreement before I sign?", "label": "housing", "family": "housing-validation-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does renting in Wales have the same deposit schemes as England?", "label": "housing", "family": "housing-validation-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Where do Welsh student tenants check deposit protection?", "label": "housing", "family": "housing-validation-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "I moved to a different council area; do I apply for student exemption again?", "label": "tax", "family": "tax-validation-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does Council Tax relief transfer when I change address?", "label": "tax", "family": "tax-validation-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can I ask my council to correct a student-status error?", "label": "tax", "family": "tax-validation-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Who can amend my household's Council Tax bill?", "label": "tax", "family": "tax-validation-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Does a household with one non-student pay the full council bill?", "label": "tax", "family": "tax-validation-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Where can I check a Council Tax discount for a mixed flat?", "label": "tax", "family": "tax-validation-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "A fake official says the police are coming unless I transfer cash.", "label": "scams", "family": "scams-validation-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Someone threatens arrest over my visa and asks for money.", "label": "scams", "family": "scams-validation-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "An immigration caller provided a callback number to pay a penalty.", "label": "scams", "family": "scams-validation-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Is a callback number enough to trust a Home Office fine?", "label": "scams", "family": "scams-validation-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "A person asks me to move funds through my bank account for a commission.", "label": "scams", "family": "scams-validation-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Could an easy-money transfer offer be fraud?", "label": "scams", "family": "scams-validation-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Can you repair my broken washing machine?", "label": "other", "family": "other-validation-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How do I fix an appliance that will not switch on?", "label": "other", "family": "other-validation-01", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "What is the quickest train to Edinburgh?", "label": "other", "family": "other-validation-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Find a bus timetable for Oxford.", "label": "other", "family": "other-validation-02", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "Translate this sentence into Spanish.", "label": "other", "family": "other-validation-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}
+{"text": "How do I say hello in French?", "label": "other", "family": "other-validation-03", "provenance": "AI-authored synthetic intent example; not a student conversation"}

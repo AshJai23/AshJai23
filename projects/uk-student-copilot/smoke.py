@@ -5,14 +5,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 from fastapi.testclient import TestClient
 from app import create_app
-from router import LocalRouter
+from trained_router import TrainedRouter
 from sources import SourceStore
 
 
 def main():
     p = argparse.ArgumentParser(); p.add_argument("--mode", choices=["live", "replay"], default="live"); p.add_argument("--output", default="outputs/smoke.json")
     args = p.parse_args()
-    app = create_app(SourceStore(args.mode), LocalRouter(), db_path=":memory:")
+    app = create_app(SourceStore(args.mode), TrainedRouter(), db_path=":memory:")
     c = TestClient(app); rows = []
     for q, nation in [("What changes for the Graduate visa in 2027?", "England"), ("Can I freelance while studying?", "England"),
                       ("How do I protect my rental deposit?", "Scotland"), ("I got a Council Tax bill", "England"),
@@ -25,7 +25,7 @@ def main():
               "responses": rows, "metrics": c.get("/metrics").text, "health": c.get("/healthz").json()}
     target = Path(args.output); target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(report, indent=2) + "\n")
-    assert all(r.get("routing", {}).get("mode") == "local_llm" for r in rows), "Actual model inference failed; see saved evidence"
+    assert all(r.get("routing", {}).get("mode") == "trained_qwen_head" for r in rows), "Actual trained model inference failed; see saved evidence"
     assert all(r["status"] == "answered" for r in rows), "Source unavailable or changed; see saved evidence"
 
 

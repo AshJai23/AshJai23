@@ -1,0 +1,163 @@
+Executed at 2026-10-25T23:26:22.868185+00:00
+COMMAND: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python -m unittest discover -s tests -v
+
+test_all_five_real_snapshots_match_reviewed_sources (test_copilot.CopilotTests.test_all_five_real_snapshots_match_reviewed_sources) ... ok
+test_cache_reports_age_and_original_check_time (test_copilot.CopilotTests.test_cache_reports_age_and_original_check_time) ... ok
+test_changed_source_even_with_same_keywords_withholds_summary (test_copilot.CopilotTests.test_changed_source_even_with_same_keywords_withholds_summary) ... ok
+test_council_tax_content_api_parent_alias (test_copilot.CopilotTests.test_council_tax_content_api_parent_alias) ... ok
+test_does_not_assume_every_student_can_work_20_hours (test_copilot.CopilotTests.test_does_not_assume_every_student_can_work_20_hours) ... ok
+test_email_is_blocked_before_model_or_network (test_copilot.CopilotTests.test_email_is_blocked_before_model_or_network) ... ok
+test_explicit_baseline_and_replay_labels (test_copilot.CopilotTests.test_explicit_baseline_and_replay_labels) ... ok
+test_feedback_support_reference_and_metrics (test_copilot.CopilotTests.test_feedback_support_reference_and_metrics) ... ok
+test_graduate_2027_change_is_visible (test_copilot.CopilotTests.test_graduate_2027_change_is_visible) ... ok
+test_identifier_pattern_is_blocked (test_copilot.CopilotTests.test_identifier_pattern_is_blocked) ... ok
+test_injection_cannot_add_a_tool_url_or_claim (test_copilot.CopilotTests.test_injection_cannot_add_a_tool_url_or_claim) ... ok
+test_live_failure_never_falls_back_to_saved_replay (test_copilot.CopilotTests.test_live_failure_never_falls_back_to_saved_replay) ... ok
+test_model_exception_is_an_explicit_fallback (test_copilot.CopilotTests.test_model_exception_is_an_explicit_fallback) ... ok
+test_northern_ireland_council_tax_is_withheld (test_copilot.CopilotTests.test_northern_ireland_council_tax_is_withheld) ... ok
+test_origin_and_host_restrictions (test_copilot.CopilotTests.test_origin_and_host_restrictions) ... ok
+test_question_length_validation (test_copilot.CopilotTests.test_question_length_validation) ... ok
+test_rate_limit (test_copilot.CopilotTests.test_rate_limit) ... ok
+test_removed_anchor_withholds_summary (test_copilot.CopilotTests.test_removed_anchor_withholds_summary) ... ok
+test_request_body_limit (test_copilot.CopilotTests.test_request_body_limit) ... ok
+test_scotland_housing_does_not_assume_english_rules (test_copilot.CopilotTests.test_scotland_housing_does_not_assume_english_rules) ... ok
+test_static_assets_and_csp (test_copilot.CopilotTests.test_static_assets_and_csp) ... ok
+test_telemetry_stores_no_question_or_ip (test_copilot.CopilotTests.test_telemetry_stores_no_question_or_ip) ... ok
+test_unknown_nation_rejected (test_copilot.CopilotTests.test_unknown_nation_rejected) ... ok
+test_unknown_questions_abstain (test_copilot.CopilotTests.test_unknown_questions_abstain) ... ok
+test_untrusted_topic_rejected (test_copilot.CopilotTests.test_untrusted_topic_rejected) ... ok
+test_withdrawn_source_is_not_used (test_copilot.CopilotTests.test_withdrawn_source_is_not_used) ... ok
+test_confidence_threshold_comes_from_validation (test_training.TrainingTests.test_confidence_threshold_comes_from_validation) ... ok
+test_each_split_is_balanced_and_explicitly_synthetic (test_training.TrainingTests.test_each_split_is_balanced_and_explicitly_synthetic) ... ok
+test_even_passed_gate_cannot_introduce_an_arbitrary_tool_url (test_training.TrainingTests.test_even_passed_gate_cannot_introduce_an_arbitrary_tool_url) ... ok
+test_low_confidence_proposal_keeps_reviewed_source_path (test_training.TrainingTests.test_low_confidence_proposal_keeps_reviewed_source_path) ... ok
+test_missing_trained_weights_never_claim_inference_success (test_training.TrainingTests.test_missing_trained_weights_never_claim_inference_success) ... ok
+test_passed_gate_allows_semantic_routing_to_fixed_source (test_training.TrainingTests.test_passed_gate_allows_semantic_routing_to_fixed_source) ... ok
+test_preassigned_family_splits_are_disjoint (test_training.TrainingTests.test_preassigned_family_splits_are_disjoint) ... ok
+test_trained_artifact_matches_saved_fit_and_test (test_training.TrainingTests.test_trained_artifact_matches_saved_fit_and_test) ... ok
+test_trained_proposal_does_not_bypass_source_guard (test_training.TrainingTests.test_trained_proposal_does_not_bypass_source_guard) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 0.227s
+
+OK
+
+EXIT CODE: 0
+COMMAND: node --check static/app.js
+
+
+EXIT CODE: 0
+COMMAND: node tests/ui.mjs
+UI DOM checks passed: examples, submission, busy state, real-source card rendering, provenance link, feedback, rate-limit recovery. HTTP mocked; no browser rendering claimed.
+
+
+EXIT CODE: 0
+TRAINING: python train_router.py
+{
+  "trained_at_utc": "2026-10-25T23:22:44.068656+00:00",
+  "seed": 42,
+  "data": "AI-authored synthetic intent examples, not real student data",
+  "split_counts": {
+    "train": 144,
+    "validation": 36,
+    "test": 48
+  },
+  "split_policy": "Scenario-family groups assigned before fit; no duplicate text or group across splits. Test labels/text not used for fitting or threshold selection; split checker reads them only to verify disjointness.",
+  "trained_parameters": 10758,
+  "base_model_parameters_updated": 0,
+  "feature_extraction_seconds": 25.998430121000183,
+  "classifier_fit_seconds": 0.34487750900007086,
+  "epochs_run": 400,
+  "selected_epoch": 400,
+  "train_accuracy": 1.0,
+  "validation_accuracy": 0.8888888955116272,
+  "chosen_threshold": {
+    "threshold": 0.9,
+    "accepted": 22,
+    "correct": 22,
+    "accepted_precision": 1.0,
+    "out_of_scope_false_accepts": 0
+  },
+  "artifact_sha256": "66a5b6301342de80d9ad12b4d1f2419d64e32b6909797c0fd0cdcf13a88271ed",
+  "dataset_sha256": {
+    "train": "145176c54a093944c62dc8b281670288871c813bf3f3106f978b6267fed49831",
+    "validation": "83530ef1645d392511b39fe23e43b01d291d76cefb8cf156602dca12654bc653",
+    "test": "8d440a50d0a15cafce1e93a4a1e0fd73f157681e6be0ad8e962bb871768efda5"
+  },
+  "training_scope": "Supervised classification head on frozen pretrained Qwen features. Not full Qwen fine-tuning and not learning visa rules."
+}
+HELDOUT: python train_router.py --evaluate-test
+{
+  "evaluated_at_utc": "2026-10-25T23:23:28.850705+00:00",
+  "artifact_sha256": "66a5b6301342de80d9ad12b4d1f2419d64e32b6909797c0fd0cdcf13a88271ed",
+  "test_count": 48,
+  "test_accuracy": 0.8958333333333334,
+  "test_correct": 43,
+  "lexical_baseline_correct": 40,
+  "majority_baseline_correct": 8,
+  "accepted_count": 34,
+  "accepted_correct": 33,
+  "accepted_precision": 0.9705882352941176,
+  "known_topic_coverage": 0.85,
+  "out_of_scope_false_accepts": 0,
+  "evaluation_seconds": 14.577462974000355,
+  "limitations": "Single small synthetic held-out scenario-family test; authored by the same AI that built the training set. Not independent student feedback, legal accuracy, or a public-launch certification.",
+  "local_pilot_gate": true
+}
+LIVE SOURCE / TRAINED INFERENCE: python smoke.py --mode live --output examples/trained-live-smoke.json
+{"status": "answered", "mode": "trained_qwen_head", "policy": "local_pilot_assist", "decision": "trained_assist", "cards": [{"topic": "graduate", "source_status": "verified", "transport": "network"}]}
+{"status": "answered", "mode": "trained_qwen_head", "policy": "local_pilot_assist", "decision": "trained_assist", "cards": [{"topic": "work", "source_status": "verified", "transport": "network"}]}
+{"status": "answered", "mode": "trained_qwen_head", "policy": "local_pilot_assist", "decision": "trained_assist", "cards": [{"topic": "housing", "source_status": "verified", "transport": "network"}]}
+{"status": "answered", "mode": "trained_qwen_head", "policy": "local_pilot_assist", "decision": "keyword_fallback", "cards": [{"topic": "tax", "source_status": "verified", "transport": "network"}]}
+{"status": "answered", "mode": "trained_qwen_head", "policy": "local_pilot_assist", "decision": "keyword_fallback", "cards": [{"topic": "scams", "source_status": "verified", "transport": "network"}]}
+LIMITS: no public hosting, no real student pilot, no independent legal review. Docker unavailable, so Docker/Compose remain untested. DOM checks mock HTTP; no browser visual audit claimed.
+
+LAUNCH PREFLIGHT: python launch.py --mode live --check-only
+{
+  "ready_for": "local pilot only",
+  "source_mode": "live",
+  "sources": {
+    "graduate": "verified",
+    "work": "verified",
+    "housing": "verified",
+    "tax": "verified",
+    "scams": "verified"
+  },
+  "trained_model": "trained_qwen_head",
+  "artifact_sha256": "66a5b6301342de80d9ad12b4d1f2419d64e32b6909797c0fd0cdcf13a88271ed",
+  "public_deployment": false,
+  "command": "python launch.py --mode live --check-only",
+  "exit_code": 0
+}
+
+
+TRAINED LAUNCH / REAL HTTP: python launch.py --mode replay
+{
+  "executed_at_utc": "2026-10-25T23:27:13.712804+00:00",
+  "get_checks": [
+    {
+      "endpoint": "/",
+      "status": 200,
+      "bytes": 3075
+    },
+    {
+      "endpoint": "/static/style.css",
+      "status": 200,
+      "bytes": 5248
+    },
+    {
+      "endpoint": "/static/app.js",
+      "status": 200,
+      "bytes": 3794
+    },
+    {
+      "endpoint": "/metrics",
+      "status": 200,
+      "bytes": 190
+    }
+  ],
+  "post_status": "answered",
+  "model": "trained_qwen_head",
+  "pilot_gate": true,
+  "source_mode": "replay"
+}
