@@ -1,0 +1,17 @@
+site,name,site_type,lat,lon,pollutant,unit,valid_hours,expected_hours,coverage,eligible,mean_available,max_available,latest_observation_utc,common_hours,mean_common_hours,nearest_eligible_site,nearest_distance_km
+MY1,Westminster - Marylebone Road,Kerbside,51.52254,-0.15459,NO2,ug/m3,20,24,0.8333333333333334,True,40.755,75.9,2026-10-25T23:00:00+00:00,20,40.755,GN0,16.216453058804362
+MY1,Westminster - Marylebone Road,Kerbside,51.52254,-0.15459,PM10,ug/m3,0,24,0.0,False,,,,0,,,
+BL0,Camden - Bloomsbury,Urban Background,51.522287,-0.125848,NO2,ug/m3,0,24,0.0,False,,,,0,,,
+BL0,Camden - Bloomsbury,Urban Background,51.522287,-0.125848,PM10,ug/m3,0,24,0.0,False,,,,0,,,
+CD1,Camden - Swiss Cottage,Kerbside,51.544219,-0.175284,NO2,ug/m3,0,24,0.0,False,,,,0,,,
+CD1,Camden - Swiss Cottage,Kerbside,51.544219,-0.175284,PM10,ug/m3,0,24,0.0,False,,,,0,,,
+KC1,Kensington and Chelsea - North Ken,Urban Background,51.5210467476039,-0.213492139585065,NO2,ug/m3,0,24,0.0,False,,,,0,,,
+KC1,Kensington and Chelsea - North Ken,Urban Background,51.5210467476039,-0.213492139585065,PM10,ug/m3,0,24,0.0,False,,,,0,,,
+GR4,Greenwich - Eltham,Suburban,51.45258,0.070766,NO2,ug/m3,0,24,0.0,False,,,,0,,,
+GR4,Greenwich - Eltham,Suburban,51.45258,0.070766,PM10,ug/m3,0,24,0.0,False,,,,0,,,
+GN0,Greenwich - A206 Burrage Grove,Roadside,51.490532,0.074003,NO2,ug/m3,24,24,1.0,True,6.045833333333333,15.4,2026-10-25T23:00:00+00:00,20,6.085,MY1,16.216453058804362
+GN0,Greenwich - A206 Burrage Grove,Roadside,51.490532,0.074003,PM10,ug/m3,9,24,0.375,False,14.622222222222222,21.2,2026-10-25T17:00:00+00:00,0,,,
+HG1,Haringey - Haringey Town Hall,Roadside,51.599302,-0.068218,NO2,ug/m3,0,24,0.0,False,,,,0,,,
+HG1,Haringey - Haringey Town Hall,Roadside,51.599302,-0.068218,PM10,ug/m3,0,24,0.0,False,,,,0,,,
+TH4,Tower Hamlets - Blackwall,Roadside,51.5150461674013,-0.00841849265642741,NO2,ug/m3,0,24,0.0,False,,,,0,,,
+TH4,Tower Hamlets - Blackwall,Roadside,51.5150461674013,-0.00841849265642741,PM10,ug/m3,0,24,0.0,False,,,,0,,,

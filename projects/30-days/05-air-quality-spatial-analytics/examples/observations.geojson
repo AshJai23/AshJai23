@@ -1,0 +1,453 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.15459,
+          51.52254
+        ]
+      },
+      "properties": {
+        "site": "MY1",
+        "name": "Westminster - Marylebone Road",
+        "site_type": "Kerbside",
+        "pollutant": "NO2",
+        "unit": "ug/m3",
+        "valid_hours": 20,
+        "expected_hours": 24,
+        "coverage": 0.8333333333333334,
+        "eligible": true,
+        "mean_available": 40.755,
+        "max_available": 75.9,
+        "latest_observation_utc": "2026-10-25T23:00:00+00:00",
+        "common_hours": 20,
+        "mean_common_hours": 40.755,
+        "nearest_eligible_site": "GN0",
+        "nearest_distance_km": 16.216453058804362
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.15459,
+          51.52254
+        ]
+      },
+      "properties": {
+        "site": "MY1",
+        "name": "Westminster - Marylebone Road",
+        "site_type": "Kerbside",
+        "pollutant": "PM10",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.125848,
+          51.522287
+        ]
+      },
+      "properties": {
+        "site": "BL0",
+        "name": "Camden - Bloomsbury",
+        "site_type": "Urban Background",
+        "pollutant": "NO2",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.125848,
+          51.522287
+        ]
+      },
+      "properties": {
+        "site": "BL0",
+        "name": "Camden - Bloomsbury",
+        "site_type": "Urban Background",
+        "pollutant": "PM10",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.175284,
+          51.544219
+        ]
+      },
+      "properties": {
+        "site": "CD1",
+        "name": "Camden - Swiss Cottage",
+        "site_type": "Kerbside",
+        "pollutant": "NO2",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.175284,
+          51.544219
+        ]
+      },
+      "properties": {
+        "site": "CD1",
+        "name": "Camden - Swiss Cottage",
+        "site_type": "Kerbside",
+        "pollutant": "PM10",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.213492139585065,
+          51.5210467476039
+        ]
+      },
+      "properties": {
+        "site": "KC1",
+        "name": "Kensington and Chelsea - North Ken",
+        "site_type": "Urban Background",
+        "pollutant": "NO2",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.213492139585065,
+          51.5210467476039
+        ]
+      },
+      "properties": {
+        "site": "KC1",
+        "name": "Kensington and Chelsea - North Ken",
+        "site_type": "Urban Background",
+        "pollutant": "PM10",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.070766,
+          51.45258
+        ]
+      },
+      "properties": {
+        "site": "GR4",
+        "name": "Greenwich - Eltham",
+        "site_type": "Suburban",
+        "pollutant": "NO2",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.070766,
+          51.45258
+        ]
+      },
+      "properties": {
+        "site": "GR4",
+        "name": "Greenwich - Eltham",
+        "site_type": "Suburban",
+        "pollutant": "PM10",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.074003,
+          51.490532
+        ]
+      },
+      "properties": {
+        "site": "GN0",
+        "name": "Greenwich - A206 Burrage Grove",
+        "site_type": "Roadside",
+        "pollutant": "NO2",
+        "unit": "ug/m3",
+        "valid_hours": 24,
+        "expected_hours": 24,
+        "coverage": 1.0,
+        "eligible": true,
+        "mean_available": 6.045833333333333,
+        "max_available": 15.4,
+        "latest_observation_utc": "2026-10-25T23:00:00+00:00",
+        "common_hours": 20,
+        "mean_common_hours": 6.085,
+        "nearest_eligible_site": "MY1",
+        "nearest_distance_km": 16.216453058804362
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.074003,
+          51.490532
+        ]
+      },
+      "properties": {
+        "site": "GN0",
+        "name": "Greenwich - A206 Burrage Grove",
+        "site_type": "Roadside",
+        "pollutant": "PM10",
+        "unit": "ug/m3",
+        "valid_hours": 9,
+        "expected_hours": 24,
+        "coverage": 0.375,
+        "eligible": false,
+        "mean_available": 14.622222222222222,
+        "max_available": 21.2,
+        "latest_observation_utc": "2026-10-25T17:00:00+00:00",
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.068218,
+          51.599302
+        ]
+      },
+      "properties": {
+        "site": "HG1",
+        "name": "Haringey - Haringey Town Hall",
+        "site_type": "Roadside",
+        "pollutant": "NO2",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.068218,
+          51.599302
+        ]
+      },
+      "properties": {
+        "site": "HG1",
+        "name": "Haringey - Haringey Town Hall",
+        "site_type": "Roadside",
+        "pollutant": "PM10",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.00841849265642741,
+          51.5150461674013
+        ]
+      },
+      "properties": {
+        "site": "TH4",
+        "name": "Tower Hamlets - Blackwall",
+        "site_type": "Roadside",
+        "pollutant": "NO2",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.00841849265642741,
+          51.5150461674013
+        ]
+      },
+      "properties": {
+        "site": "TH4",
+        "name": "Tower Hamlets - Blackwall",
+        "site_type": "Roadside",
+        "pollutant": "PM10",
+        "unit": "ug/m3",
+        "valid_hours": 0,
+        "expected_hours": 24,
+        "coverage": 0.0,
+        "eligible": false,
+        "mean_available": null,
+        "max_available": null,
+        "latest_observation_utc": null,
+        "common_hours": 0,
+        "mean_common_hours": null,
+        "nearest_eligible_site": null,
+        "nearest_distance_km": null
+      }
+    }
+  ]
+}

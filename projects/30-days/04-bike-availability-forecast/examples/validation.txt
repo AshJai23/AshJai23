@@ -1,0 +1,169 @@
+Executed at 2026-10-26T09:42:35.706084+00:00
+COMMAND: -m unittest discover -s tests -v
+
+test_bad_counts_and_unknown_operational_flags_are_rejected (test_forecast.ForecastTests.test_bad_counts_and_unknown_operational_flags_are_rejected) ... ok
+test_capacity_changes_do_not_create_leaking_features (test_forecast.ForecastTests.test_capacity_changes_do_not_create_leaking_features) ... ok
+test_conflicting_duplicate_key_is_quarantined (test_forecast.ForecastTests.test_conflicting_duplicate_key_is_quarantined) ... ok
+test_dates_outside_bounded_history_are_rejected (test_forecast.ForecastTests.test_dates_outside_bounded_history_are_rejected) ... ok
+test_global_time_split_labels_available_at_first_test_origin (test_forecast.ForecastTests.test_global_time_split_labels_available_at_first_test_origin) ... ok
+test_identical_duplicate_is_counted (test_forecast.ForecastTests.test_identical_duplicate_is_counted) ... ok
+test_missing_observation_is_not_filled_across_a_gap (test_forecast.ForecastTests.test_missing_observation_is_not_filled_across_a_gap) ... ok
+test_no_live_failure_fallback_or_partial_file (test_forecast.ForecastTests.test_no_live_failure_fallback_or_partial_file) ... ok
+test_origin_is_exactly_thirty_minutes_before_target (test_forecast.ForecastTests.test_origin_is_exactly_thirty_minutes_before_target) ... ok
+test_short_dataset_does_not_publish_metrics (test_forecast.ForecastTests.test_short_dataset_does_not_publish_metrics) ... ok
+test_target_and_future_values_do_not_change_features (test_forecast.ForecastTests.test_target_and_future_values_do_not_change_features) ... ok
+test_training_scaler_uses_training_only_and_predictions_are_bounded (test_forecast.ForecastTests.test_training_scaler_uses_training_only_and_predictions_are_bounded) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.312s
+
+OK
+
+EXIT CODE: 0
+COMMAND: main.py --input examples/source_snapshot.csv --output examples
+{
+  "built_at_utc": "2026-10-26T09:42:40.333351+00:00",
+  "mode": "Historical replay; no current operational forecast",
+  "source_sha256": "8f55022bb360a1d074d511ddf0b4219116260ffa2793b2e205df6807ae43aa20",
+  "clock": "Naive provider timestamps preserved; timezone unspecified, no UTC claim. DST transitions need source review.",
+  "horizon_minutes": 30,
+  "quality": {
+    "input_rows": 731,
+    "invalid_or_unavailable_rows": 0,
+    "conflicting_keys": 0,
+    "identical_duplicates": 0,
+    "usable_rows": 731,
+    "stations": 5,
+    "missing_grid_slots": 452,
+    "rows_without_complete_lags": 669
+  },
+  "split": {
+    "training_rows": 433,
+    "test_rows": 81,
+    "train_first_target": "2026-10-19 03:30:00",
+    "train_last_target": "2026-10-22 21:00:00",
+    "first_test_origin": "2026-10-22 21:00:00",
+    "first_test_target": "2026-10-22 21:30:00",
+    "last_test_target": "2026-10-23 22:00:00"
+  },
+  "method": "Fixed alpha=10 Ridge; scaler and station encoder fit only on earlier training rows; rolling one-step 30min holdout; no imputation or hyperparameter search",
+  "fit_seconds": 0.05393112399997335,
+  "ridge": {
+    "mae_bikes": 1.1633443110216741,
+    "rmse_bikes": 1.5960548849059664
+  },
+  "persistence": {
+    "mae_bikes": 0.7407407407407407,
+    "rmse_bikes": 1.2765694770084508
+  },
+  "per_station": [
+    {
+      "station_id": "10",
+      "test_rows": 12,
+      "ridge": {
+        "mae_bikes": 1.4636768742026307,
+        "rmse_bikes": 1.9075124011451712
+      },
+      "persistence": {
+        "mae_bikes": 1.25,
+        "rmse_bikes": 1.848422751068236
+      }
+    },
+    {
+      "station_id": "100",
+      "test_rows": 9,
+      "ridge": {
+        "mae_bikes": 0.2508396730700859,
+        "rmse_bikes": 0.4381756092931979
+      },
+      "persistence": {
+        "mae_bikes": 0.2222222222222222,
+        "rmse_bikes": 0.4714045207910317
+      }
+    },
+    {
+      "station_id": "11",
+      "test_rows": 18,
+      "ridge": {
+        "mae_bikes": 1.5501979773184624,
+        "rmse_bikes": 2.135230147475746
+      },
+      "persistence": {
+        "mae_bikes": 0.8333333333333334,
+        "rmse_bikes": 1.5811388300841898
+      }
+    },
+    {
+      "station_id": "12",
+      "test_rows": 11,
+      "ridge": {
+        "mae_bikes": 1.058439671872375,
+        "rmse_bikes": 1.373677424917817
+      },
+      "persistence": {
+        "mae_bikes": 0.45454545454545453,
+        "rmse_bikes": 0.7977240352174656
+      }
+    },
+    {
+      "station_id": "13",
+      "test_rows": 31,
+      "ridge": {
+        "mae_bikes": 1.1246067633020913,
+        "rmse_bikes": 1.3693044726723647
+      },
+      "persistence": {
+        "mae_bikes": 0.7419354838709677,
+        "rmse_bikes": 1.0924964014113612
+      }
+    }
+  ],
+  "training_numeric_means": {
+    "lag_1": 8.859122401847575,
+    "lag_2": 8.84295612009238,
+    "lag_3": 8.750577367205542,
+    "past_mean": 8.8175519630485,
+    "change": 0.016166281755196306,
+    "capacity_known": 23.64203233256351,
+    "hour_sin": 0.03654307061886082,
+    "hour_cos": -0.20276109213753551,
+    "weekday_sin": 0.5559069162212086,
+    "weekday_cos": 0.16280581683207215
+  },
+  "limitations": "Five stations and a short historical window; provider outages are skipped, no new-station generalisation, no live launch or future accuracy guarantee. Source publication delays not simulated.",
+  "ridge_beats_persistence_mae": false
+}
+
+
+EXIT CODE: 0
+Second real-source replay exactly reproduced quality, split, errors and training-only feature means. Fit time and build timestamp excluded.
+SOURCE DOWNLOAD: {
+  "retrieved_at_utc": "2026-10-26T09:29:35.033028+00:00",
+  "source_url": "https://data.smartdublin.ie/dublinbikes-api/bikes/dublin_bikes/historical/stations.csv?dt_start=2026-10-19&dt_end=2026-10-24",
+  "source_mode": "Historical station-availability replay downloaded from public API; not current live predictions",
+  "source_rows_scanned": 101877,
+  "rows_retained": 731,
+  "sampling": "Exact source records for station IDs 10,100,11,12,13 where minute is 00 or 30; no interpolation",
+  "source_columns": [
+    "system_id",
+    "last_reported",
+    "station_id",
+    "num_bikes_available",
+    "num_docks_available",
+    "is_installed",
+    "is_renting",
+    "is_returning",
+    "name",
+    "short_name",
+    "address",
+    "lat",
+    "lon",
+    "region_id",
+    "capacity"
+  ],
+  "sha256": "8f55022bb360a1d074d511ddf0b4219116260ffa2793b2e205df6807ae43aa20",
+  "license": "Creative Commons Attribution (catalogue cc-by; version not specified by catalogue)",
+  "attribution": "Dublin City Council / Smart Dublin, Dublinbikes API DCC",
+  "catalogue": "https://data.smartdublin.ie/dataset/dublinbikes-api"
+}
+

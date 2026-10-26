@@ -1,0 +1,112 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Bike availability replay</title><style>body{font:16px system-ui;max-width:1000px;margin:40px auto;padding:20px;background:#f3f7f3;color:#163d37}pre{white-space:pre-wrap;background:white;padding:24px;border-radius:12px}</style><h1>Bike availability: 30-minute historical forecast</h1><p>Actual Smart Dublin station snapshots. Historical replay, not current bike availability.</p><pre>{
+  &quot;built_at_utc&quot;: &quot;2026-10-26T09:42:40.333351+00:00&quot;,
+  &quot;mode&quot;: &quot;Historical replay; no current operational forecast&quot;,
+  &quot;source_sha256&quot;: &quot;8f55022bb360a1d074d511ddf0b4219116260ffa2793b2e205df6807ae43aa20&quot;,
+  &quot;clock&quot;: &quot;Naive provider timestamps preserved; timezone unspecified, no UTC claim. DST transitions need source review.&quot;,
+  &quot;horizon_minutes&quot;: 30,
+  &quot;quality&quot;: {
+    &quot;input_rows&quot;: 731,
+    &quot;invalid_or_unavailable_rows&quot;: 0,
+    &quot;conflicting_keys&quot;: 0,
+    &quot;identical_duplicates&quot;: 0,
+    &quot;usable_rows&quot;: 731,
+    &quot;stations&quot;: 5,
+    &quot;missing_grid_slots&quot;: 452,
+    &quot;rows_without_complete_lags&quot;: 669
+  },
+  &quot;split&quot;: {
+    &quot;training_rows&quot;: 433,
+    &quot;test_rows&quot;: 81,
+    &quot;train_first_target&quot;: &quot;2026-10-19 03:30:00&quot;,
+    &quot;train_last_target&quot;: &quot;2026-10-22 21:00:00&quot;,
+    &quot;first_test_origin&quot;: &quot;2026-10-22 21:00:00&quot;,
+    &quot;first_test_target&quot;: &quot;2026-10-22 21:30:00&quot;,
+    &quot;last_test_target&quot;: &quot;2026-10-23 22:00:00&quot;
+  },
+  &quot;method&quot;: &quot;Fixed alpha=10 Ridge; scaler and station encoder fit only on earlier training rows; rolling one-step 30min holdout; no imputation or hyperparameter search&quot;,
+  &quot;fit_seconds&quot;: 0.05393112399997335,
+  &quot;ridge&quot;: {
+    &quot;mae_bikes&quot;: 1.1633443110216741,
+    &quot;rmse_bikes&quot;: 1.5960548849059664
+  },
+  &quot;persistence&quot;: {
+    &quot;mae_bikes&quot;: 0.7407407407407407,
+    &quot;rmse_bikes&quot;: 1.2765694770084508
+  },
+  &quot;per_station&quot;: [
+    {
+      &quot;station_id&quot;: &quot;10&quot;,
+      &quot;test_rows&quot;: 12,
+      &quot;ridge&quot;: {
+        &quot;mae_bikes&quot;: 1.4636768742026307,
+        &quot;rmse_bikes&quot;: 1.9075124011451712
+      },
+      &quot;persistence&quot;: {
+        &quot;mae_bikes&quot;: 1.25,
+        &quot;rmse_bikes&quot;: 1.848422751068236
+      }
+    },
+    {
+      &quot;station_id&quot;: &quot;100&quot;,
+      &quot;test_rows&quot;: 9,
+      &quot;ridge&quot;: {
+        &quot;mae_bikes&quot;: 0.2508396730700859,
+        &quot;rmse_bikes&quot;: 0.4381756092931979
+      },
+      &quot;persistence&quot;: {
+        &quot;mae_bikes&quot;: 0.2222222222222222,
+        &quot;rmse_bikes&quot;: 0.4714045207910317
+      }
+    },
+    {
+      &quot;station_id&quot;: &quot;11&quot;,
+      &quot;test_rows&quot;: 18,
+      &quot;ridge&quot;: {
+        &quot;mae_bikes&quot;: 1.5501979773184624,
+        &quot;rmse_bikes&quot;: 2.135230147475746
+      },
+      &quot;persistence&quot;: {
+        &quot;mae_bikes&quot;: 0.8333333333333334,
+        &quot;rmse_bikes&quot;: 1.5811388300841898
+      }
+    },
+    {
+      &quot;station_id&quot;: &quot;12&quot;,
+      &quot;test_rows&quot;: 11,
+      &quot;ridge&quot;: {
+        &quot;mae_bikes&quot;: 1.058439671872375,
+        &quot;rmse_bikes&quot;: 1.373677424917817
+      },
+      &quot;persistence&quot;: {
+        &quot;mae_bikes&quot;: 0.45454545454545453,
+        &quot;rmse_bikes&quot;: 0.7977240352174656
+      }
+    },
+    {
+      &quot;station_id&quot;: &quot;13&quot;,
+      &quot;test_rows&quot;: 31,
+      &quot;ridge&quot;: {
+        &quot;mae_bikes&quot;: 1.1246067633020913,
+        &quot;rmse_bikes&quot;: 1.3693044726723647
+      },
+      &quot;persistence&quot;: {
+        &quot;mae_bikes&quot;: 0.7419354838709677,
+        &quot;rmse_bikes&quot;: 1.0924964014113612
+      }
+    }
+  ],
+  &quot;training_numeric_means&quot;: {
+    &quot;lag_1&quot;: 8.859122401847575,
+    &quot;lag_2&quot;: 8.84295612009238,
+    &quot;lag_3&quot;: 8.750577367205542,
+    &quot;past_mean&quot;: 8.8175519630485,
+    &quot;change&quot;: 0.016166281755196306,
+    &quot;capacity_known&quot;: 23.64203233256351,
+    &quot;hour_sin&quot;: 0.03654307061886082,
+    &quot;hour_cos&quot;: -0.20276109213753551,
+    &quot;weekday_sin&quot;: 0.5559069162212086,
+    &quot;weekday_cos&quot;: 0.16280581683207215
+  },
+  &quot;limitations&quot;: &quot;Five stations and a short historical window; provider outages are skipped, no new-station generalisation, no live launch or future accuracy guarantee. Source publication delays not simulated.&quot;,
+  &quot;ridge_beats_persistence_mae&quot;: false
+}</pre><p>Data: Dublin City Council / Smart Dublin. Creative Commons Attribution (catalogue cc-by).</p></html>

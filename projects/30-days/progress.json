@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-25T09:21:52.018Z",
-  "completed_count": 3,
+  "updated_at_utc": "2026-10-26T09:44:07.103Z",
+  "completed_count": 5,
   "target_count": 44,
   "items": {
     "10": {
@@ -207,14 +207,24 @@
       "summary": "30 reports across 5 requested UK/India stations; latest observations PASS=5, WARN=0, FAIL=0 at 2026-10-25T09:19:19.485320+00:00"
     },
     "04": {
-      "status": "planned",
+      "status": "completed",
       "path": "04-bike-availability-forecast",
-      "planned_date": "2026-10-26"
+      "planned_date": "2026-10-26",
+      "completed_at_utc": "2026-10-26T09:44:07.103Z",
+      "evidence": "04-bike-availability-forecast/examples/validation.txt",
+      "tests_passed": 12,
+      "data_mode": "Explicit historical replay of actual Smart Dublin station availability; real API download, no synthetic training data",
+      "summary": "731 real records at 5 stations; 433 training / 81 chronological held-out rows. Ridge MAE 1.1633 bikes versus persistence 0.7407; baseline wins."
     },
     "05": {
-      "status": "planned",
+      "status": "completed",
       "path": "05-air-quality-spatial-analytics",
-      "planned_date": "2026-10-26"
+      "planned_date": "2026-10-26",
+      "completed_at_utc": "2026-10-26T09:44:07.103Z",
+      "evidence": "05-air-quality-spatial-analytics/examples/validation.txt",
+      "tests_passed": 19,
+      "data_mode": "Live LAQN API download of delayed 25 October 2026 measurements, plus exact saved-source replay",
+      "summary": "8 sites requested, 7 CSV responses, HG1 HTTP 400 recorded. 53 valid observations; 2 sites qualify for NO2 across 20 matched hours; no PM10 comparison qualifies."
     },
     "06": {
       "status": "planned",

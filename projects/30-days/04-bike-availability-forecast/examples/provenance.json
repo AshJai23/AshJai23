@@ -1,0 +1,29 @@
+{
+  "retrieved_at_utc": "2026-10-26T09:29:35.033028+00:00",
+  "source_url": "https://data.smartdublin.ie/dublinbikes-api/bikes/dublin_bikes/historical/stations.csv?dt_start=2026-10-19&dt_end=2026-10-24",
+  "source_mode": "Historical station-availability replay downloaded from public API; not current live predictions",
+  "source_rows_scanned": 101877,
+  "rows_retained": 731,
+  "sampling": "Exact source records for station IDs 10,100,11,12,13 where minute is 00 or 30; no interpolation",
+  "source_columns": [
+    "system_id",
+    "last_reported",
+    "station_id",
+    "num_bikes_available",
+    "num_docks_available",
+    "is_installed",
+    "is_renting",
+    "is_returning",
+    "name",
+    "short_name",
+    "address",
+    "lat",
+    "lon",
+    "region_id",
+    "capacity"
+  ],
+  "sha256": "8f55022bb360a1d074d511ddf0b4219116260ffa2793b2e205df6807ae43aa20",
+  "license": "Creative Commons Attribution (catalogue cc-by; version not specified by catalogue)",
+  "attribution": "Dublin City Council / Smart Dublin, Dublinbikes API DCC",
+  "catalogue": "https://data.smartdublin.ie/dataset/dublinbikes-api"
+}

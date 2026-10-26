@@ -1,0 +1,257 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "servers": [
+    {
+      "url": "/dublinbikes-api/bikes"
+    }
+  ],
+  "paths": {
+    "/{system_id}/historical/stations.csv": {
+      "get": {
+        "summary": "Historical Stations Csv",
+        "description": "Returns up to one month of historical station status in CSV format at a 5 minute granularity",
+        "operationId": "historical_stations_csv__system_id__historical_stations_csv_get",
+        "parameters": [
+          {
+            "name": "system_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/StationStatus_SystemID",
+              "description": "Choose a system here"
+            },
+            "description": "Choose a system here"
+          },
+          {
+            "name": "dt_start",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Start Date/Time, in ISO Format: YYYY-MM-DDTHH:MM:SS. May be truncated to the date.",
+              "title": "Dt Start"
+            },
+            "description": "Start Date/Time, in ISO Format: YYYY-MM-DDTHH:MM:SS. May be truncated to the date."
+          },
+          {
+            "name": "dt_end",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "End Date/Time, in ISO Format: YYYY-MM-DDTHH:MM:SS. May be truncated to the date.",
+              "title": "Dt End"
+            },
+            "description": "End Date/Time, in ISO Format: YYYY-MM-DDTHH:MM:SS. May be truncated to the date."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns bulk CSV data",
+            "content": {
+              "application/json": {
+                "schema": {}
+              },
+              "text/csv": {}
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "StationStatus": {
+        "properties": {
+          "system_id": {
+            "type": "string",
+            "title": "System Id"
+          },
+          "last_reported": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Last Reported"
+          },
+          "station_id": {
+            "type": "string",
+            "title": "Station Id"
+          },
+          "num_bikes_available": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Num Bikes Available"
+          },
+          "num_docks_available": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Num Docks Available"
+          },
+          "is_installed": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Is Installed"
+          },
+          "is_renting": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Is Renting"
+          },
+          "is_returning": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Is Returning"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "short_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Short Name"
+          },
+          "address": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Address"
+          },
+          "lat": {
+            "type": "number",
+            "title": "Lat"
+          },
+          "lon": {
+            "type": "number",
+            "title": "Lon"
+          },
+          "region_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Region Id"
+          },
+          "capacity": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Capacity"
+          }
+        },
+        "type": "object",
+        "required": [
+          "system_id",
+          "last_reported",
+          "station_id",
+          "num_bikes_available",
+          "num_docks_available",
+          "is_installed",
+          "is_renting",
+          "is_returning",
+          "name",
+          "short_name",
+          "address",
+          "lat",
+          "lon",
+          "region_id",
+          "capacity"
+        ],
+        "title": "StationStatus"
+      },
+      "StationStatus_SystemID": {
+        "type": "string",
+        "enum": [
+          "dublin_bikes"
+        ],
+        "title": "StationStatus_SystemID"
+      }
+    }
+  }
+}

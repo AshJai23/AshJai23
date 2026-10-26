@@ -1,0 +1,106 @@
+Executed at 2026-10-26T09:40:40.719448+00:00
+COMMAND: python -m unittest discover -s tests -v
+
+test_aware_window_is_required (test_spatial.SpatialTests.test_aware_window_is_required) ... ok
+test_closed_station_is_excluded (test_spatial.SpatialTests.test_closed_station_is_excluded) ... ok
+test_comparison_uses_intersection_not_different_hours (test_spatial.SpatialTests.test_comparison_uses_intersection_not_different_hours) ... ok
+test_conflicting_duplicate_key_is_removed (test_spatial.SpatialTests.test_conflicting_duplicate_key_is_removed) ... ok
+test_extra_inclusive_endpoint_midnight_is_excluded (test_spatial.SpatialTests.test_extra_inclusive_endpoint_midnight_is_excluded) ... ok
+test_full_coverage_zero_value_and_matched_hours (test_spatial.SpatialTests.test_full_coverage_zero_value_and_matched_hours) ... ok
+test_geojson_order_and_html_escaping (test_spatial.SpatialTests.test_geojson_order_and_html_escaping) ... ok
+test_gmt_day_remains_twenty_four_hours_at_dst_transition (test_spatial.SpatialTests.test_gmt_day_remains_twenty_four_hours_at_dst_transition) ... ok
+test_haversine_distance_is_in_kilometres (test_spatial.SpatialTests.test_haversine_distance_is_in_kilometres) ... ok
+test_identical_duplicate_counts_once (test_spatial.SpatialTests.test_identical_duplicate_counts_once) ... ok
+test_live_failure_is_not_replaced_with_test_data (test_spatial.SpatialTests.test_live_failure_is_not_replaced_with_test_data) ... ok
+test_missing_metadata_is_reported (test_spatial.SpatialTests.test_missing_metadata_is_reported) ... ok
+test_missing_values_are_not_zero (test_spatial.SpatialTests.test_missing_values_are_not_zero) ... ok
+test_nearest_station_does_not_select_itself (test_spatial.SpatialTests.test_nearest_station_does_not_select_itself) ... ok
+test_nonfinite_and_negative_values_are_rejected (test_spatial.SpatialTests.test_nonfinite_and_negative_values_are_rejected) ... ok
+test_partial_source_failure_is_explicit_not_silent (test_spatial.SpatialTests.test_partial_source_failure_is_explicit_not_silent) ... ok
+test_projected_or_swapped_coordinate_fields_are_not_accepted (test_spatial.SpatialTests.test_projected_or_swapped_coordinate_fields_are_not_accepted) ... ok
+test_units_are_read_from_headers_and_wrong_units_are_rejected (test_spatial.SpatialTests.test_units_are_read_from_headers_and_wrong_units_are_rejected) ... ok
+test_unknown_clock_column_is_rejected (test_spatial.SpatialTests.test_unknown_clock_column_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.012s
+
+OK
+
+EXIT CODE: 0
+COMMAND: python main.py --input examples/source_snapshot.json --output <temporary replay output>
+{
+  "quality": {
+    "input_csv_rows": 175,
+    "missing_values": 283,
+    "outside_window_rows": 7,
+    "invalid_timestamp_rows": 0,
+    "invalid_values": 0,
+    "unsupported_unit_columns": 0,
+    "invalid_metadata_sites": 0,
+    "missing_metadata_sites": 0,
+    "missing_csv_sites": 1,
+    "identical_duplicates": 0,
+    "conflicting_duplicate_keys": 0,
+    "valid_measurements": 53,
+    "requested_sites": 8,
+    "metadata_sites_usable": 8
+  },
+  "common_hour_coverage": {
+    "NO2": {
+      "eligible_sites": 2,
+      "common_hours": 20,
+      "timestamps_utc": [
+        "2026-10-25T01:00:00+00:00",
+        "2026-10-25T02:00:00+00:00",
+        "2026-10-25T03:00:00+00:00",
+        "2026-10-25T04:00:00+00:00",
+        "2026-10-25T05:00:00+00:00",
+        "2026-10-25T06:00:00+00:00",
+        "2026-10-25T07:00:00+00:00",
+        "2026-10-25T08:00:00+00:00",
+        "2026-10-25T09:00:00+00:00",
+        "2026-10-25T10:00:00+00:00",
+        "2026-10-25T11:00:00+00:00",
+        "2026-10-25T12:00:00+00:00",
+        "2026-10-25T16:00:00+00:00",
+        "2026-10-25T17:00:00+00:00",
+        "2026-10-25T18:00:00+00:00",
+        "2026-10-25T19:00:00+00:00",
+        "2026-10-25T20:00:00+00:00",
+        "2026-10-25T21:00:00+00:00",
+        "2026-10-25T22:00:00+00:00",
+        "2026-10-25T23:00:00+00:00"
+      ]
+    },
+    "PM10": {
+      "eligible_sites": 0,
+      "common_hours": 0,
+      "timestamps_utc": []
+    }
+  },
+  "site_type_groups": [
+    {
+      "pollutant": "NO2",
+      "site_type": "Kerbside",
+      "sites": 1,
+      "common_hours": 20,
+      "mean_of_station_means": 40.755,
+      "unit": "ug/m3"
+    },
+    {
+      "pollutant": "NO2",
+      "site_type": "Roadside",
+      "sites": 1,
+      "common_hours": 20,
+      "mean_of_station_means": 6.085,
+      "unit": "ug/m3"
+    }
+  ]
+}
+
+
+EXIT CODE: 0
+Offline replay matched all live-source numeric results, coverage, coordinates and quality flags exactly; only the explicit mode label differs.
+Live request errors: {"HG1": {"type": "HTTPError", "http_status": 400}}
+Actual retrieval: 2026-10-26T09:37:07.442409+00:00
+SHA-256 of saved real source: 005aab4f0db3eb4be489eb802fcf5f19e489c2f236e9a25a1db9210f78291483

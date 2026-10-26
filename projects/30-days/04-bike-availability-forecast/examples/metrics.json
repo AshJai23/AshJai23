@@ -1,0 +1,112 @@
+{
+  "built_at_utc": "2026-10-26T09:42:40.333351+00:00",
+  "mode": "Historical replay; no current operational forecast",
+  "source_sha256": "8f55022bb360a1d074d511ddf0b4219116260ffa2793b2e205df6807ae43aa20",
+  "clock": "Naive provider timestamps preserved; timezone unspecified, no UTC claim. DST transitions need source review.",
+  "horizon_minutes": 30,
+  "quality": {
+    "input_rows": 731,
+    "invalid_or_unavailable_rows": 0,
+    "conflicting_keys": 0,
+    "identical_duplicates": 0,
+    "usable_rows": 731,
+    "stations": 5,
+    "missing_grid_slots": 452,
+    "rows_without_complete_lags": 669
+  },
+  "split": {
+    "training_rows": 433,
+    "test_rows": 81,
+    "train_first_target": "2026-10-19 03:30:00",
+    "train_last_target": "2026-10-22 21:00:00",
+    "first_test_origin": "2026-10-22 21:00:00",
+    "first_test_target": "2026-10-22 21:30:00",
+    "last_test_target": "2026-10-23 22:00:00"
+  },
+  "method": "Fixed alpha=10 Ridge; scaler and station encoder fit only on earlier training rows; rolling one-step 30min holdout; no imputation or hyperparameter search",
+  "fit_seconds": 0.05393112399997335,
+  "ridge": {
+    "mae_bikes": 1.1633443110216741,
+    "rmse_bikes": 1.5960548849059664
+  },
+  "persistence": {
+    "mae_bikes": 0.7407407407407407,
+    "rmse_bikes": 1.2765694770084508
+  },
+  "per_station": [
+    {
+      "station_id": "10",
+      "test_rows": 12,
+      "ridge": {
+        "mae_bikes": 1.4636768742026307,
+        "rmse_bikes": 1.9075124011451712
+      },
+      "persistence": {
+        "mae_bikes": 1.25,
+        "rmse_bikes": 1.848422751068236
+      }
+    },
+    {
+      "station_id": "100",
+      "test_rows": 9,
+      "ridge": {
+        "mae_bikes": 0.2508396730700859,
+        "rmse_bikes": 0.4381756092931979
+      },
+      "persistence": {
+        "mae_bikes": 0.2222222222222222,
+        "rmse_bikes": 0.4714045207910317
+      }
+    },
+    {
+      "station_id": "11",
+      "test_rows": 18,
+      "ridge": {
+        "mae_bikes": 1.5501979773184624,
+        "rmse_bikes": 2.135230147475746
+      },
+      "persistence": {
+        "mae_bikes": 0.8333333333333334,
+        "rmse_bikes": 1.5811388300841898
+      }
+    },
+    {
+      "station_id": "12",
+      "test_rows": 11,
+      "ridge": {
+        "mae_bikes": 1.058439671872375,
+        "rmse_bikes": 1.373677424917817
+      },
+      "persistence": {
+        "mae_bikes": 0.45454545454545453,
+        "rmse_bikes": 0.7977240352174656
+      }
+    },
+    {
+      "station_id": "13",
+      "test_rows": 31,
+      "ridge": {
+        "mae_bikes": 1.1246067633020913,
+        "rmse_bikes": 1.3693044726723647
+      },
+      "persistence": {
+        "mae_bikes": 0.7419354838709677,
+        "rmse_bikes": 1.0924964014113612
+      }
+    }
+  ],
+  "training_numeric_means": {
+    "lag_1": 8.859122401847575,
+    "lag_2": 8.84295612009238,
+    "lag_3": 8.750577367205542,
+    "past_mean": 8.8175519630485,
+    "change": 0.016166281755196306,
+    "capacity_known": 23.64203233256351,
+    "hour_sin": 0.03654307061886082,
+    "hour_cos": -0.20276109213753551,
+    "weekday_sin": 0.5559069162212086,
+    "weekday_cos": 0.16280581683207215
+  },
+  "limitations": "Five stations and a short historical window; provider outages are skipped, no new-station generalisation, no live launch or future accuracy guarantee. Source publication delays not simulated.",
+  "ridge_beats_persistence_mae": false
+}
