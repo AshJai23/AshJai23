@@ -1,6 +1,6 @@
 # 30 days of practical data science, ML and deep learning
 
-**24 October–22 November 2026 · 44 planned projects · 5 completed**
+**24 October–22 November 2026 · 44 planned projects · 6 completed**
 
 A portfolio sprint built with AI assistance. Each completed item contains runnable
 code, a source-attributed data example, validation evidence and an honest account
@@ -28,6 +28,7 @@ counts or claims of production experience.
 | 03 | [Live weather quality monitor](03-weather-quality-monitor/) | 30 real station reports; freshness, missingness, duplicates and consistency checks; 5/5 latest station records passed | [12 passing tests + live/replay evidence](03-weather-quality-monitor/examples/validation.txt) |
 | 04 | [Bike availability forecast](04-bike-availability-forecast/) | Real station-history replay; 30-minute Ridge vs persistence; baseline wins on 81 held-out rows | [12 passing tests + exact replay](04-bike-availability-forecast/examples/validation.txt) |
 | 05 | [Air-quality spatial analytics](05-air-quality-spatial-analytics/) | LAQN observations, units/coverage checks, matched-hour spatial summaries and GeoJSON; partial source outage exposed | [19 passing tests + live/replay evidence](05-air-quality-spatial-analytics/examples/validation.txt) |
+| 06 | [RSS topic clustering](06-rss-topic-clustering/) | 60 real publisher headlines; TF-IDF/K-means, story-held-out baselines, freshness and inspectable topic groups; baseline wins | [22 passing tests + exact replay](06-rss-topic-clustering/examples/validation.txt) |
 
 ### Day-one measured results
 

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-26T09:44:07.103Z",
-  "completed_count": 5,
+  "updated_at_utc": "2026-10-27T09:41:16.185Z",
+  "completed_count": 6,
   "target_count": 44,
   "items": {
     "10": {
@@ -227,9 +227,14 @@
       "summary": "8 sites requested, 7 CSV responses, HG1 HTTP 400 recorded. 53 valid observations; 2 sites qualify for NO2 across 20 matched hours; no PM10 comparison qualifies."
     },
     "06": {
-      "status": "planned",
+      "status": "completed",
       "path": "06-rss-topic-clustering",
-      "planned_date": "2026-10-27"
+      "planned_date": "2026-10-27",
+      "completed_at_utc": "2026-10-27T09:41:16.184Z",
+      "evidence": "06-rss-topic-clustering/examples/validation.txt",
+      "tests_passed": 22,
+      "data_mode": "One real pull of public NASA/NOAA/NIST RSS metadata, followed by explicit frozen-source replay; freshness reported",
+      "summary": "60 real headlines; 48 train / 12 story-held-out. Four-cluster TF-IDF KMeans squared distance 0.994561 versus single-centroid baseline 0.993707 (baseline wins); 2 unrepresented heldout items, undefined silhouette and low seed stability retained."
     },
     "07": {
       "status": "planned",

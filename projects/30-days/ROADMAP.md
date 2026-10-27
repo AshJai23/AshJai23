@@ -13,7 +13,7 @@ Completed items are linked below. Sources and technical details for remaining pl
 | 2 | 2026-10-25 | 03 | Live weather quality monitor | Data science | [Complete](03-weather-quality-monitor/) |
 | 3 | 2026-10-26 | 04 | Bike availability forecast | Machine learning | [Complete](04-bike-availability-forecast/) |
 | 3 | 2026-10-26 | 05 | Air-quality spatial analytics | Data science | [Complete](05-air-quality-spatial-analytics/) |
-| 4 | 2026-10-27 | 06 | RSS topic clustering | Machine learning | Planned |
+| 4 | 2026-10-27 | 06 | RSS topic clustering | Machine learning | [Complete](06-rss-topic-clustering/) |
 | 5 | 2026-10-28 | 07 | River-level anomaly detection | Machine learning | Planned |
 | 5 | 2026-10-28 | 08 | Carbon intensity BI data model | Data science | Planned |
 | 6 | 2026-10-29 | 09 | Weather LSTM nowcast | Deep learning | Planned |

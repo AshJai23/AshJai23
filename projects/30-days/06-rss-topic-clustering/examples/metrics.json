@@ -1,0 +1,335 @@
+{
+  "built_at_utc": "2026-10-27T09:39:05.597176+00:00",
+  "data_mode": "Explicit replay of real saved RSS metadata",
+  "captured_at_utc": "2026-10-27T09:30:24.795265+00:00",
+  "snapshot_canonical_sha256": "8bec0ca69e5b8f848db9d6b6a0dfbc9414afc90fd787257a69def425a42a19ec",
+  "quality": {
+    "input_records": 60,
+    "invalid_records": 0,
+    "future_records": 0,
+    "older_than_365_days": 0,
+    "exact_duplicates": 0,
+    "usable_headlines": 60,
+    "story_groups": 60
+  },
+  "sources": [
+    {
+      "source": "nasa",
+      "requested_url": "https://www.nasa.gov/feed/",
+      "final_url": "https://www.nasa.gov/feed/",
+      "status": "ok",
+      "raw_xml_sha256": "5633931978a9d9fe67b6371a33554d104e990fddf6c335b76d84f0bae88f90f9",
+      "raw_entries": 10,
+      "latest_usable_published_utc": "2026-10-27T07:07:51+00:00",
+      "age_latest_days": 0.09900226001157408,
+      "older_than_7_days": false
+    },
+    {
+      "source": "noaa",
+      "requested_url": "https://www.noaa.gov/rss.xml",
+      "final_url": "https://www.noaa.gov/rss.xml",
+      "status": "ok",
+      "raw_xml_sha256": "b78c3704f7fa31d57b3fe2722dabafe9d328600f4badb89d65ecdfa666e42fad",
+      "raw_entries": 10,
+      "latest_usable_published_utc": "2026-10-14T19:40:37+00:00",
+      "age_latest_days": 12.576247630381946,
+      "older_than_7_days": true
+    },
+    {
+      "source": "nist",
+      "requested_url": "https://www.nist.gov/news-events/news/rss.xml",
+      "final_url": "https://www.nist.gov/news-events/news/rss.xml",
+      "status": "ok",
+      "raw_xml_sha256": "1e894d74a9082b3a7dff708f93025669308979444c052d4ab8102031cc8db762",
+      "raw_entries": 40,
+      "latest_usable_published_utc": "2026-10-16T12:00:00+00:00",
+      "age_latest_days": 10.89612031556713,
+      "older_than_7_days": true
+    }
+  ],
+  "split": "Seed 42, 80/20 story-group holdout after exact dedup and near-title/canonical-URL grouping. Not a chronological future-news test.",
+  "metrics": {
+    "training_headlines": 48,
+    "heldout_headlines": 12,
+    "clusters": 4,
+    "features": 590,
+    "fit_seconds": 0.04023447200006558,
+    "heldout_mean_squared_distance": 0.9945612451026337,
+    "single_centroid_baseline_distance": 0.9937072799210115,
+    "four_random_training_prototypes_distance": 1.7089597395949554,
+    "zero_vocabulary_heldout": 2,
+    "heldout_cosine_silhouette": null,
+    "training_seed_stability_ari_42_vs_7": 0.09745211263532338,
+    "training_cluster_counts": {
+      "0": 37,
+      "1": 2,
+      "2": 3,
+      "3": 6
+    },
+    "heldout_cluster_counts": {
+      "-1": 2,
+      "0": 10,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    "heldout_silhouette_note": "Undefined: fewer than two nonzero-vocabulary assigned clusters or too few samples",
+    "kmeans_beats_single_centroid": false,
+    "metric_scope": "Unsupervised TF-IDF compactness on story-held-out metadata, not topic accuracy or semantic truth; lower squared distance is better."
+  },
+  "clusters": [
+    {
+      "cluster": 0,
+      "top_terms": [
+        "ai",
+        "new",
+        "awards",
+        "researchers",
+        "releases",
+        "national",
+        "lasers",
+        "help",
+        "standards",
+        "south"
+      ],
+      "training_count": 37,
+      "heldout_count": 10,
+      "representative_training": [
+        {
+          "title": "Announcing the \"AI Agent Standards Initiative\" for Interoperable and Secure Innovation",
+          "url": "https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure",
+          "urls": [
+            "https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure"
+          ],
+          "published_utc": "2026-02-17T12:00:00+00:00",
+          "sources": [
+            "nist"
+          ],
+          "group": "044cc85319f5ab129e52"
+        },
+        {
+          "title": "NIST Awards More Than $30 Million for MEP Centers in 11 States and Puerto Rico",
+          "url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico",
+          "urls": [
+            "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico"
+          ],
+          "published_utc": "2026-09-15T12:00:00+00:00",
+          "sources": [
+            "nist"
+          ],
+          "group": "01cd30f40bb29d0998c7"
+        },
+        {
+          "title": "NIST Releases New Forensic Genetic Reference Material to Help Crime Laboratories Analyze Challenging Cases",
+          "url": "https://www.nist.gov/news-events/news/2026/02/nist-releases-new-forensic-genetic-reference-material-help-crime",
+          "urls": [
+            "https://www.nist.gov/news-events/news/2026/02/nist-releases-new-forensic-genetic-reference-material-help-crime"
+          ],
+          "published_utc": "2026-02-17T12:00:00+00:00",
+          "sources": [
+            "nist"
+          ],
+          "group": "ac1a68bcdf1eb65ac524"
+        }
+      ],
+      "representative_heldout": [
+        {
+          "title": "NIST Expands AI Consortium’s Scope, Calls for New Members",
+          "url": "https://www.nist.gov/news-events/news/2026/05/nist-expands-ai-consortiums-scope-calls-new-members",
+          "urls": [
+            "https://www.nist.gov/news-events/news/2026/05/nist-expands-ai-consortiums-scope-calls-new-members"
+          ],
+          "published_utc": "2026-05-29T12:00:00+00:00",
+          "sources": [
+            "nist"
+          ],
+          "group": "fc91eb3160a3f68984ad"
+        },
+        {
+          "title": "New Chip-Based ‘Tape Measure’ for Light Could Revolutionize Mobile Timekeeping and Enhance National Security",
+          "url": "https://www.nist.gov/news-events/news/2026/10/new-chip-based-tape-measure-light-could-revolutionize-mobile-timekeeping",
+          "urls": [
+            "https://www.nist.gov/news-events/news/2026/10/new-chip-based-tape-measure-light-could-revolutionize-mobile-timekeeping"
+          ],
+          "published_utc": "2026-10-16T12:00:00+00:00",
+          "sources": [
+            "nist"
+          ],
+          "group": "b6b1c31604ee8d07fd9e"
+        }
+      ],
+      "source_counts_training": {
+        "nist": 24,
+        "noaa": 7,
+        "nasa": 6
+      }
+    },
+    {
+      "cluster": 1,
+      "top_terms": [
+        "inspected",
+        "surveyor",
+        "neo surveyor",
+        "neo",
+        "inspected neo",
+        "cells",
+        "cells inspected",
+        "solar",
+        "solar cells",
+        "sunshade"
+      ],
+      "training_count": 2,
+      "heldout_count": 0,
+      "representative_training": [
+        {
+          "title": "NEO Surveyor’s Sunshade Gets Inspected",
+          "url": "https://science.nasa.gov/photojournal/neo-surveyors-sunshade-gets-inspected",
+          "urls": [
+            "https://science.nasa.gov/photojournal/neo-surveyors-sunshade-gets-inspected"
+          ],
+          "published_utc": "2026-10-26T20:53:13+00:00",
+          "sources": [
+            "nasa"
+          ],
+          "group": "af6242ff08341156125b"
+        },
+        {
+          "title": "Solar Cells Inspected on NASA’s NEO Surveyor",
+          "url": "https://science.nasa.gov/photojournal/solar-cells-inspected-on-nasas-neo-surveyor",
+          "urls": [
+            "https://science.nasa.gov/photojournal/solar-cells-inspected-on-nasas-neo-surveyor"
+          ],
+          "published_utc": "2026-10-26T20:52:24+00:00",
+          "sources": [
+            "nasa"
+          ],
+          "group": "f037009ccddfdbab0fc1"
+        }
+      ],
+      "representative_heldout": [],
+      "source_counts_training": {
+        "nasa": 2
+      }
+    },
+    {
+      "cluster": 2,
+      "top_terms": [
+        "october",
+        "outlook",
+        "winter outlook",
+        "winter",
+        "issue",
+        "issue winter",
+        "outlook october",
+        "noctilucent clouds",
+        "apod",
+        "apod october"
+      ],
+      "training_count": 3,
+      "heldout_count": 0,
+      "representative_training": [
+        {
+          "title": "NOAA to issue 2026-2027 U.S. Winter Outlook October 15",
+          "url": "https://www.noaa.gov/media-advisory/noaa-to-issue-2026-2027-us-winter-outlook-october-15",
+          "urls": [
+            "https://www.noaa.gov/media-advisory/noaa-to-issue-2026-2027-us-winter-outlook-october-15"
+          ],
+          "published_utc": "2026-10-05T15:31:34+00:00",
+          "sources": [
+            "noaa"
+          ],
+          "group": "7e8a5be8655a004a4e35"
+        },
+        {
+          "title": "El Nino looms large over U.S. Winter Outlook",
+          "url": "https://www.noaa.gov/news-release/el-nino-looms-large-over-us-winter-outlook",
+          "urls": [
+            "https://www.noaa.gov/news-release/el-nino-looms-large-over-us-winter-outlook"
+          ],
+          "published_utc": "2026-10-14T19:40:37+00:00",
+          "sources": [
+            "noaa"
+          ],
+          "group": "6c6a732fc1ce0dbc8b21"
+        },
+        {
+          "title": "APOD: 2026 October 27 – Noctilucent Clouds over Sweden",
+          "url": "https://science.nasa.gov/image-article/apod-2026-october-27-noctilucent-clouds-over-sweden",
+          "urls": [
+            "https://science.nasa.gov/image-article/apod-2026-october-27-noctilucent-clouds-over-sweden"
+          ],
+          "published_utc": "2026-10-27T04:05:00+00:00",
+          "sources": [
+            "nasa"
+          ],
+          "group": "15d4e42a88dcd66e5785"
+        }
+      ],
+      "representative_heldout": [],
+      "source_counts_training": {
+        "noaa": 2,
+        "nasa": 1
+      }
+    },
+    {
+      "cluster": 3,
+      "top_terms": [
+        "quantum",
+        "step",
+        "ai",
+        "manufacture",
+        "manufacture quantum",
+        "center drive",
+        "unruly molecules",
+        "unruly",
+        "party",
+        "physicists"
+      ],
+      "training_count": 6,
+      "heldout_count": 0,
+      "representative_training": [
+        {
+          "title": "‘Spooky’ Particles Transit DC Suburbs, a Step Toward a Quantum Network",
+          "url": "https://www.nist.gov/news-events/news/2026/08/spooky-particles-transit-dc-suburbs-step-toward-quantum-network",
+          "urls": [
+            "https://www.nist.gov/news-events/news/2026/08/spooky-particles-transit-dc-suburbs-step-toward-quantum-network"
+          ],
+          "published_utc": "2026-08-05T12:00:00+00:00",
+          "sources": [
+            "nist"
+          ],
+          "group": "05cb69b851c9e578c05c"
+        },
+        {
+          "title": "NIST Allocates Over $3 Million to Small Businesses Advancing AI, Biotechnology, Semiconductors, Quantum and More",
+          "url": "https://www.nist.gov/news-events/news/2026/02/nist-allocates-over-3-million-small-businesses-advancing-ai-biotechnology",
+          "urls": [
+            "https://www.nist.gov/news-events/news/2026/02/nist-allocates-over-3-million-small-businesses-advancing-ai-biotechnology"
+          ],
+          "published_utc": "2026-02-10T12:00:00+00:00",
+          "sources": [
+            "nist"
+          ],
+          "group": "d1b45e97649b84636889"
+        },
+        {
+          "title": "NIST Physicists Bring Unruly Molecules to the Quantum Party",
+          "url": "https://www.nist.gov/news-events/news/2025/12/nist-physicists-bring-unruly-molecules-quantum-party",
+          "urls": [
+            "https://www.nist.gov/news-events/news/2025/12/nist-physicists-bring-unruly-molecules-quantum-party"
+          ],
+          "published_utc": "2025-12-18T12:00:00+00:00",
+          "sources": [
+            "nist"
+          ],
+          "group": "0adb5b6486d7742f8029"
+        }
+      ],
+      "representative_heldout": [],
+      "source_counts_training": {
+        "nist": 6
+      }
+    }
+  ],
+  "limitations": "Small, publisher-imbalanced English headline sample; no semantic ground truth, sentiment, fact checking or full-article analysis. Feed dates can represent updates/republication. Publisher names removed from model text; no claim that this removes all source style. Machine-generated clusters are not official publisher classifications."
+}

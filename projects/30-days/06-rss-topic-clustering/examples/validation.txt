@@ -1,0 +1,115 @@
+Executed at 2026-10-27T09:39:00.476283+00:00
+COMMAND: -m unittest discover -s tests -v
+
+test_alias_revision_story_stays_in_one_split (test_topics.TopicTests.test_alias_revision_story_stays_in_one_split) ... ok
+test_annual_editions_are_not_deleted_as_exact_copies (test_topics.TopicTests.test_annual_editions_are_not_deleted_as_exact_copies) ... ok
+test_atom_namespace_dates_and_alternate_links (test_topics.TopicTests.test_atom_namespace_dates_and_alternate_links) ... ok
+test_different_word_order_not_silently_deleted (test_topics.TopicTests.test_different_word_order_not_silently_deleted) ... ok
+test_dtd_and_html_response_rejected (test_topics.TopicTests.test_dtd_and_html_response_rejected) ... ok
+test_exact_duplicate_preserves_source_and_url_aliases (test_topics.TopicTests.test_exact_duplicate_preserves_source_and_url_aliases) ... ok
+test_export_is_finite_and_report_escapes_metadata (test_topics.TopicTests.test_export_is_finite_and_report_escapes_metadata) ... ok
+test_future_old_and_malformed_dates_are_reported (test_topics.TopicTests.test_future_old_and_malformed_dates_are_reported) ... ok
+test_live_total_failure_is_saved_and_never_fabricated (test_topics.TopicTests.test_live_total_failure_is_saved_and_never_fabricated) ... ok
+test_no_group_or_canonical_url_overlap_in_holdout (test_topics.TopicTests.test_no_group_or_canonical_url_overlap_in_holdout) ... ok
+test_publisher_names_are_not_model_features (test_topics.TopicTests.test_publisher_names_are_not_model_features) ... ok
+test_rss_metadata_parsed_without_article_body (test_topics.TopicTests.test_rss_metadata_parsed_without_article_body) ... ok
+test_script_content_and_html_tags_removed (test_topics.TopicTests.test_script_content_and_html_tags_removed) ... ok
+test_single_centroid_baseline_is_training_mean (test_topics.TopicTests.test_single_centroid_baseline_is_training_mean) ... ok
+test_small_capture_fails_instead_of_fake_metrics (test_topics.TopicTests.test_small_capture_fails_instead_of_fake_metrics) ... ok
+test_split_is_repeatable_under_input_reordering (test_topics.TopicTests.test_split_is_repeatable_under_input_reordering) ... ok
+test_test_exclusive_word_cannot_enter_fitted_vocabulary (test_topics.TopicTests.test_test_exclusive_word_cannot_enter_fitted_vocabulary) ... ok
+test_time_zone_is_not_invented (test_topics.TopicTests.test_time_zone_is_not_invented) ... ok
+test_tracking_is_removed_but_content_query_is_retained (test_topics.TopicTests.test_tracking_is_removed_but_content_query_is_retained) ... ok
+test_unsafe_urls_are_not_publishable (test_topics.TopicTests.test_unsafe_urls_are_not_publishable) ... ok
+test_wrong_metadata_types_are_rejected_without_inventing_values (test_topics.TopicTests.test_wrong_metadata_types_are_rejected_without_inventing_values) ... ok
+test_zero_overlap_holdout_is_unassigned_and_penalised (test_topics.TopicTests.test_zero_overlap_holdout_is_unassigned_and_penalised) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.254s
+
+OK
+
+EXIT CODE: 0
+COMMAND: main.py --input examples/source_snapshot.json --output examples
+{
+  "quality": {
+    "input_records": 60,
+    "invalid_records": 0,
+    "future_records": 0,
+    "older_than_365_days": 0,
+    "exact_duplicates": 0,
+    "usable_headlines": 60,
+    "story_groups": 60
+  },
+  "metrics": {
+    "training_headlines": 48,
+    "heldout_headlines": 12,
+    "clusters": 4,
+    "features": 590,
+    "fit_seconds": 0.04023447200006558,
+    "heldout_mean_squared_distance": 0.9945612451026337,
+    "single_centroid_baseline_distance": 0.9937072799210115,
+    "four_random_training_prototypes_distance": 1.7089597395949554,
+    "zero_vocabulary_heldout": 2,
+    "heldout_cosine_silhouette": null,
+    "training_seed_stability_ari_42_vs_7": 0.09745211263532338,
+    "training_cluster_counts": {
+      "0": 37,
+      "1": 2,
+      "2": 3,
+      "3": 6
+    },
+    "heldout_cluster_counts": {
+      "-1": 2,
+      "0": 10,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    "heldout_silhouette_note": "Undefined: fewer than two nonzero-vocabulary assigned clusters or too few samples",
+    "kmeans_beats_single_centroid": false,
+    "metric_scope": "Unsupervised TF-IDF compactness on story-held-out metadata, not topic accuracy or semantic truth; lower squared distance is better."
+  }
+}
+
+
+EXIT CODE: 0
+SECOND REPLAY: fitted vocabulary, IDF, centroids, group split, assignments, quality, representative headlines and all numeric scores matched exactly. Build/fit timing excluded.
+LIVE SOURCE CAPTURE: one real pull per NASA/NOAA/NIST feed; metadata preserved with original XML SHA-256. The first complete fit was replayed after fixing JSON serialisation. No synthetic replacement.
+SNAPSHOT CANONICAL SHA-256: 8bec0ca69e5b8f848db9d6b6a0dfbc9414afc90fd787257a69def425a42a19ec
+SOURCES: [
+  {
+    "source": "nasa",
+    "requested_url": "https://www.nasa.gov/feed/",
+    "final_url": "https://www.nasa.gov/feed/",
+    "status": "ok",
+    "raw_xml_sha256": "5633931978a9d9fe67b6371a33554d104e990fddf6c335b76d84f0bae88f90f9",
+    "raw_entries": 10,
+    "latest_usable_published_utc": "2026-10-27T07:07:51+00:00",
+    "age_latest_days": 0.09900226001157408,
+    "older_than_7_days": false
+  },
+  {
+    "source": "noaa",
+    "requested_url": "https://www.noaa.gov/rss.xml",
+    "final_url": "https://www.noaa.gov/rss.xml",
+    "status": "ok",
+    "raw_xml_sha256": "b78c3704f7fa31d57b3fe2722dabafe9d328600f4badb89d65ecdfa666e42fad",
+    "raw_entries": 10,
+    "latest_usable_published_utc": "2026-10-14T19:40:37+00:00",
+    "age_latest_days": 12.576247630381946,
+    "older_than_7_days": true
+  },
+  {
+    "source": "nist",
+    "requested_url": "https://www.nist.gov/news-events/news/rss.xml",
+    "final_url": "https://www.nist.gov/news-events/news/rss.xml",
+    "status": "ok",
+    "raw_xml_sha256": "1e894d74a9082b3a7dff708f93025669308979444c052d4ab8102031cc8db762",
+    "raw_entries": 40,
+    "latest_usable_published_utc": "2026-10-16T12:00:00+00:00",
+    "age_latest_days": 10.89612031556713,
+    "older_than_7_days": true
+  }
+]
+LIMITS: negative held-out baseline comparison; 2 unrepresented test titles; silhouette undefined; low seed stability. No independent semantic labels, public hosting or browser visual audit.
