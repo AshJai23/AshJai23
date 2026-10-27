@@ -6,7 +6,6 @@ import json
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-import torch
 from trained_router import Features, LABELS, ROOT
 from router import MODEL_ID, MODEL_REVISION
 from sources import lexical
@@ -23,10 +22,12 @@ def check_splits():
 
 
 def raw_predictions(x, head):
+    import torch
     with torch.no_grad(): return torch.softmax(head(x), dim=1)
 
 
 def train():
+    import torch
     torch.manual_seed(42); torch.set_num_threads(2)
     counts = check_splits(); train_rows = read("train"); val_rows = read("validation")
     t = time.perf_counter(); features = Features()

@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-10-27T11:36:01.156364+00:00",
+  "results": [
+    {
+      "url": "https://ashjai23.github.io",
+      "status": 200,
+      "final_url": "https://ashjai23.github.io",
+      "bytes_read": 14971,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://ashjai23.github.io/#projects",
+      "status": 200,
+      "final_url": "https://ashjai23.github.io/#projects",
+      "bytes_read": 14971,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://environment.data.gov.uk/flood-monitoring/id/stations?_limit=1",
+      "status": 200,
+      "final_url": "https://environment.data.gov.uk/flood-monitoring/id/stations?_limit=1",
+      "bytes_read": 1746,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/datasets/retailsales",
+      "status": 200,
+      "final_url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/datasets/retailsales",
+      "bytes_read": 41804,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
+      "status": 200,
+      "final_url": "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
+      "bytes_read": 55589,
+      "content_type": "text/html"
+    },
+    {
+      "url": "https://www.england.nhs.uk/statistics/statistical-work-areas/ae-waiting-times-and-activity/",
+      "status": 200,
+      "final_url": "https://www.england.nhs.uk/statistics/statistical-work-areas/ae-waiting-times-and-activity/",
+      "bytes_read": 80935,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.gov.uk/government/organisations/government-digital-service.atom",
+      "status": 200,
+      "final_url": "https://www.gov.uk/government/organisations/government-digital-service.atom",
+      "bytes_read": 10761,
+      "content_type": "application/atom+xml; charset=utf-8"
+    }
+  ],
+  "limitation": "HTTP/address checks only; no browser rendering or functional audit. Fragment #projects is client-side and not tested by HTTP."
+}

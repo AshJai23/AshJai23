@@ -1,5 +1,29 @@
 # Country-wise Hazard Explorer
 
+## Niche, data freshness and how to open
+
+**Niche:** Hazard awareness and local weather exposure.
+
+**Data truth:** Global USGS observations; country/year history and Open-Meteo local provider forecasts. UK can be selected; not UK-only. The annual wind outlook is a statistical estimate, not a year-ahead storm warning.
+
+**Website status:** runnable locally; no public project website has been deployed.
+The GitHub address displays source code. An HTML file in GitHub's file viewer is
+not a hosted dashboard.
+
+From this project folder, install its documented dependencies, then run:
+
+```bash
+python dashboard.py --port 8501
+```
+
+Open **http://127.0.0.1:8501** on the **same computer** after the server starts.
+If it does not open, check the terminal for errors, confirm the port, and keep
+the process running. `127.0.0.1` on a phone refers to the phone, not your laptop.
+
+**Separate repository:** requested; creation is pending. The current folder and
+its previous validation evidence remain available. Extraction is not a new
+project and does not increase the completed count.
+
 An interactive Python web app for **earthquakes by country**, **local wind and
 thunderstorm forecasts**, and a **calendar-year statistical wind outlook**.
 

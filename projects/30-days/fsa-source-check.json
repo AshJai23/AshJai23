@@ -1,0 +1,18 @@
+{
+  "captured_at_utc": "2026-10-27T11:40:49.507870+00:00",
+  "source_url": "https://api.ratings.food.gov.uk/Authorities",
+  "http_status": 200,
+  "mode": "live authority metadata, not establishment/model data",
+  "required_header": {
+    "x-api-version": "2"
+  },
+  "camden": {
+    "LocalAuthorityId": 93,
+    "LocalAuthorityIdCode": "506",
+    "Name": "Camden",
+    "EstablishmentCount": 4293,
+    "LastPublishedDate": "2026-10-27T00:31:52.193",
+    "FileName": "https://ratings.food.gov.uk/OpenDataFiles/FHRS506en-GB.xml"
+  },
+  "notes": "Provider LastPublishedDate has no timezone; do not silently assume UTC. Aggregate metadata only; no establishment data downloaded."
+}

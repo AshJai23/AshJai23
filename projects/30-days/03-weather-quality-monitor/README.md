@@ -1,5 +1,28 @@
 # Live weather data quality monitor
 
+## Niche, data freshness and how to open
+
+**Niche:** Weather-feed quality for transport and operations.
+
+**Data truth:** METAR observations from a US-operated public API covering UK and Indian stations by default. Choose UK stations explicitly; live pull is one request, not continuous streaming.
+
+**Website status:** runnable locally; no public project website has been deployed.
+The GitHub address displays source code. An HTML file in GitHub's file viewer is
+not a hosted dashboard.
+
+From this project folder, install its documented dependencies, then run:
+
+```bash
+python main.py --live --stations EGLL,EGCC,EGPH --output outputs
+```
+
+Open the generated **`outputs/report.html`** from your local output folder.
+It is a saved report; it refreshes only when you run the command again.
+
+**Separate repository:** requested; creation is pending. The current folder and
+its previous validation evidence remain available. Extraction is not a new
+project and does not increase the completed count.
+
 Project 03 of the 30-day portfolio sprint. A small Python data-science prototype
 that asks: **is the incoming station weather data complete, recent and internally
 consistent enough to inspect?** Built with AI assistance.

@@ -42,10 +42,45 @@ documentation, not just a topic description or a renamed copy of another project
     completed count and the next planned work. Do not claim the plan guarantees
     an eventual result or mark blocked projects complete.
 
-## Repository destination
+## Repository destination — updated user instruction, 27 October 2026
 
-Use `AshJai23/AshJai23`, under `projects/30-days/`. Existing GitHub access and the
-user's request authorise these project commits. Keep the work in this repository
-rather than creating numerous empty repositories. This is a portfolio learning
-sprint, not a claim of professional production deployment or user authorship
-without AI assistance.
+The user now requests **one separate, populated repository per project**. This
+supersedes the earlier single-repository preference. `REPOSITORIES.json` records
+requested names; pending names must never be presented as existing repositories.
+The profile repository retains the plan/progress/index and original completed
+folders until extraction is published and verified. Copying a completed project
+does not count as a new ID. Include UK Student Copilot separately, outside 44.
+
+Before extraction, fetch the exact current project tree, copy all code/data/test
+evidence, fix project-root commands and relative links, include source commit
+provenance, run its tests and replay from the new root, publish, then read back
+the complete destination tree. Do not modify unrelated repositories or create
+empty repositories for future items. Keep the old URLs working. If repository
+creation is unavailable, report it as blocked rather than claim completion.
+
+## UK sectors and data truth
+
+Pending work must follow the revised scope, `uk_sector` and `niche` in plan.json:
+retail, banking, technology, councils and NHS. Preserve completed non-UK results
+with accurate labels; do not relabel Dublin as UK or NASA headlines as UK tech.
+Consult [UK_DATA_POLICY.md](UK_DATA_POLICY.md) for candidate primary sources.
+Verify the exact dataset, licence, endpoint and returned data when building;
+a successful landing page check is not a working data integration. If enough
+historical data is unavailable for the required model, block the item honestly.
+
+Every README must lead with the niche, intended user/decision, exact geography,
+source, observed/released/captured dates and cadence. Distinguish near-real-time
+polling, delayed observations, periodically released aggregates, historical
+replay and synthetic test/training fixtures. Show source age in the interface.
+NHS monthly performance data is not a live queue. Bank/retail public aggregates
+are not private transactions, card purchases or store inventory.
+
+## Website and link checks
+
+Label GitHub source, saved HTML report, local app and public website separately.
+Publish a public website URL only after deployment and a successful public smoke
+test. For a local app, give its exact command/port and say that 127.0.0.1 works
+on the computer running it. Test required routes and error states. Check URLs,
+redirects and expected content; report outages without inventing replacement
+addresses. GitHub Pages cannot run a Python API or model server. Do not deploy
+paid/always-on infrastructure. Changes still use normal Git history and readback.

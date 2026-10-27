@@ -1,5 +1,19 @@
 # UK Student Copilot
 
+## Niche and address
+
+UK international-student support using official GOV.UK sources. Live mode checks
+source content when requested and uses a cache; this is not a continuous stream.
+Training used labelled synthetic routing questions, not real student records.
+
+**No public app website is deployed.** Start `python launch.py --mode live` after
+installing the dependencies below, then open **http://127.0.0.1:8000** on that same
+computer. Keep the server running; check the terminal if the address does not
+open. A GitHub repository link opens code, not this application.
+
+A separate `AshJai23/uk-student-copilot` repository is requested but has not yet
+been created. Existing training evidence and code are preserved here.
+
 A runnable, source-grounded support assistant for international students in the
 UK. It helps visitors find a useful next step about student work, post-study
 plans, tenancy deposits, Council Tax and suspicious payment demands.

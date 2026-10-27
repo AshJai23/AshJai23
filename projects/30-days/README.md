@@ -7,6 +7,23 @@ code, a source-attributed data example, validation evidence and an honest accoun
 of limitations. The goal is practical skill development, not inflated commit
 counts or claims of production experience.
 
+## Repository layout and UK niches
+
+The user requested a separate repository for each project on **27 October**.
+[Repository names and niches](REPOSITORIES.md) / [destination manifest](REPOSITORIES.json) lists the requested names and honest
+creation status. **No separate repositories have been created yet:** the current
+connector cannot create them. The existing completed-project links below remain
+valid. Seven implemented projects (including Student Copilot, outside the 44)
+are ready for extraction after repository creation is available.
+
+Future work now covers **UK retail, banking, technology, councils and NHS**;
+see the revised [roadmap](ROADMAP.md) and [data policy](UK_DATA_POLICY.md).
+Completed Dublin/global projects retain their true scope and results.
+
+A GitHub link opens **code**, not a running website. Project READMEs now explain
+their niche and the correct local address or generated report.
+[HTTP address-check evidence](link-check.json) is separate from functional tests.
+
 ## Schedule
 
 - At least **one project every day**.

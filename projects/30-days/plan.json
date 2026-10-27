@@ -26,7 +26,9 @@
       "title": "Country-wise hazard explorer",
       "category": "Data science",
       "path": "01-live-earthquake-analytics",
-      "scope": "USGS country/year exploration, Open-Meteo local wind/thunderstorm forecasts and a baseline-tested annual statistical wind outlook; original SQL pipeline preserved."
+      "scope": "USGS country/year exploration, Open-Meteo local wind/thunderstorm forecasts and a baseline-tested annual statistical wind outlook; original SQL pipeline preserved.",
+      "target_repository": "AshJai23/ds-01-live-earthquake-analytics",
+      "repository_status": "pending_creation"
     },
     {
       "id": "02",
@@ -35,7 +37,9 @@
       "title": "GB carbon-intensity forecast",
       "category": "Machine learning",
       "path": "02-carbon-intensity-forecast",
-      "scope": "Actual half-hour carbon data, lagged Ridge model and chronological persistence comparison"
+      "scope": "Actual half-hour carbon data, lagged Ridge model and chronological persistence comparison",
+      "target_repository": "AshJai23/ds-02-carbon-intensity-forecast",
+      "repository_status": "pending_creation"
     },
     {
       "id": "03",
@@ -44,7 +48,9 @@
       "title": "Live weather quality monitor",
       "category": "Data science",
       "path": "03-weather-quality-monitor",
-      "scope": "Validate a public weather API; timestamp freshness, missingness and station-level summary"
+      "scope": "Validate a public weather API; timestamp freshness, missingness and station-level summary",
+      "target_repository": "AshJai23/ds-03-weather-quality-monitor",
+      "repository_status": "pending_creation"
     },
     {
       "id": "04",
@@ -53,7 +59,9 @@
       "title": "Bike availability forecast",
       "category": "Machine learning",
       "path": "04-bike-availability-forecast",
-      "scope": "Public station availability snapshots or explicitly labelled historical replay; lagged regression and baseline"
+      "scope": "Public station availability snapshots or explicitly labelled historical replay; lagged regression and baseline",
+      "target_repository": "AshJai23/ds-04-bike-availability-forecast",
+      "repository_status": "pending_creation"
     },
     {
       "id": "05",
@@ -62,7 +70,9 @@
       "title": "Air-quality spatial analytics",
       "category": "Data science",
       "path": "05-air-quality-spatial-analytics",
-      "scope": "Public air-quality observations with location, coverage and unit checks; spatial summaries"
+      "scope": "Public air-quality observations with location, coverage and unit checks; spatial summaries",
+      "target_repository": "AshJai23/ds-05-air-quality-spatial-analytics",
+      "repository_status": "pending_creation"
     },
     {
       "id": "06",
@@ -71,7 +81,9 @@
       "title": "RSS topic clustering",
       "category": "Machine learning",
       "path": "06-rss-topic-clustering",
-      "scope": "Public RSS ingestion, TF-IDF topics, clustering and human-readable cluster inspection"
+      "scope": "Public RSS ingestion, TF-IDF topics, clustering and human-readable cluster inspection",
+      "target_repository": "AshJai23/ds-06-rss-topic-clustering",
+      "repository_status": "pending_creation"
     },
     {
       "id": "07",
@@ -80,7 +92,11 @@
       "title": "River-level anomaly detection",
       "category": "Machine learning",
       "path": "07-river-level-anomaly-detection",
-      "scope": "Public river observations with robust anomaly scoring and an inspected validation sample"
+      "scope": "Public river observations with robust anomaly scoring and an inspected validation sample UK source requirement: UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "uk_sector": "council",
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "target_repository": "AshJai23/ds-07-river-level-anomaly-detection",
+      "repository_status": "pending_creation"
     },
     {
       "id": "08",
@@ -89,7 +105,11 @@
       "title": "Carbon intensity BI data model",
       "category": "Data science",
       "path": "08-carbon-bi-data-model",
-      "scope": "SQL fact/dimension modelling, Power BI/Tableau-ready exports and documented measures"
+      "scope": "SQL fact/dimension modelling, Power BI/Tableau-ready exports and documented measures UK source requirement: UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "uk_sector": "council",
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "target_repository": "AshJai23/ds-08-carbon-bi-data-model",
+      "repository_status": "pending_creation"
     },
     {
       "id": "09",
@@ -98,7 +118,11 @@
       "title": "Weather LSTM nowcast",
       "category": "Deep learning",
       "path": "09-weather-lstm-nowcast",
-      "scope": "Train a compact LSTM on public weather history; chronological one-step evaluation versus persistence"
+      "scope": "Train a compact LSTM on public weather history; chronological one-step evaluation versus persistence UK source requirement: UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "uk_sector": "retail",
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "target_repository": "AshJai23/ds-09-weather-lstm-nowcast",
+      "repository_status": "pending_creation"
     },
     {
       "id": "10",
@@ -107,16 +131,29 @@
       "title": "Public issue triage classifier",
       "category": "Machine learning",
       "path": "10-public-issue-triage",
-      "scope": "Public GitHub issue text; defensible labels, source-aware split and classification baseline"
+      "scope": "Public GitHub issue text; defensible labels, source-aware split and classification baseline UK source requirement: UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms.",
+      "uk_sector": "technology",
+      "niche": "UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms.",
+      "target_repository": "AshJai23/ds-10-public-issue-triage",
+      "repository_status": "pending_creation"
     },
     {
       "id": "11",
       "day": 8,
       "date": "2026-10-31",
-      "title": "Earthquake spatial clustering",
+      "title": "UK retail profile clustering",
       "category": "Machine learning",
-      "path": "11-earthquake-spatial-clustering",
-      "scope": "Geographic DBSCAN on recent events with distance units and cluster-stability checks"
+      "path": "11-uk-retail-profile-clustering",
+      "scope": "Cluster ONS retail category time profiles with train-only preprocessing, group/time holdout, a simple centroid baseline and stability inspection. UK source requirement: UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "previous_planned_scope": {
+        "title": "Earthquake spatial clustering",
+        "path": "11-earthquake-spatial-clustering",
+        "scope": "Geographic DBSCAN on recent events with distance units and cluster-stability checks"
+      },
+      "uk_sector": "retail",
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "target_repository": "AshJai23/ds-11-uk-retail-profile-clustering",
+      "repository_status": "pending_creation"
     },
     {
       "id": "12",
@@ -125,25 +162,47 @@
       "title": "API latency anomaly monitor",
       "category": "MLOps",
       "path": "12-api-latency-monitor",
-      "scope": "Low-rate measurements of documented public APIs; latency distribution, errors and robust thresholds"
+      "scope": "Low-rate measurements of documented public APIs; latency distribution, errors and robust thresholds UK source requirement: UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms.",
+      "uk_sector": "technology",
+      "niche": "UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms.",
+      "target_repository": "AshJai23/ds-12-api-latency-monitor",
+      "repository_status": "pending_creation"
     },
     {
       "id": "13",
       "day": 9,
       "date": "2026-11-01",
-      "title": "Weather tabular forecast",
+      "title": "NHS A&E activity forecast",
       "category": "Machine learning",
-      "path": "13-weather-tabular-forecast",
-      "scope": "Time-aware gradient boosting against seasonal/persistence baselines using archived weather"
+      "path": "13-nhs-ae-tabular-forecast",
+      "scope": "Forecast published England monthly A&E activity using lag-safe gradient boosting, chronological holdout and seasonal/persistence baselines; check reporting-definition changes and revisions. UK source requirement: England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data.",
+      "previous_planned_scope": {
+        "title": "Weather tabular forecast",
+        "path": "13-weather-tabular-forecast",
+        "scope": "Time-aware gradient boosting against seasonal/persistence baselines using archived weather"
+      },
+      "uk_sector": "nhs",
+      "niche": "England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data.",
+      "target_repository": "AshJai23/ds-13-nhs-ae-tabular-forecast",
+      "repository_status": "pending_creation"
     },
     {
       "id": "14",
       "day": 10,
       "date": "2026-11-02",
-      "title": "Carbon profile autoencoder",
+      "title": "Banking rate profile autoencoder",
       "category": "Deep learning",
-      "path": "14-carbon-autoencoder",
-      "scope": "Train a small neural autoencoder on prior daily profiles; held-out reconstruction and anomaly inspection"
+      "path": "14-banking-profile-autoencoder",
+      "scope": "Train a compact autoencoder on prior Bank of England daily SONIA interest-rate windows; held-out reconstruction against a mean-profile baseline and inspected anomalies, with no trading claims. UK source requirement: UK banking publication and official rate analytics; Bank of England public series, not private customer transactions.",
+      "previous_planned_scope": {
+        "title": "Carbon profile autoencoder",
+        "path": "14-carbon-autoencoder",
+        "scope": "Train a small neural autoencoder on prior daily profiles; held-out reconstruction and anomaly inspection"
+      },
+      "uk_sector": "banking",
+      "niche": "UK banking publication and official rate analytics; Bank of England public series, not private customer transactions.",
+      "target_repository": "AshJai23/ds-14-banking-profile-autoencoder",
+      "repository_status": "pending_creation"
     },
     {
       "id": "15",
@@ -152,16 +211,29 @@
       "title": "Air-quality forecast",
       "category": "Machine learning",
       "path": "15-air-quality-forecast",
-      "scope": "Observed pollution time series, lag-safe features and time-based error analysis"
+      "scope": "Observed pollution time series, lag-safe features and time-based error analysis UK source requirement: UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "uk_sector": "council",
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "target_repository": "AshJai23/ds-15-air-quality-forecast",
+      "repository_status": "pending_creation"
     },
     {
       "id": "16",
       "day": 11,
       "date": "2026-11-03",
-      "title": "RSS sentiment trends",
+      "title": "UK banking publication sentiment",
       "category": "Machine learning",
-      "path": "16-rss-sentiment-trends",
-      "scope": "Public feed sentiment with lexical baseline, manual sample review and clear label limitations"
+      "path": "16-uk-banking-sentiment",
+      "scope": "Analyse public Bank of England publication titles with a lexical baseline, inspected labelled sample, source/time separation and explicit limits of sentiment as a proxy. UK source requirement: UK banking publication and official rate analytics; Bank of England public series, not private customer transactions.",
+      "previous_planned_scope": {
+        "title": "RSS sentiment trends",
+        "path": "16-rss-sentiment-trends",
+        "scope": "Public feed sentiment with lexical baseline, manual sample review and clear label limitations"
+      },
+      "uk_sector": "banking",
+      "niche": "UK banking publication and official rate analytics; Bank of England public series, not private customer transactions.",
+      "target_repository": "AshJai23/ds-16-uk-banking-sentiment",
+      "repository_status": "pending_creation"
     },
     {
       "id": "17",
@@ -170,16 +242,29 @@
       "title": "River observation ETL",
       "category": "Data engineering",
       "path": "17-river-observation-etl",
-      "scope": "Incremental timestamped river ingestion, deduplication, schema validation and SQL query examples"
+      "scope": "Incremental timestamped river ingestion, deduplication, schema validation and SQL query examples UK source requirement: UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "uk_sector": "council",
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "target_repository": "AshJai23/ds-17-river-observation-etl",
+      "repository_status": "pending_creation"
     },
     {
       "id": "18",
       "day": 12,
       "date": "2026-11-04",
-      "title": "Transport BI KPI exports",
+      "title": "NHS A&E BI KPI exports",
       "category": "Data science",
-      "path": "18-transport-bi-kpis",
-      "scope": "Public transport status data; SQL KPI definitions and Power BI/Tableau-ready tables"
+      "path": "18-nhs-ae-bi-kpis",
+      "scope": "Model published England monthly A&E aggregates in SQL; coverage, denominator and definition checks; Power BI/Tableau-ready facts and dimensions, not live waiting times. UK source requirement: England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data.",
+      "previous_planned_scope": {
+        "title": "Transport BI KPI exports",
+        "path": "18-transport-bi-kpis",
+        "scope": "Public transport status data; SQL KPI definitions and Power BI/Tableau-ready tables"
+      },
+      "uk_sector": "nhs",
+      "niche": "England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data.",
+      "target_repository": "AshJai23/ds-18-nhs-ae-bi-kpis",
+      "repository_status": "pending_creation"
     },
     {
       "id": "19",
@@ -188,16 +273,29 @@
       "title": "Weather temporal CNN",
       "category": "Deep learning",
       "path": "19-weather-temporal-cnn",
-      "scope": "Train a temporal 1D CNN with genuine holdout evaluation and a simple autoregressive baseline"
+      "scope": "Train a temporal 1D CNN with genuine holdout evaluation and a simple autoregressive baseline UK source requirement: UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "uk_sector": "retail",
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "target_repository": "AshJai23/ds-19-weather-temporal-cnn",
+      "repository_status": "pending_creation"
     },
     {
       "id": "20",
       "day": 14,
       "date": "2026-11-06",
-      "title": "Bike occupancy classifier",
+      "title": "Council food-inspection classification",
       "category": "Machine learning",
-      "path": "20-bike-occupancy-classifier",
-      "scope": "Predict a future station occupancy band from earlier observations; time split and class-balance checks"
+      "path": "20-council-food-inspection-classifier",
+      "scope": "Retrospectively classify published FSA council inspection bands from business type and geography only; exclude score components and other target-derived fields, split by business and inspection date, compare majority baseline, and document latest-registry selection bias. Not a future inspection or food-safety decision tool. UK source requirement: UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "previous_planned_scope": {
+        "title": "Bike occupancy classifier",
+        "path": "20-bike-occupancy-classifier",
+        "scope": "Predict a future station occupancy band from earlier observations; time split and class-balance checks"
+      },
+      "uk_sector": "council",
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "target_repository": "AshJai23/ds-20-council-food-inspection-classifier",
+      "repository_status": "pending_creation"
     },
     {
       "id": "21",
@@ -206,25 +304,47 @@
       "title": "Semantic news search",
       "category": "AI",
       "path": "21-semantic-news-search",
-      "scope": "Public RSS semantic retrieval with local embeddings, source links and a small relevance evaluation"
+      "scope": "Public RSS semantic retrieval with local embeddings, source links and a small relevance evaluation UK source requirement: UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms.",
+      "uk_sector": "technology",
+      "niche": "UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms.",
+      "target_repository": "AshJai23/ds-21-semantic-news-search",
+      "repository_status": "pending_creation"
     },
     {
       "id": "22",
       "day": 15,
       "date": "2026-11-07",
-      "title": "RSS data-quality profiler",
+      "title": "UK retail inspection data-quality profiler",
       "category": "Data science",
-      "path": "22-rss-quality-profiler",
-      "scope": "Feed freshness, duplicates, parsing failures and a reproducible source-quality scorecard"
+      "path": "22-uk-retail-quality-profiler",
+      "scope": "Profile FSA council inspection records for source freshness, missingness, unique identifiers, scheme differences and pending/unpublished ratings; retain data/inspection dates and compare snapshots without inventing history. UK source requirement: UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "previous_planned_scope": {
+        "title": "RSS data-quality profiler",
+        "path": "22-rss-quality-profiler",
+        "scope": "Feed freshness, duplicates, parsing failures and a reproducible source-quality scorecard"
+      },
+      "uk_sector": "retail",
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "target_repository": "AshJai23/ds-22-uk-retail-quality-profiler",
+      "repository_status": "pending_creation"
     },
     {
       "id": "23",
       "day": 16,
       "date": "2026-11-08",
-      "title": "Carbon LSTM forecast",
+      "title": "Banking SONIA LSTM",
       "category": "Deep learning",
-      "path": "23-carbon-lstm-forecast",
-      "scope": "Train a compact sequence model; time-based holdout and comparison with the day-one model/baseline"
+      "path": "23-banking-lstm-forecast",
+      "scope": "Train a small LSTM on Bank of England daily SONIA interest-rate history; chronological holdout against persistence and Ridge, no investment recommendations. UK source requirement: UK banking publication and official rate analytics; Bank of England public series, not private customer transactions.",
+      "previous_planned_scope": {
+        "title": "Carbon LSTM forecast",
+        "path": "23-carbon-lstm-forecast",
+        "scope": "Train a compact sequence model; time-based holdout and comparison with the day-one model/baseline"
+      },
+      "uk_sector": "banking",
+      "niche": "UK banking publication and official rate analytics; Bank of England public series, not private customer transactions.",
+      "target_repository": "AshJai23/ds-23-banking-lstm-forecast",
+      "repository_status": "pending_creation"
     },
     {
       "id": "24",
@@ -233,16 +353,29 @@
       "title": "Weather quantile forecast",
       "category": "Machine learning",
       "path": "24-weather-quantile-forecast",
-      "scope": "Quantile regression with pinball loss and interval-coverage checks on a held-out period"
+      "scope": "Quantile regression with pinball loss and interval-coverage checks on a held-out period UK source requirement: UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "uk_sector": "retail",
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "target_repository": "AshJai23/ds-24-weather-quantile-forecast",
+      "repository_status": "pending_creation"
     },
     {
       "id": "25",
       "day": 17,
       "date": "2026-11-09",
-      "title": "Transport SQL warehouse",
+      "title": "Council river SQL warehouse",
       "category": "Data engineering",
-      "path": "25-transport-sql-warehouse",
-      "scope": "Public status snapshots, snapshot history, window queries and a reproducible mini warehouse"
+      "path": "25-council-river-sql-warehouse",
+      "scope": "Build an incremental Environment Agency observation warehouse with source timestamps, idempotence, windows and council-facing coverage queries; readings are observations, not council-authored flood advice. UK source requirement: UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "previous_planned_scope": {
+        "title": "Transport SQL warehouse",
+        "path": "25-transport-sql-warehouse",
+        "scope": "Public status snapshots, snapshot history, window queries and a reproducible mini warehouse"
+      },
+      "uk_sector": "council",
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "target_repository": "AshJai23/ds-25-council-river-sql-warehouse",
+      "repository_status": "pending_creation"
     },
     {
       "id": "26",
@@ -251,7 +384,11 @@
       "title": "Semantic news deduplication",
       "category": "AI",
       "path": "26-semantic-news-deduplication",
-      "scope": "Compare lexical and embedding similarity; inspected pairs, thresholds and source attribution"
+      "scope": "Compare lexical and embedding similarity; inspected pairs, thresholds and source attribution UK source requirement: UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms.",
+      "uk_sector": "technology",
+      "niche": "UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms.",
+      "target_repository": "AshJai23/ds-26-semantic-news-deduplication",
+      "repository_status": "pending_creation"
     },
     {
       "id": "27",
@@ -260,7 +397,11 @@
       "title": "Forecast drift monitor",
       "category": "MLOps",
       "path": "27-forecast-drift-monitor",
-      "scope": "Monitor prediction and feature drift with replay windows, false-alarm examples and baseline thresholds"
+      "scope": "Monitor prediction and feature drift with replay windows, false-alarm examples and baseline thresholds UK source requirement: UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "uk_sector": "retail",
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "target_repository": "AshJai23/ds-27-forecast-drift-monitor",
+      "repository_status": "pending_creation"
     },
     {
       "id": "28",
@@ -269,43 +410,83 @@
       "title": "Containerised forecast API",
       "category": "ML engineering",
       "path": "28-containerised-forecast-api",
-      "scope": "Serve an existing validated model behind a local API with input validation, Docker and smoke tests"
+      "scope": "Serve an existing validated model behind a local API with input validation, Docker and smoke tests UK source requirement: UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "uk_sector": "retail",
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "target_repository": "AshJai23/ds-28-containerised-forecast-api",
+      "repository_status": "pending_creation"
     },
     {
       "id": "29",
       "day": 20,
       "date": "2026-11-12",
-      "title": "Carbon transformer forecast",
+      "title": "NHS activity transformer forecast",
       "category": "Deep learning",
-      "path": "29-carbon-transformer-forecast",
-      "scope": "Train a small CPU-friendly transformer with chronological evaluation; compare to simpler models"
+      "path": "29-nhs-transformer-forecast",
+      "scope": "Train a small CPU-friendly transformer on sufficient published monthly NHS activity history; chronological holdout, seasonal-naive and linear baselines, uncertainty and data-volume limitations. UK source requirement: England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data.",
+      "previous_planned_scope": {
+        "title": "Carbon transformer forecast",
+        "path": "29-carbon-transformer-forecast",
+        "scope": "Train a small CPU-friendly transformer with chronological evaluation; compare to simpler models"
+      },
+      "uk_sector": "nhs",
+      "niche": "England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data.",
+      "target_repository": "AshJai23/ds-29-nhs-transformer-forecast",
+      "repository_status": "pending_creation"
     },
     {
       "id": "30",
       "day": 21,
       "date": "2026-11-13",
-      "title": "Weather model explanations",
+      "title": "NHS forecast explanations",
       "category": "Machine learning",
-      "path": "30-weather-model-explanations",
-      "scope": "Permutation importance and grouped error analysis on a held-out weather forecast model"
+      "path": "30-nhs-model-explanations",
+      "scope": "Explain a validated held-out NHS aggregate forecast through permutation importance and grouped errors; no patient-level inference or causal claims. UK source requirement: England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data.",
+      "previous_planned_scope": {
+        "title": "Weather model explanations",
+        "path": "30-weather-model-explanations",
+        "scope": "Permutation importance and grouped error analysis on a held-out weather forecast model"
+      },
+      "uk_sector": "nhs",
+      "niche": "England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data.",
+      "target_repository": "AshJai23/ds-30-nhs-model-explanations",
+      "repository_status": "pending_creation"
     },
     {
       "id": "31",
       "day": 22,
       "date": "2026-11-14",
-      "title": "Online carbon regression",
+      "title": "Online banking regression",
       "category": "Machine learning",
-      "path": "31-online-carbon-regression",
-      "scope": "Prequential online regression with update ordering, replay evaluation and concept-drift discussion"
+      "path": "31-online-banking-regression",
+      "scope": "Prequential regression on Bank of England daily SONIA interest-rate observations; score before update, compare persistence, simulate delayed publications and discuss revisions. UK source requirement: UK banking publication and official rate analytics; Bank of England public series, not private customer transactions.",
+      "previous_planned_scope": {
+        "title": "Online carbon regression",
+        "path": "31-online-carbon-regression",
+        "scope": "Prequential online regression with update ordering, replay evaluation and concept-drift discussion"
+      },
+      "uk_sector": "banking",
+      "niche": "UK banking publication and official rate analytics; Bank of England public series, not private customer transactions.",
+      "target_repository": "AshJai23/ds-31-online-banking-regression",
+      "repository_status": "pending_creation"
     },
     {
       "id": "32",
       "day": 22,
       "date": "2026-11-14",
-      "title": "Energy sequence classifier",
+      "title": "Banking sequence classifier",
       "category": "Deep learning",
-      "path": "32-energy-sequence-classifier",
-      "scope": "Train a neural sequence classifier for future observed regimes; leakage-safe targets and baseline"
+      "path": "32-banking-sequence-classifier",
+      "scope": "Train a compact neural classifier for a future observed rate-change band using actual Bank of England series, thresholds fitted on training only, chronological splits and a majority baseline. UK source requirement: UK banking publication and official rate analytics; Bank of England public series, not private customer transactions.",
+      "previous_planned_scope": {
+        "title": "Energy sequence classifier",
+        "path": "32-energy-sequence-classifier",
+        "scope": "Train a neural sequence classifier for future observed regimes; leakage-safe targets and baseline"
+      },
+      "uk_sector": "banking",
+      "niche": "UK banking publication and official rate analytics; Bank of England public series, not private customer transactions.",
+      "target_repository": "AshJai23/ds-32-banking-sequence-classifier",
+      "repository_status": "pending_creation"
     },
     {
       "id": "33",
@@ -314,7 +495,11 @@
       "title": "News co-occurrence analytics",
       "category": "Data science",
       "path": "33-news-cooccurrence-network",
-      "scope": "Public feed entities or terms, co-occurrence graph, frequency checks and temporal comparisons"
+      "scope": "Public feed entities or terms, co-occurrence graph, frequency checks and temporal comparisons UK source requirement: UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms.",
+      "uk_sector": "technology",
+      "niche": "UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms.",
+      "target_repository": "AshJai23/ds-33-news-cooccurrence-network",
+      "repository_status": "pending_creation"
     },
     {
       "id": "34",
@@ -323,25 +508,47 @@
       "title": "Forecast model audit",
       "category": "MLOps",
       "path": "34-forecast-model-audit",
-      "scope": "Reproducible slice, residual and data-leakage audit of completed sprint models"
+      "scope": "Reproducible slice, residual and data-leakage audit of completed sprint models UK source requirement: England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data.",
+      "uk_sector": "nhs",
+      "niche": "England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data.",
+      "target_repository": "AshJai23/ds-34-forecast-model-audit",
+      "repository_status": "pending_creation"
     },
     {
       "id": "35",
       "day": 24,
       "date": "2026-11-16",
-      "title": "Source-grounded documentation retrieval",
+      "title": "NHS statistics documentation retrieval",
       "category": "AI",
-      "path": "35-source-grounded-docs-retrieval",
-      "scope": "Retrieve public API documentation with exact source links and retrieval evaluation; label any generation"
+      "path": "35-nhs-docs-retrieval",
+      "scope": "Retrieve official NHS statistical definitions and release documentation with exact source links, version dates and a relevance evaluation; aggregate-data help, not clinical guidance. UK source requirement: England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data.",
+      "previous_planned_scope": {
+        "title": "Source-grounded documentation retrieval",
+        "path": "35-source-grounded-docs-retrieval",
+        "scope": "Retrieve public API documentation with exact source links and retrieval evaluation; label any generation"
+      },
+      "uk_sector": "nhs",
+      "niche": "England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data.",
+      "target_repository": "AshJai23/ds-35-nhs-docs-retrieval",
+      "repository_status": "pending_creation"
     },
     {
       "id": "36",
       "day": 25,
       "date": "2026-11-17",
-      "title": "Carbon tabular neural network",
+      "title": "UK retail tabular neural network",
       "category": "Deep learning",
-      "path": "36-carbon-tabular-neural-network",
-      "scope": "Train a small MLP on lag-safe features, save real learning curves and compare with Ridge"
+      "path": "36-uk-retail-neural-network",
+      "scope": "Train a small MLP on lag-safe ONS retail time-series features; chronological holdout, real learning curves, Ridge and seasonal-naive baselines; disclose revisions and limited monthly sample size. UK source requirement: UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "previous_planned_scope": {
+        "title": "Carbon tabular neural network",
+        "path": "36-carbon-tabular-neural-network",
+        "scope": "Train a small MLP on lag-safe features, save real learning curves and compare with Ridge"
+      },
+      "uk_sector": "retail",
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "target_repository": "AshJai23/ds-36-uk-retail-neural-network",
+      "repository_status": "pending_creation"
     },
     {
       "id": "37",
@@ -350,7 +557,11 @@
       "title": "Rolling forecast backtester",
       "category": "MLOps",
       "path": "37-rolling-forecast-backtester",
-      "scope": "Expanding-window evaluation utility, reproducible model comparison and regression tests"
+      "scope": "Expanding-window evaluation utility, reproducible model comparison and regression tests UK source requirement: UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "uk_sector": "retail",
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "target_repository": "AshJai23/ds-37-rolling-forecast-backtester",
+      "repository_status": "pending_creation"
     },
     {
       "id": "38",
@@ -359,7 +570,11 @@
       "title": "Live data dashboard",
       "category": "Data science",
       "path": "38-live-data-dashboard",
-      "scope": "Streamlit dashboard over validated sprint sources with cached pulls, freshness and error states"
+      "scope": "Streamlit dashboard over validated sprint sources with cached pulls, freshness and error states UK source requirement: UK source freshness, quality and validated cross-sector portfolio integration; preserve each dataset geography and cadence.",
+      "uk_sector": "cross-sector",
+      "niche": "UK source freshness, quality and validated cross-sector portfolio integration; preserve each dataset geography and cadence.",
+      "target_repository": "AshJai23/ds-38-live-data-dashboard",
+      "repository_status": "pending_creation"
     },
     {
       "id": "39",
@@ -368,7 +583,11 @@
       "title": "RSS text CNN",
       "category": "Deep learning",
       "path": "39-rss-text-cnn",
-      "scope": "Train a compact text CNN on explicit weak feed labels; source/time splits and baseline limitations"
+      "scope": "Train a compact text CNN on explicit weak feed labels; source/time splits and baseline limitations UK source requirement: UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms.",
+      "uk_sector": "technology",
+      "niche": "UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms.",
+      "target_repository": "AshJai23/ds-39-rss-text-cnn",
+      "repository_status": "pending_creation"
     },
     {
       "id": "40",
@@ -377,7 +596,11 @@
       "title": "Open-data observability",
       "category": "MLOps",
       "path": "40-open-data-observability",
-      "scope": "Schema, freshness, missingness and distribution checks across multiple real source snapshots"
+      "scope": "Schema, freshness, missingness and distribution checks across multiple real source snapshots UK source requirement: UK source freshness, quality and validated cross-sector portfolio integration; preserve each dataset geography and cadence.",
+      "uk_sector": "cross-sector",
+      "niche": "UK source freshness, quality and validated cross-sector portfolio integration; preserve each dataset geography and cadence.",
+      "target_repository": "AshJai23/ds-40-open-data-observability",
+      "repository_status": "pending_creation"
     },
     {
       "id": "41",
@@ -386,7 +609,11 @@
       "title": "Sequence anomaly reconstruction",
       "category": "Deep learning",
       "path": "41-sequence-anomaly-reconstruction",
-      "scope": "Train a sequence autoencoder; distinguish historical reconstruction from causal online detection"
+      "scope": "Train a sequence autoencoder; distinguish historical reconstruction from causal online detection UK source requirement: UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "uk_sector": "council",
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "target_repository": "AshJai23/ds-41-sequence-anomaly-reconstruction",
+      "repository_status": "pending_creation"
     },
     {
       "id": "42",
@@ -395,7 +622,11 @@
       "title": "Portfolio model benchmark",
       "category": "MLOps",
       "path": "42-portfolio-model-benchmark",
-      "scope": "Runnable benchmark over existing predictions, common metrics, compute notes and honest model ranking"
+      "scope": "Runnable benchmark over existing predictions, common metrics, compute notes and honest model ranking UK source requirement: UK source freshness, quality and validated cross-sector portfolio integration; preserve each dataset geography and cadence.",
+      "uk_sector": "cross-sector",
+      "niche": "UK source freshness, quality and validated cross-sector portfolio integration; preserve each dataset geography and cadence.",
+      "target_repository": "AshJai23/ds-42-portfolio-model-benchmark",
+      "repository_status": "pending_creation"
     },
     {
       "id": "43",
@@ -404,7 +635,11 @@
       "title": "Cross-source event analytics",
       "category": "Data science",
       "path": "43-cross-source-event-analytics",
-      "scope": "Align public weather, energy and news observations; demonstrate join coverage and avoid causal claims"
+      "scope": "Align public weather, energy and news observations; demonstrate join coverage and avoid causal claims UK source requirement: UK source freshness, quality and validated cross-sector portfolio integration; preserve each dataset geography and cadence.",
+      "uk_sector": "cross-sector",
+      "niche": "UK source freshness, quality and validated cross-sector portfolio integration; preserve each dataset geography and cadence.",
+      "target_repository": "AshJai23/ds-43-cross-source-event-analytics",
+      "repository_status": "pending_creation"
     },
     {
       "id": "44",
@@ -413,7 +648,19 @@
       "title": "Forecast service capstone",
       "category": "ML engineering",
       "path": "44-forecast-service-capstone",
-      "scope": "Integrate validated model, ingestion, local API, monitoring and reproducible Docker run; final smoke test"
+      "scope": "Integrate validated model, ingestion, local API, monitoring and reproducible Docker run; final smoke test UK source requirement: UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "uk_sector": "retail",
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "target_repository": "AshJai23/ds-44-forecast-service-capstone",
+      "repository_status": "pending_creation"
     }
-  ]
+  ],
+  "delivery_policy": {
+    "requested_on": "2026-10-27",
+    "layout": "one populated repository per project; profile repository retains sprint coordination and original completed sources until extraction is verified",
+    "manifest": "REPOSITORIES.json",
+    "new_repositories_created": false,
+    "blocker": "Current GitHub connector exposes no repository-creation action. Browser fallback requires user approval.",
+    "uk_data_policy": "Use actual free public UK sector data. State geography, capture time, observation/publication dates, cadence, licence and mode. Never label a monthly release as real-time. No invented training or silent live-data fallback."
+  }
 }

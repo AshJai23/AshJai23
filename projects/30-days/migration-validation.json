@@ -1,0 +1,183 @@
+{
+  "validated_at_utc": "2026-10-27T11:41:42.748386+00:00",
+  "source_commit": "cc80aa5426281f81e1279887978449b99758a227",
+  "source_files_git_blob_verified": 133,
+  "extracted_project_roots": 7,
+  "tests_passed": 130,
+  "tests": [
+    {
+      "repository": "ds-01-live-earthquake-analytics",
+      "exit_code": 0,
+      "tail": [
+        "----------------------------------------------------------------------",
+        "Ran 24 tests in 0.657s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "repository": "ds-02-carbon-intensity-forecast",
+      "exit_code": 0,
+      "tail": [
+        "----------------------------------------------------------------------",
+        "Ran 6 tests in 0.264s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "repository": "ds-03-weather-quality-monitor",
+      "exit_code": 0,
+      "tail": [
+        "----------------------------------------------------------------------",
+        "Ran 12 tests in 0.003s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "repository": "ds-04-bike-availability-forecast",
+      "exit_code": 0,
+      "tail": [
+        "----------------------------------------------------------------------",
+        "Ran 12 tests in 0.287s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "repository": "ds-05-air-quality-spatial-analytics",
+      "exit_code": 0,
+      "tail": [
+        "----------------------------------------------------------------------",
+        "Ran 19 tests in 0.010s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "repository": "ds-06-rss-topic-clustering",
+      "exit_code": 0,
+      "tail": [
+        "----------------------------------------------------------------------",
+        "Ran 22 tests in 0.245s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "repository": "uk-student-copilot",
+      "exit_code": 0,
+      "tail": [
+        "----------------------------------------------------------------------",
+        "Ran 35 tests in 0.248s",
+        "",
+        "OK"
+      ],
+      "note": "35 tests exercise source/replay/routing/artefact checks with mocked model proposals; actual Qwen inference and retraining were not rerun. Initial missing-dependency failure fixed by installing API dependencies and lazily importing torch only in training/inference paths."
+    }
+  ],
+  "replays": [
+    {
+      "repository": "ds-01-live-earthquake-analytics",
+      "command": [
+        "python",
+        "main.py",
+        "--input",
+        "examples/source_snapshot.json",
+        "--output",
+        "extraction-replay"
+      ],
+      "data_mode": "saved actual-source replay",
+      "exit_code": 0,
+      "tail": "{\n  \"event_count\": 185,\n  \"mean_magnitude\": 2.538,\n  \"largest_magnitude\": 6.9,\n  \"first_event_utc\": \"2026-10-23T22:57:18.950000+00:00\",\n  \"latest_event_utc\": \"2026-10-24T22:37:54.110000+00:00\"\n}\n"
+    },
+    {
+      "repository": "ds-02-carbon-intensity-forecast",
+      "command": [
+        "python",
+        "main.py",
+        "--input",
+        "examples/source_snapshot.json",
+        "--output",
+        "extraction-replay"
+      ],
+      "data_mode": "saved actual-source replay",
+      "exit_code": 0,
+      "tail": "{\n  \"ridge\": {\n    \"mae_gco2_per_kwh\": 4.556432496724723,\n    \"rmse_gco2_per_kwh\": 6.2994468555266\n  },\n  \"persistence_baseline\": {\n    \"mae_gco2_per_kwh\": 5.096153846153846,\n    \"rmse_gco2_per_kwh\": 7.206033796543219\n  },\n  \"ridge_beats_persistence_on_mae\": true\n}\n"
+    },
+    {
+      "repository": "ds-03-weather-quality-monitor",
+      "command": [
+        "python",
+        "main.py",
+        "--input",
+        "examples/source_snapshot.json",
+        "--output",
+        "extraction-replay",
+        "--as-of",
+        "2026-10-25T09:19:19.485320+00:00"
+      ],
+      "data_mode": "saved actual-source replay",
+      "exit_code": 0,
+      "tail": "\": {\n    \"input_records\": 30,\n    \"unique_usable_timestamp_records\": 30,\n    \"rejected_timestamp_or_structure_records\": 0,\n    \"unexpected_station_records\": 0,\n    \"duplicate_records\": 0,\n    \"conflicting_duplicate_stations\": []\n  },\n  \"statuses\": {\n    \"PASS\": 5,\n    \"WARN\": 0,\n    \"FAIL\": 0\n  }\n}\n"
+    },
+    {
+      "repository": "ds-04-bike-availability-forecast",
+      "command": [
+        "python",
+        "main.py",
+        "--input",
+        "examples/source_snapshot.csv",
+        "--output",
+        "extraction-replay"
+      ],
+      "data_mode": "saved actual-source replay",
+      "exit_code": 0,
+      "tail": "6,\n    \"weekday_cos\": 0.16280581683207215\n  },\n  \"limitations\": \"Five stations and a short historical window; provider outages are skipped, no new-station generalisation, no live launch or future accuracy guarantee. Source publication delays not simulated.\",\n  \"ridge_beats_persistence_mae\": false\n}\n"
+    },
+    {
+      "repository": "ds-05-air-quality-spatial-analytics",
+      "command": [
+        "python",
+        "main.py",
+        "--input",
+        "examples/source_snapshot.json",
+        "--output",
+        "extraction-replay"
+      ],
+      "data_mode": "saved actual-source replay",
+      "exit_code": 0,
+      "tail": "rbside\",\n      \"sites\": 1,\n      \"common_hours\": 20,\n      \"mean_of_station_means\": 40.755,\n      \"unit\": \"ug/m3\"\n    },\n    {\n      \"pollutant\": \"NO2\",\n      \"site_type\": \"Roadside\",\n      \"sites\": 1,\n      \"common_hours\": 20,\n      \"mean_of_station_means\": 6.085,\n      \"unit\": \"ug/m3\"\n    }\n  ]\n}\n"
+    },
+    {
+      "repository": "ds-06-rss-topic-clustering",
+      "command": [
+        "python",
+        "main.py",
+        "--input",
+        "examples/source_snapshot.json",
+        "--output",
+        "extraction-replay"
+      ],
+      "data_mode": "saved actual-source replay",
+      "exit_code": 0,
+      "tail": "ette_note\": \"Undefined: fewer than two nonzero-vocabulary assigned clusters or too few samples\",\n    \"kmeans_beats_single_centroid\": false,\n    \"metric_scope\": \"Unsupervised TF-IDF compactness on story-held-out metadata, not topic accuracy or semantic truth; lower squared distance is better.\"\n  }\n}\n"
+    }
+  ],
+  "published_standalone_repositories": 0,
+  "limitations": [
+    "No new model training or actual Qwen inference in this migration check.",
+    "Only original USGS CLI replay tested here; existing hazard dashboard tests also passed.",
+    "HTTP/address/anchor checks do not prove browser rendering or public project deployment.",
+    "Student API dependencies installed locally; torch import moved into training functions so validation needs no heavyweight model.",
+    "One initial test invocation from the wrong working directory failed; final documented project-root invocation passed."
+  ],
+  "scope_checks": {
+    "project_ids_dates_categories_preserved": true,
+    "completed_scopes_preserved": true,
+    "root_readme_outside_markers_preserved": true,
+    "completed_count": 6,
+    "target": 44
+  }
+}

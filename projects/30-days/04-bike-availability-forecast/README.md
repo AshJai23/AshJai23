@@ -1,5 +1,28 @@
 # Dublin bike availability: a 30-minute historical forecast
 
+## Niche, data freshness and how to open
+
+**Niche:** Bike-share operations and station rebalancing.
+
+**Data truth:** Actual Dublin, Ireland station history. This completed experiment is NOT UK data or a real-time service. Historical replay is retained honestly.
+
+**Website status:** runnable locally; no public project website has been deployed.
+The GitHub address displays source code. An HTML file in GitHub's file viewer is
+not a hosted dashboard.
+
+From this project folder, install its documented dependencies, then run:
+
+```bash
+python main.py --input examples/source_snapshot.csv --output outputs
+```
+
+Open the generated **`outputs/report.html`** from your local output folder.
+It is a saved report; it refreshes only when you run the command again.
+
+**Separate repository:** requested; creation is pending. The current folder and
+its previous validation evidence remain available. Extraction is not a new
+project and does not increase the completed count.
+
 A small, runnable ML prototype predicting **bikes available at a station 30
 minutes later**. It uses real availability snapshots, not journey counts or
 invented demand. The checked-in experiment is explicitly **historical replay**.

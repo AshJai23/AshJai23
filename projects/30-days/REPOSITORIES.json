@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-27",
+  "note": "Requested destinations, not claims that repositories exist. Seven implemented projects ready to extract; 38 planned IDs are not built. No empty future repositories should be created. Original sources retained until verified publication.",
+  "projects": [
+    {
+      "id": "01",
+      "name": "ds-01-live-earthquake-analytics",
+      "target_repository": "AshJai23/ds-01-live-earthquake-analytics",
+      "source_path": "projects/30-days/01-live-earthquake-analytics",
+      "status": "ready_to_extract",
+      "repository_created": false,
+      "niche": "Hazard awareness and local weather exposure"
+    },
+    {
+      "id": "02",
+      "name": "ds-02-carbon-intensity-forecast",
+      "target_repository": "AshJai23/ds-02-carbon-intensity-forecast",
+      "source_path": "projects/30-days/02-carbon-intensity-forecast",
+      "status": "ready_to_extract",
+      "repository_created": false,
+      "niche": "GB energy and council carbon reporting"
+    },
+    {
+      "id": "03",
+      "name": "ds-03-weather-quality-monitor",
+      "target_repository": "AshJai23/ds-03-weather-quality-monitor",
+      "source_path": "projects/30-days/03-weather-quality-monitor",
+      "status": "ready_to_extract",
+      "repository_created": false,
+      "niche": "Weather-feed quality for transport and operations"
+    },
+    {
+      "id": "04",
+      "name": "ds-04-bike-availability-forecast",
+      "target_repository": "AshJai23/ds-04-bike-availability-forecast",
+      "source_path": "projects/30-days/04-bike-availability-forecast",
+      "status": "ready_to_extract",
+      "repository_created": false,
+      "niche": "Bike-share operations and station rebalancing"
+    },
+    {
+      "id": "05",
+      "name": "ds-05-air-quality-spatial-analytics",
+      "target_repository": "AshJai23/ds-05-air-quality-spatial-analytics",
+      "source_path": "projects/30-days/05-air-quality-spatial-analytics",
+      "status": "ready_to_extract",
+      "repository_created": false,
+      "niche": "London council environmental reporting"
+    },
+    {
+      "id": "06",
+      "name": "ds-06-rss-topic-clustering",
+      "target_repository": "AshJai23/ds-06-rss-topic-clustering",
+      "source_path": "projects/30-days/06-rss-topic-clustering",
+      "status": "ready_to_extract",
+      "repository_created": false,
+      "niche": "Science and technology headline organisation"
+    },
+    {
+      "id": "07",
+      "name": "ds-07-river-level-anomaly-detection",
+      "target_repository": "AshJai23/ds-07-river-level-anomaly-detection",
+      "source_path": "projects/30-days/07-river-level-anomaly-detection",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide."
+    },
+    {
+      "id": "08",
+      "name": "ds-08-carbon-bi-data-model",
+      "target_repository": "AshJai23/ds-08-carbon-bi-data-model",
+      "source_path": "projects/30-days/08-carbon-bi-data-model",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide."
+    },
+    {
+      "id": "09",
+      "name": "ds-09-weather-lstm-nowcast",
+      "target_repository": "AshJai23/ds-09-weather-lstm-nowcast",
+      "source_path": "projects/30-days/09-weather-lstm-nowcast",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales."
+    },
+    {
+      "id": "10",
+      "name": "ds-10-public-issue-triage",
+      "target_repository": "AshJai23/ds-10-public-issue-triage",
+      "source_path": "projects/30-days/10-public-issue-triage",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms."
+    },
+    {
+      "id": "11",
+      "name": "ds-11-uk-retail-profile-clustering",
+      "target_repository": "AshJai23/ds-11-uk-retail-profile-clustering",
+      "source_path": "projects/30-days/11-uk-retail-profile-clustering",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales."
+    },
+    {
+      "id": "12",
+      "name": "ds-12-api-latency-monitor",
+      "target_repository": "AshJai23/ds-12-api-latency-monitor",
+      "source_path": "projects/30-days/12-api-latency-monitor",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms."
+    },
+    {
+      "id": "13",
+      "name": "ds-13-nhs-ae-tabular-forecast",
+      "target_repository": "AshJai23/ds-13-nhs-ae-tabular-forecast",
+      "source_path": "projects/30-days/13-nhs-ae-tabular-forecast",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data."
+    },
+    {
+      "id": "14",
+      "name": "ds-14-banking-profile-autoencoder",
+      "target_repository": "AshJai23/ds-14-banking-profile-autoencoder",
+      "source_path": "projects/30-days/14-banking-profile-autoencoder",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK banking publication and official rate analytics; Bank of England public series, not private customer transactions."
+    },
+    {
+      "id": "15",
+      "name": "ds-15-air-quality-forecast",
+      "target_repository": "AshJai23/ds-15-air-quality-forecast",
+      "source_path": "projects/30-days/15-air-quality-forecast",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide."
+    },
+    {
+      "id": "16",
+      "name": "ds-16-uk-banking-sentiment",
+      "target_repository": "AshJai23/ds-16-uk-banking-sentiment",
+      "source_path": "projects/30-days/16-uk-banking-sentiment",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK banking publication and official rate analytics; Bank of England public series, not private customer transactions."
+    },
+    {
+      "id": "17",
+      "name": "ds-17-river-observation-etl",
+      "target_repository": "AshJai23/ds-17-river-observation-etl",
+      "source_path": "projects/30-days/17-river-observation-etl",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide."
+    },
+    {
+      "id": "18",
+      "name": "ds-18-nhs-ae-bi-kpis",
+      "target_repository": "AshJai23/ds-18-nhs-ae-bi-kpis",
+      "source_path": "projects/30-days/18-nhs-ae-bi-kpis",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data."
+    },
+    {
+      "id": "19",
+      "name": "ds-19-weather-temporal-cnn",
+      "target_repository": "AshJai23/ds-19-weather-temporal-cnn",
+      "source_path": "projects/30-days/19-weather-temporal-cnn",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales."
+    },
+    {
+      "id": "20",
+      "name": "ds-20-council-food-inspection-classifier",
+      "target_repository": "AshJai23/ds-20-council-food-inspection-classifier",
+      "source_path": "projects/30-days/20-council-food-inspection-classifier",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide."
+    },
+    {
+      "id": "21",
+      "name": "ds-21-semantic-news-search",
+      "target_repository": "AshJai23/ds-21-semantic-news-search",
+      "source_path": "projects/30-days/21-semantic-news-search",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms."
+    },
+    {
+      "id": "22",
+      "name": "ds-22-uk-retail-quality-profiler",
+      "target_repository": "AshJai23/ds-22-uk-retail-quality-profiler",
+      "source_path": "projects/30-days/22-uk-retail-quality-profiler",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales."
+    },
+    {
+      "id": "23",
+      "name": "ds-23-banking-lstm-forecast",
+      "target_repository": "AshJai23/ds-23-banking-lstm-forecast",
+      "source_path": "projects/30-days/23-banking-lstm-forecast",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK banking publication and official rate analytics; Bank of England public series, not private customer transactions."
+    },
+    {
+      "id": "24",
+      "name": "ds-24-weather-quantile-forecast",
+      "target_repository": "AshJai23/ds-24-weather-quantile-forecast",
+      "source_path": "projects/30-days/24-weather-quantile-forecast",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales."
+    },
+    {
+      "id": "25",
+      "name": "ds-25-council-river-sql-warehouse",
+      "target_repository": "AshJai23/ds-25-council-river-sql-warehouse",
+      "source_path": "projects/30-days/25-council-river-sql-warehouse",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide."
+    },
+    {
+      "id": "26",
+      "name": "ds-26-semantic-news-deduplication",
+      "target_repository": "AshJai23/ds-26-semantic-news-deduplication",
+      "source_path": "projects/30-days/26-semantic-news-deduplication",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms."
+    },
+    {
+      "id": "27",
+      "name": "ds-27-forecast-drift-monitor",
+      "target_repository": "AshJai23/ds-27-forecast-drift-monitor",
+      "source_path": "projects/30-days/27-forecast-drift-monitor",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales."
+    },
+    {
+      "id": "28",
+      "name": "ds-28-containerised-forecast-api",
+      "target_repository": "AshJai23/ds-28-containerised-forecast-api",
+      "source_path": "projects/30-days/28-containerised-forecast-api",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales."
+    },
+    {
+      "id": "29",
+      "name": "ds-29-nhs-transformer-forecast",
+      "target_repository": "AshJai23/ds-29-nhs-transformer-forecast",
+      "source_path": "projects/30-days/29-nhs-transformer-forecast",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data."
+    },
+    {
+      "id": "30",
+      "name": "ds-30-nhs-model-explanations",
+      "target_repository": "AshJai23/ds-30-nhs-model-explanations",
+      "source_path": "projects/30-days/30-nhs-model-explanations",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data."
+    },
+    {
+      "id": "31",
+      "name": "ds-31-online-banking-regression",
+      "target_repository": "AshJai23/ds-31-online-banking-regression",
+      "source_path": "projects/30-days/31-online-banking-regression",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK banking publication and official rate analytics; Bank of England public series, not private customer transactions."
+    },
+    {
+      "id": "32",
+      "name": "ds-32-banking-sequence-classifier",
+      "target_repository": "AshJai23/ds-32-banking-sequence-classifier",
+      "source_path": "projects/30-days/32-banking-sequence-classifier",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK banking publication and official rate analytics; Bank of England public series, not private customer transactions."
+    },
+    {
+      "id": "33",
+      "name": "ds-33-news-cooccurrence-network",
+      "target_repository": "AshJai23/ds-33-news-cooccurrence-network",
+      "source_path": "projects/30-days/33-news-cooccurrence-network",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms."
+    },
+    {
+      "id": "34",
+      "name": "ds-34-forecast-model-audit",
+      "target_repository": "AshJai23/ds-34-forecast-model-audit",
+      "source_path": "projects/30-days/34-forecast-model-audit",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data."
+    },
+    {
+      "id": "35",
+      "name": "ds-35-nhs-docs-retrieval",
+      "target_repository": "AshJai23/ds-35-nhs-docs-retrieval",
+      "source_path": "projects/30-days/35-nhs-docs-retrieval",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "England NHS service-demand planning with published aggregate statistics; monthly releases, not live patient or hospital queue data."
+    },
+    {
+      "id": "36",
+      "name": "ds-36-uk-retail-neural-network",
+      "target_repository": "AshJai23/ds-36-uk-retail-neural-network",
+      "source_path": "projects/30-days/36-uk-retail-neural-network",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales."
+    },
+    {
+      "id": "37",
+      "name": "ds-37-rolling-forecast-backtester",
+      "target_repository": "AshJai23/ds-37-rolling-forecast-backtester",
+      "source_path": "projects/30-days/37-rolling-forecast-backtester",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales."
+    },
+    {
+      "id": "38",
+      "name": "ds-38-live-data-dashboard",
+      "target_repository": "AshJai23/ds-38-live-data-dashboard",
+      "source_path": "projects/30-days/38-live-data-dashboard",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK source freshness, quality and validated cross-sector portfolio integration; preserve each dataset geography and cadence."
+    },
+    {
+      "id": "39",
+      "name": "ds-39-rss-text-cnn",
+      "target_repository": "AshJai23/ds-39-rss-text-cnn",
+      "source_path": "projects/30-days/39-rss-text-cnn",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK public digital-service engineering and technology publication intelligence; GOV.UK/GDS publications or public alphagov repositories, subject to source-specific reuse terms."
+    },
+    {
+      "id": "40",
+      "name": "ds-40-open-data-observability",
+      "target_repository": "AshJai23/ds-40-open-data-observability",
+      "source_path": "projects/30-days/40-open-data-observability",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK source freshness, quality and validated cross-sector portfolio integration; preserve each dataset geography and cadence."
+    },
+    {
+      "id": "41",
+      "name": "ds-41-sequence-anomaly-reconstruction",
+      "target_repository": "AshJai23/ds-41-sequence-anomaly-reconstruction",
+      "source_path": "projects/30-days/41-sequence-anomaly-reconstruction",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide."
+    },
+    {
+      "id": "42",
+      "name": "ds-42-portfolio-model-benchmark",
+      "target_repository": "AshJai23/ds-42-portfolio-model-benchmark",
+      "source_path": "projects/30-days/42-portfolio-model-benchmark",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK source freshness, quality and validated cross-sector portfolio integration; preserve each dataset geography and cadence."
+    },
+    {
+      "id": "43",
+      "name": "ds-43-cross-source-event-analytics",
+      "target_repository": "AshJai23/ds-43-cross-source-event-analytics",
+      "source_path": "projects/30-days/43-cross-source-event-analytics",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK source freshness, quality and validated cross-sector portfolio integration; preserve each dataset geography and cadence."
+    },
+    {
+      "id": "44",
+      "name": "ds-44-forecast-service-capstone",
+      "target_repository": "AshJai23/ds-44-forecast-service-capstone",
+      "source_path": "projects/30-days/44-forecast-service-capstone",
+      "status": "planned_not_built",
+      "repository_created": false,
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales."
+    },
+    {
+      "id": "extra-student",
+      "name": "uk-student-copilot",
+      "target_repository": "AshJai23/uk-student-copilot",
+      "source_path": "projects/uk-student-copilot",
+      "status": "ready_to_extract",
+      "repository_created": false,
+      "niche": "UK international-student support: reviewed GOV.UK source cards and a trained local routing head; not a live legal adviser."
+    }
+  ]
+}

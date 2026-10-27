@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-27T09:41:16.185Z",
+  "updated_at_utc": "2026-10-27T11:41:42.748386+00:00",
   "completed_count": 6,
   "target_count": 44,
   "items": {
@@ -11,7 +11,7 @@
     },
     "11": {
       "status": "planned",
-      "path": "11-earthquake-spatial-clustering",
+      "path": "11-uk-retail-profile-clustering",
       "planned_date": "2026-10-31"
     },
     "12": {
@@ -21,12 +21,12 @@
     },
     "13": {
       "status": "planned",
-      "path": "13-weather-tabular-forecast",
+      "path": "13-nhs-ae-tabular-forecast",
       "planned_date": "2026-11-01"
     },
     "14": {
       "status": "planned",
-      "path": "14-carbon-autoencoder",
+      "path": "14-banking-profile-autoencoder",
       "planned_date": "2026-11-02"
     },
     "15": {
@@ -36,7 +36,7 @@
     },
     "16": {
       "status": "planned",
-      "path": "16-rss-sentiment-trends",
+      "path": "16-uk-banking-sentiment",
       "planned_date": "2026-11-03"
     },
     "17": {
@@ -46,7 +46,7 @@
     },
     "18": {
       "status": "planned",
-      "path": "18-transport-bi-kpis",
+      "path": "18-nhs-ae-bi-kpis",
       "planned_date": "2026-11-04"
     },
     "19": {
@@ -56,7 +56,7 @@
     },
     "20": {
       "status": "planned",
-      "path": "20-bike-occupancy-classifier",
+      "path": "20-council-food-inspection-classifier",
       "planned_date": "2026-11-06"
     },
     "21": {
@@ -66,12 +66,12 @@
     },
     "22": {
       "status": "planned",
-      "path": "22-rss-quality-profiler",
+      "path": "22-uk-retail-quality-profiler",
       "planned_date": "2026-11-07"
     },
     "23": {
       "status": "planned",
-      "path": "23-carbon-lstm-forecast",
+      "path": "23-banking-lstm-forecast",
       "planned_date": "2026-11-08"
     },
     "24": {
@@ -81,7 +81,7 @@
     },
     "25": {
       "status": "planned",
-      "path": "25-transport-sql-warehouse",
+      "path": "25-council-river-sql-warehouse",
       "planned_date": "2026-11-09"
     },
     "26": {
@@ -101,22 +101,22 @@
     },
     "29": {
       "status": "planned",
-      "path": "29-carbon-transformer-forecast",
+      "path": "29-nhs-transformer-forecast",
       "planned_date": "2026-11-12"
     },
     "30": {
       "status": "planned",
-      "path": "30-weather-model-explanations",
+      "path": "30-nhs-model-explanations",
       "planned_date": "2026-11-13"
     },
     "31": {
       "status": "planned",
-      "path": "31-online-carbon-regression",
+      "path": "31-online-banking-regression",
       "planned_date": "2026-11-14"
     },
     "32": {
       "status": "planned",
-      "path": "32-energy-sequence-classifier",
+      "path": "32-banking-sequence-classifier",
       "planned_date": "2026-11-14"
     },
     "33": {
@@ -131,12 +131,12 @@
     },
     "35": {
       "status": "planned",
-      "path": "35-source-grounded-docs-retrieval",
+      "path": "35-nhs-docs-retrieval",
       "planned_date": "2026-11-16"
     },
     "36": {
       "status": "planned",
-      "path": "36-carbon-tabular-neural-network",
+      "path": "36-uk-retail-neural-network",
       "planned_date": "2026-11-17"
     },
     "37": {
@@ -251,5 +251,14 @@
       "path": "09-weather-lstm-nowcast",
       "planned_date": "2026-10-29"
     }
+  },
+  "repository_migration": {
+    "status": "pending_repository_creation",
+    "manifest": "REPOSITORIES.json",
+    "completed_count_unchanged": true,
+    "extracted_project_roots": 7,
+    "tests_passed": 130,
+    "replay_smokes_passed": 6,
+    "evidence": "migration-validation.json"
   }
 }

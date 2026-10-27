@@ -1,5 +1,28 @@
 # RSS topic clustering: inspectable groups, measured limitations
 
+## Niche, data freshness and how to open
+
+**Niche:** Science and technology headline organisation.
+
+**Data truth:** NASA, NOAA and NIST public headline metadata. Live fetch obtains published feed entries; stories may be old. Saved training results are a historical snapshot, NOT UK technology results.
+
+**Website status:** runnable locally; no public project website has been deployed.
+The GitHub address displays source code. An HTML file in GitHub's file viewer is
+not a hosted dashboard.
+
+From this project folder, install its documented dependencies, then run:
+
+```bash
+python main.py --live --output outputs
+```
+
+Open the generated **`outputs/report.html`** from your local output folder.
+It is a saved report; it refreshes only when you run the command again.
+
+**Separate repository:** requested; creation is pending. The current folder and
+its previous validation evidence remain available. Extraction is not a new
+project and does not increase the completed count.
+
 A runnable NLP/ML prototype that captures public RSS headline metadata, groups
 near-duplicate stories, fits **TF-IDF + K-means**, and exports human-readable
 cluster inspection with original source links. It actually trains a clustering

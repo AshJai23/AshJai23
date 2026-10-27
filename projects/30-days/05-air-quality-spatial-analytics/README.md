@@ -1,5 +1,28 @@
 # Observed London air: spatial analytics with coverage checks
 
+## Niche, data freshness and how to open
+
+**Niche:** London council environmental reporting.
+
+**Data truth:** LAQN measured pollution from London sites; delayed observations, missing coverage and request failures are reported. No current-health or live exposure claim.
+
+**Website status:** runnable locally; no public project website has been deployed.
+The GitHub address displays source code. An HTML file in GitHub's file viewer is
+not a hosted dashboard.
+
+From this project folder, install its documented dependencies, then run:
+
+```bash
+python main.py --live --output outputs
+```
+
+Open the generated **`outputs/report.html`** from your local output folder.
+It is a saved report; it refreshes only when you run the command again.
+
+**Separate repository:** requested; creation is pending. The current folder and
+its previous validation evidence remain available. Extraction is not a new
+project and does not increase the completed count.
+
 A data-science prototype that joins monitoring-site coordinates to **measured
 hourly NO2 and PM10 concentrations**, checks units and coverage, and creates
 matched-hour spatial summaries. It does not forecast pollution, interpolate

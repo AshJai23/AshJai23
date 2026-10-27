@@ -1,5 +1,28 @@
 # Great Britain carbon-intensity forecasting
 
+## Niche, data freshness and how to open
+
+**Niche:** GB energy and council carbon reporting.
+
+**Data truth:** Actual GB half-hour carbon observations; live command pulls source data, which can be delayed. Saved model scores are historical backtests.
+
+**Website status:** runnable locally; no public project website has been deployed.
+The GitHub address displays source code. An HTML file in GitHub's file viewer is
+not a hosted dashboard.
+
+From this project folder, install its documented dependencies, then run:
+
+```bash
+python main.py --live --days 28 --output outputs
+```
+
+Open the generated **`outputs/report.html`** from your local output folder.
+It is a saved report; it refreshes only when you run the command again.
+
+**Separate repository:** requested; creation is pending. The current folder and
+its previous validation evidence remain available. Extraction is not a new
+project and does not increase the completed count.
+
 A reproducible ML project using the public NESO Carbon Intensity API. It compares
 a regularised linear model against a persistence baseline for the next half-hour
 interval, using only earlier actual observations as input.
