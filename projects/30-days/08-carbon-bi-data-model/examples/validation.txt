@@ -1,0 +1,33 @@
+Validation on 28 October 2026; Python 3.12.14
+Initial live source command succeeded: python main.py --live --output live-run --end 2026-10-28T00:00Z
+Final implementation smoke runs were explicitly SAVED ACTUAL-SOURCE REPLAYS, not a second live capture.
+Requests/statuses/hashes: [{"url": "https://api.carbonintensity.org.uk/intensity/2026-10-24T23:00Z/2026-10-28T00:00Z", "http_status": 200, "sha256": "fbd922861eaf9c5809e7d9f661fc5ecb76977fe3b6955c893e387fbfc7092c18"}, {"url": "https://api.carbonintensity.org.uk/regional/intensity/2026-10-27T00:00Z/2026-10-28T00:00Z", "http_status": 200, "sha256": "5fd3d05767bc6e098c0ae6d75757411c7300a52a4e09abb16328e1a9f7ae311d"}]
+Captured at: 2026-10-28T09:11:29.933173+00:00
+Commands: [{"command": "python main.py --input examples/source_snapshot.json --output examples", "exit": 0}, {"command": "python main.py --input examples/source_snapshot.json --output replay-check", "exit": 0}]
+Replay equality: summary.json, warehouse.sql, dim_time.csv, dim_region.csv, fact_national.csv, fact_regional_forecast.csv, v_national_daily.csv; river metrics equal excluding elapsed fit duration.
+BI SQL example queries and restore/integrity tests executed. No Power BI/Tableau/DAX runtime or browser hosting claim.
+test_api_extra_boundary_row_excluded (test_bi.BITests.test_api_extra_boundary_row_excluded) ... ok
+test_autumn_has_50_slots (test_bi.BITests.test_autumn_has_50_slots) ... ok
+test_collection_autumn_window_includes_25_hour_regional_day (test_bi.BITests.test_collection_autumn_window_includes_25_hour_regional_day) ... ok
+test_collection_spring_window_uses_local_midnights (test_bi.BITests.test_collection_spring_window_uses_local_midnights) ... ok
+test_conflicting_duplicate_fails (test_bi.BITests.test_conflicting_duplicate_fails) ... ok
+test_exact_duplicates_idempotent (test_bi.BITests.test_exact_duplicates_idempotent) ... ok
+test_forecast_grain_does_not_multiply_national_facts (test_bi.BITests.test_forecast_grain_does_not_multiply_national_facts) ... ok
+test_future_window_is_not_historical_data (test_bi.BITests.test_future_window_is_not_historical_data) ... ok
+test_live_outage_has_no_synthetic_or_replay_fallback (test_bi.BITests.test_live_outage_has_no_synthetic_or_replay_fallback) ... ok
+test_missing_fact_interval_remains_on_time_axis (test_bi.BITests.test_missing_fact_interval_remains_on_time_axis) ... ok
+test_negative_nan_bool_and_strings_rejected (test_bi.BITests.test_negative_nan_bool_and_strings_rejected) ... ok
+test_non_aligned_or_wrong_duration_rejected (test_bi.BITests.test_non_aligned_or_wrong_duration_rejected) ... ok
+test_ordinary_day_has_48_slots (test_bi.BITests.test_ordinary_day_has_48_slots) ... ok
+test_partial_day_denominator_stays_full_day (test_bi.BITests.test_partial_day_denominator_stays_full_day) ... ok
+test_repeated_local_hour_has_distinct_utc_fold_and_period (test_bi.BITests.test_repeated_local_hour_has_distinct_utc_fold_and_period) ... ok
+test_spring_has_46_slots (test_bi.BITests.test_spring_has_46_slots) ... ok
+test_sql_dump_restores_all_facts_and_view (test_bi.BITests.test_sql_dump_restores_all_facts_and_view) ... ok
+test_sql_foreign_key_and_unique_constraints (test_bi.BITests.test_sql_foreign_key_and_unique_constraints) ... ok
+test_unknown_region_rejected (test_bi.BITests.test_unknown_region_rejected) ... ok
+test_zero_is_counted_null_is_not (test_bi.BITests.test_zero_is_counted_null_is_not) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.044s
+
+OK

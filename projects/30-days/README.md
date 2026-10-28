@@ -1,6 +1,6 @@
 # 30 days of practical data science, ML and deep learning
 
-**24 October–22 November 2026 · 44 planned projects · 6 completed**
+**24 October–22 November 2026 · 44 planned projects · 8 completed**
 
 A portfolio sprint built with AI assistance. Each completed item contains runnable
 code, a source-attributed data example, validation evidence and an honest account
@@ -13,7 +13,7 @@ The user requested a separate repository for each project on **27 October**.
 [Repository names and niches](REPOSITORIES.md) / [destination manifest](REPOSITORIES.json) lists the requested names and honest
 creation status. **No separate repositories have been created yet:** the current
 connector cannot create them. The existing completed-project links below remain
-valid. Seven implemented projects (including Student Copilot, outside the 44)
+valid. Nine implemented projects (including Student Copilot, outside the 44)
 are ready for extraction after repository creation is available.
 
 Future work now covers **UK retail, banking, technology, councils and NHS**;
@@ -46,6 +46,8 @@ their niche and the correct local address or generated report.
 | 04 | [Bike availability forecast](04-bike-availability-forecast/) | Real station-history replay; 30-minute Ridge vs persistence; baseline wins on 81 held-out rows | [12 passing tests + exact replay](04-bike-availability-forecast/examples/validation.txt) |
 | 05 | [Air-quality spatial analytics](05-air-quality-spatial-analytics/) | LAQN observations, units/coverage checks, matched-hour spatial summaries and GeoJSON; partial source outage exposed | [19 passing tests + live/replay evidence](05-air-quality-spatial-analytics/examples/validation.txt) |
 | 06 | [RSS topic clustering](06-rss-topic-clustering/) | 60 real publisher headlines; TF-IDF/K-means, story-held-out baselines, freshness and inspectable topic groups; baseline wins | [22 passing tests + exact replay](06-rss-topic-clustering/examples/validation.txt) |
+| 07 | [River-level anomaly detection](07-river-level-anomaly-detection/) | Actual EA historical readings; Ridge + calibrated robust innovations; persistence wins; stale observations and no anomaly labels explicit | [14 tests + live-download/replay evidence](07-river-level-anomaly-detection/examples/validation.txt) |
+| 08 | [Carbon intensity BI data model](08-carbon-bi-data-model/) | Separate national/regional fact grains; 146 national + 144 regional rows, 50-slot DST day and SQL/CSV BI exports | [20 tests + live-download/replay evidence](08-carbon-bi-data-model/examples/validation.txt) |
 
 ### Day-one measured results
 

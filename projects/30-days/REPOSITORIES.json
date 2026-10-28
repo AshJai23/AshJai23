@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "as_of": "2026-10-27",
-  "note": "Requested destinations, not claims that repositories exist. Seven implemented projects ready to extract; 38 planned IDs are not built. No empty future repositories should be created. Original sources retained until verified publication.",
+  "as_of": "2026-10-28",
+  "note": "Requested destinations, not claims that repositories exist. Nine implemented projects (8 sprint + extra Student Copilot) ready to extract; 36 planned IDs are not built. Do not create empty future repositories. Original sources remain in the profile repository.",
   "projects": [
     {
       "id": "01",
@@ -62,18 +62,22 @@
       "name": "ds-07-river-level-anomaly-detection",
       "target_repository": "AshJai23/ds-07-river-level-anomaly-detection",
       "source_path": "projects/30-days/07-river-level-anomaly-detection",
-      "status": "planned_not_built",
+      "status": "ready_to_extract",
       "repository_created": false,
-      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide."
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "published_source_folder": true,
+      "standalone_repository_created": false
     },
     {
       "id": "08",
       "name": "ds-08-carbon-bi-data-model",
       "target_repository": "AshJai23/ds-08-carbon-bi-data-model",
       "source_path": "projects/30-days/08-carbon-bi-data-model",
-      "status": "planned_not_built",
+      "status": "ready_to_extract",
       "repository_created": false,
-      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide."
+      "niche": "UK local environmental and operational reporting; UK Environment Agency, London air and GB energy as applicable. State exact geography: England-only data is not UK-wide.",
+      "published_source_folder": true,
+      "standalone_repository_created": false
     },
     {
       "id": "09",

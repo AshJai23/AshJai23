@@ -74,9 +74,9 @@ My work spans fraud detection, cyber threat analysis, time-series forecasting, h
 
 <!-- data-science-sprint:start -->
 ### 🚀 30-day data science sprint
-**24 October–22 November 2026 · 6 of 44 projects completed**
+**24 October–22 November 2026 · 8 of 44 projects completed**
 
-**UK niches:** retail · banking · technology · councils · NHS (pending builds).
+**UK niches:** retail · banking · technology · councils · NHS (council/environment builds published; other sector work planned).
 
 Separate project repositories requested; [migration status](projects/30-days/REPOSITORIES.json). Existing code remains accessible below.
 

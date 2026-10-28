@@ -1,0 +1,2817 @@
+{
+  "captured_at_utc": "2026-10-28T09:11:29.933173+00:00",
+  "window_start": "2026-10-24T23:00Z",
+  "window_end": "2026-10-28T00:00Z",
+  "regional_start": "2026-10-27T00:00Z",
+  "national": [
+    {
+      "from": "2026-10-24T22:30Z",
+      "to": "2026-10-24T23:00Z",
+      "intensity": {
+        "forecast": 73,
+        "actual": 73,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-24T23:00Z",
+      "to": "2026-10-24T23:30Z",
+      "intensity": {
+        "forecast": 73,
+        "actual": 73,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-24T23:30Z",
+      "to": "2026-10-25T00:00Z",
+      "intensity": {
+        "forecast": 74,
+        "actual": 74,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T00:00Z",
+      "to": "2026-10-25T00:30Z",
+      "intensity": {
+        "forecast": 72,
+        "actual": 77,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T00:30Z",
+      "to": "2026-10-25T01:00Z",
+      "intensity": {
+        "forecast": 73,
+        "actual": 71,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T01:00Z",
+      "to": "2026-10-25T01:30Z",
+      "intensity": {
+        "forecast": 67,
+        "actual": 67,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T01:30Z",
+      "to": "2026-10-25T02:00Z",
+      "intensity": {
+        "forecast": 68,
+        "actual": 62,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T02:00Z",
+      "to": "2026-10-25T02:30Z",
+      "intensity": {
+        "forecast": 61,
+        "actual": 61,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T02:30Z",
+      "to": "2026-10-25T03:00Z",
+      "intensity": {
+        "forecast": 57,
+        "actual": 59,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T03:00Z",
+      "to": "2026-10-25T03:30Z",
+      "intensity": {
+        "forecast": 62,
+        "actual": 59,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T03:30Z",
+      "to": "2026-10-25T04:00Z",
+      "intensity": {
+        "forecast": 59,
+        "actual": 70,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T04:00Z",
+      "to": "2026-10-25T04:30Z",
+      "intensity": {
+        "forecast": 59,
+        "actual": 69,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T04:30Z",
+      "to": "2026-10-25T05:00Z",
+      "intensity": {
+        "forecast": 67,
+        "actual": 68,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T05:00Z",
+      "to": "2026-10-25T05:30Z",
+      "intensity": {
+        "forecast": 70,
+        "actual": 72,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T05:30Z",
+      "to": "2026-10-25T06:00Z",
+      "intensity": {
+        "forecast": 68,
+        "actual": 79,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T06:00Z",
+      "to": "2026-10-25T06:30Z",
+      "intensity": {
+        "forecast": 67,
+        "actual": 86,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T06:30Z",
+      "to": "2026-10-25T07:00Z",
+      "intensity": {
+        "forecast": 81,
+        "actual": 97,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-25T07:00Z",
+      "to": "2026-10-25T07:30Z",
+      "intensity": {
+        "forecast": 80,
+        "actual": 100,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-25T07:30Z",
+      "to": "2026-10-25T08:00Z",
+      "intensity": {
+        "forecast": 87,
+        "actual": 87,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T08:00Z",
+      "to": "2026-10-25T08:30Z",
+      "intensity": {
+        "forecast": 95,
+        "actual": 78,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T08:30Z",
+      "to": "2026-10-25T09:00Z",
+      "intensity": {
+        "forecast": 77,
+        "actual": 64,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T09:00Z",
+      "to": "2026-10-25T09:30Z",
+      "intensity": {
+        "forecast": 70,
+        "actual": 60,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T09:30Z",
+      "to": "2026-10-25T10:00Z",
+      "intensity": {
+        "forecast": 58,
+        "actual": 55,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T10:00Z",
+      "to": "2026-10-25T10:30Z",
+      "intensity": {
+        "forecast": 50,
+        "actual": 52,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T10:30Z",
+      "to": "2026-10-25T11:00Z",
+      "intensity": {
+        "forecast": 50,
+        "actual": 55,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T11:00Z",
+      "to": "2026-10-25T11:30Z",
+      "intensity": {
+        "forecast": 48,
+        "actual": 54,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T11:30Z",
+      "to": "2026-10-25T12:00Z",
+      "intensity": {
+        "forecast": 51,
+        "actual": 53,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T12:00Z",
+      "to": "2026-10-25T12:30Z",
+      "intensity": {
+        "forecast": 49,
+        "actual": 54,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T12:30Z",
+      "to": "2026-10-25T13:00Z",
+      "intensity": {
+        "forecast": 50,
+        "actual": 54,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T13:00Z",
+      "to": "2026-10-25T13:30Z",
+      "intensity": {
+        "forecast": 51,
+        "actual": 50,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T13:30Z",
+      "to": "2026-10-25T14:00Z",
+      "intensity": {
+        "forecast": 49,
+        "actual": 52,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T14:00Z",
+      "to": "2026-10-25T14:30Z",
+      "intensity": {
+        "forecast": 49,
+        "actual": 56,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T14:30Z",
+      "to": "2026-10-25T15:00Z",
+      "intensity": {
+        "forecast": 52,
+        "actual": 58,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T15:00Z",
+      "to": "2026-10-25T15:30Z",
+      "intensity": {
+        "forecast": 51,
+        "actual": 62,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T15:30Z",
+      "to": "2026-10-25T16:00Z",
+      "intensity": {
+        "forecast": 53,
+        "actual": 74,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T16:00Z",
+      "to": "2026-10-25T16:30Z",
+      "intensity": {
+        "forecast": 50,
+        "actual": 84,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T16:30Z",
+      "to": "2026-10-25T17:00Z",
+      "intensity": {
+        "forecast": 53,
+        "actual": 96,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-25T17:00Z",
+      "to": "2026-10-25T17:30Z",
+      "intensity": {
+        "forecast": 64,
+        "actual": 102,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-25T17:30Z",
+      "to": "2026-10-25T18:00Z",
+      "intensity": {
+        "forecast": 73,
+        "actual": 101,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-25T18:00Z",
+      "to": "2026-10-25T18:30Z",
+      "intensity": {
+        "forecast": 86,
+        "actual": 99,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-25T18:30Z",
+      "to": "2026-10-25T19:00Z",
+      "intensity": {
+        "forecast": 86,
+        "actual": 92,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-25T19:00Z",
+      "to": "2026-10-25T19:30Z",
+      "intensity": {
+        "forecast": 88,
+        "actual": 85,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T19:30Z",
+      "to": "2026-10-25T20:00Z",
+      "intensity": {
+        "forecast": 85,
+        "actual": 86,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T20:00Z",
+      "to": "2026-10-25T20:30Z",
+      "intensity": {
+        "forecast": 83,
+        "actual": 78,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T20:30Z",
+      "to": "2026-10-25T21:00Z",
+      "intensity": {
+        "forecast": 83,
+        "actual": 79,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T21:00Z",
+      "to": "2026-10-25T21:30Z",
+      "intensity": {
+        "forecast": 76,
+        "actual": 73,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T21:30Z",
+      "to": "2026-10-25T22:00Z",
+      "intensity": {
+        "forecast": 73,
+        "actual": 73,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T22:00Z",
+      "to": "2026-10-25T22:30Z",
+      "intensity": {
+        "forecast": 78,
+        "actual": 74,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T22:30Z",
+      "to": "2026-10-25T23:00Z",
+      "intensity": {
+        "forecast": 75,
+        "actual": 76,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T23:00Z",
+      "to": "2026-10-25T23:30Z",
+      "intensity": {
+        "forecast": 73,
+        "actual": 78,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-25T23:30Z",
+      "to": "2026-10-26T00:00Z",
+      "intensity": {
+        "forecast": 83,
+        "actual": 80,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T00:00Z",
+      "to": "2026-10-26T00:30Z",
+      "intensity": {
+        "forecast": 79,
+        "actual": 81,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T00:30Z",
+      "to": "2026-10-26T01:00Z",
+      "intensity": {
+        "forecast": 80,
+        "actual": 78,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T01:00Z",
+      "to": "2026-10-26T01:30Z",
+      "intensity": {
+        "forecast": 82,
+        "actual": 73,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T01:30Z",
+      "to": "2026-10-26T02:00Z",
+      "intensity": {
+        "forecast": 83,
+        "actual": 73,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T02:00Z",
+      "to": "2026-10-26T02:30Z",
+      "intensity": {
+        "forecast": 72,
+        "actual": 70,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T02:30Z",
+      "to": "2026-10-26T03:00Z",
+      "intensity": {
+        "forecast": 78,
+        "actual": 74,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T03:00Z",
+      "to": "2026-10-26T03:30Z",
+      "intensity": {
+        "forecast": 76,
+        "actual": 76,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T03:30Z",
+      "to": "2026-10-26T04:00Z",
+      "intensity": {
+        "forecast": 74,
+        "actual": 75,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T04:00Z",
+      "to": "2026-10-26T04:30Z",
+      "intensity": {
+        "forecast": 73,
+        "actual": 70,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T04:30Z",
+      "to": "2026-10-26T05:00Z",
+      "intensity": {
+        "forecast": 60,
+        "actual": 61,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T05:00Z",
+      "to": "2026-10-26T05:30Z",
+      "intensity": {
+        "forecast": 61,
+        "actual": 64,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T05:30Z",
+      "to": "2026-10-26T06:00Z",
+      "intensity": {
+        "forecast": 63,
+        "actual": 89,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T06:00Z",
+      "to": "2026-10-26T06:30Z",
+      "intensity": {
+        "forecast": 63,
+        "actual": 95,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-26T06:30Z",
+      "to": "2026-10-26T07:00Z",
+      "intensity": {
+        "forecast": 84,
+        "actual": 108,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-26T07:00Z",
+      "to": "2026-10-26T07:30Z",
+      "intensity": {
+        "forecast": 95,
+        "actual": 108,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-26T07:30Z",
+      "to": "2026-10-26T08:00Z",
+      "intensity": {
+        "forecast": 98,
+        "actual": 96,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-26T08:00Z",
+      "to": "2026-10-26T08:30Z",
+      "intensity": {
+        "forecast": 96,
+        "actual": 97,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-26T08:30Z",
+      "to": "2026-10-26T09:00Z",
+      "intensity": {
+        "forecast": 92,
+        "actual": 88,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T09:00Z",
+      "to": "2026-10-26T09:30Z",
+      "intensity": {
+        "forecast": 92,
+        "actual": 86,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T09:30Z",
+      "to": "2026-10-26T10:00Z",
+      "intensity": {
+        "forecast": 85,
+        "actual": 81,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T10:00Z",
+      "to": "2026-10-26T10:30Z",
+      "intensity": {
+        "forecast": 81,
+        "actual": 77,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T10:30Z",
+      "to": "2026-10-26T11:00Z",
+      "intensity": {
+        "forecast": 77,
+        "actual": 77,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T11:00Z",
+      "to": "2026-10-26T11:30Z",
+      "intensity": {
+        "forecast": 76,
+        "actual": 70,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T11:30Z",
+      "to": "2026-10-26T12:00Z",
+      "intensity": {
+        "forecast": 72,
+        "actual": 73,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T12:00Z",
+      "to": "2026-10-26T12:30Z",
+      "intensity": {
+        "forecast": 67,
+        "actual": 71,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T12:30Z",
+      "to": "2026-10-26T13:00Z",
+      "intensity": {
+        "forecast": 66,
+        "actual": 70,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T13:00Z",
+      "to": "2026-10-26T13:30Z",
+      "intensity": {
+        "forecast": 68,
+        "actual": 72,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T13:30Z",
+      "to": "2026-10-26T14:00Z",
+      "intensity": {
+        "forecast": 68,
+        "actual": 75,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T14:00Z",
+      "to": "2026-10-26T14:30Z",
+      "intensity": {
+        "forecast": 65,
+        "actual": 75,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T14:30Z",
+      "to": "2026-10-26T15:00Z",
+      "intensity": {
+        "forecast": 64,
+        "actual": 75,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T15:00Z",
+      "to": "2026-10-26T15:30Z",
+      "intensity": {
+        "forecast": 66,
+        "actual": 76,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T15:30Z",
+      "to": "2026-10-26T16:00Z",
+      "intensity": {
+        "forecast": 76,
+        "actual": 82,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T16:00Z",
+      "to": "2026-10-26T16:30Z",
+      "intensity": {
+        "forecast": 76,
+        "actual": 90,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-26T16:30Z",
+      "to": "2026-10-26T17:00Z",
+      "intensity": {
+        "forecast": 78,
+        "actual": 102,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-26T17:00Z",
+      "to": "2026-10-26T17:30Z",
+      "intensity": {
+        "forecast": 82,
+        "actual": 104,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-26T17:30Z",
+      "to": "2026-10-26T18:00Z",
+      "intensity": {
+        "forecast": 96,
+        "actual": 104,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-26T18:00Z",
+      "to": "2026-10-26T18:30Z",
+      "intensity": {
+        "forecast": 96,
+        "actual": 103,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-26T18:30Z",
+      "to": "2026-10-26T19:00Z",
+      "intensity": {
+        "forecast": 97,
+        "actual": 100,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-26T19:00Z",
+      "to": "2026-10-26T19:30Z",
+      "intensity": {
+        "forecast": 94,
+        "actual": 88,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T19:30Z",
+      "to": "2026-10-26T20:00Z",
+      "intensity": {
+        "forecast": 95,
+        "actual": 87,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T20:00Z",
+      "to": "2026-10-26T20:30Z",
+      "intensity": {
+        "forecast": 90,
+        "actual": 83,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T20:30Z",
+      "to": "2026-10-26T21:00Z",
+      "intensity": {
+        "forecast": 75,
+        "actual": 84,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T21:00Z",
+      "to": "2026-10-26T21:30Z",
+      "intensity": {
+        "forecast": 77,
+        "actual": 77,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T21:30Z",
+      "to": "2026-10-26T22:00Z",
+      "intensity": {
+        "forecast": 79,
+        "actual": 72,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T22:00Z",
+      "to": "2026-10-26T22:30Z",
+      "intensity": {
+        "forecast": 73,
+        "actual": 61,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T22:30Z",
+      "to": "2026-10-26T23:00Z",
+      "intensity": {
+        "forecast": 69,
+        "actual": 65,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T23:00Z",
+      "to": "2026-10-26T23:30Z",
+      "intensity": {
+        "forecast": 62,
+        "actual": 66,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-26T23:30Z",
+      "to": "2026-10-27T00:00Z",
+      "intensity": {
+        "forecast": 60,
+        "actual": 72,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T00:00Z",
+      "to": "2026-10-27T00:30Z",
+      "intensity": {
+        "forecast": 60,
+        "actual": 73,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T00:30Z",
+      "to": "2026-10-27T01:00Z",
+      "intensity": {
+        "forecast": 67,
+        "actual": 68,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T01:00Z",
+      "to": "2026-10-27T01:30Z",
+      "intensity": {
+        "forecast": 67,
+        "actual": 64,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T01:30Z",
+      "to": "2026-10-27T02:00Z",
+      "intensity": {
+        "forecast": 66,
+        "actual": 61,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T02:00Z",
+      "to": "2026-10-27T02:30Z",
+      "intensity": {
+        "forecast": 62,
+        "actual": 61,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T02:30Z",
+      "to": "2026-10-27T03:00Z",
+      "intensity": {
+        "forecast": 60,
+        "actual": 59,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T03:00Z",
+      "to": "2026-10-27T03:30Z",
+      "intensity": {
+        "forecast": 59,
+        "actual": 64,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T03:30Z",
+      "to": "2026-10-27T04:00Z",
+      "intensity": {
+        "forecast": 58,
+        "actual": 61,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T04:00Z",
+      "to": "2026-10-27T04:30Z",
+      "intensity": {
+        "forecast": 61,
+        "actual": 61,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T04:30Z",
+      "to": "2026-10-27T05:00Z",
+      "intensity": {
+        "forecast": 60,
+        "actual": 65,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T05:00Z",
+      "to": "2026-10-27T05:30Z",
+      "intensity": {
+        "forecast": 61,
+        "actual": 68,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T05:30Z",
+      "to": "2026-10-27T06:00Z",
+      "intensity": {
+        "forecast": 62,
+        "actual": 72,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T06:00Z",
+      "to": "2026-10-27T06:30Z",
+      "intensity": {
+        "forecast": 65,
+        "actual": 81,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T06:30Z",
+      "to": "2026-10-27T07:00Z",
+      "intensity": {
+        "forecast": 68,
+        "actual": 90,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T07:00Z",
+      "to": "2026-10-27T07:30Z",
+      "intensity": {
+        "forecast": 70,
+        "actual": 92,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T07:30Z",
+      "to": "2026-10-27T08:00Z",
+      "intensity": {
+        "forecast": 80,
+        "actual": 89,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T08:00Z",
+      "to": "2026-10-27T08:30Z",
+      "intensity": {
+        "forecast": 83,
+        "actual": 89,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T08:30Z",
+      "to": "2026-10-27T09:00Z",
+      "intensity": {
+        "forecast": 79,
+        "actual": 79,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T09:00Z",
+      "to": "2026-10-27T09:30Z",
+      "intensity": {
+        "forecast": 84,
+        "actual": 65,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T09:30Z",
+      "to": "2026-10-27T10:00Z",
+      "intensity": {
+        "forecast": 72,
+        "actual": 56,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T10:00Z",
+      "to": "2026-10-27T10:30Z",
+      "intensity": {
+        "forecast": 75,
+        "actual": 52,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T10:30Z",
+      "to": "2026-10-27T11:00Z",
+      "intensity": {
+        "forecast": 48,
+        "actual": 53,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T11:00Z",
+      "to": "2026-10-27T11:30Z",
+      "intensity": {
+        "forecast": 45,
+        "actual": 55,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T11:30Z",
+      "to": "2026-10-27T12:00Z",
+      "intensity": {
+        "forecast": 46,
+        "actual": 53,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T12:00Z",
+      "to": "2026-10-27T12:30Z",
+      "intensity": {
+        "forecast": 50,
+        "actual": 52,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T12:30Z",
+      "to": "2026-10-27T13:00Z",
+      "intensity": {
+        "forecast": 51,
+        "actual": 54,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T13:00Z",
+      "to": "2026-10-27T13:30Z",
+      "intensity": {
+        "forecast": 49,
+        "actual": 57,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T13:30Z",
+      "to": "2026-10-27T14:00Z",
+      "intensity": {
+        "forecast": 51,
+        "actual": 65,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T14:00Z",
+      "to": "2026-10-27T14:30Z",
+      "intensity": {
+        "forecast": 56,
+        "actual": 68,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T14:30Z",
+      "to": "2026-10-27T15:00Z",
+      "intensity": {
+        "forecast": 65,
+        "actual": 72,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T15:00Z",
+      "to": "2026-10-27T15:30Z",
+      "intensity": {
+        "forecast": 68,
+        "actual": 85,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T15:30Z",
+      "to": "2026-10-27T16:00Z",
+      "intensity": {
+        "forecast": 73,
+        "actual": 95,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T16:00Z",
+      "to": "2026-10-27T16:30Z",
+      "intensity": {
+        "forecast": 84,
+        "actual": 106,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T16:30Z",
+      "to": "2026-10-27T17:00Z",
+      "intensity": {
+        "forecast": 96,
+        "actual": 119,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T17:00Z",
+      "to": "2026-10-27T17:30Z",
+      "intensity": {
+        "forecast": 108,
+        "actual": 124,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T17:30Z",
+      "to": "2026-10-27T18:00Z",
+      "intensity": {
+        "forecast": 111,
+        "actual": 121,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T18:00Z",
+      "to": "2026-10-27T18:30Z",
+      "intensity": {
+        "forecast": 116,
+        "actual": 119,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T18:30Z",
+      "to": "2026-10-27T19:00Z",
+      "intensity": {
+        "forecast": 108,
+        "actual": 114,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T19:00Z",
+      "to": "2026-10-27T19:30Z",
+      "intensity": {
+        "forecast": 108,
+        "actual": 106,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T19:30Z",
+      "to": "2026-10-27T20:00Z",
+      "intensity": {
+        "forecast": 111,
+        "actual": 106,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T20:00Z",
+      "to": "2026-10-27T20:30Z",
+      "intensity": {
+        "forecast": 107,
+        "actual": 106,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T20:30Z",
+      "to": "2026-10-27T21:00Z",
+      "intensity": {
+        "forecast": 104,
+        "actual": 101,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T21:00Z",
+      "to": "2026-10-27T21:30Z",
+      "intensity": {
+        "forecast": 103,
+        "actual": 91,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T21:30Z",
+      "to": "2026-10-27T22:00Z",
+      "intensity": {
+        "forecast": 93,
+        "actual": 87,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T22:00Z",
+      "to": "2026-10-27T22:30Z",
+      "intensity": {
+        "forecast": 85,
+        "actual": 82,
+        "index": "low"
+      }
+    },
+    {
+      "from": "2026-10-27T22:30Z",
+      "to": "2026-10-27T23:00Z",
+      "intensity": {
+        "forecast": 77,
+        "actual": 95,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T23:00Z",
+      "to": "2026-10-27T23:30Z",
+      "intensity": {
+        "forecast": 76,
+        "actual": 101,
+        "index": "moderate"
+      }
+    },
+    {
+      "from": "2026-10-27T23:30Z",
+      "to": "2026-10-28T00:00Z",
+      "intensity": {
+        "forecast": 89,
+        "actual": 109,
+        "index": "moderate"
+      }
+    }
+  ],
+  "regional": [
+    {
+      "from": "2026-10-26T23:30Z",
+      "to": "2026-10-27T00:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 130,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 83,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T00:00Z",
+      "to": "2026-10-27T00:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 105,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 85,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T00:30Z",
+      "to": "2026-10-27T01:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 84,
+            "index": "low"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 82,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T01:00Z",
+      "to": "2026-10-27T01:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 76,
+            "index": "low"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 78,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T01:30Z",
+      "to": "2026-10-27T02:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 107,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 76,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T02:00Z",
+      "to": "2026-10-27T02:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 85,
+            "index": "low"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 78,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T02:30Z",
+      "to": "2026-10-27T03:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 111,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 72,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T03:00Z",
+      "to": "2026-10-27T03:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 86,
+            "index": "low"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 77,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T03:30Z",
+      "to": "2026-10-27T04:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 116,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 75,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T04:00Z",
+      "to": "2026-10-27T04:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 79,
+            "index": "low"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 75,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T04:30Z",
+      "to": "2026-10-27T05:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 105,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 77,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T05:00Z",
+      "to": "2026-10-27T05:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 93,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 82,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T05:30Z",
+      "to": "2026-10-27T06:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 98,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 86,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T06:00Z",
+      "to": "2026-10-27T06:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 105,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 91,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T06:30Z",
+      "to": "2026-10-27T07:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 174,
+            "index": "high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 102,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T07:00Z",
+      "to": "2026-10-27T07:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 115,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 117,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T07:30Z",
+      "to": "2026-10-27T08:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 151,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 113,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T08:00Z",
+      "to": "2026-10-27T08:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 128,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 112,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T08:30Z",
+      "to": "2026-10-27T09:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 120,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 98,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T09:00Z",
+      "to": "2026-10-27T09:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 69,
+            "index": "low"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 81,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T09:30Z",
+      "to": "2026-10-27T10:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 90,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 62,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T10:00Z",
+      "to": "2026-10-27T10:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 59,
+            "index": "low"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 59,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T10:30Z",
+      "to": "2026-10-27T11:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 86,
+            "index": "low"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 61,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T11:00Z",
+      "to": "2026-10-27T11:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 101,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 65,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T11:30Z",
+      "to": "2026-10-27T12:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 97,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 61,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T12:00Z",
+      "to": "2026-10-27T12:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 78,
+            "index": "low"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 63,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T12:30Z",
+      "to": "2026-10-27T13:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 108,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 59,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T13:00Z",
+      "to": "2026-10-27T13:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 91,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 70,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T13:30Z",
+      "to": "2026-10-27T14:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 133,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 76,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T14:00Z",
+      "to": "2026-10-27T14:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 131,
+            "index": "moderate"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 83,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T14:30Z",
+      "to": "2026-10-27T15:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 177,
+            "index": "high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 89,
+            "index": "low"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T15:00Z",
+      "to": "2026-10-27T15:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 195,
+            "index": "high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 104,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T15:30Z",
+      "to": "2026-10-27T16:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 255,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 123,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T16:00Z",
+      "to": "2026-10-27T16:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 281,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 140,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T16:30Z",
+      "to": "2026-10-27T17:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 303,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 153,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T17:00Z",
+      "to": "2026-10-27T17:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 320,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 159,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T17:30Z",
+      "to": "2026-10-27T18:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 334,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 155,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T18:00Z",
+      "to": "2026-10-27T18:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 330,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 153,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T18:30Z",
+      "to": "2026-10-27T19:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 306,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 155,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T19:00Z",
+      "to": "2026-10-27T19:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 316,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 143,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T19:30Z",
+      "to": "2026-10-27T20:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 323,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 138,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T20:00Z",
+      "to": "2026-10-27T20:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 316,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 140,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T20:30Z",
+      "to": "2026-10-27T21:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 315,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 125,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T21:00Z",
+      "to": "2026-10-27T21:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 293,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 114,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T21:30Z",
+      "to": "2026-10-27T22:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 303,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 106,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T22:00Z",
+      "to": "2026-10-27T22:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 272,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 103,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T22:30Z",
+      "to": "2026-10-27T23:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 300,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 116,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T23:00Z",
+      "to": "2026-10-27T23:30Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 279,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 122,
+            "index": "moderate"
+          }
+        }
+      ]
+    },
+    {
+      "from": "2026-10-27T23:30Z",
+      "to": "2026-10-28T00:00Z",
+      "regions": [
+        {
+          "regionid": 1,
+          "shortname": "North Scotland",
+          "intensity": {
+            "forecast": 0,
+            "index": "very low"
+          }
+        },
+        {
+          "regionid": 7,
+          "shortname": "South Wales",
+          "intensity": {
+            "forecast": 335,
+            "index": "very high"
+          }
+        },
+        {
+          "regionid": 13,
+          "shortname": "London",
+          "intensity": {
+            "forecast": 132,
+            "index": "moderate"
+          }
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://api.carbonintensity.org.uk/intensity/2026-10-24T23:00Z/2026-10-28T00:00Z",
+      "http_status": 200,
+      "sha256": "fbd922861eaf9c5809e7d9f661fc5ecb76977fe3b6955c893e387fbfc7092c18"
+    },
+    {
+      "url": "https://api.carbonintensity.org.uk/regional/intensity/2026-10-27T00:00Z/2026-10-28T00:00Z",
+      "http_status": 200,
+      "sha256": "5fd3d05767bc6e098c0ae6d75757411c7300a52a4e09abb16328e1a9f7ae311d"
+    }
+  ],
+  "mode": "Live download of historical published estimates and provider forecasts; not a forecast-vintage archive",
+  "selection": "Three DNO regions only; no generation mix retained; raw-response hashes recorded"
+}

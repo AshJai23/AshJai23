@@ -1,0 +1,38 @@
+{
+  "features": [
+    "previous_level",
+    "lag2_level",
+    "lag4_level",
+    "last_change",
+    "previous4_mean"
+  ],
+  "ridge_alpha": 1.0,
+  "scaler_mean": [
+    1.5015120772946848,
+    1.5014565217391291,
+    1.5013550724637668,
+    5.555555555555587e-05,
+    1.5014320652173916
+  ],
+  "scaler_scale": [
+    0.01267862132410362,
+    0.012575445496983164,
+    0.012370664648082907,
+    0.001119353486433089,
+    0.012501599712539098
+  ],
+  "ridge_coef": [
+    0.004791841437263382,
+    0.0048141687716913685,
+    -0.001177678462694607,
+    0.00019084768946361121,
+    0.0042873982538908255
+  ],
+  "ridge_intercept": 1.501570048309178,
+  "residual_training_median": -8.641627718364298e-05,
+  "residual_training_mad_scale_floor_1mm": 0.001,
+  "calibration_99pct_score_threshold_min3": 6.520544768100212,
+  "baseline_residual_median": 0.0,
+  "baseline_mad_scale": 0.0014825999999998367,
+  "baseline_calibration_threshold": 5.39592607581336
+}

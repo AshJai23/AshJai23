@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>GB carbon BI audit</title><style>body{font:16px system-ui;max-width:1000px;margin:30px auto;background:#112535;color:#ecf3f9}pre{white-space:pre-wrap}</style><h1>GB carbon BI audit</h1><p>Saved report, not a live website. Provider forecasts are separate from national actual estimates. No emissions totals without consumption.</p><pre>{
+  &quot;data_mode&quot;: &quot;Live download of historical published estimates and provider forecasts; not a forecast-vintage archive&quot;,
+  &quot;captured_at_utc&quot;: &quot;2026-10-28T09:11:29.933173+00:00&quot;,
+  &quot;window_start&quot;: &quot;2026-10-24T23:00Z&quot;,
+  &quot;window_end&quot;: &quot;2026-10-28T00:00Z&quot;,
+  &quot;national_fact_rows&quot;: 146,
+  &quot;regional_fact_rows&quot;: 144,
+  &quot;expected_national_rows&quot;: 146,
+  &quot;expected_regional_rows&quot;: 144,
+  &quot;missing_national_intervals&quot;: 0,
+  &quot;missing_regional_intervals&quot;: 0,
+  &quot;quality&quot;: {
+    &quot;outside_window_rows&quot;: 2,
+    &quot;exact_duplicates&quot;: 0,
+    &quot;missing_actual&quot;: 0,
+    &quot;missing_national_forecast&quot;: 0,
+    &quot;missing_regional_forecast&quot;: 0
+  },
+  &quot;national_daily&quot;: [
+    {
+      &quot;local_date&quot;: &quot;2026-10-25&quot;,
+      &quot;rows&quot;: 50,
+      &quot;actual_count&quot;: 50,
+      &quot;mean_actual_g&quot;: 72.36,
+      &quot;mean_forecast_g&quot;: 67.14,
+      &quot;paired_mae_g&quot;: 8.3,
+      &quot;expected_local_slots&quot;: 50,
+      &quot;actual_coverage&quot;: 1.0,
+      &quot;complete_intervals&quot;: true
+    },
+    {
+      &quot;local_date&quot;: &quot;2026-10-26&quot;,
+      &quot;rows&quot;: 48,
+      &quot;actual_count&quot;: 48,
+      &quot;mean_actual_g&quot;: 81.125,
+      &quot;mean_forecast_g&quot;: 77.72916666666667,
+      &quot;paired_mae_g&quot;: 7.5625,
+      &quot;expected_local_slots&quot;: 48,
+      &quot;actual_coverage&quot;: 1.0,
+      &quot;complete_intervals&quot;: true
+    },
+    {
+      &quot;local_date&quot;: &quot;2026-10-27&quot;,
+      &quot;rows&quot;: 48,
+      &quot;actual_count&quot;: 48,
+      &quot;mean_actual_g&quot;: 80.54166666666667,
+      &quot;mean_forecast_g&quot;: 74.9375,
+      &quot;paired_mae_g&quot;: 9.770833333333334,
+      &quot;expected_local_slots&quot;: 48,
+      &quot;actual_coverage&quot;: 1.0,
+      &quot;complete_intervals&quot;: true
+    }
+  ],
+  &quot;regional_forecasts&quot;: [
+    {
+      &quot;region_id&quot;: 1,
+      &quot;region_name&quot;: &quot;North Scotland&quot;,
+      &quot;observations&quot;: 48,
+      &quot;mean_provider_forecast_g&quot;: 0.0
+    },
+    {
+      &quot;region_id&quot;: 7,
+      &quot;region_name&quot;: &quot;South Wales&quot;,
+      &quot;observations&quot;: 48,
+      &quot;mean_provider_forecast_g&quot;: 177.79166666666666
+    },
+    {
+      &quot;region_id&quot;: 13,
+      &quot;region_name&quot;: &quot;London&quot;,
+      &quot;observations&quot;: 48,
+      &quot;mean_provider_forecast_g&quot;: 99.70833333333333
+    }
+  ],
+  &quot;training&quot;: &quot;None: this is SQL data modelling and BI, not a new ML forecast.&quot;,
+  &quot;units&quot;: &quot;gCO2/kWh; means time-weight equal 30-minute intervals, not demand-weighted emissions&quot;,
+  &quot;geography&quot;: &quot;GB national, three DNO regions; not council boundaries or Northern Ireland&quot;,
+  &quot;freshness_hours_at_capture&quot;: 9.19164810361111
+}</pre></html>

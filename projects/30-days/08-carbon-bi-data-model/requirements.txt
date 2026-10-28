@@ -1,0 +1,2 @@
+# Runtime is standard library except this timezone database on Windows.
+tzdata>=2025.2; platform_system == "Windows"

@@ -1,0 +1,18 @@
+// Import templates; not executed in Power BI here. Use dim_time local_date slicer.
+GB Mean Actual gCO2 per kWh = AVERAGE(fact_national[actual_g])
+GB Mean Provider Forecast gCO2 per kWh = AVERAGE(fact_national[forecast_g])
+GB Paired Forecast Error gCO2 per kWh =
+AVERAGEX(
+    FILTER(fact_national,
+        NOT(ISBLANK(fact_national[actual_g])) &&
+        NOT(ISBLANK(fact_national[forecast_g]))),
+    ABS(fact_national[actual_g] - fact_national[forecast_g])
+)
+GB Full Local Day Coverage =
+DIVIDE(
+    COUNT(fact_national[actual_g]),
+    SUMX(VALUES(dim_time[local_date]), CALCULATE(MAX(dim_time[expected_local_day_slots])))
+)
+// Guard: select exactly one region. A simple regional mean is not a GB intensity.
+Selected Region Mean Provider Forecast =
+IF(HASONEVALUE(dim_region[region_id]), AVERAGE(fact_regional_forecast[forecast_g]), BLANK())

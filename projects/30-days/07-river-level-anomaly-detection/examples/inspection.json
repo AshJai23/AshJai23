@@ -1,0 +1,111 @@
+{
+  "review_type": "AI-assisted numerical inspection; not human/domain-verified anomaly labels",
+  "selection": "Eight largest held-out robust innovation scores, selected after evaluation for descriptive inspection only. No tuning on these cases.",
+  "cases": [
+    {
+      "target_utc": "2026-10-13T12:30:00+00:00",
+      "origin_utc": "2026-10-13T12:15:00+00:00",
+      "split": "test",
+      "observed_m": 1.598,
+      "ridge_prediction_m": 1.5898778104435782,
+      "persistence_m": 1.589,
+      "ridge_absolute_error_m": 0.008122189556421855,
+      "ridge_robust_score": 8.208605833605498,
+      "ridge_flag": true,
+      "baseline_score": 6.070416835290105,
+      "baseline_flag": true
+    },
+    {
+      "target_utc": "2026-10-13T10:30:00+00:00",
+      "origin_utc": "2026-10-13T10:15:00+00:00",
+      "split": "test",
+      "observed_m": 1.586,
+      "ridge_prediction_m": 1.5931416513517163,
+      "persistence_m": 1.592,
+      "ridge_absolute_error_m": 0.007141651351716183,
+      "ridge_robust_score": 7.05523507453254,
+      "ridge_flag": true,
+      "baseline_score": 4.04694455686002,
+      "baseline_flag": false
+    },
+    {
+      "target_utc": "2026-10-13T11:15:00+00:00",
+      "origin_utc": "2026-10-13T11:00:00+00:00",
+      "split": "test",
+      "observed_m": 1.588,
+      "ridge_prediction_m": 1.5948372985743038,
+      "persistence_m": 1.595,
+      "ridge_absolute_error_m": 0.006837298574303707,
+      "ridge_robust_score": 6.750882297120064,
+      "ridge_flag": true,
+      "baseline_score": 4.721435316336616,
+      "baseline_flag": false
+    },
+    {
+      "target_utc": "2026-10-13T13:15:00+00:00",
+      "origin_utc": "2026-10-13T13:00:00+00:00",
+      "split": "test",
+      "observed_m": 1.586,
+      "ridge_prediction_m": 1.591493315603984,
+      "persistence_m": 1.589,
+      "ridge_absolute_error_m": 0.005493315603984028,
+      "ridge_robust_score": 5.406899326800385,
+      "ridge_flag": false,
+      "baseline_score": 2.0234722784299355,
+      "baseline_flag": false
+    },
+    {
+      "target_utc": "2026-10-13T13:00:00+00:00",
+      "origin_utc": "2026-10-13T12:45:00+00:00",
+      "split": "test",
+      "observed_m": 1.589,
+      "ridge_prediction_m": 1.5944031361154956,
+      "persistence_m": 1.592,
+      "ridge_absolute_error_m": 0.005403136115495588,
+      "ridge_robust_score": 5.316719838311945,
+      "ridge_flag": false,
+      "baseline_score": 2.023472278430085,
+      "baseline_flag": false
+    },
+    {
+      "target_utc": "2026-10-13T10:45:00+00:00",
+      "origin_utc": "2026-10-13T10:30:00+00:00",
+      "split": "test",
+      "observed_m": 1.594,
+      "ridge_prediction_m": 1.5891336986429974,
+      "persistence_m": 1.586,
+      "ridge_absolute_error_m": 0.0048663013570027225,
+      "ridge_robust_score": 4.9527176341863655,
+      "ridge_flag": false,
+      "baseline_score": 5.39592607581336,
+      "baseline_flag": false
+    },
+    {
+      "target_utc": "2026-10-13T08:45:00+00:00",
+      "origin_utc": "2026-10-13T08:30:00+00:00",
+      "split": "test",
+      "observed_m": 1.587,
+      "ridge_prediction_m": 1.5910578026023194,
+      "persistence_m": 1.59,
+      "ridge_absolute_error_m": 0.004057802602319471,
+      "ridge_robust_score": 3.9713863251358283,
+      "ridge_flag": false,
+      "baseline_score": 2.023472278430085,
+      "baseline_flag": false
+    },
+    {
+      "target_utc": "2026-10-13T13:45:00+00:00",
+      "origin_utc": "2026-10-13T13:30:00+00:00",
+      "split": "test",
+      "observed_m": 1.59,
+      "ridge_prediction_m": 1.5863681983395612,
+      "persistence_m": 1.585,
+      "ridge_absolute_error_m": 0.0036318016604388603,
+      "ridge_robust_score": 3.7182179376225033,
+      "ridge_flag": false,
+      "baseline_score": 3.372453797383425,
+      "baseline_flag": false
+    }
+  ],
+  "interpretation": "Large innovation may reflect real hydrological change, sensor issues, datum problems or normal dynamics. This snapshot cannot distinguish these. Small scores do not establish safety."
+}

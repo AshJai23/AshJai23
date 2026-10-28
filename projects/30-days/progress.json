@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-27T11:41:42.748386+00:00",
-  "completed_count": 6,
+  "updated_at_utc": "2026-10-28T09:24:42.810593+00:00",
+  "completed_count": 8,
   "target_count": 44,
   "items": {
     "10": {
@@ -237,14 +237,26 @@
       "summary": "60 real headlines; 48 train / 12 story-held-out. Four-cluster TF-IDF KMeans squared distance 0.994561 versus single-centroid baseline 0.993707 (baseline wins); 2 unrepresented heldout items, undefined silhouette and low seed stability retained."
     },
     "07": {
-      "status": "planned",
+      "status": "completed",
       "path": "07-river-level-anomaly-detection",
-      "planned_date": "2026-10-28"
+      "planned_date": "2026-10-28",
+      "completed_at_utc": "2026-10-28T09:24:42.810593+00:00",
+      "tests_passed": 14,
+      "evidence": "07-river-level-anomaly-detection/examples/validation.txt",
+      "data_mode": "Real EA historical readings downloaded on 28 October, latest observation 13 October; explicitly stale historical replay, not live warning service",
+      "summary": "1400 readings / 1380 complete windows; train 828, calibrate 276, test 276. Ridge MAE 0.0011660 m versus persistence 0.0009493 m (baseline wins). Three model flags vs one baseline; no anomaly ground truth.",
+      "publication_location": "AshJai23/AshJai23/projects/30-days; standalone repository creation remains pending"
     },
     "08": {
-      "status": "planned",
+      "status": "completed",
       "path": "08-carbon-bi-data-model",
-      "planned_date": "2026-10-28"
+      "planned_date": "2026-10-28",
+      "completed_at_utc": "2026-10-28T09:24:42.810593+00:00",
+      "tests_passed": 20,
+      "evidence": "08-carbon-bi-data-model/examples/validation.txt",
+      "data_mode": "Live download of delayed NESO national estimates and historical regional provider forecasts; exact source replay",
+      "summary": "146 national half-hours and 144 regional forecast rows. 25 October London day has 50 slots. Separate fact grains, UTC scaffold, SQL constraints, CSV and documented BI measures; no model training or Power BI/Tableau application run.",
+      "publication_location": "AshJai23/AshJai23/projects/30-days; standalone repository creation remains pending"
     },
     "09": {
       "status": "planned",
@@ -259,6 +271,7 @@
     "extracted_project_roots": 7,
     "tests_passed": 130,
     "replay_smokes_passed": 6,
-    "evidence": "migration-validation.json"
+    "evidence": "migration-validation.json",
+    "available_implemented_projects_including_extra": 9
   }
 }

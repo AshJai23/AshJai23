@@ -1,0 +1,27 @@
+Validation on 28 October 2026; Python 3.12.14
+Initial live source command succeeded: python main.py --live --output live-run
+Final implementation smoke runs were explicitly SAVED ACTUAL-SOURCE REPLAYS, not a second live capture.
+Requests/statuses/hashes: [{"url": "https://environment.data.gov.uk/flood-monitoring/id/stations/1491TH", "status": 200, "raw_sha256": "a509e06f52e06215aa468b98f45d69143dd737ea247504975f084ac1ad41e4ab"}, {"url": "https://environment.data.gov.uk/flood-monitoring/id/measures/1491TH-level-stage-i-15_min-mASD/readings?_sorted&_limit=1500", "status": 200, "raw_sha256": "0d133fe39b589184820d7f9cf81ef18d4fd3fcb0eefe341fb64ec620be283934"}]
+Captured at: 2026-10-28T09:13:03.417546+00:00
+Commands: [{"command": "python main.py --input examples/source_snapshot.json --output examples", "exit": 0}, {"command": "python main.py --input examples/source_snapshot.json --output replay-check", "exit": 0}]
+Replay equality: model.json, scored_observations.csv, inspection.json; river metrics equal excluding elapsed fit duration.
+Ridge actually fitted; no verified anomaly ground truth. Synthetic fixtures are test-only.
+test_chronology_and_one_step_origin (test_river.RiverTests.test_chronology_and_one_step_origin) ... ok
+test_conflicting_duplicate_fails (test_river.RiverTests.test_conflicting_duplicate_fails) ... ok
+test_constant_series_has_zero_persistence_error (test_river.RiverTests.test_constant_series_has_zero_persistence_error) ... ok
+test_exact_duplicate_not_double_counted (test_river.RiverTests.test_exact_duplicate_not_double_counted) ... ok
+test_export_is_finite_and_stale_is_visible (test_river.RiverTests.test_export_is_finite_and_stale_is_visible) ... ok
+test_future_and_wrong_measure_excluded (test_river.RiverTests.test_future_and_wrong_measure_excluded) ... ok
+test_heldout_changes_cannot_change_model_or_thresholds (test_river.RiverTests.test_heldout_changes_cannot_change_model_or_thresholds) ... ok
+test_incorrect_measure_unit_fails_replay (test_river.RiverTests.test_incorrect_measure_unit_fails_replay) ... ok
+test_live_outage_has_no_synthetic_or_replay_fallback (test_river.RiverTests.test_live_outage_has_no_synthetic_or_replay_fallback) ... ok
+test_missing_slots_are_not_imputed_or_bridged (test_river.RiverTests.test_missing_slots_are_not_imputed_or_bridged) ... ok
+test_naive_dates_rejected (test_river.RiverTests.test_naive_dates_rejected) ... ok
+test_negative_local_datum_is_valid (test_river.RiverTests.test_negative_local_datum_is_valid) ... ok
+test_nonfinite_and_boolean_rejected (test_river.RiverTests.test_nonfinite_and_boolean_rejected) ... ok
+test_small_series_blocked (test_river.RiverTests.test_small_series_blocked) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.034s
+
+OK
