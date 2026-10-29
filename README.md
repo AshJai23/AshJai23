@@ -82,6 +82,38 @@ Separate project repositories requested; [migration status](projects/30-days/REP
 
 [Explore the projects](projects/30-days/) · [30-day roadmap](projects/30-days/ROADMAP.md) · [Progress](projects/30-days/progress.json)
 
+### Featured applications
+
+**[Cyber Threat Detection & Analysis](https://github.com/AshJai23/JAIATD3)** — Node.js/Python application for file and URL intelligence through VirusTotal, with MITRE ATT&CK technique extraction and an AI-assisted investigation chat.
+
+*Tools:* Node.js, Python, VirusTotal. Requires external API keys; repository and setup instructions available.
+
+**[ATS Tracker / AJ.ai](https://github.com/AshJai23/ats-tracker)** — A CV and job-description workflow for formatting diagnosis, keyword gaps and AI-assisted bullet rewriting in XYZ format.
+
+*Tools:* JavaScript, CV analysis, AI integration. Diagnosis and keyword checks run in-browser; AI rewriting uses a server.
+
+**[UK Student Copilot](https://github.com/AshJai23/AshJai23/tree/main/projects/uk-student-copilot)** — A LangGraph/FastAPI local-pilot assistant for UK international students, combining reviewed GOV.UK guidance cards with a trained Qwen-based topic-routing head.
+
+*Tools:* LangGraph, FastAPI, Qwen. Local prototype; synthetic routing evaluation, no public service or legal-advice claim.
+
+### Completed data science projects
+
+Nine completed sprint prototypes with published code, real-source examples and validation evidence. Built with AI assistance; local apps and saved reports are not hosted production services.
+
+| Project | Description and measured result | Data mode |
+|---|---|---|
+| **[01 · Country-wise Hazard Explorer](https://github.com/AshJai23/AshJai23/tree/main/projects/30-days/01-live-earthquake-analytics)** | Explore earthquakes by country and year, local wind and thunderstorm provider forecasts, and a baseline-tested annual wind outlook. Country controls, historical exploration and reproducible checks. | On-demand APIs + historical data |
+| **[02 · GB Carbon-Intensity Forecast](https://github.com/AshJai23/AshJai23/tree/main/projects/30-days/02-carbon-intensity-forecast)** | Forecast the next half-hour of Great Britain electricity carbon intensity from earlier actual estimates, with chronological model evaluation. MAE 4.56 gCO₂/kWh vs persistence 5.10 on 260 held-out intervals. | Historical API snapshot / rolling backtest |
+| **[03 · Weather Data Quality Monitor](https://github.com/AshJai23/AshJai23/tree/main/projects/30-days/03-weather-quality-monitor)** | Audit station reports for freshness, missing fields, duplicate timestamps and inconsistent values before downstream use. 30 real reports audited across five UK/India stations in the saved capture. | On-demand observations + saved replay |
+| **[04 · Bike Availability Forecast](https://github.com/AshJai23/AshJai23/tree/main/projects/30-days/04-bike-availability-forecast)** | Predict station bike availability 30 minutes ahead using real Dublin history and compare the model with repeating the last observation. MAE 1.16 bikes vs persistence 0.74; the baseline won. | Dublin historical replay; not UK data |
+| **[05 · London Air-Quality Analytics](https://github.com/AshJai23/AshJai23/tree/main/projects/30-days/05-air-quality-spatial-analytics)** | Join LAQN monitoring observations with site coordinates, validate units and coverage, then export matched-hour pollution summaries. Eight sites audited; two qualified for NO₂ comparison. Missing PM10 coverage and an API error remain visible. | Delayed London observations |
+| **[06 · RSS Topic Clustering](https://github.com/AshJai23/AshJai23/tree/main/projects/30-days/06-rss-topic-clustering)** | Group real NASA, NOAA and NIST headlines into inspectable topics with story-group holdout and a simple baseline. 60 headlines; weak stability and a better single-centroid baseline are documented. | Global publisher snapshot / replay |
+| **[07 · River-Level Anomaly Detection](https://github.com/AshJai23/AshJai23/tree/main/projects/30-days/07-river-level-anomaly-detection)** | Fit a causal next-reading model to Oxford river history and score unusual innovations using training and calibration data only. MAE 1.17 mm vs persistence 0.95 mm. Latest returned observation: 13 October 2026; stale data is flagged. | Stale historical EA observations; not flood warnings |
+| **[08 · Carbon-Intensity BI Warehouse](https://github.com/AshJai23/AshJai23/tree/main/projects/30-days/08-carbon-bi-data-model)** | Build separate national-estimate and regional-forecast fact tables with a DST-aware time dimension, constraints and documented BI measures. 146 national half-hours + 144 regional rows; correctly handles the 50-slot London day. | Published estimates / provider forecasts |
+| **[09 · London Weather LSTM](https://github.com/AshJai23/AshJai23/tree/main/projects/30-days/09-weather-lstm-nowcast)** | Train a 1,553-parameter CPU LSTM for next-hour temperature using real London-area ERA5 history, with validation-selected weights and held-out baselines. 864 test hours: LSTM MAE 0.429°C, persistence 0.636°C, Ridge 0.349°C. Ridge performed best. | Delayed historical reanalysis; no retail sales data |
+
+[Open the portfolio project gallery](https://ashjai23.github.io/#projects) · [Full sprint index](projects/30-days/) · [Remaining roadmap](projects/30-days/ROADMAP.md)
+
 <!-- data-science-sprint:end -->
 
 ### Featured projects:
