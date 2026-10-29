@@ -279,5 +279,8 @@
     "replay_smokes_passed": 6,
     "evidence": "migration-validation.json",
     "available_implemented_projects_including_extra": 10
-  }
+  },
+  "programme_status": "superseded_by_weekly_programme",
+  "historical_target_only": true,
+  "active_plan": "projects/weekly/plan.json"
 }

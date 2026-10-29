@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "updated_at_utc": "2026-10-29T12:55:38.512294+00:00",
+  "status": "scoping_complete_build_not_started",
+  "new_flagships_completed": 0,
+  "new_flagship_target": 3,
+  "preserved_daily_prototypes": 9,
+  "active_project": "W01",
+  "items": {
+    "W01": {
+      "status": "planned",
+      "path": "w01-uk-retail-commercial-analytics",
+      "start_date": "2026-10-30",
+      "due_date": "2026-11-05"
+    },
+    "W02": {
+      "status": "planned",
+      "path": "w02-nhs-operations-analytics",
+      "start_date": "2026-11-06",
+      "due_date": "2026-11-12"
+    },
+    "W03": {
+      "status": "planned",
+      "path": "w03-uk-council-knowledge-assistant",
+      "start_date": "2026-11-13",
+      "due_date": "2026-11-19"
+    }
+  },
+  "latest_daily_log": "logs/2026-10-29.md",
+  "pending_feedback": [],
+  "repository_creation": "Standalone repositories still pending; publish authorised work in existing profile repository if creation is unavailable, and report that limitation."
+}

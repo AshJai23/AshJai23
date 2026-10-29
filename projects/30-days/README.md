@@ -1,3 +1,7 @@
+> **Archived on 29 October 2026:** the daily 44-project target was replaced at the
+> user's request by [one deeper project per week](../weekly/). Nine completed
+> prototypes below remain available. The unfinished daily queue is retired.
+
 # 30 days of practical data science, ML and deep learning
 
 **24 October–22 November 2026 · 44 planned projects · 9 completed**
@@ -24,7 +28,7 @@ A GitHub link opens **code**, not a running website. Project READMEs now explain
 their niche and the correct local address or generated report.
 [HTTP address-check evidence](link-check.json) is separate from functional tests.
 
-## Schedule
+## Original schedule (retired)
 
 - At least **one project every day**.
 - Two projects on days **1, 3 and 5 of each seven-day block**, plus two on days

@@ -1,3 +1,5 @@
+> **Retired daily roadmap — 29 October 2026.** The user changed to one deeper project per week with daily progress. Follow [the active weekly plan](../weekly/plan.json). Old planned IDs below are historical, not due work.
+
 # 30-day project roadmap
 
 24 October–22 November 2026 · Europe/London · 44 IDs, 9 completed.

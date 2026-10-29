@@ -73,14 +73,14 @@ My work spans fraud detection, cyber threat analysis, time-series forecasting, h
 ---
 
 <!-- data-science-sprint:start -->
-### 🚀 30-day data science sprint
-**24 October–22 November 2026 · 9 of 44 projects completed**
+### 🚀 Weekly UK job-focused portfolio
+**One flagship per week · daily progress · 9 earlier prototypes preserved**
 
 **UK niches:** retail · banking · technology · councils · NHS (council/environment and retail-weather prototypes published; further sector work planned).
 
 Separate project repositories requested; [migration status](projects/30-days/REPOSITORIES.json). Existing code remains accessible below.
 
-[Explore the projects](projects/30-days/) · [30-day roadmap](projects/30-days/ROADMAP.md) · [Progress](projects/30-days/progress.json)
+[Active weekly plan](projects/weekly/) · [Daily progress](projects/weekly/logs/2026-10-29.md) · [Completed prototype archive](projects/30-days/)
 
 ### Featured applications
 
@@ -98,7 +98,7 @@ Separate project repositories requested; [migration status](projects/30-days/REP
 
 ### Completed data science projects
 
-Nine completed sprint prototypes with published code, real-source examples and validation evidence. Built with AI assistance; local apps and saved reports are not hosted production services.
+Nine completed earlier prototypes with published code, real-source examples and validation evidence. Built with AI assistance; local apps and saved reports are not hosted production services.
 
 | Project | Description and measured result | Data mode |
 |---|---|---|

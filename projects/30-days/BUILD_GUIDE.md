@@ -1,3 +1,14 @@
+# Superseded daily build guide
+
+**User revision, 29 October 2026:** the daily quota and old incomplete queue are
+retired. Do not build IDs 10–44 on their former dates. Read the active
+[weekly plan](../weekly/plan.json), [progress](../weekly/progress.json) and
+[weekly build guide](../weekly/BUILD_GUIDE.md). Preserve the nine completed daily
+projects and their evidence. The original runbook below is retained as history,
+not as active execution instructions.
+
+---
+
 # How to continue this sprint
 
 ## Source of truth
