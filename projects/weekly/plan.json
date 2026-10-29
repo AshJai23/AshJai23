@@ -36,7 +36,9 @@
         "Embeddings / hybrid retrieval",
         "FastAPI",
         "Streamlit",
-        "GitHub Actions"
+        "GitHub Actions",
+        "Hugging Face Transformers / model cards",
+        "n8n local workflow"
       ],
       "data": [
         {
@@ -59,7 +61,8 @@
         "LangGraph bounded tool workflow: validated read-only SQL for numbers, RAG for schema/product/source context, local LLM explanations",
         "Runnable API/UI showing query evidence, source dates and abstention",
         "Held-out task evaluation against deterministic SQL/lexical baselines, with accuracy, grounding, failure and latency results",
-        "CI, replay fixtures, source register, model licence/version, monitoring and beginner/interview case study"
+        "CI, replay fixtures, source register, model licence/version, monitoring and beginner/interview case study",
+        "n8n workflow export for manual/scheduled ingestion or freshness checks calling the local API, with idempotence, retries and run evidence"
       ],
       "acceptance": [
         "Target full 1,067,371 source rows; report actual raw/clean counts and exclusions, missing customers and cancellation handling",
@@ -67,7 +70,9 @@
         "No unrestricted SQL writes or arbitrary agent execution; bound query cost, tool calls and input size",
         "At least 40 held-out numerical/retrieval/unsupported tasks with saved references; keep tuning tasks separate and label AI-authored evaluation",
         "Actually run free local LLM inference and show generated outputs; if unavailable, mark GenAI requirement blocked rather than substituting templates as an LLM",
-        "Reconcile numeric answers to independent SQL controls; do not invent costs, profit, stock, ROI or live sales"
+        "Reconcile numeric answers to independent SQL controls; do not invent costs, profit, stock, ROI or live sales",
+        "Use Hugging Face public ungated licence-verified models/libraries where appropriate; pin model revisions, document model cards, and distinguish pretrained inference from fitted weights",
+        "For n8n provide an importable secret-free workflow and actually run a local smoke test before calling integration complete. If runtime is unavailable, report blocked/untested; Python CLI fallback does not count as executed n8n."
       ],
       "status": "planned",
       "milestones": [
@@ -134,7 +139,9 @@
         "FAISS or equivalent local index",
         "Local open-weight LLM",
         "FastAPI",
-        "Evaluation and structured monitoring"
+        "Evaluation and structured monitoring",
+        "Hugging Face Datasets / Sentence Transformers",
+        "n8n local refresh workflow"
       ],
       "data": [
         {
@@ -158,7 +165,8 @@
         "Deduplicated corpus with target 100,000 unique passages if permitted API access and laptop resources allow; publish actual achieved scale",
         "Hybrid retrieval plus citation-grounded local generation and bounded research workflow",
         "Held-out debate/group-separated retrieval and answer evaluation against BM25; ablation of dense/hybrid methods",
-        "Runnable local API/UI, latency/memory benchmarks, freshness checks, prompt-injection tests and support runbook"
+        "Runnable local API/UI, latency/memory benchmarks, freshness checks, prompt-injection tests and support runbook",
+        "n8n source-refresh workflow with checkpointing, duplicate prevention, bounded retries and local error records"
       ],
       "acceptance": [
         "Verify endpoint, pagination, rate limits, licence and reuse exclusions before bulk acquisition; no bypass of access controls",
@@ -166,7 +174,9 @@
         "At least 50 held-out answerable and unanswerable questions; report Recall@k/MRR, citation support, abstention failures and p50/p95 latency with evaluation provenance",
         "Do not present parliamentary statements as established fact/current law; show speaker/date/source context and refresh age",
         "Actually run local LLM generation; no chat API wrapper or renamed Student Copilot, no personal profiling or automated external actions",
-        "Distinguish embeddings/indexing from training an LLM; no claim of fine-tuning without fitted weights and held-out evidence"
+        "Distinguish embeddings/indexing from training an LLM; no claim of fine-tuning without fitted weights and held-out evidence",
+        "Use Hugging Face public ungated licence-verified models/libraries where appropriate; pin model revisions, document model cards, and distinguish pretrained inference from fitted weights",
+        "For n8n provide an importable secret-free workflow and actually run a local smoke test before calling integration complete. If runtime is unavailable, report blocked/untested; Python CLI fallback does not count as executed n8n."
       ],
       "status": "planned",
       "milestones": [
@@ -234,7 +244,9 @@
         "MLflow local tracking or equivalent",
         "FastAPI",
         "CI",
-        "Drift and data-quality monitoring"
+        "Drift and data-quality monitoring",
+        "Hugging Face model/dataset tooling where applicable",
+        "n8n batch scoring workflow"
       ],
       "data": [
         {
@@ -259,7 +271,10 @@
         "Report actual training rows/time/epochs/parameters, machine resources, package/model versions and baseline comparisons",
         "Fit a small neural model rather than a placeholder; do not claim neural methods win if simpler models do better",
         "Evaluate unavailable/new products explicitly; no claim of inventory optimisation, causal impact, current retail demand or profit",
-        "Distinct code/service/evaluation from W01 copilot; shared source ingestion does not make it a second copy of that project"
+        "Distinct code/service/evaluation from W01 copilot; shared source ingestion does not make it a second copy of that project",
+        "Deep learning is required: train a small CPU PyTorch MLP/LSTM/TCN as appropriate, save weights/configuration and learning curves, report epochs, parameters, training time and held-out comparison with simple and non-neural ML baselines; no foundation-model training claim",
+        "Use Hugging Face public ungated licence-verified models/libraries where appropriate; pin model revisions, document model cards, and distinguish pretrained inference from fitted weights",
+        "For n8n provide an importable secret-free workflow and actually run a local smoke test before calling integration complete. If runtime is unavailable, report blocked/untested; Python CLI fallback does not count as executed n8n."
       ],
       "status": "planned",
       "milestones": [
@@ -326,5 +341,20 @@
     "NHS operations analytics",
     "Council service assistant",
     "Banking applications after suitable public data verification"
-  ]
+  ],
+  "requested_stack": [
+    "GenAI / LLMs",
+    "RAG",
+    "AI agents / LangGraph",
+    "Deep learning / PyTorch",
+    "Hugging Face Transformers, Datasets and Sentence Transformers",
+    "n8n Community (local)"
+  ],
+  "optional_media": {
+    "tool": "Higgsfield (interpreting Higgesfield)",
+    "purpose": "Optional generated demo visuals / retail creative storyboard, separate from analytics and model evaluation",
+    "status": "Not integrated; official API lists metered pricing. No paid calls or new credentials authorised; keep optional and disabled.",
+    "official_url": "https://higgsfield.ai/",
+    "api_url": "https://open.higgsfield.ai/quick-start"
+  }
 }

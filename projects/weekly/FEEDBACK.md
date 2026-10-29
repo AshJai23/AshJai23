@@ -23,3 +23,7 @@ one predictive ML/MLOps service. Kept one project/week, daily feedback, the orig
 dates and nine completed prototypes. W01 uses the larger Online Retail II source;
 W02 has an explicit, unachieved 100k-passage target. No data/model performance is
 claimed from replanning. NHS and council analytics remain unscheduled backlog.
+
+## 29 October — deep learning, agents, Hugging Face, Higgsfield and n8n
+
+Incorporated the user's additional stack requests into the existing three weekly builds. Deep learning has an explicit actual-training gate; Hugging Face and local n8n have execution/evidence requirements. Higgsfield is an optional media extension because official API use is metered and the existing no-spend/no-new-credentials constraints remain. No new project dates or completion claims.

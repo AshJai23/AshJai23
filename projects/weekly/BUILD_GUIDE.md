@@ -87,3 +87,35 @@ and hardware. Distinguish automated evaluation from independent human review.
 Treat retrieved text as untrusted input, constrain agent tools and read-only SQL,
 and test prompt injection, unsupported questions, stale sources and source errors.
 A working local demo is distinct from public deployment or support for real users.
+
+## Added stack — 29 October 2026
+
+- **Deep learning:** W03 must actually train a small PyTorch neural model, save
+  learning curves/weights and report temporal held-out results against simple and
+  non-neural ML baselines. It need not beat them to be a useful honest result.
+- **AI agents:** W01/W02 use bounded tool selection and multi-step workflows.
+  Evaluate tool choice, numerical correctness/citations and failures; adding an
+  agent framework alone is not evidence of useful autonomous behaviour.
+- **Hugging Face:** use Transformers for suitable local generation, Sentence
+  Transformers for retrieval and Datasets where useful. Use public ungated models,
+  check licences/model cards, pin revisions and report actual inference/training.
+  No new account/token or paid hosted inference required.
+- **n8n:** local Community edition for ingestion/refresh, retries, duplicate
+  prevention and batch scoring through the project's API. Export secret-free
+  workflow JSON and record actual local executions. Schedules run only while the
+  local instance is running; this plan does not provision an always-on host.
+  JSON import/export is distinct from built-in paid Git/version-control features.
+- **Higgsfield:** interpreting the user's spelling as the image/video platform
+  at https://higgsfield.ai/. Optional demo creative/storyboard work only; its API
+  advertises metered pricing. It is not required for core completion, data
+  evidence or model training. No paid calls, credentials or executed integration
+  are implied. Provide a storyboard/local demo alternative without calling that
+  a Higgsfield-generated video.
+
+Primary references: [Hugging Face docs](https://huggingface.co/docs),
+[Transformers training](https://huggingface.co/docs/transformers/en/trainer),
+[n8n self-hosting](https://github.com/n8n-io/n8n-docs/blob/main/docs/deploy/host-n8n/README.md),
+[n8n licence](https://support.n8n.io/article/can-i-use-your-license-for-my-use-case),
+[Higgsfield API](https://open.higgsfield.ai/quick-start).
+
+No external email/Slack notifications: record n8n failures locally unless explicitly authorised otherwise. Recheck current n8n installation requirements and licence before implementation. Preserve one flagship per week; these are integrated capabilities, not extra quota projects.
