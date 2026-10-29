@@ -28,3 +28,29 @@ transactions and CC BY 4.0 reuse; the ONS retail index is monthly and was releas
 retailer sales stream. NHS/public-service endpoint availability/licensing must be
 verified again at implementation time; the NHS A&E landing page presented a
 verification wall in this research session.
+
+## Revised implication after user feedback — 29 October
+
+The user now prioritises applied AI / LLM / ML engineering. The earlier
+analyst-first sequencing above is superseded. Demonstrate local generation,
+bounded agent tools, RAG retrieval/answer evaluation, SQL correctness, model
+training, serving, reliability and scale evidence. Senior adverts remain skill
+signals, not entry-level suitability or a ranking of UK demand.
+
+### Larger-data primary sources checked
+
+- [Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii):
+  UCI catalogue lists 1,067,371 rows, actual UK retailer data from December 2009
+  through December 2011, missing values, CC BY 4.0. Credit Chen, D. (2012),
+  DOI 10.24432/C5CG6D. Not downloaded/processed during this scope change.
+- [Hansard](https://www.parliament.uk/about/how/publications/hansard/):
+  official record of proceedings, rolling publication with delay and later
+  corrections; it records statements, not verified facts or current service rules.
+- [Open Parliament Licence](https://www.parliament.uk/site-information/copyright/open-parliament-licence/):
+  v3 attribution and exemptions must be respected; do not assume third-party
+  material/personal data is covered.
+- [GOV.UK Parlex record](https://www.gov.uk/algorithmic-transparency-records/dsit-parlex):
+  primary example of semantic search and cited generation over parliamentary data,
+  and API source references. This portfolio is independent, not that service.
+  The Hansard Swagger URL was inaccessible through the research reader on
+  29 October; runtime acquisition, limits and corpus volume remain unverified.

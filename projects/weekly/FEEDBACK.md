@@ -13,3 +13,13 @@ The current brief prioritises an analyst/retail hiring story. The user can steer
 which KPIs matter most (returns, revenue concentration or retention), the dashboard
 style/filters, and the level of ML. Record subsequent feedback here before
 changing an affected milestone. No response is required to continue the build.
+
+## 29 October 2026 — AI priority incorporated
+
+User: "give more important to AI, LLM, ML projects use Gen AI, RAG and with large data set"
+
+Replaced the unbuilt analyst-first weekly scopes with two GenAI/RAG systems and
+one predictive ML/MLOps service. Kept one project/week, daily feedback, the original
+dates and nine completed prototypes. W01 uses the larger Online Retail II source;
+W02 has an explicit, unachieved 100k-passage target. No data/model performance is
+claimed from replanning. NHS and council analytics remain unscheduled backlog.

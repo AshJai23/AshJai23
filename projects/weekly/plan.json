@@ -10,275 +10,299 @@
   "target_new_flagships": 3,
   "old_daily_quota_retired": true,
   "preserve_previous_completed_projects": 9,
-  "schedule_note": "Preserve the original 22 November end boundary: three full build weeks, then 20\u201322 November for review. No added dates after 22 November. Continue beyond only if the user later requests it.",
+  "schedule_note": "Preserve the original 22 November end boundary: three full build weeks, then 20–22 November for review. No added dates after 22 November. Continue beyond only if the user later requests it.",
   "daily_reporting": "An evening progress update on actual work performed, tests, commits, blockers, next action and suggested change options. This is not a claim of continuous all-day work.",
   "quality_over_speed": "Do not call an unfinished project complete to meet a date. Carry the active blocker visibly; do not rush, duplicate or rename projects.",
   "feedback_policy": "Read user feedback in this conversation and FEEDBACK.md before the next milestone; record the concrete change and scope implications. Optional changes must not block unrelated useful work.",
   "projects": [
     {
       "id": "W01",
-      "title": "UK Retail Commercial Analytics",
+      "title": "UK Retail GenAI Analytics Copilot",
       "start_date": "2026-10-30",
       "due_date": "2026-11-05",
-      "path": "w01-uk-retail-commercial-analytics",
+      "path": "w01-uk-retail-genai-copilot",
       "target_roles": [
-        "Data Analyst",
-        "BI Analyst",
-        "Retail Analyst"
+        "Junior AI Engineer",
+        "Applied AI Engineer",
+        "Python Developer"
       ],
-      "business_question": "Which products, customer cohorts and return patterns should a retail manager investigate, and how do the figures reconcile?",
+      "business_question": "Can a retail manager ask plain-English questions and receive reconciled numerical answers and evidence-backed explanations?",
       "tools": [
         "Python",
-        "SQL / DuckDB",
-        "Plotly or Streamlit",
-        "Power BI-ready semantic model",
+        "LangGraph",
+        "DuckDB / SQL",
+        "Parquet",
+        "Local open-weight LLM",
+        "Embeddings / hybrid retrieval",
+        "FastAPI",
+        "Streamlit",
         "GitHub Actions"
       ],
       "data": [
         {
-          "source": "UCI Online Retail",
-          "url": "https://archive.ics.uci.edu/dataset/352/online+retail",
-          "mode": "Historical actual UK retailer transactions, 2010\u20132011; not real-time",
-          "licence": "CC BY 4.0; credit Daqing Chen / UCI",
-          "status": "Documentation verified 29 October; raw rows not yet downloaded/profiled"
+          "source": "UCI Online Retail II",
+          "url": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "mode": "Actual historical UK retailer transactions, December 2009–December 2011; NOT real-time",
+          "licence": "CC BY 4.0; Chen, D. (2012), DOI 10.24432/C5CG6D",
+          "catalogue_rows": 1067371,
+          "status": "Official documentation verified 29 October; not downloaded or processed in this scoping change"
         },
         {
           "source": "ONS Retail Sales Index",
           "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/datasets/retailsales",
-          "mode": "Regularly published GB monthly context; separate from historic retailer data",
-          "status": "Release page verified 29 October; latest release 23 October, next 20 November 2026"
+          "mode": "Regularly published monthly GB macro context, separately labelled; not current merchant transactions",
+          "status": "Verify download/API at build time; do not join unrelated periods or businesses"
         }
       ],
       "deliverables": [
-        "Runnable ingestion and idempotent SQL warehouse with row-level reconciliation",
-        "Revenue/returns/cohort KPI definitions and executable quality checks",
-        "Working interactive dashboard, filters and documented decisions",
-        "Power BI import model/DAX templates with honest desktop-validation status",
-        "Reproducible commands, CI checks, source licence and concise business case study"
+        "Full-source ingestion, deduplication audit and reproducible DuckDB/Parquet warehouse",
+        "LangGraph bounded tool workflow: validated read-only SQL for numbers, RAG for schema/product/source context, local LLM explanations",
+        "Runnable API/UI showing query evidence, source dates and abstention",
+        "Held-out task evaluation against deterministic SQL/lexical baselines, with accuracy, grounding, failure and latency results",
+        "CI, replay fixtures, source register, model licence/version, monitoring and beginner/interview case study"
       ],
       "acceptance": [
-        "Keep cancellations/returns/negative prices and missing customers visible in a quality audit; justify exclusions",
-        "Do not invent costs, profit, conversion, stock availability, customer churn outcomes or business impact",
-        "Use real source rows; clearly separate ONS macro context without joining unrelated businesses or dates",
-        "Verify headline KPIs against independent SQL/control totals and test reload idempotence",
-        "At least three evidence-based findings with caveats and realistic recommendations; no fabricated ROI"
+        "Target full 1,067,371 source rows; report actual raw/clean counts and exclusions, missing customers and cancellation handling",
+        "Do not describe transaction rows as vector documents; report actual distinct indexed descriptions/docs/chunks",
+        "No unrestricted SQL writes or arbitrary agent execution; bound query cost, tool calls and input size",
+        "At least 40 held-out numerical/retrieval/unsupported tasks with saved references; keep tuning tasks separate and label AI-authored evaluation",
+        "Actually run free local LLM inference and show generated outputs; if unavailable, mark GenAI requirement blocked rather than substituting templates as an LLM",
+        "Reconcile numeric answers to independent SQL controls; do not invent costs, profit, stock, ROI or live sales"
       ],
       "status": "planned",
       "milestones": [
         {
           "day": 1,
           "date": "2026-10-30",
-          "focus": "Data source and business scope",
+          "focus": "Source verification, scope and evaluation contract",
           "status": "planned"
         },
         {
           "day": 2,
           "date": "2026-10-31",
-          "focus": "Ingestion, validation and SQL model",
+          "focus": "Ingestion, profiling and scalable data model",
           "status": "planned"
         },
         {
           "day": 3,
           "date": "2026-11-01",
-          "focus": "Analysis and baseline",
+          "focus": "Baseline and model/retrieval implementation",
           "status": "planned"
         },
         {
           "day": 4,
           "date": "2026-11-02",
-          "focus": "Dashboard or API workflow",
+          "focus": "Integrated local inference API/UI",
           "status": "planned"
         },
         {
           "day": 5,
           "date": "2026-11-03",
-          "focus": "Evaluation and failure cases",
+          "focus": "Held-out evaluation, scale and failure tests",
           "status": "planned"
         },
         {
           "day": 6,
           "date": "2026-11-04",
-          "focus": "Integration, CI and documentation",
+          "focus": "CI, monitoring and reproducibility",
           "status": "planned"
         },
         {
           "day": 7,
           "date": "2026-11-05",
-          "focus": "Demo, verification and release",
+          "focus": "Verified demo, case study and release",
           "status": "planned"
         }
       ]
     },
     {
       "id": "W02",
-      "title": "NHS Operations Analytics and Forecasting",
+      "title": "UK Public-Sector Research RAG Assistant",
       "start_date": "2026-11-06",
       "due_date": "2026-11-12",
-      "path": "w02-nhs-operations-analytics",
+      "path": "w02-uk-public-sector-rag",
       "target_roles": [
-        "NHS Information Analyst",
-        "Data Analyst",
-        "Junior Data Scientist"
+        "Junior AI Engineer",
+        "LLM Application Engineer",
+        "Python Backend Developer"
       ],
-      "business_question": "How do published England A&E demand and performance vary over time, and how reliable is a simple planning forecast?",
+      "business_question": "Can a policy researcher retrieve and summarise relevant UK parliamentary discussion with dated, verifiable citations across a substantial corpus?",
       "tools": [
         "Python",
-        "SQL",
-        "Statistical forecasting",
-        "Interactive dashboard",
-        "Data-quality checks"
+        "LangGraph or LlamaIndex",
+        "BM25 + dense embeddings",
+        "FAISS or equivalent local index",
+        "Local open-weight LLM",
+        "FastAPI",
+        "Evaluation and structured monitoring"
       ],
       "data": [
         {
-          "source": "NHS England A&E published aggregates",
-          "url": "https://www.england.nhs.uk/statistics/statistical-work-areas/ae-waiting-times-and-activity/",
-          "mode": "Monthly England aggregates; not current hospital queues or patient-level records",
-          "status": "Candidate primary source; page showed a browser-verification wall in research on 29 October. Verify official downloads/gateway at build time or report blocker."
+          "source": "UK Parliament Hansard",
+          "url": "https://www.parliament.uk/about/how/publications/hansard/",
+          "mode": "Published proceedings, refreshed on demand with publication lag; records statements, not verified policy facts",
+          "licence": "Check applicable Open Parliament Licence v3.0 scope and exemptions; attribute Parliamentary information; exclude third-party material not covered",
+          "status": "Official source/licence and GOV.UK Parlex source description checked 29 October. Swagger inaccessible through research reader; API pagination, rate limits and acquisition still require a real probe"
+        },
+        {
+          "source": "Official API / licence references",
+          "url": "https://www.gov.uk/algorithmic-transparency-records/dsit-parlex",
+          "licence_url": "https://www.parliament.uk/site-information/copyright/open-parliament-licence/",
+          "api_documentation": "https://hansard-api.parliament.uk/swagger/ui/index",
+          "mode": "Documentation; not acquired corpus",
+          "status": "Candidate permitted corpus; do not assume API success"
         }
       ],
       "deliverables": [
-        "Documented multi-release ingestion and NHS metric/denominator glossary",
-        "Provider/time dashboard with missingness and definition-change flags",
-        "Rolling temporal backtest against seasonal-naive and persistence baselines",
-        "Forecast error/uncertainty discussion and operational decision memo",
-        "Reproducible SQL, tests and a source/freshness register"
+        "Resumable cached ingestion, source registry, provenance, stable IDs and incremental refresh",
+        "Deduplicated corpus with target 100,000 unique passages if permitted API access and laptop resources allow; publish actual achieved scale",
+        "Hybrid retrieval plus citation-grounded local generation and bounded research workflow",
+        "Held-out debate/group-separated retrieval and answer evaluation against BM25; ablation of dense/hybrid methods",
+        "Runnable local API/UI, latency/memory benchmarks, freshness checks, prompt-injection tests and support runbook"
       ],
       "acceptance": [
-        "Use public aggregates only; no patient data, individual risk scores or clinical advice",
-        "Preserve revisions, organisational changes and reporting definitions; do not equate published performance with current wait estimates",
-        "Fit preprocessing and models using earlier data only; save actual held-out errors and honest negative results",
-        "Separate historic observed-period reporting from publication-time operational availability"
+        "Verify endpoint, pagination, rate limits, licence and reuse exclusions before bulk acquisition; no bypass of access controls",
+        "Start with a genuine smaller corpus, benchmark, then scale; if 100k passages cannot be acquired/indexed, label scale target unmet and report blocker",
+        "At least 50 held-out answerable and unanswerable questions; report Recall@k/MRR, citation support, abstention failures and p50/p95 latency with evaluation provenance",
+        "Do not present parliamentary statements as established fact/current law; show speaker/date/source context and refresh age",
+        "Actually run local LLM generation; no chat API wrapper or renamed Student Copilot, no personal profiling or automated external actions",
+        "Distinguish embeddings/indexing from training an LLM; no claim of fine-tuning without fitted weights and held-out evidence"
       ],
       "status": "planned",
       "milestones": [
         {
           "day": 1,
           "date": "2026-11-06",
-          "focus": "Data source and business scope",
+          "focus": "Source verification, scope and evaluation contract",
           "status": "planned"
         },
         {
           "day": 2,
           "date": "2026-11-07",
-          "focus": "Ingestion, validation and SQL model",
+          "focus": "Ingestion, profiling and scalable data model",
           "status": "planned"
         },
         {
           "day": 3,
           "date": "2026-11-08",
-          "focus": "Analysis and baseline",
+          "focus": "Baseline and model/retrieval implementation",
           "status": "planned"
         },
         {
           "day": 4,
           "date": "2026-11-09",
-          "focus": "Dashboard or API workflow",
+          "focus": "Integrated local inference API/UI",
           "status": "planned"
         },
         {
           "day": 5,
           "date": "2026-11-10",
-          "focus": "Evaluation and failure cases",
+          "focus": "Held-out evaluation, scale and failure tests",
           "status": "planned"
         },
         {
           "day": 6,
           "date": "2026-11-11",
-          "focus": "Integration, CI and documentation",
+          "focus": "CI, monitoring and reproducibility",
           "status": "planned"
         },
         {
           "day": 7,
           "date": "2026-11-12",
-          "focus": "Demo, verification and release",
+          "focus": "Verified demo, case study and release",
           "status": "planned"
         }
       ]
     },
     {
       "id": "W03",
-      "title": "UK Council Services Knowledge Assistant",
+      "title": "UK Retail Demand ML and MLOps Service",
       "start_date": "2026-11-13",
       "due_date": "2026-11-19",
-      "path": "w03-uk-council-knowledge-assistant",
+      "path": "w03-uk-retail-demand-mlops",
       "target_roles": [
-        "Junior AI Engineer",
-        "Applied ML Engineer",
-        "Python Developer"
+        "Junior ML Engineer",
+        "Data Scientist",
+        "ML Platform Developer"
       ],
-      "business_question": "Can a resident find the right current public-service information with traceable evidence, and can the system decline unsupported questions?",
+      "business_question": "Can a reproducible model forecast next-week product demand more accurately than simple baselines, and can its predictions be served and monitored?",
       "tools": [
         "Python",
-        "LangGraph",
-        "Local retrieval / embeddings",
+        "DuckDB / Parquet",
+        "scikit-learn or gradient boosting",
+        "PyTorch small neural comparator",
+        "MLflow local tracking or equivalent",
         "FastAPI",
-        "Docker configuration",
-        "Evaluation and monitoring"
+        "CI",
+        "Drift and data-quality monitoring"
       ],
       "data": [
         {
-          "source": "Permitted official GOV.UK and selected council service documents",
-          "url": "https://www.gov.uk/find-local-council",
-          "mode": "Published source documents refreshed on demand; source-change checks, not a live case-management system",
-          "status": "Candidate corpus; exact council licences, URLs and document coverage must be verified before ingestion"
+          "source": "UCI Online Retail II",
+          "url": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "mode": "Historical UK transactions; distinct predictive objective from W01, not live inventory or sales",
+          "licence": "CC BY 4.0; Chen / UCI; DOI 10.24432/C5CG6D",
+          "catalogue_rows": 1067371,
+          "status": "Reuse verified ingestion only after auditing W01 outputs; report aggregate series counts separately from raw rows"
         }
       ],
       "deliverables": [
-        "Source registry with dates/licensing, reliable ingestion and explicit failures",
-        "Retrieval + bounded answer workflow with citations and abstention",
-        "Held-out relevance/grounding evaluation against a lexical baseline",
-        "Runnable local API/UI, structured operational metrics and support runbook",
-        "Security/input tests, replay smoke tests, Docker build/run only if available and actually tested"
+        "As-of product-week demand target, causal lag features and rolling temporal backtests",
+        "Actually fitted ML model and small CPU neural comparator, training-only preprocessing and simple last-week/seasonal baselines",
+        "Saved predictions, per-product and aggregate MAE/WAPE with zero-demand handling and negative results",
+        "Versioned local experiment/artifact tracking, batch inference and validated prediction API",
+        "Data/feature drift replay, quality gates, CI, model card, monitoring/runbook and interview explanation"
       ],
       "acceptance": [
-        "Distinct council service corpus and workflow, not a renamed Student Copilot or hosted chat wrapper",
-        "Use free local inference/retrieval where feasible; no new credentials, paid calls or personal case records",
-        "Measure retrieval, unsupported-answer behaviour and latency; label AI-authored evaluation questions and independent-review limits",
-        "No autonomous messages, applications, payments, eligibility decisions or private council-system access",
-        "Do not claim production users, cloud deployment, Docker execution or legal/financial accuracy without actual evidence"
+        "Fix target, forecast horizon, returns treatment and product eligibility before testing; no future-derived filtering or random row split",
+        "Separate train/validation/test chronologically, group overlapping forecast windows appropriately and freeze test selection",
+        "Report actual training rows/time/epochs/parameters, machine resources, package/model versions and baseline comparisons",
+        "Fit a small neural model rather than a placeholder; do not claim neural methods win if simpler models do better",
+        "Evaluate unavailable/new products explicitly; no claim of inventory optimisation, causal impact, current retail demand or profit",
+        "Distinct code/service/evaluation from W01 copilot; shared source ingestion does not make it a second copy of that project"
       ],
       "status": "planned",
       "milestones": [
         {
           "day": 1,
           "date": "2026-11-13",
-          "focus": "Data source and business scope",
+          "focus": "Source verification, scope and evaluation contract",
           "status": "planned"
         },
         {
           "day": 2,
           "date": "2026-11-14",
-          "focus": "Ingestion, validation and SQL model",
+          "focus": "Ingestion, profiling and scalable data model",
           "status": "planned"
         },
         {
           "day": 3,
           "date": "2026-11-15",
-          "focus": "Analysis and baseline",
+          "focus": "Baseline and model/retrieval implementation",
           "status": "planned"
         },
         {
           "day": 4,
           "date": "2026-11-16",
-          "focus": "Dashboard or API workflow",
+          "focus": "Integrated local inference API/UI",
           "status": "planned"
         },
         {
           "day": 5,
           "date": "2026-11-17",
-          "focus": "Evaluation and failure cases",
+          "focus": "Held-out evaluation, scale and failure tests",
           "status": "planned"
         },
         {
           "day": 6,
           "date": "2026-11-18",
-          "focus": "Integration, CI and documentation",
+          "focus": "CI, monitoring and reproducibility",
           "status": "planned"
         },
         {
           "day": 7,
           "date": "2026-11-19",
-          "focus": "Demo, verification and release",
+          "focus": "Verified demo, case study and release",
           "status": "planned"
         }
       ]
@@ -289,5 +313,18 @@
     "2026-11-21",
     "2026-11-22"
   ],
-  "post_end_action": "Publish an honest final status on 22 November, then disable the existing automation; do not schedule new project dates."
+  "post_end_action": "Publish an honest final status on 22 November, then disable the existing automation; do not schedule new project dates.",
+  "priority": "Applied AI / LLM engineering and ML, with GenAI, RAG, agents and measured larger-data engineering",
+  "target_roles": [
+    "Junior AI Engineer",
+    "Applied AI Engineer",
+    "Junior ML Engineer",
+    "Data Scientist"
+  ],
+  "scale_policy": "Catalogue sizes and processing targets are not achieved counts. Record raw/clean rows, unique documents, chunks, bytes, index size, runtime and peak memory. SQL rows are not RAG documents. Batch/incremental processing; never inflate the corpus by duplication.",
+  "unscheduled_backlog": [
+    "NHS operations analytics",
+    "Council service assistant",
+    "Banking applications after suitable public data verification"
+  ]
 }

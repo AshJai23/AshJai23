@@ -1,44 +1,47 @@
-# Weekly UK job-focused portfolio
+# Weekly UK AI and ML portfolio
 
-**One substantial project per week, with daily progress and a feedback loop.**
-Reframed at the user's request on **29 October 2026**. The daily 44-project quota
-is retired. Nine completed prototypes remain available in the
-[original archive](../30-days/); they are not re-counted as weekly flagships.
+**One substantial project per week, with daily progress and user feedback.**
+Updated 29 October 2026: prioritise **GenAI, LLM applications, RAG, agents and ML**
+for applied AI / junior ML engineering roles. SQL and data quality support these
+systems. The nine earlier prototypes remain [archived](../30-days/) and are not
+recounted. No weekly flagship has been built or trained yet.
 
-The primary portfolio emphasis is **Data Analyst / BI Analyst**, followed by
-junior data-science roles. The AI/API project demonstrates additional engineering
-skills; a prototype does not replace production employment experience. Selection
-uses a small, dated sample of UK vacancies, not a statistical ranking of all jobs
-or a guarantee of employment. See [market evidence](UK_MARKET_EVIDENCE.md).
-
-| Build week | Project | Hiring evidence to demonstrate |
+| Build week | Project | Main evidence |
 |---|---|---|
-| 30 Oct–5 Nov | UK Retail Commercial Analytics | SQL, reconciled KPIs, Python ETL, business dashboard and recommendations |
-| 6–12 Nov | NHS Operations Analytics and Forecasting | Aggregated NHS data, reporting definitions, temporal validation and stakeholder explanation |
-| 13–19 Nov | UK Council Services Knowledge Assistant | Python API, LangGraph, retrieval evaluation, citations, failure handling and monitoring |
-| 20–22 Nov | Review and polish | Reproduce demos, fix defects, improve README/portfolio, prepare CV bullets and interview explanations |
+| 30 Oct–5 Nov | [UK Retail GenAI Analytics Copilot](w01-uk-retail-genai-copilot/BRIEF.md) | LangGraph, local LLM, evidence-backed SQL tools, RAG and evaluation |
+| 6–12 Nov | [UK Public-Sector Research RAG Assistant](w02-uk-public-sector-rag/BRIEF.md) | Larger document corpus, hybrid retrieval, cited generation and incremental refresh |
+| 13–19 Nov | [UK Retail Demand ML and MLOps Service](w03-uk-retail-demand-mlops/BRIEF.md) | Fitted ML/neural models, temporal baselines, serving, tracking and monitoring |
+| 20–22 Nov | Review and polish | Reproducible demos, fixes, portfolio case studies, CV and interview explanations |
 
-This keeps the earlier **22 November** boundary. Each full project gets seven
-days; the final three days are review, not a rushed fourth project. Banking,
-additional retail and other domain ideas stay an unscheduled backlog unless the
-user changes the programme; there is no requirement to collect sector labels.
+## Dataset scale and freshness
 
-## Daily progress report
+UCI lists **1,067,371 historical transaction rows** for Online Retail II
+(2009–2011). That is a source catalogue count, not rows processed in this update.
+Full-source ingestion is the target. Numerical questions use SQL; a million
+transaction rows are not a million RAG documents.
 
-Each update records:
+W02 targets **100,000 unique passages**, subject to permitted acquisition and
+measured laptop resources. This is a target, not an achieved corpus. Verify API
+behaviour and licence before ingestion; report any shortfall. Record unique
+documents/chunks, bytes, index size, ingestion time, memory and retrieval latency.
+Refresh published UK sources on demand with capture/publication dates; historical
+data never becomes a live retail feed. There is no fabricated live-data fallback.
 
-1. What actually changed, with commit/file links.
-2. What was run and tested, with measured results and source freshness.
-3. What remains unfinished or blocked.
-4. The next concrete milestone.
-5. A few useful choices the user can change, such as KPIs, audience, filters or scope.
+## Quality and daily reporting
 
-Reports describe actual work performed during the run and known project history;
-they do not pretend a scheduled run is continuous work for an entire day. User
-feedback is incorporated before the next affected step. Work is published in
-reviewable increments, and a weekly completion is counted only after validation
-and readback. No quota-driven invented results or empty repositories.
+Run the actual local LLM for GenAI requirements; retrieval and embeddings alone
+do not count as generation or LLM training. Fit and evaluate ML/neural models
+against simple baselines. Report unsuccessful approaches honestly. Each release
+needs a runnable interface, tests, real-source/replay smoke evidence, measured
+evaluation, source attribution, limitations and a beginner-friendly case study.
+No paid services or new credentials.
+
+Daily updates around 7pm UK time describe actual work, commit links, tests,
+results, blockers, the next milestone and choices the user can change. They do
+not claim continuous all-day work. Current scope preserves the 22 November end
+boundary: three full build weeks and three review days. Previous NHS and council
+analytics ideas are unscheduled backlog. These are portfolio demonstrations, not
+a guarantee of a job or claims of production users.
 
 [Plan](plan.json) · [Progress](progress.json) · [Build guide](BUILD_GUIDE.md) ·
-[Feedback](FEEDBACK.md) · [Today's actual log](logs/2026-10-29.md) ·
-[First project brief](w01-uk-retail-commercial-analytics/BRIEF.md)
+[Feedback](FEEDBACK.md) · [Daily logs](logs/) · [Dated hiring evidence](UK_MARKET_EVIDENCE.md)

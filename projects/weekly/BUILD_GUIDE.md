@@ -59,3 +59,31 @@ On 20–22 November prioritise fixes, demo reproducibility, business case studie
 CV bullets and interview explanations. Do not invent performance improvements or
 commercial outcomes. After the final 22 November report, disable the current
 automation. Do not create another automation during an automated run.
+
+## AI-first revision — 29 October 2026
+
+The user's latest instruction supersedes the earlier analyst-first emphasis:
+prioritise GenAI, LLM applications, RAG, agents, ML and larger real datasets.
+Follow the revised project scopes in plan.json; do not build the retired weekly
+NHS/council briefs automatically. Keep the same dates and weekly quality standard.
+
+Use free, licence-verified local models. Record model IDs/revisions, licence,
+quantisation, inference settings and actual generation examples. A pretrained
+model used for inference has not been trained by this project. Embedding/index
+construction is not LLM fine-tuning. If local generation is blocked, expose the
+blocker and do not claim the GenAI acceptance criterion passed.
+
+Record scale evidence: raw/clean rows, unique documents/passages/chunks, dedup
+counts, bytes, index size, ingest/index times, peak memory and query latency.
+Targets/catalogue sizes are never achieved counts. Use bounded batches,
+checkpointed ingestion and incremental updates. Keep large raw corpora and model
+weights out of normal Git blobs; commit download manifests, checksums, commands,
+small attributed replay fixtures and actual validation reports.
+
+Freeze evaluation contracts before tuning: group/time-safe splits, independent
+references, numerical reconciliation, lexical/simple baselines, actual generated
+answer support and abstention failures. Report p50/p95 latency with sample count
+and hardware. Distinguish automated evaluation from independent human review.
+Treat retrieved text as untrusted input, constrain agent tools and read-only SQL,
+and test prompt injection, unsupported questions, stale sources and source errors.
+A working local demo is distinct from public deployment or support for real users.

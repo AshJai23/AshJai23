@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-29T12:55:38.512294+00:00",
+  "updated_at_utc": "2026-10-29T13:05:45.925Z",
   "status": "scoping_complete_build_not_started",
   "new_flagships_completed": 0,
   "new_flagship_target": 3,
@@ -9,24 +9,28 @@
   "items": {
     "W01": {
       "status": "planned",
-      "path": "w01-uk-retail-commercial-analytics",
+      "path": "w01-uk-retail-genai-copilot",
       "start_date": "2026-10-30",
-      "due_date": "2026-11-05"
+      "due_date": "2026-11-05",
+      "title": "UK Retail GenAI Analytics Copilot"
     },
     "W02": {
       "status": "planned",
-      "path": "w02-nhs-operations-analytics",
+      "path": "w02-uk-public-sector-rag",
       "start_date": "2026-11-06",
-      "due_date": "2026-11-12"
+      "due_date": "2026-11-12",
+      "title": "UK Public-Sector Research RAG Assistant"
     },
     "W03": {
       "status": "planned",
-      "path": "w03-uk-council-knowledge-assistant",
+      "path": "w03-uk-retail-demand-mlops",
       "start_date": "2026-11-13",
-      "due_date": "2026-11-19"
+      "due_date": "2026-11-19",
+      "title": "UK Retail Demand ML and MLOps Service"
     }
   },
   "latest_daily_log": "logs/2026-10-29.md",
   "pending_feedback": [],
-  "repository_creation": "Standalone repositories still pending; publish authorised work in existing profile repository if creation is unavailable, and report that limitation."
+  "repository_creation": "Standalone repositories still pending; publish authorised work in existing profile repository if creation is unavailable, and report that limitation.",
+  "priority": "Applied AI / LLM engineering and ML, with GenAI, RAG, agents and measured larger-data engineering"
 }
