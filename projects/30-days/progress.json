@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-28T09:24:42.810593+00:00",
-  "completed_count": 8,
+  "updated_at_utc": "2026-10-29T09:33:12.642074+00:00",
+  "completed_count": 9,
   "target_count": 44,
   "items": {
     "10": {
@@ -259,9 +259,15 @@
       "publication_location": "AshJai23/AshJai23/projects/30-days; standalone repository creation remains pending"
     },
     "09": {
-      "status": "planned",
+      "status": "completed",
       "path": "09-weather-lstm-nowcast",
-      "planned_date": "2026-10-29"
+      "planned_date": "2026-10-29",
+      "completed_at_utc": "2026-10-29T09:33:12.642074+00:00",
+      "tests_passed": 23,
+      "evidence": "09-weather-lstm-nowcast/examples/validation.txt",
+      "data_mode": "Actual Open-Meteo ERA5 historical reanalysis for a London-area grid cell; delayed retrospective experiment, not live station observations or as-issued forecasts",
+      "summary": "4320 actual hourly source rows; 2568 training, 864 validation, 864 held-out sequences. Trained 1553-parameter CPU LSTM, best epoch 25 of 31, 3.83 s training loop. Held-out MAE LSTM 0.42875 C vs persistence 0.63565 C and Ridge 0.34852 C; Ridge wins. Deterministic full retrain and two saved-model replays matched.",
+      "publication_location": "AshJai23/AshJai23/projects/30-days; standalone repository creation remains pending"
     }
   },
   "repository_migration": {
@@ -272,6 +278,6 @@
     "tests_passed": 130,
     "replay_smokes_passed": 6,
     "evidence": "migration-validation.json",
-    "available_implemented_projects_including_extra": 9
+    "available_implemented_projects_including_extra": 10
   }
 }

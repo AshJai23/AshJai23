@@ -1,0 +1,77 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>London weather LSTM experiment</title><style>body{font:16px system-ui;background:#102535;color:#edf4f9;max-width:1000px;margin:35px auto}td,th{padding:10px;border-bottom:1px solid #789}pre{white-space:pre-wrap}</style><h1>London weather LSTM experiment</h1><p>Historical ERA5 reanalysis; not a live retail sales or weather service. Read source dates and limitations.</p><table><tr><th>Method</th><th>Held-out MAE °C</th><th>RMSE °C</th></tr><tr><td>lstm</td><td>0.4287</td><td>0.5608</td></tr><tr><td>persistence</td><td>0.6356</td><td>0.8477</td></tr><tr><td>previous_day</td><td>2.5981</td><td>3.3324</td></tr><tr><td>ridge</td><td>0.3485</td><td>0.4436</td></tr></table><h2>Measured evidence</h2><pre>{
+  &quot;mode&quot;: &quot;Retrospective one-hour reanalysis extrapolation; no live nowcast or retail-sales prediction&quot;,
+  &quot;captured_at_utc&quot;: &quot;2026-10-29T09:20:31.890059+00:00&quot;,
+  &quot;requested_coordinates&quot;: [
+    51.5074,
+    -0.1278
+  ],
+  &quot;returned_grid_coordinates&quot;: [
+    51.5,
+    -0.25
+  ],
+  &quot;source_model_requested&quot;: &quot;ERA5&quot;,
+  &quot;first_source_utc&quot;: &quot;2026-04-25T00:00:00+00:00&quot;,
+  &quot;last_source_utc&quot;: &quot;2026-10-21T23:00:00+00:00&quot;,
+  &quot;source_age_hours_at_capture&quot;: 178.34219168305398,
+  &quot;quality&quot;: {
+    &quot;input_rows&quot;: 4320,
+    &quot;duplicates&quot;: 0,
+    &quot;invalid_or_missing_rows&quot;: 0,
+    &quot;outside_window_or_future&quot;: 0,
+    &quot;missing_requested_hours&quot;: 0
+  },
+  &quot;split_counts&quot;: {
+    &quot;train&quot;: 2568,
+    &quot;validation&quot;: 864,
+    &quot;test&quot;: 864
+  },
+  &quot;training_scaler_unique_hours&quot;: 2592,
+  &quot;train_end_exclusive&quot;: &quot;2026-08-11T00:00:00+00:00&quot;,
+  &quot;validation_end_exclusive&quot;: &quot;2026-09-16T00:00:00+00:00&quot;,
+  &quot;heldout_first_origin&quot;: &quot;2026-09-15T23:00:00+00:00&quot;,
+  &quot;heldout_first_target&quot;: &quot;2026-09-16T00:00:00+00:00&quot;,
+  &quot;heldout_last_target&quot;: &quot;2026-10-21T23:00:00+00:00&quot;,
+  &quot;heldout_metrics&quot;: {
+    &quot;lstm&quot;: {
+      &quot;mae_c&quot;: 0.4287465388059613,
+      &quot;rmse_c&quot;: 0.5607516492279799
+    },
+    &quot;persistence&quot;: {
+      &quot;mae_c&quot;: 0.6356481481481482,
+      &quot;rmse_c&quot;: 0.8476683706890724
+    },
+    &quot;previous_day&quot;: {
+      &quot;mae_c&quot;: 2.5981481481481485,
+      &quot;rmse_c&quot;: 3.332416540590327
+    },
+    &quot;ridge&quot;: {
+      &quot;mae_c&quot;: 0.34852455568491636,
+      &quot;rmse_c&quot;: 0.44363738010565895
+    }
+  },
+  &quot;lstm_beats_persistence_mae&quot;: true,
+  &quot;lstm_beats_ridge_mae&quot;: false,
+  &quot;training&quot;: {
+    &quot;seed&quot;: 42,
+    &quot;max_epochs&quot;: 40,
+    &quot;patience&quot;: 6,
+    &quot;epochs_run&quot;: 31,
+    &quot;selected_epoch&quot;: 25,
+    &quot;selection&quot;: &quot;lowest validation MAE; no held-out test evaluation during selection&quot;,
+    &quot;training_loop_seconds&quot;: 3.8336930399999574,
+    &quot;trainable_parameters&quot;: 1553,
+    &quot;initial_parameter_sha256&quot;: &quot;4d7e937b7dd1f2e55ec1269d8c8cc307f64e5230f73046ff7313ebc4d48f622b&quot;,
+    &quot;selected_parameter_sha256&quot;: &quot;c2a539d6d0bcda9142dca330b9bf3e1cea7e5fb33d1d435d36480126eb3e84d0&quot;,
+    &quot;weights_changed&quot;: true,
+    &quot;torch_version&quot;: &quot;2.14.1+cpu&quot;,
+    &quot;numpy_version&quot;: &quot;2.3.5&quot;,
+    &quot;device&quot;: &quot;CPU&quot;,
+    &quot;threads&quot;: 2
+  },
+  &quot;source_snapshot_sha256&quot;: &quot;c0e92fb18833aa7d3d2c5b4f7b75346d78d62a25cb68c9dfdb4209d906c19395&quot;,
+  &quot;limitations&quot;: [
+    &quot;One gridded London-area point and one warm-to-autumn 180-day period; no measured store sales or footfall.&quot;,
+    &quot;ERA5 is delayed retrospective reanalysis and can incorporate later information; this chronological statistical split does not simulate operational as-issued data availability.&quot;,
+    &quot;One fixed seed and small model; no independent regional/year validation, uncertainty calibration or public deployment.&quot;
+  ]
+}</pre></html>

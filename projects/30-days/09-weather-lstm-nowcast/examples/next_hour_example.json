@@ -1,0 +1,11 @@
+{
+  "mode": "Historical next-hour extrapolation example, NOT a live forecast",
+  "origin_utc": "2026-10-21T23:00:00+00:00",
+  "target_utc": "2026-10-22T00:00:00+00:00",
+  "predicted_temperature_c": 8.089527561285786,
+  "persistence_c": 8.4,
+  "target_actual_c": null,
+  "known_target_error": null,
+  "captured_at_utc": "2026-10-29T09:20:31.890059+00:00",
+  "note": "No target observation is included in the archived input; accuracy for this one example is unknown. The target date is historical relative to capture."
+}

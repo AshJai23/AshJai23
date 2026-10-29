@@ -1,0 +1,48 @@
+Validation on 29 October 2026
+Runtime Python 3.12.14, PyTorch 2.14.1+cpu, NumPy 2.3.5; CPU, two threads, deterministic algorithms, native kernels.
+One actual source capture: https://archive-api.open-meteo.com/v1/archive?latitude=51.5074&longitude=-0.1278&start_date=2026-04-25&end_date=2026-10-21&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m%2Csurface_pressure&models=era5&timezone=GMT&timeformat=unixtime&wind_speed_unit=ms
+HTTP 200; raw-response SHA256 90c85de78988a39efaedf48ba63dc10f5dd9dc2a71545b97c9a3530773865e58
+Captured at 2026-10-29T09:20:31.890059+00:00
+Mode: delayed historical ERA5 reanalysis, not live station observations or an as-issued forecast archive. No synthetic training data.
+Actual complete training commands (both exit 0):
+python main.py --train --input examples/source_snapshot.json --output examples
+python main.py --train --input examples/source_snapshot.json --output retrain-check
+Exact repeat-training equality: fitted weights, scalers, Ridge parameters, selected epoch, learning curve, all test predictions, next-hour example, and all metrics excluding measured training duration. No test-driven tuning.
+Saved-model smoke tests: [{"command": "python main.py --predict --input examples/source_snapshot.json --model examples/model.json --output replay-check-1", "exit_code": 0}, {"command": "python main.py --predict --input examples/source_snapshot.json --model examples/model.json --output replay-check-2", "exit_code": 0}]
+All metrics, test predictions, example and HTML report byte-equal to saved outputs.
+Optional plot_results.py executed with Matplotlib 3.10.8; SVGs parsed as nonempty XML. No browser/public-hosting test or deployment.
+Nonfatal PyTorch cpuinfo warning appeared in this environment; the training and test processes exited successfully.
+Measured held-out results: {"lstm": {"mae_c": 0.4287465388059613, "rmse_c": 0.5607516492279799}, "persistence": {"mae_c": 0.6356481481481482, "rmse_c": 0.8476683706890724}, "previous_day": {"mae_c": 2.5981481481481485, "rmse_c": 3.332416540590327}, "ridge": {"mae_c": 0.34852455568491636, "rmse_c": 0.44363738010565895}}
+Training evidence: {"seed": 42, "max_epochs": 40, "patience": 6, "epochs_run": 31, "selected_epoch": 25, "selection": "lowest validation MAE; no held-out test evaluation during selection", "training_loop_seconds": 3.8336930399999574, "trainable_parameters": 1553, "initial_parameter_sha256": "4d7e937b7dd1f2e55ec1269d8c8cc307f64e5230f73046ff7313ebc4d48f622b", "selected_parameter_sha256": "c2a539d6d0bcda9142dca330b9bf3e1cea7e5fb33d1d435d36480126eb3e84d0", "weights_changed": true, "torch_version": "2.14.1+cpu", "numpy_version": "2.3.5", "device": "CPU", "threads": 2}
+Test fixtures explicitly synthetic; full source capture above is used for published metrics.
+test_chronology_and_24_hour_context (test_lstm.DataTests.test_chronology_and_24_hour_context) ... ok
+test_conflicting_duplicate_fails (test_lstm.DataTests.test_conflicting_duplicate_fails) ... ok
+test_exact_duplicates_collapse (test_lstm.DataTests.test_exact_duplicates_collapse) ... ok
+test_future_holdout_values_do_not_change_scaler_or_splits (test_lstm.DataTests.test_future_holdout_values_do_not_change_scaler_or_splits) ... ok
+test_grid_outside_london_fails (test_lstm.DataTests.test_grid_outside_london_fails) ... ok
+test_invalid_values_not_zero_filled (test_lstm.DataTests.test_invalid_values_not_zero_filled) ... ok
+test_misaligned_epochs_fail (test_lstm.DataTests.test_misaligned_epochs_fail) ... ok
+test_missing_hour_breaks_25_row_windows (test_lstm.DataTests.test_missing_hour_breaks_25_row_windows) ... ok
+test_recent_end_blocked_before_network (test_lstm.DataTests.test_recent_end_blocked_before_network) ... ok
+test_source_failure_does_not_use_examples (test_lstm.DataTests.test_source_failure_does_not_use_examples) ... ok
+test_target_not_in_its_input_sequence (test_lstm.DataTests.test_target_not_in_its_input_sequence) ... ok
+test_temperature_zero_and_negative_are_valid (test_lstm.DataTests.test_temperature_zero_and_negative_are_valid) ... ok
+test_unequal_response_columns_fail (test_lstm.DataTests.test_unequal_response_columns_fail) ... ok
+test_units_are_not_silently_converted (test_lstm.DataTests.test_units_are_not_silently_converted) ... ok
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+test_bad_weight_shapes_rejected (test_lstm.NeuralTests.test_bad_weight_shapes_rejected) ... ok
+test_changed_source_cannot_be_called_same_heldout_replay (test_lstm.NeuralTests.test_changed_source_cannot_be_called_same_heldout_replay) ... ok
+test_epoch_selected_from_validation_only (test_lstm.NeuralTests.test_epoch_selected_from_validation_only) ... ok
+test_json_roundtrip_preserves_exact_inference (test_lstm.NeuralTests.test_json_roundtrip_preserves_exact_inference) ... ok
+test_lstm_is_actual_trainable_recurrent_module (test_lstm.NeuralTests.test_lstm_is_actual_trainable_recurrent_module) ... ok
+test_neural_weights_really_changed (test_lstm.NeuralTests.test_neural_weights_really_changed) ... ok
+test_replay_exports_real_predictions_for_fixture (test_lstm.NeuralTests.test_replay_exports_real_predictions_for_fixture) ... ok
+test_tail_example_is_one_hour_after_source_not_current (test_lstm.NeuralTests.test_tail_example_is_one_hour_after_source_not_current) ... ok
+test_tail_missing_context_fails (test_lstm.NeuralTests.test_tail_missing_context_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 1.550s
+
+OK
+
+Both scientific figure previews were visually inspected for readable axes, titles and labels; PNG previews are not included in the Git publication.

@@ -14,11 +14,12 @@ as a website or claimed to exist. Existing source folders remain accessible.
 | 06 | `ds-06-rss-topic-clustering` | Science and technology headline organisation | Prepared for extraction; not published |
 | 07 | `ds-07-river-level-anomaly-detection` | Oxford river-feed innovation audit; explicit stale historical observations | Implemented/tested in source folder; standalone pending |
 | 08 | `ds-08-carbon-bi-data-model` | Council sustainability BI using GB energy estimates and regional forecasts | Implemented/tested in source folder; standalone pending |
+| 09 | `ds-09-weather-lstm-nowcast` | London retail weather-exposure experiment with a genuinely trained LSTM; delayed historical reanalysis | Implemented/tested in source folder; standalone pending |
 | extra-student | `uk-student-copilot` | UK international-student support: reviewed GOV.UK source cards and a trained local routing head; not a live legal adviser. | Prepared for extraction; not published |
 
 [All 44 sprint destinations and the extra Student Copilot](REPOSITORIES.json).
 Future repositories will be created only when they contain a built project.
-Extraction does not change the sprint count: **8/44 complete**.
+Extraction does not change the sprint count: **9/44 complete**.
 
 The repository export must include all source files, tests, data provenance,
 existing measured results and a source commit pointer. Rerun tests and a saved
@@ -36,3 +37,7 @@ under the requested profile repository: 34 tests and two saved-source smoke runs
 per project passed. Standalone creation/authentication remains pending; no new
 repository URL is claimed. The earlier 133-file/130-test extraction evidence
 applies only to the original seven projects and was not rerun here.
+
+On 29 October, project 09 was trained/tested in its source folder: 23 tests,
+two exact saved-model replays and a deterministic full retrain passed. This adds
+one sprint completion, not a new standalone repository. Migration remains pending.

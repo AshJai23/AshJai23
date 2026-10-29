@@ -1,6 +1,6 @@
 # 30-day project roadmap
 
-24 October–22 November 2026 · Europe/London · 44 IDs, 8 completed.
+24 October–22 November 2026 · Europe/London · 44 IDs, 9 completed.
 
 UK-sector revision requested 27 October. Completed results retain their original
 geography. Separate repositories are pending creation; no new completions are
@@ -16,7 +16,7 @@ claimed by this reorganisation.
 | 4 | 2026-10-27 | 06 | RSS topic clustering | Machine learning | Existing validated scope | [Complete](06-rss-topic-clustering/) |
 | 5 | 2026-10-28 | 07 | River-level anomaly detection | Machine learning | council | [Complete](07-river-level-anomaly-detection/) |
 | 5 | 2026-10-28 | 08 | Carbon intensity BI data model | Data science | council | [Complete](08-carbon-bi-data-model/) |
-| 6 | 2026-10-29 | 09 | Weather LSTM nowcast | Deep learning | retail | Planned |
+| 6 | 2026-10-29 | 09 | Weather LSTM nowcast | Deep learning | retail | [Complete](09-weather-lstm-nowcast/) |
 | 7 | 2026-10-30 | 10 | Public issue triage classifier | Machine learning | technology | Planned |
 | 8 | 2026-10-31 | 11 | UK retail profile clustering | Machine learning | retail | Planned |
 | 8 | 2026-10-31 | 12 | API latency anomaly monitor | MLOps | technology | Planned |

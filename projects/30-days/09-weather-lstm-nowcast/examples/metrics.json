@@ -1,0 +1,77 @@
+{
+  "mode": "Retrospective one-hour reanalysis extrapolation; no live nowcast or retail-sales prediction",
+  "captured_at_utc": "2026-10-29T09:20:31.890059+00:00",
+  "requested_coordinates": [
+    51.5074,
+    -0.1278
+  ],
+  "returned_grid_coordinates": [
+    51.5,
+    -0.25
+  ],
+  "source_model_requested": "ERA5",
+  "first_source_utc": "2026-04-25T00:00:00+00:00",
+  "last_source_utc": "2026-10-21T23:00:00+00:00",
+  "source_age_hours_at_capture": 178.34219168305398,
+  "quality": {
+    "input_rows": 4320,
+    "duplicates": 0,
+    "invalid_or_missing_rows": 0,
+    "outside_window_or_future": 0,
+    "missing_requested_hours": 0
+  },
+  "split_counts": {
+    "train": 2568,
+    "validation": 864,
+    "test": 864
+  },
+  "training_scaler_unique_hours": 2592,
+  "train_end_exclusive": "2026-08-11T00:00:00+00:00",
+  "validation_end_exclusive": "2026-09-16T00:00:00+00:00",
+  "heldout_first_origin": "2026-09-15T23:00:00+00:00",
+  "heldout_first_target": "2026-09-16T00:00:00+00:00",
+  "heldout_last_target": "2026-10-21T23:00:00+00:00",
+  "heldout_metrics": {
+    "lstm": {
+      "mae_c": 0.4287465388059613,
+      "rmse_c": 0.5607516492279799
+    },
+    "persistence": {
+      "mae_c": 0.6356481481481482,
+      "rmse_c": 0.8476683706890724
+    },
+    "previous_day": {
+      "mae_c": 2.5981481481481485,
+      "rmse_c": 3.332416540590327
+    },
+    "ridge": {
+      "mae_c": 0.34852455568491636,
+      "rmse_c": 0.44363738010565895
+    }
+  },
+  "lstm_beats_persistence_mae": true,
+  "lstm_beats_ridge_mae": false,
+  "training": {
+    "seed": 42,
+    "max_epochs": 40,
+    "patience": 6,
+    "epochs_run": 31,
+    "selected_epoch": 25,
+    "selection": "lowest validation MAE; no held-out test evaluation during selection",
+    "training_loop_seconds": 3.8336930399999574,
+    "trainable_parameters": 1553,
+    "initial_parameter_sha256": "4d7e937b7dd1f2e55ec1269d8c8cc307f64e5230f73046ff7313ebc4d48f622b",
+    "selected_parameter_sha256": "c2a539d6d0bcda9142dca330b9bf3e1cea7e5fb33d1d435d36480126eb3e84d0",
+    "weights_changed": true,
+    "torch_version": "2.14.1+cpu",
+    "numpy_version": "2.3.5",
+    "device": "CPU",
+    "threads": 2
+  },
+  "source_snapshot_sha256": "c0e92fb18833aa7d3d2c5b4f7b75346d78d62a25cb68c9dfdb4209d906c19395",
+  "limitations": [
+    "One gridded London-area point and one warm-to-autumn 180-day period; no measured store sales or footfall.",
+    "ERA5 is delayed retrospective reanalysis and can incorporate later information; this chronological statistical split does not simulate operational as-issued data availability.",
+    "One fixed seed and small model; no independent regional/year validation, uncertainty calibration or public deployment."
+  ]
+}

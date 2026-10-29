@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "as_of": "2026-10-28",
-  "note": "Requested destinations, not claims that repositories exist. Nine implemented projects (8 sprint + extra Student Copilot) ready to extract; 36 planned IDs are not built. Do not create empty future repositories. Original sources remain in the profile repository.",
+  "as_of": "2026-10-29",
+  "note": "Requested destinations, not claims that repositories exist. Ten implemented projects (9 sprint + extra Student Copilot) ready to extract; 35 planned IDs are not built. Do not create empty future repositories. Original sources remain in the profile repository.",
   "projects": [
     {
       "id": "01",
@@ -84,9 +84,11 @@
       "name": "ds-09-weather-lstm-nowcast",
       "target_repository": "AshJai23/ds-09-weather-lstm-nowcast",
       "source_path": "projects/30-days/09-weather-lstm-nowcast",
-      "status": "planned_not_built",
+      "status": "ready_to_extract",
       "repository_created": false,
-      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales."
+      "niche": "UK retail demand, weather exposure and reporting; use ONS retail aggregates for sales, UK-location weather for exposure only. Weather does not measure shop sales.",
+      "published_source_folder": true,
+      "standalone_repository_created": false
     },
     {
       "id": "10",
