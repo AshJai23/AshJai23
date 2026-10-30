@@ -1,18 +1,31 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-29T13:05:45.925Z",
-  "status": "scoping_complete_build_not_started",
+  "updated_at_utc": "2026-10-30T19:44:50.432Z",
+  "status": "in_progress",
   "new_flagships_completed": 0,
   "new_flagship_target": 3,
   "preserved_daily_prototypes": 9,
   "active_project": "W01",
   "items": {
     "W01": {
-      "status": "planned",
+      "status": "in_progress",
       "path": "w01-uk-retail-genai-copilot",
       "start_date": "2026-10-30",
       "due_date": "2026-11-05",
-      "title": "UK Retail GenAI Analytics Copilot"
+      "title": "UK Retail GenAI Analytics Copilot",
+      "completed_milestones": [
+        1
+      ],
+      "current_milestone": 2,
+      "latest_increment": "Full real-source ingestion, quality audit, Parquet/DuckDB warehouse, read-only SQL baseline and frozen 40-task evaluation contract. AI/RAG/n8n/UI not yet implemented.",
+      "metrics": {
+        "raw_rows": 1067371,
+        "deduplicated_rows": 1033036,
+        "unit_tests_passed": 8,
+        "real_source_checks_passed": 6,
+        "llm_inference_run": false,
+        "rag_documents_indexed": 0
+      }
     },
     "W02": {
       "status": "planned",
@@ -29,7 +42,7 @@
       "title": "UK Retail Demand ML and MLOps Service"
     }
   },
-  "latest_daily_log": "logs/2026-10-29.md",
+  "latest_daily_log": "logs/2026-10-30.md",
   "pending_feedback": [],
   "repository_creation": "Standalone repositories still pending; publish authorised work in existing profile repository if creation is unavailable, and report that limitation.",
   "priority": "Applied AI / LLM engineering and ML, with GenAI, RAG, agents and measured larger-data engineering"

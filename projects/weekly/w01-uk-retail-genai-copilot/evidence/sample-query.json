@@ -1,0 +1,12 @@
+{
+  "metric": "signed_value",
+  "country": "United Kingdom",
+  "value": "15986060.3370",
+  "source": "UCI Online Retail II, 2009\u20132011 historical",
+  "population": "deduplicated normalised invoice lines",
+  "sql_template": "SELECT sum(signed_value) FROM auditable_lines WHERE country = ?",
+  "parameters": [
+    "United Kingdom"
+  ],
+  "generated_by": "deterministic SQL baseline; no LLM"
+}

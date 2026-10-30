@@ -1,0 +1,151 @@
+{
+  "checks": {
+    "raw_rows_match_official_catalogue": true,
+    "reload_same_metrics": true,
+    "country_subtotals_reconcile": true,
+    "python_vs_sql_raw_control": true,
+    "source_archive_checksum_matches": true,
+    "parquet_row_count_matches": true
+  },
+  "passed": true,
+  "source_mode": "real full-source historical replay",
+  "reload_seconds": 7.874,
+  "query_timing_note": "30 local deterministic UK signed-value queries, each opens/closes read-only database; not LLM/agent latency",
+  "query_samples": 30,
+  "query_latency_ms_p50": 95.025,
+  "query_latency_ms_p95": 137.739,
+  "query_latency_ms_all": [
+    68.303,
+    82.575,
+    96.051,
+    78.284,
+    91.179,
+    93.999,
+    96.316,
+    114.753,
+    85.734,
+    100.136,
+    100.881,
+    92.984,
+    111.574,
+    99.27,
+    105.246,
+    137.739,
+    133.394,
+    87.457,
+    74.219,
+    72.977,
+    98.681,
+    71.893,
+    74.288,
+    88.66,
+    152.423,
+    114.734,
+    127.141,
+    120.632,
+    80.326,
+    93.393
+  ],
+  "tasks_sha256": "9fb3427284c3801a8143c854280662115f4baeb33c959106419c089afe7623c4",
+  "numerical_oracle_results": [
+    {
+      "id": "T01",
+      "value": "948321"
+    },
+    {
+      "id": "T02",
+      "value": "15986060.3370"
+    },
+    {
+      "id": "T03",
+      "value": "17410196.1170"
+    },
+    {
+      "id": "T04",
+      "value": "232206"
+    },
+    {
+      "id": "T05",
+      "value": "14025"
+    },
+    {
+      "id": "T06",
+      "value": "321733.3900"
+    },
+    {
+      "id": "T07",
+      "value": "350456.0900"
+    },
+    {
+      "id": "T08",
+      "value": "128"
+    },
+    {
+      "id": "T09",
+      "value": "17339"
+    },
+    {
+      "id": "T10",
+      "value": "411959.1610"
+    },
+    {
+      "id": "T11",
+      "value": "425019.7110"
+    },
+    {
+      "id": "T12",
+      "value": "0"
+    },
+    {
+      "id": "T13",
+      "value": "17667"
+    },
+    {
+      "id": "T14",
+      "value": "609953.7800"
+    },
+    {
+      "id": "T15",
+      "value": "658767.3100"
+    },
+    {
+      "id": "T16",
+      "value": "1653"
+    },
+    {
+      "id": "T17",
+      "value": "3754"
+    },
+    {
+      "id": "T18",
+      "value": "91013.4400"
+    },
+    {
+      "id": "T19",
+      "value": "108332.4900"
+    },
+    {
+      "id": "T20",
+      "value": "0"
+    },
+    {
+      "id": "T21",
+      "value": "5137"
+    },
+    {
+      "id": "T22",
+      "value": "548330.7000"
+    },
+    {
+      "id": "T23",
+      "value": "554038.0900"
+    },
+    {
+      "id": "T24",
+      "value": "0"
+    }
+  ],
+  "agent_evaluation_run": false,
+  "llm_inference_run": false,
+  "n8n_execution_run": false
+}

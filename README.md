@@ -76,13 +76,13 @@ My work spans fraud detection, cyber threat analysis, time-series forecasting, h
 ### 🚀 Weekly UK AI and ML portfolio
 **GenAI · LLMs · RAG · agents · ML · larger real datasets**
 
-One flagship per week with daily progress. Three new builds planned; 9 earlier prototypes preserved. [AI-first scopes and data-scale targets](projects/weekly/plan.json).
+One flagship per week with daily progress. W01 data foundation in progress: 1,067,371 real historical retail rows ingested; 0/3 weekly releases complete. 9 earlier prototypes preserved. [AI-first scopes and data-scale targets](projects/weekly/plan.json).
 
 **UK niches:** retail · banking · technology · councils · NHS (council/environment and retail-weather prototypes published; further sector work planned).
 
 Separate project repositories requested; [migration status](projects/30-days/REPOSITORIES.json). Existing code remains accessible below.
 
-[Active weekly plan](projects/weekly/) · [Daily progress](projects/weekly/logs/2026-10-29.md) · [Completed prototype archive](projects/30-days/)
+[Active weekly plan](projects/weekly/) · [Daily progress](projects/weekly/logs/2026-10-30.md) · [Completed prototype archive](projects/30-days/)
 
 ### Featured applications
 

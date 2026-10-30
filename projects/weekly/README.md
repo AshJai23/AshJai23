@@ -4,7 +4,7 @@
 Updated 29 October 2026: prioritise **GenAI, LLM applications, RAG, agents and ML**
 for applied AI / junior ML engineering roles. SQL and data quality support these
 systems. The nine earlier prototypes remain [archived](../30-days/) and are not
-recounted. No weekly flagship has been built or trained yet.
+recounted. W01 is **in progress**: its real-data warehouse and deterministic SQL baseline are implemented and tested. No weekly flagship is complete yet; no new LLM inference/training is claimed.
 
 | Build week | Project | Main evidence |
 |---|---|---|
@@ -44,7 +44,7 @@ analytics ideas are unscheduled backlog. These are portfolio demonstrations, not
 a guarantee of a job or claims of production users.
 
 [Plan](plan.json) · [Progress](progress.json) · [Build guide](BUILD_GUIDE.md) ·
-[Feedback](FEEDBACK.md) · [Daily logs](logs/) · [Dated hiring evidence](UK_MARKET_EVIDENCE.md)
+[Feedback](FEEDBACK.md) · [Latest daily progress](logs/2026-10-30.md) · [Dated hiring evidence](UK_MARKET_EVIDENCE.md)
 
 ## Added stack — 29 October 2026
 

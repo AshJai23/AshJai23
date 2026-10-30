@@ -1,0 +1,15 @@
+test_both_sheets_are_streamed (test_ingestion.IngestionTests.test_both_sheets_are_streamed) ... {"sheet": "Sheet", "rows": 1}
+{"sheet": "second", "rows": 1}
+ok
+test_duplicate_returns_missingness_and_reload (test_ingestion.IngestionTests.test_duplicate_returns_missingness_and_reload) ... ok
+test_excess_price_precision_rejected (test_ingestion.IngestionTests.test_excess_price_precision_rejected) ... ok
+test_fractional_quantity_rejected (test_ingestion.IngestionTests.test_fractional_quantity_rejected) ... ok
+test_invalid_date_rejected (test_ingestion.IngestionTests.test_invalid_date_rejected) ... ok
+test_money_is_decimal_and_quantity_integral (test_ingestion.IngestionTests.test_money_is_decimal_and_quantity_integral) ... ok
+test_nan_price_rejected (test_ingestion.IngestionTests.test_nan_price_rejected) ... ok
+test_schema_drift_fails_explicitly (test_ingestion.IngestionTests.test_schema_drift_fails_explicitly) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.669s
+
+OK

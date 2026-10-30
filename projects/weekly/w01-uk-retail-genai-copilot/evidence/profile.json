@@ -1,0 +1,259 @@
+{
+  "raw_rows": 1067371,
+  "deduplicated_rows": 1033036,
+  "raw_signed_value": "19287250.5680",
+  "date_min": "2009-12-01 07:45:00",
+  "date_max": "2011-12-09 12:50:00",
+  "missing_customer_rows": 235151,
+  "missing_description_rows": 4275,
+  "negative_quantity_rows": 22496,
+  "zero_price_rows": 6014,
+  "negative_price_rows": 5,
+  "cancellation_rows": 19104,
+  "sale_line_rows": 1007913,
+  "countries": 43,
+  "distinct_stock_codes": 5304,
+  "distinct_nonempty_descriptions": 5655,
+  "deduplicated_signed_value": "18855533.6980",
+  "positive_non_cancel_line_value": "20476260.4480",
+  "missing_customer_sale_value": "3101456.1800",
+  "duplicate_rows_removed": 34335,
+  "country_signed_values": [
+    {
+      "country": "Australia",
+      "signed_value": "166444.4200",
+      "rows": 1890
+    },
+    {
+      "country": "Austria",
+      "signed_value": "23177.6000",
+      "rows": 938
+    },
+    {
+      "country": "Bahrain",
+      "signed_value": "2861.5500",
+      "rows": 126
+    },
+    {
+      "country": "Belgium",
+      "signed_value": "63208.8900",
+      "rows": 3110
+    },
+    {
+      "country": "Bermuda",
+      "signed_value": "1253.1400",
+      "rows": 34
+    },
+    {
+      "country": "Brazil",
+      "signed_value": "1411.8700",
+      "rows": 94
+    },
+    {
+      "country": "Canada",
+      "signed_value": "4883.0400",
+      "rows": 228
+    },
+    {
+      "country": "Channel Islands",
+      "signed_value": "41080.1800",
+      "rows": 1646
+    },
+    {
+      "country": "Cyprus",
+      "signed_value": "24032.5600",
+      "rows": 1157
+    },
+    {
+      "country": "Czech Republic",
+      "signed_value": "707.7200",
+      "rows": 30
+    },
+    {
+      "country": "Denmark",
+      "signed_value": "64459.5900",
+      "rows": 797
+    },
+    {
+      "country": "EIRE",
+      "signed_value": "609953.7800",
+      "rows": 17667
+    },
+    {
+      "country": "European Community",
+      "signed_value": "1291.7500",
+      "rows": 61
+    },
+    {
+      "country": "Finland",
+      "signed_value": "29514.4500",
+      "rows": 1049
+    },
+    {
+      "country": "France",
+      "signed_value": "321733.3900",
+      "rows": 14025
+    },
+    {
+      "country": "Germany",
+      "signed_value": "411959.1610",
+      "rows": 17339
+    },
+    {
+      "country": "Greece",
+      "signed_value": "18995.4900",
+      "rows": 663
+    },
+    {
+      "country": "Hong Kong",
+      "signed_value": "13830.5000",
+      "rows": 360
+    },
+    {
+      "country": "Iceland",
+      "signed_value": "4921.5300",
+      "rows": 222
+    },
+    {
+      "country": "Israel",
+      "signed_value": "11101.3700",
+      "rows": 368
+    },
+    {
+      "country": "Italy",
+      "signed_value": "30254.1000",
+      "rows": 1507
+    },
+    {
+      "country": "Japan",
+      "signed_value": "39662.1000",
+      "rows": 565
+    },
+    {
+      "country": "Korea",
+      "signed_value": "949.8200",
+      "rows": 63
+    },
+    {
+      "country": "Lebanon",
+      "signed_value": "1865.9100",
+      "rows": 58
+    },
+    {
+      "country": "Lithuania",
+      "signed_value": "4892.6800",
+      "rows": 154
+    },
+    {
+      "country": "Malta",
+      "signed_value": "5192.2200",
+      "rows": 299
+    },
+    {
+      "country": "Netherlands",
+      "signed_value": "548330.7000",
+      "rows": 5137
+    },
+    {
+      "country": "Nigeria",
+      "signed_value": "-6.6600",
+      "rows": 32
+    },
+    {
+      "country": "Norway",
+      "signed_value": "35455.9100",
+      "rows": 1308
+    },
+    {
+      "country": "Poland",
+      "signed_value": "10279.9300",
+      "rows": 527
+    },
+    {
+      "country": "Portugal",
+      "signed_value": "51403.6800",
+      "rows": 2528
+    },
+    {
+      "country": "RSA",
+      "signed_value": "3369.0300",
+      "rows": 169
+    },
+    {
+      "country": "Saudi Arabia",
+      "signed_value": "131.1700",
+      "rows": 10
+    },
+    {
+      "country": "Singapore",
+      "signed_value": "13158.1600",
+      "rows": 346
+    },
+    {
+      "country": "Spain",
+      "signed_value": "91013.4400",
+      "rows": 3754
+    },
+    {
+      "country": "Sweden",
+      "signed_value": "87775.5200",
+      "rows": 1362
+    },
+    {
+      "country": "Switzerland",
+      "signed_value": "99403.0600",
+      "rows": 3175
+    },
+    {
+      "country": "Thailand",
+      "signed_value": "3070.5400",
+      "rows": 76
+    },
+    {
+      "country": "USA",
+      "signed_value": "6286.5400",
+      "rows": 535
+    },
+    {
+      "country": "United Arab Emirates",
+      "signed_value": "9948.6500",
+      "rows": 500
+    },
+    {
+      "country": "United Kingdom",
+      "signed_value": "15986060.3370",
+      "rows": 948321
+    },
+    {
+      "country": "Unspecified",
+      "signed_value": "9678.4700",
+      "rows": 752
+    },
+    {
+      "country": "West Indies",
+      "signed_value": "536.4100",
+      "rows": 54
+    }
+  ],
+  "independent_decimal_reconciliation_passed": true,
+  "sheet_rows": {
+    "Year 2009-2010": 525461,
+    "Year 2010-2011": 541910
+  },
+  "python_decimal_raw_signed_value": "19287250.568",
+  "generated_at_utc": "2026-10-30T19:43:32.322121+00:00",
+  "ingest_and_profile_seconds": 57.093,
+  "process_peak_rss_mib": 379.39,
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "duckdb": "1.4.1",
+  "openpyxl": "3.1.5",
+  "cpu_count_visible": 9,
+  "duckdb_threads": 2,
+  "duckdb_memory_limit": "512MB",
+  "parquet_bytes": 12758252,
+  "database_bytes": 41168896,
+  "vector_index_built": false,
+  "rag_documents_indexed": 0,
+  "llm_inference_run": false
+}

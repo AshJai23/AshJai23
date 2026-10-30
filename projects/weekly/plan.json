@@ -47,7 +47,7 @@
           "mode": "Actual historical UK retailer transactions, December 2009–December 2011; NOT real-time",
           "licence": "CC BY 4.0; Chen, D. (2012), DOI 10.24432/C5CG6D",
           "catalogue_rows": 1067371,
-          "status": "Official documentation verified 29 October; not downloaded or processed in this scoping change"
+          "status": "Full archive retrieved 30 October 2026; 1,067,371 rows ingested and audited. See project evidence/source_manifest.json and profile.json. Historical observations remain 2009–2011."
         },
         {
           "source": "ONS Retail Sales Index",
@@ -74,19 +74,20 @@
         "Use Hugging Face public ungated licence-verified models/libraries where appropriate; pin model revisions, document model cards, and distinguish pretrained inference from fitted weights",
         "For n8n provide an importable secret-free workflow and actually run a local smoke test before calling integration complete. If runtime is unavailable, report blocked/untested; Python CLI fallback does not count as executed n8n."
       ],
-      "status": "planned",
+      "status": "in_progress",
       "milestones": [
         {
           "day": 1,
           "date": "2026-10-30",
           "focus": "Source verification, scope and evaluation contract",
-          "status": "planned"
+          "status": "completed",
+          "evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/real-source-validation.json"
         },
         {
           "day": 2,
           "date": "2026-10-31",
           "focus": "Ingestion, profiling and scalable data model",
-          "status": "planned"
+          "status": "in_progress"
         },
         {
           "day": 3,

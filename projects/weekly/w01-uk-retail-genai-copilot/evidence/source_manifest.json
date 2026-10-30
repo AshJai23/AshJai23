@@ -1,0 +1,13 @@
+{
+  "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+  "download_url": "https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip",
+  "mode": "historical actual transactions; not live",
+  "retrieved_at_utc": "2026-10-30T19:42:18.360493+00:00",
+  "http_status": 200,
+  "bytes": 45622418,
+  "sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb",
+  "download_seconds": 5.997,
+  "last_modified": null,
+  "licence": "CC BY 4.0",
+  "attribution": "Chen, D. (2012). Online Retail II. UCI. https://doi.org/10.24432/C5CG6D"
+}

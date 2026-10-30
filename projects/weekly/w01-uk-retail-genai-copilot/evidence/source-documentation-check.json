@@ -1,0 +1,13 @@
+{
+  "verified_at_utc": "2026-10-30T19:44:24.520344+00:00",
+  "official_page_url": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+  "official_metadata_url": "https://archive.ics.uci.edu/api/dataset?id=502",
+  "page_http_status": 200,
+  "metadata_http_status": 200,
+  "page_sha256": "f3cb0e8c8abfc3cb05fd073bafb8b612da524495dada58ef3aaa62c4b4a6e252",
+  "page_links_cc_by_4_legalcode": true,
+  "page_missing_values_text": "Yes",
+  "metadata_missing_values_value": "no",
+  "catalogue_rows": 1067371,
+  "note": "Conflicting source metadata; measure raw workbook missingness rather than trusting the flag."
+}
