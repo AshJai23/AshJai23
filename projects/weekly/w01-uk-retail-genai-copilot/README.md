@@ -1,13 +1,18 @@
 # UK Retail GenAI Analytics Copilot — W01
 
-**In progress. Published milestone: real-data warehouse, quality audit and
-deterministic read-only SQL baseline. The LLM/RAG/agent/UI/n8n integration is not
-implemented yet.** Target weekly release: 5 November 2026.
+**In progress. Published: real-data warehouse, quality audit, read-only SQL
+baseline, hybrid retrieval and actual local LLM generation smoke. Generated drafts
+failed citation checks; the agent, answer gate, UI/API and n8n remain unfinished.**
+Target weekly release: 5 November 2026.
+
+See [31 October AI milestone](AI_MILESTONE.md) for exact model commands, pinned
+Hugging Face revisions, measured index scale and negative generation results.
 
 The intended user is a retail analyst/manager who wants evidence-backed answers
 to plain-English commercial questions. Numerical answers will use constrained
-SQL, with RAG for source/schema context and a local LLM for explanations. This
-first increment establishes trustworthy numbers before adding generation.
+SQL, with RAG for source/schema context and a local LLM for explanations. The
+first increment established the numerical foundation. The next increment now
+adds retrieval and local generation, with unverified drafts clearly separated.
 
 ## Actually run on 30 October
 
@@ -93,14 +98,18 @@ download URL and SHA-256 so the same capture can be verified.
 - Eight passing tests do not establish production safety. Read-only SQL is only
   the first tool boundary; agent budgets, prompt-injection and interface security
   remain to be built/tested. Query timing here is not LLM latency.
-- No LLM inference/training, embeddings/index, LangGraph, Hugging Face integration,
-  n8n runtime, public website, Docker run or production users are claimed.
+- Local pretrained Hugging Face generation/embedding inference and an index ran
+  on 31 October. No training/fine-tuning, LangGraph, n8n runtime, public website,
+  Docker run or production users are claimed. Generation produced unsupported
+  text and omitted citations; see the dated evidence rather than treating these
+  drafts as validated answers. DATA_CONTRACT.md is the original 30 October metric
+  contract; its final ingestion-stage status is historical, not the latest AI status.
 - [40-task evaluation contract](EVALUATION.md) is frozen before implementation,
   with deterministic numerical oracle outputs and retrieval/decline rubrics.
   It is AI-authored and not independent human validation. No agent score yet.
-- Next: refine non-merchandise code policy, separate development cases, verify a
-  free ungated local model/revision/licence and implement the bounded tool/RAG
-  workflow. Preserve all negative findings and evaluate before weekly release.
+- Next: build bounded agent routing and deterministic answer/citation gates,
+  then evaluate tool choice and grounding without tuning to the frozen held-out
+  tasks. Keep code-review heuristics and unsupported generations visible.
 
 This foundation demonstrates Python streaming, SQL, decimal reconciliation,
 quality contracts and reproducibility. It is useful portfolio evidence, but not

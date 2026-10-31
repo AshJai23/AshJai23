@@ -1,0 +1,62 @@
+{
+  "checks": {
+    "full_source_rebuild_same_business_values": true,
+    "new_rebuild_decimal_control": true,
+    "source_checksum_matches_oct30": true,
+    "audit_rows_reconcile": true,
+    "audit_signed_values_reconcile": true,
+    "uk_signed_value_unchanged": true,
+    "frozen_40_task_contract_unchanged": false,
+    "llm_asset_checksums_match": true,
+    "embedding_asset_checksums_match": true,
+    "all_5665_vectors_finite_and_unit_normalised": true,
+    "distinct_corpus_ids": true,
+    "ten_source_embeddings_replay_within_1e_5": true,
+    "three_actual_local_generations_saved": true
+  },
+  "passed": false,
+  "check_count": 13,
+  "real_data_mode": "same public historical archive, freshly downloaded and rebuilt 31 October; observations 2009\u20132011",
+  "models": {
+    "llm": {
+      "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "bytes": 271177292
+    },
+    "embedding": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "bytes": 91577707
+    }
+  },
+  "embedding_replay_max_abs_error": 1.4156103134155273e-07,
+  "latency": {
+    "bm25": {
+      "samples": 30,
+      "p50_ms": 13.68,
+      "p95_ms": 15.466,
+      "min_ms": 12.788,
+      "max_ms": 16.983
+    },
+    "dense": {
+      "samples": 30,
+      "p50_ms": 25.672,
+      "p95_ms": 27.808,
+      "min_ms": 24.214,
+      "max_ms": 29.089
+    },
+    "hybrid": {
+      "samples": 30,
+      "p50_ms": 25.248,
+      "p95_ms": 36.033,
+      "min_ms": 22.727,
+      "max_ms": 38.972
+    }
+  },
+  "latency_note": "Repeated warm queries, 30 per mode, includes embedding forward pass for dense/hybrid; excludes model/index loading and LLM generation. Not independent query diversity or production concurrency.",
+  "model_quality_not_passed": "0/3 generations contained literal supplied evidence citations; numeric example added unsupported population 10,000. Full grounding evaluation has not run.",
+  "held_out_40_task_agent_evaluation_run": false,
+  "training_performed": false,
+  "n8n_execution_run": false,
+  "failure_note": "Initial local materialisation appended one newline to the frozen task file. The checksum check caught it. Restored exact published bytes without changing questions or expected rubrics; original SHA-256 matches. Rebuilt the corpus/index after restoring original contract-file bytes."
+}

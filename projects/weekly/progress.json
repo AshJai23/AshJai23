@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-30T19:44:50.432Z",
+  "updated_at_utc": "2026-10-31T19:52:28.839Z",
   "status": "in_progress",
   "new_flagships_completed": 0,
   "new_flagship_target": 3,
@@ -14,18 +14,37 @@
       "due_date": "2026-11-05",
       "title": "UK Retail GenAI Analytics Copilot",
       "completed_milestones": [
-        1
+        1,
+        2
       ],
-      "current_milestone": 2,
-      "latest_increment": "Full real-source ingestion, quality audit, Parquet/DuckDB warehouse, read-only SQL baseline and frozen 40-task evaluation contract. AI/RAG/n8n/UI not yet implemented.",
+      "current_milestone": 3,
+      "latest_increment": "Product/charge audit without changing totals; 5,665-document BM25/dense/hybrid retrieval and actual pinned Hugging Face local generation. Three unverified drafts failed citations; one hallucinated a population count. Agent/quality gate/API/UI/n8n incomplete.",
       "metrics": {
         "raw_rows": 1067371,
         "deduplicated_rows": 1033036,
-        "unit_tests_passed": 8,
+        "unit_tests_passed": 14,
         "real_source_checks_passed": 6,
-        "llm_inference_run": false,
-        "rag_documents_indexed": 0
-      }
+        "llm_inference_run": true,
+        "rag_documents_indexed": 5665,
+        "integrity_replay_checks_passed": 13,
+        "model_training_performed": false,
+        "description_documents": 5655,
+        "contract_documents": 10,
+        "embedding_dimensions": 384,
+        "index_bytes": 8701568,
+        "local_generation_samples": 3,
+        "generation_samples_with_literal_supplied_citation": 0,
+        "held_out_agent_evaluation_run": false,
+        "n8n_execution_run": false
+      },
+      "remaining_requirements": [
+        "Bounded agent/tool routing",
+        "Answer validation and abstention",
+        "40-task held-out agent evaluation",
+        "Runnable API/UI",
+        "Actual local n8n workflow test",
+        "CI and final reproducible demo"
+      ]
     },
     "W02": {
       "status": "planned",
@@ -42,7 +61,7 @@
       "title": "UK Retail Demand ML and MLOps Service"
     }
   },
-  "latest_daily_log": "logs/2026-10-30.md",
+  "latest_daily_log": "logs/2026-10-31.md",
   "pending_feedback": [],
   "repository_creation": "Standalone repositories still pending; publish authorised work in existing profile repository if creation is unavailable, and report that limitation.",
   "priority": "Applied AI / LLM engineering and ML, with GenAI, RAG, agents and measured larger-data engineering"

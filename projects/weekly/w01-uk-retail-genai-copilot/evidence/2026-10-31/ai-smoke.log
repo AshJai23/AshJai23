@@ -1,0 +1,287 @@
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+[W1031 19:49:05.672115874 ThreadPool.cc:52] cpuinfo initialization failed
+`torch_dtype` is deprecated! Use `dtype` instead!
+{
+  "mode": "development smoke on actual downloaded models and real-source warehouse/corpus",
+  "model_training_performed": false,
+  "agent_implemented": false,
+  "held_out_40_task_evaluation_run": false,
+  "samples": [
+    {
+      "question": "Describe the retrieved item descriptions without adding features or availability claims.",
+      "draft": "The retrieved item descriptions without adding features or availability claims are:\n\n- CERAMIC PLATE STRAWBERRY DESIGN\n- CERAMIC BOWL WITH STRAWBERRY DESIGN\n- CERAMIC STRAWBERRY MONEY BOX\n\nThese descriptions are based on the retrieved item descriptions provided in the context. They do not",
+      "status": "unverified AI draft; inspect cited evidence, not a supported final answer",
+      "evidence": [
+        {
+          "id": "description:7ce24983ba48ecfb0125",
+          "kind": "source_description",
+          "text": "CERAMIC PLATE STRAWBERRY DESIGN",
+          "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "source_period": "2009-12-01 through 2011-12-09",
+          "licence": "CC BY 4.0",
+          "attribution": "Chen, D. (2012), UCI Online Retail II. DOI 10.24432/C5CG6D",
+          "untrusted": true,
+          "score": 0.03252247488101534,
+          "retrieval_mode": "hybrid"
+        },
+        {
+          "id": "description:ab65d062bcee5f34b197",
+          "kind": "source_description",
+          "text": "CERAMIC BOWL WITH STRAWBERRY DESIGN",
+          "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "source_period": "2009-12-01 through 2011-12-09",
+          "licence": "CC BY 4.0",
+          "attribution": "Chen, D. (2012), UCI Online Retail II. DOI 10.24432/C5CG6D",
+          "untrusted": true,
+          "score": 0.032266458495966696,
+          "retrieval_mode": "hybrid"
+        },
+        {
+          "id": "description:0f7b8c144a45cc281edf",
+          "kind": "source_description",
+          "text": "CERAMIC STRAWBERRY MONEY BOX",
+          "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "source_period": "2009-12-01 through 2011-12-09",
+          "licence": "CC BY 4.0",
+          "attribution": "Chen, D. (2012), UCI Online Retail II. DOI 10.24432/C5CG6D",
+          "untrusted": true,
+          "score": 0.03128054740957967,
+          "retrieval_mode": "hybrid"
+        }
+      ],
+      "citation_ids_found": [],
+      "generation_seconds": 5.358,
+      "input_tokens": 193,
+      "generated_tokens": 80,
+      "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "licence": "apache-2.0",
+      "parameter_count": 134515008,
+      "dtype": "float32",
+      "quantisation": null,
+      "device": "CPU",
+      "threads": 2,
+      "settings": {
+        "do_sample": false,
+        "num_beams": 1,
+        "max_new_tokens": 80
+      },
+      "training_performed": false,
+      "process_peak_rss_mib": 1261.2,
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.39"
+    },
+    {
+      "question": "Write a short note describing this computed aggregate, preserving its exact value and source period.",
+      "draft": "The computed aggregate is:\n\n\"15986060.3370\"\n\nThe source period is 2009-2011. The value is 15986060.3370. The population is 10,000.",
+      "status": "unverified AI draft; inspect cited evidence, not a supported final answer",
+      "evidence": [
+        {
+          "id": "sql:uk-signed-value",
+          "text": "{\"metric\": \"signed_value\", \"country\": \"United Kingdom\", \"value\": \"15986060.3370\", \"source\": \"UCI Online Retail II, 2009\\u20132011 historical\", \"population\": \"deduplicated normalised invoice lines\", \"sql_template\": \"SELECT sum(signed_value) FROM auditable_lines WHERE country = ?\", \"parameters\": [\"United Kingdom\"], \"generated_by\": \"deterministic SQL baseline; no LLM\"}",
+          "source": "read-only metrics.py over full-source warehouse",
+          "untrusted": true
+        }
+      ],
+      "citation_ids_found": [],
+      "generation_seconds": 4.803,
+      "input_tokens": 217,
+      "generated_tokens": 69,
+      "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "licence": "apache-2.0",
+      "parameter_count": 134515008,
+      "dtype": "float32",
+      "quantisation": null,
+      "device": "CPU",
+      "threads": 2,
+      "settings": {
+        "do_sample": false,
+        "num_beams": 1,
+        "max_new_tokens": 80
+      },
+      "training_performed": false,
+      "process_peak_rss_mib": 1261.2,
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+      "automatic_checks": {
+        "exact_value_in_draft": true,
+        "source_citation_present": false
+      },
+      "automatic_check_limits": "Literal checks only; not full factuality or independent human evaluation."
+    },
+    {
+      "question": "Explain what an analyst must check before treating item-code shape as a verified merchandise catalogue.",
+      "draft": "QUESTION: Explain what an analyst must check before treating item-code shape as a verified merchandise catalogue.\nEVIDENCE:\n[audit:shape] This is a heuristic audit only. Product-shaped codes are candidates, not a verified merchandise master. Charge/adjustment and ambiguous codes require review. No source rows are removed and original metric definitions are unchanged.\n\nThe analyst",
+      "status": "unverified AI draft; inspect cited evidence, not a supported final answer",
+      "evidence": [
+        {
+          "id": "audit:code-shape",
+          "text": "This is a heuristic audit only. Product-shaped codes are candidates, not a verified merchandise master. Charge/adjustment and ambiguous codes require review. No source rows are removed and original metric definitions are unchanged.",
+          "source": "catalogue.py audit policy v1",
+          "untrusted": true
+        }
+      ],
+      "citation_ids_found": [],
+      "generation_seconds": 5.398,
+      "input_tokens": 141,
+      "generated_tokens": 80,
+      "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "licence": "apache-2.0",
+      "parameter_count": 134515008,
+      "dtype": "float32",
+      "quantisation": null,
+      "device": "CPU",
+      "threads": 2,
+      "settings": {
+        "do_sample": false,
+        "num_beams": 1,
+        "max_new_tokens": 80
+      },
+      "training_performed": false,
+      "process_peak_rss_mib": 1261.2,
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.39"
+    }
+  ],
+  "retrieval_examples": [
+    {
+      "question": "Find ceramic storage items with a strawberry design.",
+      "mode": "bm25",
+      "seconds": 0.02,
+      "hits": [
+        {
+          "id": "description:ab65d062bcee5f34b197",
+          "kind": "source_description",
+          "text": "CERAMIC BOWL WITH STRAWBERRY DESIGN",
+          "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "source_period": "2009-12-01 through 2011-12-09",
+          "licence": "CC BY 4.0",
+          "attribution": "Chen, D. (2012), UCI Online Retail II. DOI 10.24432/C5CG6D",
+          "untrusted": true,
+          "score": 16.142906912428316,
+          "retrieval_mode": "bm25"
+        },
+        {
+          "id": "description:7ce24983ba48ecfb0125",
+          "kind": "source_description",
+          "text": "CERAMIC PLATE STRAWBERRY DESIGN",
+          "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "source_period": "2009-12-01 through 2011-12-09",
+          "licence": "CC BY 4.0",
+          "attribution": "Chen, D. (2012), UCI Online Retail II. DOI 10.24432/C5CG6D",
+          "untrusted": true,
+          "score": 13.749991643684531,
+          "retrieval_mode": "bm25"
+        },
+        {
+          "id": "description:cff693c5e0db609a9df1",
+          "kind": "source_description",
+          "text": "CERAMIC STRAWBERRY DESIGN MUG",
+          "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "source_period": "2009-12-01 through 2011-12-09",
+          "licence": "CC BY 4.0",
+          "attribution": "Chen, D. (2012), UCI Online Retail II. DOI 10.24432/C5CG6D",
+          "untrusted": true,
+          "score": 13.749991643684531,
+          "retrieval_mode": "bm25"
+        }
+      ],
+      "quality_score": null,
+      "note": "Illustrative real-source retrieval, no independently labelled relevance score."
+    },
+    {
+      "question": "Find ceramic storage items with a strawberry design.",
+      "mode": "dense",
+      "seconds": 0.035,
+      "hits": [
+        {
+          "id": "description:7ce24983ba48ecfb0125",
+          "kind": "source_description",
+          "text": "CERAMIC PLATE STRAWBERRY DESIGN",
+          "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "source_period": "2009-12-01 through 2011-12-09",
+          "licence": "CC BY 4.0",
+          "attribution": "Chen, D. (2012), UCI Online Retail II. DOI 10.24432/C5CG6D",
+          "untrusted": true,
+          "score": 0.7169481515884399,
+          "retrieval_mode": "dense"
+        },
+        {
+          "id": "description:0f7b8c144a45cc281edf",
+          "kind": "source_description",
+          "text": "CERAMIC STRAWBERRY MONEY BOX",
+          "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "source_period": "2009-12-01 through 2011-12-09",
+          "licence": "CC BY 4.0",
+          "attribution": "Chen, D. (2012), UCI Online Retail II. DOI 10.24432/C5CG6D",
+          "untrusted": true,
+          "score": 0.6829078793525696,
+          "retrieval_mode": "dense"
+        },
+        {
+          "id": "description:ab65d062bcee5f34b197",
+          "kind": "source_description",
+          "text": "CERAMIC BOWL WITH STRAWBERRY DESIGN",
+          "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "source_period": "2009-12-01 through 2011-12-09",
+          "licence": "CC BY 4.0",
+          "attribution": "Chen, D. (2012), UCI Online Retail II. DOI 10.24432/C5CG6D",
+          "untrusted": true,
+          "score": 0.6808103322982788,
+          "retrieval_mode": "dense"
+        }
+      ],
+      "quality_score": null,
+      "note": "Illustrative real-source retrieval, no independently labelled relevance score."
+    },
+    {
+      "question": "Find ceramic storage items with a strawberry design.",
+      "mode": "hybrid",
+      "seconds": 0.029,
+      "hits": [
+        {
+          "id": "description:7ce24983ba48ecfb0125",
+          "kind": "source_description",
+          "text": "CERAMIC PLATE STRAWBERRY DESIGN",
+          "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "source_period": "2009-12-01 through 2011-12-09",
+          "licence": "CC BY 4.0",
+          "attribution": "Chen, D. (2012), UCI Online Retail II. DOI 10.24432/C5CG6D",
+          "untrusted": true,
+          "score": 0.03252247488101534,
+          "retrieval_mode": "hybrid"
+        },
+        {
+          "id": "description:ab65d062bcee5f34b197",
+          "kind": "source_description",
+          "text": "CERAMIC BOWL WITH STRAWBERRY DESIGN",
+          "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "source_period": "2009-12-01 through 2011-12-09",
+          "licence": "CC BY 4.0",
+          "attribution": "Chen, D. (2012), UCI Online Retail II. DOI 10.24432/C5CG6D",
+          "untrusted": true,
+          "score": 0.032266458495966696,
+          "retrieval_mode": "hybrid"
+        },
+        {
+          "id": "description:0f7b8c144a45cc281edf",
+          "kind": "source_description",
+          "text": "CERAMIC STRAWBERRY MONEY BOX",
+          "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+          "source_period": "2009-12-01 through 2011-12-09",
+          "licence": "CC BY 4.0",
+          "attribution": "Chen, D. (2012), UCI Online Retail II. DOI 10.24432/C5CG6D",
+          "untrusted": true,
+          "score": 0.03128054740957967,
+          "retrieval_mode": "hybrid"
+        }
+      ],
+      "quality_score": null,
+      "note": "Illustrative real-source retrieval, no independently labelled relevance score."
+    }
+  ],
+  "llm_generations": 3,
+  "generations_with_literal_evidence_citation": 0,
+  "citation_check_is_not_grounding_score": true,
+  "peak_combined_process_rss_mib": 1261.2,
+  "status": "unverified draft outputs, not final supported answers or launch readiness"
+}

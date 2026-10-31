@@ -1,6 +1,6 @@
 # UK Retail GenAI Analytics Copilot
 
-Status: in progress. Full-source ingestion, profiling, DuckDB/Parquet warehouse and read-only SQL baseline ran on 30 October. LLM/RAG/agent/UI/n8n work remains; no model training claimed.
+Status: in progress. Full-source data foundation ran on 30 October. On 31 October, product-code audit, 5,665-document hybrid retrieval and actual local Hugging Face generation ran. Generated drafts failed citation checks; agent, answer gate, held-out evaluation, UI/API and n8n remain unfinished. No model training claimed. See [AI milestone](AI_MILESTONE.md).
 Build: 2026-10-30 through 2026-11-05.
 
 Can a retail manager ask plain-English questions and receive reconciled numerical answers and evidence-backed explanations?

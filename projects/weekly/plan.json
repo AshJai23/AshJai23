@@ -87,13 +87,14 @@
           "day": 2,
           "date": "2026-10-31",
           "focus": "Ingestion, profiling and scalable data model",
-          "status": "in_progress"
+          "status": "completed",
+          "evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-10-31/increment-validation.json"
         },
         {
           "day": 3,
           "date": "2026-11-01",
           "focus": "Baseline and model/retrieval implementation",
-          "status": "planned"
+          "status": "in_progress"
         },
         {
           "day": 4,
