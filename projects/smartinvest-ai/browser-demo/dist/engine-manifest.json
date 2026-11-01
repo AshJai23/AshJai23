@@ -1,0 +1,22 @@
+{
+  "engine_version": "0.3.0",
+  "runtime": "Pyodide 0.29.0",
+  "source": "AshJai23/AshJai23/projects/smartinvest-ai",
+  "files": [
+    {
+      "name": "__init__.py",
+      "path": "py/smartinvest/__init__.py",
+      "sha256": "459aeda88a9642693ecf982576e67319cbd72d687128fb1223067b08bd50a03b"
+    },
+    {
+      "name": "detection.py",
+      "path": "py/smartinvest/detection.py",
+      "sha256": "adff2fcd88a6712240e8f3481d6be35fb1ad9068e20cabc484acacfacb8f7a01"
+    },
+    {
+      "name": "batch.py",
+      "path": "py/smartinvest/batch.py",
+      "sha256": "3884aa2d13297f5cedf9e75f5a9564658c45aa53d7c4d6afac912b352d11382b"
+    }
+  ]
+}

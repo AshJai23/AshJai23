@@ -1,0 +1,24 @@
+{
+  "release": "0.3.0",
+  "date": "2026-11-01",
+  "tests_passed": 78,
+  "warnings": 0,
+  "dependencies_clean": true,
+  "ui_file_upload_tested": true,
+  "batch_limits": {
+    "bytes": 2097152,
+    "rows": 500
+  },
+  "batch_template_mode": "synthetic",
+  "model_training": false,
+  "fca_verification": false,
+  "raw_messages_in_batch_summary": false,
+  "api_validation_echoes_inputs": false,
+  "versions": {
+    "smartinvest-ai-scam-detection": "0.3.0",
+    "streamlit": "1.66.1",
+    "fastapi": "0.162.0",
+    "pytest": "9.2.0",
+    "httpx2": "2.16.0"
+  }
+}

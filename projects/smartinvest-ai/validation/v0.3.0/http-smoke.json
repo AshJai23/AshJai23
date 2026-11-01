@@ -1,0 +1,64 @@
+{
+  "package_version": "0.3.0",
+  "engine_version": "0.3.0",
+  "streamlit_url": "http://127.0.0.1:8503",
+  "streamlit_health_status": 200,
+  "health_body": "ok",
+  "streamlit_page_status": 200,
+  "page_bytes": 6467,
+  "api_health_status": 200,
+  "batch_post_status": 200,
+  "fixture_mode": "explicitly synthetic CSV template, not real investment data",
+  "batch_response": {
+    "engine_version": "0.3.0",
+    "mode": "offline_user_supplied_csv",
+    "verification_status": "not_checked",
+    "summary": {
+      "total_rows": 3,
+      "rows_with_indicators": 2,
+      "rows_without_configured_indicators": 1,
+      "input_error_rows": 0
+    },
+    "indicator_row_counts": {
+      "GUARANTEED_RETURNS": 1,
+      "HIGH_RECURRING_RETURN": 1,
+      "SHORTENED_URL": 1,
+      "URGENCY": 1
+    },
+    "rows": [
+      {
+        "row_number": 1,
+        "screening_status": "warning_signals_detected",
+        "verification_status": "not_checked",
+        "indicator_count": 3,
+        "finding_codes": "GUARANTEED_RETURNS; HIGH_RECURRING_RETURN; URGENCY",
+        "error": ""
+      },
+      {
+        "row_number": 2,
+        "screening_status": "no_configured_indicators_detected",
+        "verification_status": "not_checked",
+        "indicator_count": 0,
+        "finding_codes": "",
+        "error": ""
+      },
+      {
+        "row_number": 3,
+        "screening_status": "warning_signals_detected",
+        "verification_status": "not_checked",
+        "indicator_count": 1,
+        "finding_codes": "SHORTENED_URL",
+        "error": ""
+      }
+    ],
+    "limitations": [
+      "Counts are screening outcomes, not fraud labels or measured accuracy.",
+      "No indicators does not establish safety. No firm was verified.",
+      "Only generated row numbers are returned; raw messages, firms, URLs and supplied sample IDs are excluded."
+    ]
+  },
+  "api_stopped_after_check": true,
+  "public_deployment": false,
+  "fresh_fca_lookup": false,
+  "model_training": false
+}

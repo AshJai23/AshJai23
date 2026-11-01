@@ -1,0 +1,58 @@
+{
+  "mode": "actual local HTTP smoke using synthetic message; no real investment checked",
+  "health": {
+    "status": 200,
+    "body": {
+      "status": "ok"
+    }
+  },
+  "scan": {
+    "status": 200,
+    "body": {
+      "screening_status": "warning_signals_detected",
+      "verification_status": "not_checked",
+      "findings": [
+        {
+          "code": "GUARANTEED_RETURNS",
+          "category": "investment_claim",
+          "severity": "high",
+          "explanation": "The offer appears to promise guaranteed investment returns.",
+          "evidence": "Guaranteed 20% monthly profits. Act now!"
+        },
+        {
+          "code": "URGENCY",
+          "category": "pressure",
+          "severity": "medium",
+          "explanation": "The offer uses time pressure. Pressure alone does not prove fraud.",
+          "evidence": "eed 20% monthly profits. Act now!"
+        },
+        {
+          "code": "HIGH_RECURRING_RETURN",
+          "category": "investment_claim",
+          "severity": "high",
+          "explanation": "The offer advertises a high recurring percentage return. Check claims independently.",
+          "evidence": "Guaranteed 20% monthly profits. Act now!"
+        }
+      ],
+      "claimed_firm": "",
+      "websites": [],
+      "next_steps": [
+        "Do not transfer money based solely on an unfamiliar investment offer.",
+        "Check the firm and its permissions independently: https://www.fca.org.uk/consumers/fca-firm-checker",
+        "Review official warnings: https://www.fca.org.uk/consumers/warning-list-unauthorised-firms",
+        "Compare the website, email and phone details with independent official sources.",
+        "If you have already paid, contact your bank promptly and report the incident."
+      ],
+      "limitations": [
+        "This is an educational, rule-based screening, not a fraud determination.",
+        "No live FCA, domain, company or payment verification was performed.",
+        "No warning matches does not mean an offer is safe or legitimate.",
+        "Negation, quotations, sarcasm, obfuscated wording and ambiguous context can still be misread.",
+        "Recurring-return thresholds are manually chosen warning heuristics, not estimated fraud probabilities."
+      ],
+      "engine_version": "0.2.0",
+      "schema_version": "1"
+    }
+  },
+  "server_stopped_after_test": true
+}

@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-01",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "versions": {
+    "smartinvest-ai-scam-detection": "0.2.0",
+    "streamlit": "1.66.1",
+    "fastapi": "0.162.0",
+    "pydantic": "2.14.2",
+    "uvicorn": "0.54.0",
+    "pytest": "9.2.0",
+    "httpx": "0.28.1",
+    "httpx2": "2.16.0"
+  },
+  "original_tests": 14,
+  "final_tests": 60,
+  "final_suite_passed": true,
+  "warnings": 0,
+  "dependencies_clean": true,
+  "streamlit_launch": {
+    "url": "http://127.0.0.1:8502",
+    "health_status": 200,
+    "health_body": "ok",
+    "pid": 5,
+    "telemetry_disabled": true,
+    "page_status": 200,
+    "page_bytes": 6467
+  },
+  "api_http_smoke": {
+    "health_status": 200,
+    "scan_status": 200,
+    "fixture_mode": "synthetic test message",
+    "verification_status": "not_checked"
+  },
+  "new_model_training": false,
+  "real_labelled_dataset_acquired": false,
+  "fca_lookup_performed": false,
+  "user_supplied_urls_fetched": false,
+  "public_deployment": false,
+  "notes": [
+    "Tests are synthetic behaviour/security/UI checks, not measured real-world fraud accuracy.",
+    "Streamlit readiness was checked from its launch process; workspace networking does not guarantee a public browser URL.",
+    "API smoke server was stopped after its test. Streamlit launch session was retained."
+  ]
+}

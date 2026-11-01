@@ -1,0 +1,9 @@
+{
+  "url": "http://127.0.0.1:8502",
+  "health_status": 200,
+  "health_body": "ok",
+  "pid": 5,
+  "telemetry_disabled": true,
+  "page_status": 200,
+  "page_bytes": 6467
+}

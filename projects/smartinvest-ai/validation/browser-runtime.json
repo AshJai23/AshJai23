@@ -1,0 +1,9 @@
+{
+  "runtime": "Pyodide 0.29.0",
+  "mode": "Node WebAssembly runtime check, not authenticated browser UI QA",
+  "single_offer_parity_cases": 6,
+  "all_match_cpython": true,
+  "batch_synthetic_rows": 3,
+  "batch_expected_summary_passed": true,
+  "engine_version": "0.3.0"
+}

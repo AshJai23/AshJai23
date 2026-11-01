@@ -86,6 +86,8 @@ Separate project repositories requested; [migration status](projects/30-days/REP
 
 ### Featured applications
 
+**[SmartInvest AI](https://github.com/AshJai23/AshJai23/tree/main/projects/smartinvest-ai)** — An offline investment-offer warning research prototype with explainable Python rules, Streamlit single/batch review, a FastAPI endpoint and privacy-minimised CSV summaries. 78 tests passed locally; no trained scam model, fraud verdict or FCA verification is claimed. Includes a private browser demo using the same Python engine.
+
 **[Cyber Threat Detection & Analysis](https://github.com/AshJai23/JAIATD3)** — Node.js/Python application for file and URL intelligence through VirusTotal, with MITRE ATT&CK technique extraction and an AI-assisted investigation chat.
 
 *Tools:* Node.js, Python, VirusTotal. Requires external API keys; repository and setup instructions available.
