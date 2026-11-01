@@ -1,3 +1,10 @@
+# 0.4.0 — market research extension (1 November 2026)
+
+- Separate price-history research module with fitted Ridge forecasts, purged temporal evaluation, baseline comparisons and residual bands.
+- Attributed real ECB daily-reference snapshot; latest observation 30 October. Stock/ETF CSV upload supported, no live stock feed claimed.
+- Streamlit, FastAPI and private browser-demo integration. 102 tests and CPython/Pyodide numerical parity checks.
+- Scam engine remains 0.3.0 offline rules; no trained fraud classifier or FCA verification.
+
 # Changes
 
 ## 0.3.0 — 1 November 2026

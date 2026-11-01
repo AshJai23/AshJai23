@@ -1,23 +1,8 @@
-## Try the interactive demo
+## Price research and fitted forecasts (0.4.0)
 
-**[Open SmartInvest AI research demo](https://smartinvest-ai-lab-ashjai23.denickesolomon2462.chatgpt.site)**
+**[Open the private interactive demo](https://smartinvest-ai-lab-ashjai23.denickesolomon2462.chatgpt.site)** using the same ChatGPT account that owns it. Choose **Market research → Try ECB FX example**, or run the full Streamlit application below. This browser interface uses the same Python core through Pyodide; it is separate from the Streamlit UI. Inputs remain in tab memory.
 
-This demo is private: sign in with the same ChatGPT account that owns it.
-It runs the same Python detection/batch code in your browser through Pyodide.
-It is a separate interface from the full Streamlit application below. The
-runtime/assets need internet to load; offer text is processed in this tab's
-memory. No URL is visited, no firm is verified and no model is trained.
-
-Try **Warning indicators**, then **Screen offer**; the synthetic example matches
-four configured indicators. Or select **Batch CSV**, download the synthetic
-template and screen it. No matches does not mean safe.
-
-The deployed URL was verified by the hosting service. Full browser UI QA was
-blocked by this cloud browser's ChatGPT sign-in gate; the Python WebAssembly
-runtime check passed six parity cases plus the synthetic batch. See
-[validation/browser-runtime.json](validation/browser-runtime.json).
-
----
+Upload permitted share/ETF price CSVs, compare historical risk, and evaluate 1/5/20-observation Ridge forecasts against persistence. The built-in example is a dated ECB FX snapshot, not a live stock feed. The model loses two of three default held-out comparisons. See [MARKET_RESEARCH.md](MARKET_RESEARCH.md) for exact commands, attribution, measured results and limitations. No best-buy, personal allocation or return guarantee is offered. Scam screening remains offline rules; no trained fraud classifier or FCA lookup.
 
 # SmartInvest AI — Investment Scam Detection (Research Prototype)
 
@@ -42,8 +27,7 @@ A local, **educational** app that highlights some investment-scam warning signs 
 The package declares Python 3.11+. This release was validated on **Python 3.12.14**; use Python 3.12 for the tested lockfile commands below.
 
 ```bash
-git clone https://github.com/AshJai23/AshJai23.git
-cd AshJai23/projects/smartinvest-ai
+cd smartinvest-ai-scam-codex
 python -m venv .venv
 source .venv/bin/activate            # Windows PowerShell: .venv\Scripts\Activate.ps1
 python -m pip install -r requirements.lock.txt

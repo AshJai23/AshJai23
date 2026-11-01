@@ -29,3 +29,7 @@ For basic code/asset verification from the parent project:
 For a local static demo, serve dist/ from a normal localhost HTTP development
 server and use an internet-connected modern browser. Do not open index.html
 as a file:// URL: fetch/WebAssembly loading requires an HTTP origin.
+
+## Market research extension (0.4.0)
+
+Third tab runs `smartinvest.market` in the same Pyodide runtime. Four Python assets are checksum-verified and identical to the main project. An attributed ECB daily FX reference snapshot is bundled for historical replay; latest observation 30 October 2026. User-permitted price CSV upload supports shares/ETFs. The browser fits Ridge and shows purged held-out metrics, unchanged-price baseline, residual bands and staleness. No personal best investment, live stock quote or buy/sell instruction. See ../MARKET_RESEARCH.md and ../validation/v0.4.0/. Python/WASM parity passed; full authenticated browser UI QA remains unavailable.

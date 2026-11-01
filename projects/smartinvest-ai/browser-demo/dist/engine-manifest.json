@@ -9,14 +9,19 @@
       "sha256": "459aeda88a9642693ecf982576e67319cbd72d687128fb1223067b08bd50a03b"
     },
     {
+      "name": "batch.py",
+      "path": "py/smartinvest/batch.py",
+      "sha256": "3884aa2d13297f5cedf9e75f5a9564658c45aa53d7c4d6afac912b352d11382b"
+    },
+    {
       "name": "detection.py",
       "path": "py/smartinvest/detection.py",
       "sha256": "adff2fcd88a6712240e8f3481d6be35fb1ad9068e20cabc484acacfacb8f7a01"
     },
     {
-      "name": "batch.py",
-      "path": "py/smartinvest/batch.py",
-      "sha256": "3884aa2d13297f5cedf9e75f5a9564658c45aa53d7c4d6afac912b352d11382b"
+      "name": "market.py",
+      "path": "py/smartinvest/market.py",
+      "sha256": "cd547507469ea1987a4b034f7f3cc7042b53c2ba74dec9ae6f2d24fbf0342531"
     }
   ]
 }

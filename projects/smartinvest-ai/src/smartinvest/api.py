@@ -55,3 +55,18 @@ def batch_scan(request: BatchRequest):
         return screen_csv(request.csv_text.encode("utf-8"))
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+from typing import Literal
+from .market import analyse_prices
+
+class MarketRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    csv_text: str = Field(max_length=MAX_BYTES)
+    horizon: Literal[1, 5, 20] = 5
+
+@app.post('/v1/market-research')
+def market_research(request: MarketRequest):
+    try:
+        return analyse_prices(request.csv_text.encode('utf-8'), request.horizon)
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc

@@ -1,3 +1,13 @@
+# 0.4.0 validation — 1 November 2026
+
+- Full local suite: **102 passed in 3.29s**, including real-source Streamlit example, CSV upload, API, invalid inputs, constant baseline and train-only scaling/purged boundaries. `pip check`: no broken requirements.
+- Actual three-series ECB model fit and held-out predictions saved in `validation/v0.4.0/ecb-held-out.json`. Model beats persistence on one of three five-observation forecasts, loses on two. No claim of reliable investment timing.
+- Pyodide 0.29.0 runs the identical market module and matches CPython metrics/projections within 1e-8; `browser-market-runtime.json`. Existing six scam-engine parity cases and three-row synthetic batch smoke still pass.
+- JavaScript syntax check passes. Full authenticated browser UI QA remains blocked by the existing private-site sign-in / unavailable managed preview service. Audience unchanged. Streamlit AppTest actually exercised new UI branches.
+- No stock feed, prospective trading, LLM, neural model, personal recommendation, FCA lookup or fraud-classifier training. See MARKET_RESEARCH.md for method and limitations.
+
+## Prior releases (historical evidence)
+
 # Latest validation — 0.3.0, 1 November 2026
 
 - **78 tests passed, zero warnings**, including real Streamlit CSV upload, dashboard

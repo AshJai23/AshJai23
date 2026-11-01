@@ -1,0 +1,25 @@
+{
+  "publisher": "European Central Bank",
+  "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.zip",
+  "source_page": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+  "copyright_terms": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
+  "retrieved_at_utc": "2026-11-01T22:57:46.845385+00:00",
+  "http_status": 200,
+  "zip_sha256": "73db21584dd46cebf5cd6df75ebb6de7afcdeebff52f54d5046ca8e459c0fbb3",
+  "zip_bytes": 642255,
+  "csv_sha256": "7ae8526817cea5c7374478a5a8d66eb1355c51b6775e161aa239bf46a48f554e",
+  "mode": "Historical and regularly published daily reference exchange rates; not executable trading quotes",
+  "modification": "GBP price per currency unit derived as ECB GBP/EUR divided by units of that currency per EUR. EUR/GBP uses GBP/EUR directly.",
+  "not_investment_recommendation": true,
+  "processed_rows": 5253,
+  "symbols": [
+    "EURGBP",
+    "USDGBP",
+    "JPYGBP"
+  ],
+  "latest_observation": "2026-10-30",
+  "processed_sha256": "d3f0ed46096ab2e67de64b1ef9897862e4a0494708c7ffa79c2681d65bc7642d",
+  "processed_bytes": 189839,
+  "start_date": "2020-01-01",
+  "attribution": "Source: European Central Bank. Derived GBP-per-unit cross-rates and date filtering by SmartInvest AI; not ECB investment advice."
+}

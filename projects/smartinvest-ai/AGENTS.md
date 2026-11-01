@@ -11,7 +11,7 @@ The app scans user-supplied investment messages and optional URL/firm names. Avo
 - Explainable, offline deterministic baseline in `src/smartinvest/detection.py`
 - FastAPI route in `src/smartinvest/api.py`
 - Pytest tests in `tests/`
-- No historical or current FCA data is fetched, and no model is trained.
+- No historical or current FCA data is fetched. Scam screening is untrained rules. The separate market module fits a Ridge price model with purged chronological evaluation; see MARKET_RESEARCH.md.
 
 ## Development standards
 - Run `python -m pytest -q` and preserve passing tests.

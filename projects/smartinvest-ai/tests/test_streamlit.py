@@ -70,3 +70,21 @@ def test_invalid_csv_upload_shows_validation_error():
     assert at.error
     assert not at.metric
     assert 'PRIVATE-EXAMPLE' not in at.error[0].value
+
+
+def test_market_real_snapshot_ui():
+    at=AppTest.from_file(APP).run()
+    next(x for x in at.button if x.label=='Analyse ECB currency example').click().run(timeout=20)
+    assert not at.exception
+    assert len(at.dataframe[0].value)==3
+    assert any('did not beat' in x.value for x in at.warning)
+    assert any(x.label=='Download research and held-out results' for x in at.get('download_button'))
+
+
+def test_market_upload_ui():
+    from test_market import fixture
+    at=AppTest.from_file(APP).run()
+    at.file_uploader[1].set_value(('prices.csv',fixture(),'text/csv'))
+    next(x for x in at.button if x.label=='Analyse uploaded prices').click().run()
+    assert not at.exception
+    assert len(at.dataframe[0].value)==1

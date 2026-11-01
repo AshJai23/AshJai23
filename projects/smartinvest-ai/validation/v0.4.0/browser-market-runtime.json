@@ -1,0 +1,8 @@
+{
+  "runtime": "Pyodide 0.29.0",
+  "check": "Real ECB forecast parity with CPython; not authenticated UI QA",
+  "assets": 3,
+  "observations_per_asset": 1751,
+  "tolerance": 1e-8,
+  "passed": true
+}

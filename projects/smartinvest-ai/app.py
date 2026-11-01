@@ -121,3 +121,44 @@ if batch is not None:
 
 st.divider()
 st.caption(f"Research prototype v{ENGINE_VERSION} — offline rules, no website fetching or ML training. Inputs/results stay in this session's memory; no scan database or file logging.")
+
+st.divider()
+st.header('Investment research & experimental forecasts')
+st.write('Compare historical price changes and risk. There is no universal best investment; the suitable choice depends on your goals, time horizon and ability to lose money.')
+with st.expander('Where can I research investing?'):
+    st.markdown('**Cash/deposits:** research access, interest and deposit protection. **Diversified funds/ETFs:** research holdings, fees and capital risk. **Bonds:** research credit, duration and interest-rate risk. **Individual shares:** research business and concentration risk. No specific product is recommended here.')
+    st.markdown('[MoneyHelper: saving or investing](https://www.moneyhelper.org.uk/en/savings/how-to-save/should-i-save-or-invest) · [FCA Firm Checker](https://www.fca.org.uk/consumers/fca-firm-checker)')
+st.caption('Upload price history you are permitted to use: date,symbol,price,currency. One quote currency; at least 240 shared daily observations; max 10 symbols / 2 MiB. Use adjusted prices if appropriate; dividends and costs are not handled here.')
+market_upload = st.file_uploader('Upload price history CSV', type=['csv'], key='market_upload')
+horizon = st.selectbox('Forecast horizon (subsequent observations)', [1,5,20], index=1)
+use_example = st.button('Analyse ECB currency example')
+use_upload = st.button('Analyse uploaded prices')
+if use_example or use_upload:
+    st.session_state.pop('market_result',None)
+    try:
+        from smartinvest.market import analyse_prices
+        folder=Path(__file__).parent/'examples/market'
+        if use_example:
+            data=(folder/'ecb-fx-gbp.csv').read_bytes()
+            source=json.loads((folder/'source-manifest.json').read_text())
+            source_note='ECB historical daily FX reference snapshot. Latest '+source['latest_observation']+'; captured '+source['retrieved_at_utc']+'. Not stock/ETF prices or executable trading quotes. Derived GBP cross-rates.'
+        else:
+            if market_upload is None: raise ValueError('Choose a price CSV first')
+            data=market_upload.getvalue(); source_note='User-uploaded history; provenance and price adjustments have not been independently verified.'
+        st.session_state.market_result=(analyse_prices(data,horizon),source_note)
+    except ValueError as exc: st.error(str(exc))
+if 'market_result' in st.session_state:
+    research,note=st.session_state.market_result
+    st.info(note)
+    st.caption('Source: European Central Bank; derived calculations by SmartInvest AI. '+research['latest_observation']+' latest observation. Snapshot, not live polling.')
+    if research['stale_after_7_calendar_days']: st.warning('History is more than seven calendar days old; refresh or replace it before research.')
+    st.dataframe([{'Symbol':a['symbol'],'Price':a['last_price'],'252-observation change %':a['trailing_252_observation_change_pct'],'Annualised volatility %':a['annualised_log_volatility_pct'],'Max drawdown %':a['max_drawdown_pct']} for a in research['assets']],hide_index=True)
+    for a in research['assets']:
+        f=a['forecast']
+        with st.expander(a['symbol']+' · fitted Ridge forecast', expanded=True):
+            st.write(f"Projection: {f['projection']:.6g} {research['quote_currency']} after {f['horizon_observations']} observations. Residual band: {f['calibration_band_low']:.6g}–{f['calibration_band_high']:.6g}.")
+            st.write(f"Held-out mean absolute percentage error: model {f['ridge_mape_pct']:.3f}% vs unchanged-price baseline {f['persistence_mape_pct']:.3f}%. Test samples: {f['test_rows']}. Band coverage on test: {f['calibration_band_test_coverage']:.1%}.")
+            if not f['model_beat_baseline']: st.warning('The model did not beat the unchanged-price baseline on held-out data.')
+            st.caption(f['band_note']+' '+f['forecast_fit_note'])
+    st.caption(' / '.join(research['limitations']))
+    st.download_button('Download research and held-out results',json.dumps(research,indent=2),file_name='smartinvest-market-research.json')
