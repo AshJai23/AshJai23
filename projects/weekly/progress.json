@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-10-31T19:52:28.839Z",
+  "updated_at_utc": "2026-11-01T20:02:46.250Z",
   "status": "in_progress",
   "new_flagships_completed": 0,
   "new_flagship_target": 3,
@@ -18,11 +18,11 @@
         2
       ],
       "current_milestone": 3,
-      "latest_increment": "Product/charge audit without changing totals; 5,665-document BM25/dense/hybrid retrieval and actual pinned Hugging Face local generation. Three unverified drafts failed citations; one hallucinated a population count. Agent/quality gate/API/UI/n8n incomplete.",
+      "latest_increment": "Bounded LangGraph workflow and extract-only answer gate tested in public-runner CI: 26 unit tests, 8 source/replay checks; first frozen routing 36/40, numerical SQL 24/24. All 3 prior bad drafts rejected in explicit replay. Four routing failures remain; no fresh model inference/training.",
       "metrics": {
         "raw_rows": 1067371,
         "deduplicated_rows": 1033036,
-        "unit_tests_passed": 14,
+        "unit_tests_passed": 26,
         "real_source_checks_passed": 6,
         "llm_inference_run": true,
         "rag_documents_indexed": 5665,
@@ -34,16 +34,32 @@
         "index_bytes": 8701568,
         "local_generation_samples": 3,
         "generation_samples_with_literal_supplied_citation": 0,
-        "held_out_agent_evaluation_run": false,
-        "n8n_execution_run": false
+        "held_out_agent_evaluation_run": true,
+        "n8n_execution_run": false,
+        "latest_ci_source_replay_checks_passed": 8,
+        "held_out_agent_evaluation_scope": "deterministic tool routes and numerical SQL only",
+        "full_rag_grounding_evaluation_run": false,
+        "route_correct": 36,
+        "route_total": 40,
+        "numerical_correct": 24,
+        "numerical_total": 24,
+        "prior_bad_drafts_replayed": 3,
+        "prior_bad_drafts_rejected": 3,
+        "fresh_model_inference_run": false,
+        "latest_validation_runtime": "GitHub Actions ubuntu-24.04"
       },
       "remaining_requirements": [
-        "Bounded agent/tool routing",
-        "Answer validation and abstention",
-        "40-task held-out agent evaluation",
+        "Resolve intent-routing ambiguity without laundering the first frozen result; fresh independent evaluation after tuning",
+        "Full retrieval relevance and generated-answer grounding evaluation",
+        "Integrate and test dense/hybrid retrieval and fresh local-model path within workflow",
         "Runnable API/UI",
         "Actual local n8n workflow test",
-        "CI and final reproducible demo"
+        "Final reproducible demo and weekly release"
+      ],
+      "latest_validation_run": "https://github.com/AshJai23/AshJai23/actions/runs/41344533660",
+      "known_failures": [
+        "T28: explanation question misrouted to numeric metric",
+        "T29/T30/T31: source explanations unnecessarily declined"
       ]
     },
     "W02": {
@@ -61,7 +77,7 @@
       "title": "UK Retail Demand ML and MLOps Service"
     }
   },
-  "latest_daily_log": "logs/2026-10-31.md",
+  "latest_daily_log": "logs/2026-11-01.md",
   "pending_feedback": [],
   "repository_creation": "Standalone repositories still pending; publish authorised work in existing profile repository if creation is unavailable, and report that limitation.",
   "priority": "Applied AI / LLM engineering and ML, with GenAI, RAG, agents and measured larger-data engineering"

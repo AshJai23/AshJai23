@@ -1,8 +1,8 @@
 # Bounded workflow and answer-gate milestone — 1 November 2026
 
-Status: implementation prepared; CI verification pending. Do not count this
-increment as tested or the weekly project as complete until the dated validation
-report and workflow run are read back.
+Status: bounded workflow tested in GitHub Actions on 1 November 2026. W01 remains
+in progress: four frozen routing cases failed, and full RAG quality, interface
+and n8n acceptance requirements are not complete.
 
 The local execution environment is unavailable. The public repository's standard
 GitHub Actions runner is used as a permitted free validation alternative. The
@@ -64,3 +64,42 @@ Primary references:
 
 The agent/API/UI/n8n, broader safety/evaluation, final demo and weekly release
 acceptance remain distinct. No production service or users are claimed.
+
+## Actual CI results
+
+[Run 41344533660](https://github.com/AshJai23/AshJai23/actions/runs/41344533660) completed successfully on
+1 November 2026 against implementation commit
+[96ba2d8](https://github.com/AshJai23/AshJai23/commit/96ba2d8178f031c4dd22c30f32b3e027c1587239).
+The [saved report](evidence/2026-11-01/ci-validation.json) contains actual output,
+per-case results, source checks, versions and timings.
+
+- **26 unit tests passed**; **8 source/replay checks passed**.
+- Fresh HTTP 200 source download: 45,622,418 bytes, SHA-256 matches prior capture.
+  Rebuilt 1,067,371 raw / 1,033,036 deduplicated historical rows; totals unchanged.
+- First frozen deterministic-route evaluation: **36/40 correct (90%)**.
+- Numerical oracle comparisons: **24/24 correct**, using fresh read-only SQL.
+  These are synthetic AI-authored question templates over four named metrics;
+  they are not proof of broad natural-language or commercial performance.
+- **3/3 saved bad LLM drafts rejected** by the extract gate. This replays the
+  actual 31 October outputs; no new LLM inference or training ran in this CI.
+- Mixed-route latency: n=40, p50 **4.880 ms**, p95 **16.215 ms** on the CI runner.
+  No model loading/generation is included. It is not laptop end-to-end LLM latency.
+- CI validation script took **49.232 seconds**, including unit suite and source
+  rebuild. Parent-process peak RSS **162.03 MiB** excludes subprocess peak memory.
+
+### Failures remain visible
+
+T28 should have retrieved a source explanation but selected a metric and returned
+a calculated count. T29, T30 and T31 should have retrieved source explanations
+but abstained. A correct SQL value can still answer the wrong intent. Success of
+the CI job means the unit/source/replay checks passed, not all quality cases.
+
+No routing rules were adjusted after reading this evaluation. Preserve the first
+result and frozen contract. Any future changes based on these failures turn the
+affected families into development/regression material; use a newly frozen,
+separate evaluation set before claiming an unseen improvement. Full retrieval
+relevance and generated-answer grounding evaluation have not run.
+
+The safe current behaviour is fixed, cited numerical cards or evidence-only
+retrieval. Strict extract acceptance is deliberately narrow; it may reject useful
+paraphrases and does not make a cited source true or contextually sufficient.

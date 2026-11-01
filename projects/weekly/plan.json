@@ -94,7 +94,9 @@
           "day": 3,
           "date": "2026-11-01",
           "focus": "Baseline and model/retrieval implementation",
-          "status": "in_progress"
+          "status": "in_progress",
+          "evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-01/ci-validation.json",
+          "note": "Workflow and answer gate implemented/tested; first routing 36/40 and numerical 24/24. Four intent errors remain; full RAG evaluation not complete."
         },
         {
           "day": 4,

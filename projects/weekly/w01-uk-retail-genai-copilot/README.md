@@ -2,10 +2,13 @@
 
 **In progress. Published: real-data warehouse, quality audit, read-only SQL
 baseline, hybrid retrieval and actual local LLM generation smoke. Generated drafts
-failed citation checks; the agent, answer gate, UI/API and n8n remain unfinished.**
+failed citation checks. A bounded LangGraph workflow and extract-only answer gate
+ran on 1 November: 36/40 routing cases and 24/24 numerical cases passed. Routing
+errors, full RAG quality evaluation, UI/API and n8n remain unfinished.**
 Target weekly release: 5 November 2026.
 
-See [31 October AI milestone](AI_MILESTONE.md) for exact model commands, pinned
+See [1 November workflow milestone](AGENT_MILESTONE.md) for CI evidence, limitations
+and exact agent commands. See [31 October AI milestone](AI_MILESTONE.md) for exact model commands, pinned
 Hugging Face revisions, measured index scale and negative generation results.
 
 The intended user is a retail analyst/manager who wants evidence-backed answers

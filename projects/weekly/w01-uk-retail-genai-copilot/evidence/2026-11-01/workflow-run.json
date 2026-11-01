@@ -1,0 +1,17 @@
+{
+  "run_id": 41344533660,
+  "job_id": 124961437686,
+  "html_url": "https://github.com/AshJai23/AshJai23/actions/runs/41344533660",
+  "status": "completed",
+  "conclusion": "success",
+  "source_commit": "96ba2d8178f031c4dd22c30f32b3e027c1587239",
+  "run_started_at": "2026-11-01T19:59:50Z",
+  "updated_at": "2026-11-01T20:01:04Z",
+  "validation_code_commit": "96ba2d8178f031c4dd22c30f32b3e027c1587239",
+  "local_execution_environment_available": false,
+  "validation_alternative": "Standard GitHub-hosted runner in public repository, read-only contents permission, no credentials or paid service required",
+  "report_extracted_from": "Decoded job logs W01_EVIDENCE_JSON record",
+  "fresh_model_inference_run": false,
+  "previous_model_output_capture": "2026-10-31",
+  "weekly_project_completed": false
+}
