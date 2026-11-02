@@ -27,3 +27,7 @@ claimed from replanning. NHS and council analytics remain unscheduled backlog.
 ## 29 October — deep learning, agents, Hugging Face, Higgsfield and n8n
 
 Incorporated the user's additional stack requests into the existing three weekly builds. Deep learning has an explicit actual-training gate; Hugging Face and local n8n have execution/evidence requirements. Higgsfield is an optional media extension because official API use is metered and the existing no-spend/no-new-credentials constraints remain. No new project dates or completion claims.
+
+## 2 November — runnable local delivery
+
+Recent FastAPI/VS Code assistance concerned the separate SmartInvest project; it does not replace W01, change the weekly schedule or add trading features to this programme. W01 already planned FastAPI. Its new runbook now makes the local-versus-deployed URL distinction explicit, gives exact start/stop commands and keeps unsupported model drafts out of the interface. No public service or operation on the user's own computer is claimed.

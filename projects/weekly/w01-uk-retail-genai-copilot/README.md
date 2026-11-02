@@ -1,119 +1,48 @@
 # UK Retail GenAI Analytics Copilot — W01
 
-**In progress. Published: real-data warehouse, quality audit, read-only SQL
-baseline, hybrid retrieval and actual local LLM generation smoke. Generated drafts
-failed citation checks. A bounded LangGraph workflow and extract-only answer gate
-ran on 1 November: 36/40 routing cases and 24/24 numerical cases passed. Routing
-errors, full RAG quality evaluation, UI/API and n8n remain unfinished.**
-Target weekly release: 5 November 2026.
+**In progress; not a released weekly flagship or public website.** Target: 5 November 2026. This is a local retail research prototype over actual **2009–2011 historical** UCI transactions, not current UK shop activity.
 
-See [1 November workflow milestone](AGENT_MILESTONE.md) for CI evidence, limitations
-and exact agent commands. See [31 October AI milestone](AI_MILESTONE.md) for exact model commands, pinned
-Hugging Face revisions, measured index scale and negative generation results.
+On **2 November** the bounded graph, hybrid retrieval, local generator, FastAPI and web interface ran together. **35 unit tests passed**. Fresh model output still failed **all 3 development answer checks** and was withheld. The earlier frozen routing result remains **36/40**, with **24/24** numerical oracle matches; known routing failures and full quality evaluation remain open.
 
-The intended user is a retail analyst/manager who wants evidence-backed answers
-to plain-English commercial questions. Numerical answers will use constrained
-SQL, with RAG for source/schema context and a local LLM for explanations. The
-first increment established the numerical foundation. The next increment now
-adds retrieval and local generation, with unverified drafts clearly separated.
+Start with **[the current API/interface milestone and exact commands](UI_API_MILESTONE.md)**. After starting Uvicorn on your computer, open http://127.0.0.1:8000/; /docs offers API documentation. These local addresses do not represent a deployed site. No public Python host is provisioned.
 
-## Actually run on 30 October
+## What works
 
-| Measure | Observed result |
-|---|---|
-| Real source rows | 1,067,371 across both workbook sheets |
-| Rows after exact normalised-field deduplication | 1,033,036 |
-| Duplicate rows removed | 34,335; policy assumption, not proof each is erroneous |
-| Missing customer IDs after deduplication | 235,151; retained in overall totals |
-| Missing descriptions after deduplication | 4,275 |
-| Countries / distinct stock codes | 43 / 5,304; codes include adjustments/charges |
-| Distinct nonempty descriptions | 5,655 candidates, **zero indexed RAG documents** |
-| Observation dates | 1 December 2009–9 December 2011 |
-| Ingest + profile time | 57.093 s on recorded Linux/Python CPU environment |
-| Peak process RSS | 379.39 MiB; includes workbook stream and database work |
-| Parquet output | 12,758,252 bytes, local only |
+- Full source acquisition, typed streaming ingestion, auditable deduplication, DuckDB/Parquet and independent numerical controls.
+- Finite LangGraph with one allowlisted SQL aggregate or one bounded evidence lookup. No arbitrary SQL/actions or autonomous LLM tools.
+- BM25/dense/hybrid retrieval over distinct descriptions and source-contract paragraphs.
+- Actual pinned public Hugging Face CPU generation, with strict cited-extract validation and unsupported-draft withholding.
+- Local web workspace showing interpreted scope, deterministic facts, source dates, evidence, generation status, tool trace and readiness.
+- Strict JSON/input/body limits, per-process serial inference, coarse errors and prompt-free in-memory request metrics.
 
-Eight unit tests pass, including explicit synthetic edge cases for duplicates,
-returns, missingness, schema drift, invalid numeric/date inputs, both-sheet
-ingestion, repeat loading and SQL-injection-as-data. A separate **real full-source
-smoke/reload** checks catalogue row count, independent Python Decimal versus SQL
-sum, country subtotal reconciliation and Parquet row count. See actual results in
-[evidence](evidence/) and [validation JSON](evidence/real-source-validation.json).
-GitHub Actions has not been added/run yet.
+## Actual scale and provenance
 
-## Exact local commands
+| Measure | Observed |
+| --- | --- |
+| Raw / deduplicated invoice rows | 1,067,371 / 1,033,036 |
+| Duplicate rows removed | 34,335; policy assumption, not proof every repetition is erroneous |
+| Missing customer IDs retained | 235,151 deduplicated lines |
+| Observation period | 1 December 2009–9 December 2011 |
+| Latest acquisition | 2 November 2026, HTTP 200; checksum unchanged |
+| Distinct indexed documents | 5,655 descriptions + 10 contract paragraphs |
+| Corpus / vector index bytes | 2,213,419 / 8,701,568 |
+| Fresh API development generations | 3; zero accepted answers |
+| Warm generation request latency | n=3, p50 4.996 s, p95 6.289 s; small development smoke only |
 
-From this project directory, Python 3.12 was exercised:
+Transactions are SQL rows, not vector documents. No costs, profit, inventory or current demand exists in this source. Charges/adjustments can be included in line-value metrics; read [DATA_CONTRACT.md](DATA_CONTRACT.md). Deduplication may remove genuinely repeated identical lines. Missing IDs restrict customer-level inference but are retained in aggregate totals.
 
-```bash
-python -m venv .venv
-. .venv/bin/activate
-python -m pip install -r requirements.txt
-python -m unittest discover -s tests -v
-python retail.py fetch
-python retail.py build
-python validate_source.py
-python metrics.py --metric signed_value --country 'United Kingdom'
-```
+Source: Chen, D. (2012), **Online Retail II**, UCI, DOI [10.24432/C5CG6D](https://doi.org/10.24432/C5CG6D), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [Official source](https://archive.ics.uci.edu/dataset/502/online+retail+ii). Full raw data, pseudonymous customer IDs, corpus/index and model weights remain local ignored outputs. [Dated evidence](evidence/2026-11-02/) records capture hashes, parameters, outputs, resources and limitations.
 
-`fetch` makes one public UCI download (~45.6 MB archive), verifies ZIP integrity,
-saves capture time/checksum/HTTP status and refuses to overwrite an existing
-capture silently. `build` streams both Excel sheets, validates schema/types,
-stages CSV, replaces the local raw/deduplicated DuckDB tables and exports Parquet.
-It does not append duplicate data on reruns. Source failures raise errors; no
-fabricated fallback exists. Installation needs network access, disk and permission
-to create a local venv. Output data/models are ignored by Git. Budget roughly
-300 MB for current raw/staging/database files plus dependencies; future models
-will require more. No cloud service or account is needed for this milestone.
+## Evidence and honest limits
 
-`metrics.py` only exposes four fixed aggregate expressions and a parameterised
-country filter through a read-only database connection. It accepts no free SQL.
-This is a deterministic baseline, not an AI agent. See
-[sample query output](evidence/sample-query.json). Missing/unknown country
-returns zero line count and null sums; the later UI must explain that distinction.
+- [Current API/interface milestone](UI_API_MILESTONE.md): fresh local generation, actual HTTP replay, independent SQL, setup/runbook and failures.
+- [1 November workflow milestone](AGENT_MILESTONE.md): original frozen routing/SQL results and 3 bad-draft replays. No routing tuning has been made in this API increment.
+- [31 October AI milestone](AI_MILESTONE.md): initial index and actual CPU model smoke; pretrained inference is not training or fine-tuning.
+- [Evaluation contract](EVALUATION.md): AI-authored, not independent human validation. Forty original tasks remain frozen. New integration probes are development material, not an unseen quality score.
+- [Source validation](evidence/real-source-validation.json): prior full-source controls; new dated profile and API reconciliation are separate captures.
 
-## Understand the data
+The small generator invents unsupported material and omits citations. The gate keeps those drafts out of the UI, but exact source extraction is not broad semantic grounding or source-relevance validation. Evidence-only output is labelled as retrieval, not a successful generated answer. Four known intent errors remain, so inspect interpreted scope even when arithmetic is correct.
 
-A row is one line of an old invoice, such as a quantity of an item at a price.
-Many rows together let us calculate totals. Some rows repeat or cancel earlier
-transactions. Missing customer IDs prevent reliable customer-level analysis for
-those rows, but they need not disappear from overall totals. The audit makes
-these limitations visible so later AI answers can cite the correct population.
+**Unfinished:** full held-out relevance/answer evaluation, routing remediation with fresh evaluation, graphical UI review, n8n runtime smoke, final reproducibility, monitoring and case study. ONS monthly context has not been ingested. No training, public deployment, production users, commercial impact, Docker/Power BI execution or independent human review is claimed.
 
-These are **actual historical UK-retailer transactions**, not real-time UK sales.
-Customer countries include places outside the UK. The source was captured on
-30 October 2026; capture date does not make the observations current. There are
-no private/live merchant credentials. ONS monthly context is not ingested yet.
-
-Source and attribution: Chen, D. (2012). **Online Retail II** [Dataset]. UCI Machine
-Learning Repository. https://doi.org/10.24432/C5CG6D.
-[Official source](https://archive.ics.uci.edu/dataset/502/online+retail+ii),
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-The original archive and public pseudonymous customer IDs are not redistributed
-in this repository. [Manifest](evidence/source_manifest.json) contains the exact
-download URL and SHA-256 so the same capture can be verified.
-
-## Limits and remaining work
-
-- Read [data/metric definitions](DATA_CONTRACT.md) before calling a value revenue.
-  Positive non-cancel line value can include charges; no cost/profit or inventory
-  data exists. Deduplication may remove genuinely repeated identical lines.
-- Eight passing tests do not establish production safety. Read-only SQL is only
-  the first tool boundary; agent budgets, prompt-injection and interface security
-  remain to be built/tested. Query timing here is not LLM latency.
-- Local pretrained Hugging Face generation/embedding inference and an index ran
-  on 31 October. No training/fine-tuning, LangGraph, n8n runtime, public website,
-  Docker run or production users are claimed. Generation produced unsupported
-  text and omitted citations; see the dated evidence rather than treating these
-  drafts as validated answers. DATA_CONTRACT.md is the original 30 October metric
-  contract; its final ingestion-stage status is historical, not the latest AI status.
-- [40-task evaluation contract](EVALUATION.md) is frozen before implementation,
-  with deterministic numerical oracle outputs and retrieval/decline rubrics.
-  It is AI-authored and not independent human validation. No agent score yet.
-- Next: build bounded agent routing and deterministic answer/citation gates,
-  then evaluate tool choice and grounding without tuning to the frozen held-out
-  tasks. Keep code-review heuristics and unsupported generations visible.
-
-This foundation demonstrates Python streaming, SQL, decimal reconciliation,
-quality contracts and reproducibility. It is useful portfolio evidence, but not
-yet a launch-ready GenAI product.
+Weekly releases complete: **0/3**. The nine earlier prototypes are preserved separately.

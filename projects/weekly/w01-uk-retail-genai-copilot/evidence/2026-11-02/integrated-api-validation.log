@@ -1,0 +1,6 @@
+/workspace/scratch/5671858b8424/weekly-w01/.venv/lib/python3.12/site-packages/langgraph/cache/base/__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+Error in cpuinfo: failed to parse processor information from /proc/cpuinfo
+[W1102 20:00:33.237061630 ThreadPool.cc:52] cpuinfo initialization failed
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"passed": true, "checks": {"raw_rows": true, "deduplicated_rows": true, "decimal_reconciliation": true, "source_checksum_matches_previous": true, "all_probe_checks": true, "fresh_generation_samples": true, "actual_hybrid_results": true}, "generations": 3, "accepted_drafts": 0, "latency": {"samples": 3, "p50_seconds": 4.996419716999981, "p95_seconds_nearest_rank": 6.289428254000086}, "peak_rss_mib": 1220.953125}

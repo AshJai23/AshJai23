@@ -77,7 +77,7 @@ def run():
                    'corpus_documents':audit['total_documents'],'task_contract_sha256':expected_hash,
                    'cases':cases,'route_correct':sum(x['route_correct'] for x in cases),'route_total':len(cases),
                    'numeric_correct':sum(x['numeric_correct'] for x in numeric),'numeric_total':len(numeric),
-                   'evaluation_scope':'First frozen 40-case deterministic route test and 24-case SQL oracle comparison; not a full generated-answer/retrieval-grounding score. AI-authored synthetic questions, no independent human validation.',
+                   'evaluation_scope':'Frozen 40-case deterministic routing regression and 24-case SQL oracle comparison; first measured result preserved in 1 November evidence; not a full generated-answer/retrieval-grounding score. AI-authored synthetic questions, no independent human validation.',
                    'routing_policy':'Deterministic allowlist inside LangGraph, not LLM autonomous planning.',
                    'bad_llm_draft_replay':gates,'replay_capture_date':'2026-10-31','replay_note':'Actual previous local generations replayed; no fresh LLM weights loaded in this CI run.',
                    'latency_ms':{'samples':len(times),'p50':round(sorted(times)[len(times)//2],3),'p95':round(sorted(times)[int(len(times)*.95)-1],3),'all':[round(x,3) for x in times]},
@@ -89,3 +89,4 @@ def run():
     if not report['passed']:raise SystemExit(1)
 
 if __name__=='__main__':run()
+

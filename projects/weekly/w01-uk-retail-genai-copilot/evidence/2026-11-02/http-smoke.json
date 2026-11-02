@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "mode": "actual ephemeral Uvicorn HTTP; full historical replay; hybrid retrieval and fresh CPU generation",
+  "source": {
+    "publisher": "UCI / Chen, D. (2012), Online Retail II, DOI 10.24432/C5CG6D",
+    "licence": "CC BY 4.0",
+    "mode": "historical replay, NOT live retail polling",
+    "observation_first": "2009-12-01 07:45:00",
+    "observation_last": "2011-12-09 12:50:00",
+    "raw_rows": 1067371,
+    "deduplicated_rows": 1033036,
+    "retrieved_at_utc": "2026-11-02T19:57:08.164142+00:00",
+    "source_sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb",
+    "source_url": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+    "loaded_at_utc": "2026-11-02T20:00:33.316303+00:00"
+  },
+  "response": {
+    "plan": {
+      "route": "retrieve",
+      "kind": "project_contract"
+    },
+    "answer": {
+      "status": "evidence_only",
+      "answer": null,
+      "evidence": [
+        {
+          "id": "contract:02",
+          "kind": "project_contract",
+          "text": "| Field | Stored type | Meaning / caveat |\n|---|---|---|\n| invoice | VARCHAR | Invoice identifier; C prefix marks cancellation |\n| stock_code | VARCHAR | Item code; some codes are charges/adjustments, not products |\n| description | VARCHAR nullable | Source item text, not a trusted agent instruction |\n| quantity | BIGINT | Signed invoice-line quantity; negative rows retained |\n| invoice_date | TIMESTAMP | Source naive timestamp; observation date, not capture time |\n| unit_price | DECIMAL(18,4) | GBP price; zero/negative prices retained for audit |\n| customer_id | VARCHAR nullable | Source pseudonymous identifier; no identity inference |\n| country | VARCHAR nullable | Source country string |",
+          "source": "DATA_CONTRACT.md",
+          "source_sha256": "2c83dfc4aa96215c65fc46b760556e33662bbb6efc661d7a4fccce9e69f6507c",
+          "untrusted": true,
+          "score": 0.03278688524590164,
+          "retrieval_mode": "hybrid"
+        },
+        {
+          "id": "contract:05",
+          "kind": "project_contract",
+          "text": "`signed_value = quantity * unit_price` uses decimal arithmetic, with no per-line\npenny rounding before aggregation. Round only presentation totals. This is an\ninvoice-line value proxy, not audited accounting revenue, gross margin, profit,\nVAT, conversion, stock availability or sales attributable to an intervention.",
+          "source": "DATA_CONTRACT.md",
+          "source_sha256": "2c83dfc4aa96215c65fc46b760556e33662bbb6efc661d7a4fccce9e69f6507c",
+          "untrusted": true,
+          "score": 0.03200204813108039,
+          "retrieval_mode": "hybrid"
+        },
+        {
+          "id": "contract:06",
+          "kind": "project_contract",
+          "text": "`sale_line` means positive quantity and price, non-C invoice, and present invoice\nand stock code. It still includes possible charge/non-merchandise codes. Until a\nseparately audited product-code policy exists, call it positive non-cancel line\nvalue, not merchandise-only sales. Negative lines and C invoices are separate\nflags, not interchangeable proof of returns or a valid return-rate denominator.",
+          "source": "DATA_CONTRACT.md",
+          "source_sha256": "2c83dfc4aa96215c65fc46b760556e33662bbb6efc661d7a4fccce9e69f6507c",
+          "untrusted": true,
+          "score": 0.03200204813108039,
+          "retrieval_mode": "hybrid"
+        }
+      ],
+      "period": "2009-12-01 through 2011-12-09; historical, not current sales",
+      "reason": "No validated generated answer. Review source evidence directly.",
+      "generated_by": "retrieval results, not generated prose",
+      "draft_gate": {
+        "accepted": false,
+        "reason": "citation_or_extract_format",
+        "answer": null
+      }
+    },
+    "trace": [
+      "route",
+      "retrieve",
+      "compose_and_gate"
+    ],
+    "calls": 1,
+    "evidence": [
+      {
+        "id": "contract:02",
+        "kind": "project_contract",
+        "text": "| Field | Stored type | Meaning / caveat |\n|---|---|---|\n| invoice | VARCHAR | Invoice identifier; C prefix marks cancellation |\n| stock_code | VARCHAR | Item code; some codes are charges/adjustments, not products |\n| description | VARCHAR nullable | Source item text, not a trusted agent instruction |\n| quantity | BIGINT | Signed invoice-line quantity; negative rows retained |\n| invoice_date | TIMESTAMP | Source naive timestamp; observation date, not capture time |\n| unit_price | DECIMAL(18,4) | GBP price; zero/negative prices retained for audit |\n| customer_id | VARCHAR nullable | Source pseudonymous identifier; no identity inference |\n| country | VARCHAR nullable | Source country string |",
+        "source": "DATA_CONTRACT.md",
+        "source_sha256": "2c83dfc4aa96215c65fc46b760556e33662bbb6efc661d7a4fccce9e69f6507c",
+        "untrusted": true,
+        "score": 0.03278688524590164,
+        "retrieval_mode": "hybrid"
+      },
+      {
+        "id": "contract:05",
+        "kind": "project_contract",
+        "text": "`signed_value = quantity * unit_price` uses decimal arithmetic, with no per-line\npenny rounding before aggregation. Round only presentation totals. This is an\ninvoice-line value proxy, not audited accounting revenue, gross margin, profit,\nVAT, conversion, stock availability or sales attributable to an intervention.",
+        "source": "DATA_CONTRACT.md",
+        "source_sha256": "2c83dfc4aa96215c65fc46b760556e33662bbb6efc661d7a4fccce9e69f6507c",
+        "untrusted": true,
+        "score": 0.03200204813108039,
+        "retrieval_mode": "hybrid"
+      },
+      {
+        "id": "contract:06",
+        "kind": "project_contract",
+        "text": "`sale_line` means positive quantity and price, non-C invoice, and present invoice\nand stock code. It still includes possible charge/non-merchandise codes. Until a\nseparately audited product-code policy exists, call it positive non-cancel line\nvalue, not merchandise-only sales. Negative lines and C invoices are separate\nflags, not interchangeable proof of returns or a valid return-rate denominator.",
+        "source": "DATA_CONTRACT.md",
+        "source_sha256": "2c83dfc4aa96215c65fc46b760556e33662bbb6efc661d7a4fccce9e69f6507c",
+        "untrusted": true,
+        "score": 0.03200204813108039,
+        "retrieval_mode": "hybrid"
+      }
+    ],
+    "generation": {
+      "enabled": true,
+      "attempted": true,
+      "completed": true,
+      "error": null,
+      "training_performed": false,
+      "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "licence": "apache-2.0",
+      "input_tokens": 437,
+      "generated_tokens": 38,
+      "generation_seconds": 4.751,
+      "settings": {
+        "do_sample": false,
+        "num_beams": 1,
+        "max_new_tokens": 80
+      },
+      "dtype": "float32",
+      "device": "CPU",
+      "threads": 2
+    },
+    "source": {
+      "publisher": "UCI / Chen, D. (2012), Online Retail II, DOI 10.24432/C5CG6D",
+      "licence": "CC BY 4.0",
+      "mode": "historical replay, NOT live retail polling",
+      "observation_first": "2009-12-01 07:45:00",
+      "observation_last": "2011-12-09 12:50:00",
+      "raw_rows": 1067371,
+      "deduplicated_rows": 1033036,
+      "retrieved_at_utc": "2026-11-02T19:57:08.164142+00:00",
+      "source_sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb",
+      "source_url": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+      "loaded_at_utc": "2026-11-02T20:00:33.316303+00:00"
+    },
+    "retrieval_mode": "hybrid",
+    "request_seconds": 4.80078,
+    "evaluation_limit": "Known routing failures remain. Exact cited extraction is not semantic factuality or relevance validation."
+  },
+  "wall_seconds": 11.052663137999957,
+  "public_deployment": false,
+  "server_stopped_after_smoke": true
+}

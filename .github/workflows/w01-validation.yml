@@ -5,6 +5,7 @@ on:
     paths:
       - 'projects/weekly/w01-uk-retail-genai-copilot/**/*.py'
       - 'projects/weekly/w01-uk-retail-genai-copilot/requirements*.txt'
+      - 'projects/weekly/w01-uk-retail-genai-copilot/web/**'
       - 'projects/weekly/w01-uk-retail-genai-copilot/DATA_CONTRACT.md'
       - 'projects/weekly/w01-uk-retail-genai-copilot/evaluation/tasks.json'
       - '.github/workflows/w01-validation.yml'
@@ -30,6 +31,11 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install bounded-workflow dependencies
-        run: python -m pip install -r requirements-agent.txt
+        run: python -m pip install -r requirements-api.txt
       - name: Test, rebuild real source and replay gates
         run: python ci_validate.py
+
+      - name: Explicit BM25 API HTTP smoke without model generation
+        run: python smoke_http.py --baseline
+      - name: Check web client JavaScript
+        run: node --check web/app.js

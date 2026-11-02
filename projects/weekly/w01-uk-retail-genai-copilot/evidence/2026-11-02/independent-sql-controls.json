@@ -1,0 +1,14 @@
+{
+  "scope": "independent direct SQL over actual historical base table; no service metric helper",
+  "sql": "SELECT sum(quantity * unit_price), count(*) FROM transactions WHERE country = ?",
+  "parameters": [
+    "United Kingdom"
+  ],
+  "population_rows": 948321,
+  "api_value": "15986060.3370",
+  "independent_value": "15986060.3370",
+  "api_matches_independent_value": true,
+  "country_subtotals_match": true,
+  "inference_report_unchanged": true,
+  "passed": true
+}

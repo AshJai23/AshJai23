@@ -1,0 +1,6 @@
+-r requirements-agent.txt
+fastapi==0.162.0
+uvicorn==0.54.0
+httpx==0.28.1
+httpx2==2.16.0
+# For hybrid generation also install requirements-ai.txt and documented CPU torch.

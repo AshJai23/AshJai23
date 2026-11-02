@@ -47,7 +47,7 @@
           "mode": "Actual historical UK retailer transactions, December 2009–December 2011; NOT real-time",
           "licence": "CC BY 4.0; Chen, D. (2012), DOI 10.24432/C5CG6D",
           "catalogue_rows": 1067371,
-          "status": "Full archive retrieved 30 October 2026; 1,067,371 rows ingested and audited. See project evidence/source_manifest.json and profile.json. Historical observations remain 2009–2011."
+          "status": "Fresh HTTP 200 capture 2 November 2026 at 19:57:08 UTC; SHA-256 unchanged. Rebuilt and audited 1,067,371 raw / 1,033,036 deduplicated rows. Observations remain historical 2009–2011."
         },
         {
           "source": "ONS Retail Sales Index",
@@ -96,13 +96,15 @@
           "focus": "Baseline and model/retrieval implementation",
           "status": "in_progress",
           "evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-01/ci-validation.json",
-          "note": "Workflow and answer gate implemented/tested; first routing 36/40 and numerical 24/24. Four intent errors remain; full RAG evaluation not complete."
+          "note": "Original first frozen result 36/40 routing and 24/24 numerical remains. API/hybrid model path is now integrated but model quality and full RAG evaluation remain incomplete; no routing rule tuning in 2 November increment."
         },
         {
           "day": 4,
           "date": "2026-11-02",
           "focus": "Integrated local inference API/UI",
-          "status": "planned"
+          "status": "completed",
+          "evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-02/integrated-api-validation.json",
+          "note": "API/HTML/JS and real hybrid local-generation request path exercised; 35 unit tests, five development probes and real Uvicorn HTTP checks. Graphical UI review not performed. All three generated drafts rejected; this is integration completion, not answer-quality or weekly release acceptance."
         },
         {
           "day": 5,

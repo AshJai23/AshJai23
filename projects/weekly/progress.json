@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-01T20:02:46.250Z",
+  "updated_at_utc": "2026-11-02T20:02:53.964Z",
   "status": "in_progress",
   "new_flagships_completed": 0,
   "new_flagship_target": 3,
@@ -15,14 +15,15 @@
       "title": "UK Retail GenAI Analytics Copilot",
       "completed_milestones": [
         1,
-        2
+        2,
+        4
       ],
       "current_milestone": 3,
-      "latest_increment": "Bounded LangGraph workflow and extract-only answer gate tested in public-runner CI: 26 unit tests, 8 source/replay checks; first frozen routing 36/40, numerical SQL 24/24. All 3 prior bad drafts rejected in explicit replay. Four routing failures remain; no fresh model inference/training.",
+      "latest_increment": "Integrated FastAPI/web workspace with the existing bounded LangGraph, hybrid retrieval and fresh CPU local generation. 35 unit tests, five development API probes and real Uvicorn HTTP checks passed; independent base-table SQL reconciles UK signed line value. All three fresh development drafts rejected; evidence-only retrieval and deterministic numbers remain the safe output. Original routing 36/40 unchanged; not a weekly release.",
       "metrics": {
         "raw_rows": 1067371,
         "deduplicated_rows": 1033036,
-        "unit_tests_passed": 26,
+        "unit_tests_passed": 35,
         "real_source_checks_passed": 6,
         "llm_inference_run": true,
         "rag_documents_indexed": 5665,
@@ -45,22 +46,38 @@
         "numerical_total": 24,
         "prior_bad_drafts_replayed": 3,
         "prior_bad_drafts_rejected": 3,
-        "fresh_model_inference_run": false,
-        "latest_validation_runtime": "GitHub Actions ubuntu-24.04"
+        "fresh_model_inference_run": true,
+        "latest_validation_runtime": "Linux local CPU plus separate baseline/source CI",
+        "integrated_hybrid_local_api_run": true,
+        "api_development_probes": 5,
+        "api_development_probe_checks_passed": 5,
+        "local_generation_samples_latest_increment": 3,
+        "latest_generation_drafts_accepted": 0,
+        "latest_generation_drafts_rejected": 3,
+        "warm_generation_development_samples": 3,
+        "warm_generation_development_p50_seconds": 4.996419716999981,
+        "warm_generation_development_p95_seconds": 6.289428254000086,
+        "process_peak_rss_mib": 1220.953125,
+        "graphical_ui_review_run": false,
+        "source_retrieved_at_utc": "2026-11-02T19:57:08.164142+00:00"
       },
       "remaining_requirements": [
-        "Resolve intent-routing ambiguity without laundering the first frozen result; fresh independent evaluation after tuning",
-        "Full retrieval relevance and generated-answer grounding evaluation",
-        "Integrate and test dense/hybrid retrieval and fresh local-model path within workflow",
-        "Runnable API/UI",
-        "Actual local n8n workflow test",
-        "Final reproducible demo and weekly release"
+        "Resolve known intent ambiguity without laundering original 36/40 routing result; separate fresh evaluation after any tuning",
+        "Full held-out retrieval relevance and generated-answer grounding evaluation; current 0/3 accepted fresh development drafts is an important model-quality failure",
+        "Graphical UI review and final reproducibility/monitoring",
+        "Actual local n8n workflow execution",
+        "Final case study/demo and weekly release"
       ],
       "latest_validation_run": "https://github.com/AshJai23/AshJai23/actions/runs/41344533660",
       "known_failures": [
         "T28: explanation question misrouted to numeric metric",
         "T29/T30/T31: source explanations unnecessarily declined"
-      ]
+      ],
+      "next_planned_milestone": 5,
+      "open_milestones": [
+        3
+      ],
+      "latest_validation_evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-02/integrated-api-validation.json"
     },
     "W02": {
       "status": "planned",
@@ -77,7 +94,7 @@
       "title": "UK Retail Demand ML and MLOps Service"
     }
   },
-  "latest_daily_log": "logs/2026-11-01.md",
+  "latest_daily_log": "logs/2026-11-02.md",
   "pending_feedback": [],
   "repository_creation": "Standalone repositories still pending; publish authorised work in existing profile repository if creation is unavailable, and report that limitation.",
   "priority": "Applied AI / LLM engineering and ML, with GenAI, RAG, agents and measured larger-data engineering"
