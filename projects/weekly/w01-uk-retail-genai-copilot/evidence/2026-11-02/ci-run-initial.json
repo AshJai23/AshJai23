@@ -1,0 +1,12 @@
+{
+  "run_id": 41515699349,
+  "url": "https://github.com/AshJai23/AshJai23/actions/runs/41515699349",
+  "source_commit": "d91a20180c10a2c89ee8e0ac02b8826d205a1700",
+  "conclusion": "success",
+  "actual_run_date": "2026-11-02",
+  "legacy_report_date_note": "Raw CI report retains inherited hardcoded 2026-11-01 date. Actual run and source capture are 2 November; corrected in subsequent script commit.",
+  "unit_tests": 35,
+  "source_replay_checks": 8,
+  "http_smoke_mode": "explicit BM25/no-generation",
+  "fresh_model_inference_in_ci": false
+}

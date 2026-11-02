@@ -1,6 +1,7 @@
 """CI validation: real UCI source, explicit replay of prior LLM failures."""
 import contextlib
 from decimal import Decimal
+from datetime import datetime, timezone
 import hashlib
 import io
 import json
@@ -18,7 +19,7 @@ def run():
     unit=subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-v'],capture_output=True,text=True)
     output=unit.stdout+unit.stderr
     match=re.search(r'Ran (\d+) tests?',output)
-    report={'date':'2026-11-01','source_commit':os.environ.get('GITHUB_SHA'),'run_id':os.environ.get('GITHUB_RUN_ID'),
+    report={'date':datetime.now(timezone.utc).date().isoformat(),'reported_at_utc':datetime.now(timezone.utc).isoformat(),'source_commit':os.environ.get('GITHUB_SHA'),'run_id':os.environ.get('GITHUB_RUN_ID'),
             'runner':'GitHub standard ubuntu-24.04; public repository','python':sys.version,'platform':platform.platform(),
             'unit_tests_passed':unit.returncode==0,'unit_test_count':int(match.group(1)) if match else None,
             'unit_test_output':output,'fresh_model_inference_run':False,'training_performed':False,'n8n_execution_run':False,

@@ -1,0 +1,750 @@
+{
+  "date": "2026-11-01",
+  "source_commit": "d91a20180c10a2c89ee8e0ac02b8826d205a1700",
+  "run_id": "41515699349",
+  "runner": "GitHub standard ubuntu-24.04; public repository",
+  "python": "3.12.15 (main, Oct  1 2026, 02:35:59) [GCC 13.3.0]",
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "unit_tests_passed": true,
+  "unit_test_count": 35,
+  "unit_test_output": "{\"sheet\": \"Sheet\", \"rows\": 1}\n{\"sheet\": \"second\", \"rows\": 1}\n/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/langgraph/cache/base/__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.\n  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer\ntest_action_injection_never_calls_tool (test_agent.AgentTests.test_action_injection_never_calls_tool) ... ok\ntest_ambiguous_or_unknown_scope_declines (test_agent.AgentTests.test_ambiguous_or_unknown_scope_declines) ... ok\ntest_empty_and_invalid_evidence_fail (test_agent.AgentTests.test_empty_and_invalid_evidence_fail) ... ok\ntest_exact_cited_extract_passes (test_agent.AgentTests.test_exact_cited_extract_passes) ... ok\ntest_input_and_date_filter_budgets (test_agent.AgentTests.test_input_and_date_filter_budgets) ... ok\ntest_missing_forged_and_unsupported_citations_fail (test_agent.AgentTests.test_missing_forged_and_unsupported_citations_fail) ... ok\ntest_numeric_country_alias (test_agent.AgentTests.test_numeric_country_alias) ... ok\ntest_numeric_fact_not_rewritten_by_generated_draft (test_agent.AgentTests.test_numeric_fact_not_rewritten_by_generated_draft) ... ok\ntest_previous_real_model_failures_replay_as_rejected (test_agent.AgentTests.test_previous_real_model_failures_replay_as_rejected) ... ok\ntest_retrieval_only_stays_evidence_only (test_agent.AgentTests.test_retrieval_only_stays_evidence_only) ... ok\ntest_supported_extract_is_labelled_not_general_generation (test_agent.AgentTests.test_supported_extract_is_labelled_not_general_generation) ... ok\ntest_tool_error_has_no_fabricated_fallback (test_agent.AgentTests.test_tool_error_has_no_fabricated_fallback) ... ok\ntest_body_byte_limit (test_api.API.test_body_byte_limit) ... ok\ntest_busy_rejected_and_metrics_do_not_store_questions (test_api.API.test_busy_rejected_and_metrics_do_not_store_questions) ... ok\ntest_generator_failure_is_reported (test_api.API.test_generator_failure_is_reported) ... ok\ntest_numeric_scope_and_fact_survive_invalid_draft (test_api.API.test_numeric_scope_and_fact_survive_invalid_draft) ... ok\ntest_page_assets_and_source_label (test_api.API.test_page_assets_and_source_label) ... ok\ntest_rejected_retrieval_draft_is_withheld (test_api.API.test_rejected_retrieval_draft_is_withheld) ... ok\ntest_startup_failure_is_visible_no_fabrication (test_api.API.test_startup_failure_is_visible_no_fabrication) ... ok\ntest_unsupported_actions_abstain_without_tool (test_api.API.test_unsupported_actions_abstain_without_tool) ... ok\ntest_validation_omits_private_input (test_api.API.test_validation_omits_private_input) ... ok\ntest_both_sheets_are_streamed (test_ingestion.IngestionTests.test_both_sheets_are_streamed) ... ok\ntest_duplicate_returns_missingness_and_reload (test_ingestion.IngestionTests.test_duplicate_returns_missingness_and_reload) ... ok\ntest_excess_price_precision_rejected (test_ingestion.IngestionTests.test_excess_price_precision_rejected) ... ok\ntest_fractional_quantity_rejected (test_ingestion.IngestionTests.test_fractional_quantity_rejected) ... ok\ntest_invalid_date_rejected (test_ingestion.IngestionTests.test_invalid_date_rejected) ... ok\ntest_money_is_decimal_and_quantity_integral (test_ingestion.IngestionTests.test_money_is_decimal_and_quantity_integral) ... ok\ntest_nan_price_rejected (test_ingestion.IngestionTests.test_nan_price_rejected) ... ok\ntest_schema_drift_fails_explicitly (test_ingestion.IngestionTests.test_schema_drift_fails_explicitly) ... ok\ntest_bm25_relevance_and_no_overlap (test_retrieval.RetrievalTests.test_bm25_relevance_and_no_overlap) ... ok\ntest_corpus_index_mismatch_rejected (test_retrieval.RetrievalTests.test_corpus_index_mismatch_rejected) ... ok\ntest_empty_lexical_corpus (test_retrieval.RetrievalTests.test_empty_lexical_corpus) ... ok\ntest_explicit_charge_and_ambiguous_codes (test_retrieval.RetrievalTests.test_explicit_charge_and_ambiguous_codes) ... ok\ntest_invalid_requests_rejected_before_model (test_retrieval.RetrievalTests.test_invalid_requests_rejected_before_model) ... ok\ntest_product_shaped_is_only_candidate (test_retrieval.RetrievalTests.test_product_shaped_is_only_candidate) ... ok\n\n----------------------------------------------------------------------\nRan 35 tests in 0.284s\n\nOK\n",
+  "fresh_model_inference_run": false,
+  "training_performed": false,
+  "n8n_execution_run": false,
+  "full_held_out_rag_quality_evaluation_run": false,
+  "passed": true,
+  "source_checks": {
+    "source_rows": true,
+    "deduplicated_rows": true,
+    "decimal_control": true,
+    "prior_business_totals_unchanged": true,
+    "frozen_tasks_sha256": true,
+    "audit_reconciles": true,
+    "source_checksum_matches_previous_capture": true,
+    "previous_bad_drafts_all_rejected": true
+  },
+  "source_manifest": {
+    "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+    "download_url": "https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip",
+    "mode": "historical actual transactions; not live",
+    "retrieved_at_utc": "2026-11-02T20:04:08.815343+00:00",
+    "http_status": 200,
+    "bytes": 45622418,
+    "sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb",
+    "download_seconds": 6.354,
+    "last_modified": null,
+    "licence": "CC BY 4.0",
+    "attribution": "Chen, D. (2012). Online Retail II. UCI. https://doi.org/10.24432/C5CG6D"
+  },
+  "raw_rows": 1067371,
+  "deduplicated_rows": 1033036,
+  "corpus_documents": 5665,
+  "task_contract_sha256": "9fb3427284c3801a8143c854280662115f4baeb33c959106419c089afe7623c4",
+  "cases": [
+    {
+      "id": "T01",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "948321",
+      "actual_value": "948321",
+      "numeric_correct": true
+    },
+    {
+      "id": "T02",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "15986060.3370",
+      "actual_value": "15986060.3370",
+      "numeric_correct": true
+    },
+    {
+      "id": "T03",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "17410196.1170",
+      "actual_value": "17410196.1170",
+      "numeric_correct": true
+    },
+    {
+      "id": "T04",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "232206",
+      "actual_value": "232206",
+      "numeric_correct": true
+    },
+    {
+      "id": "T05",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "14025",
+      "actual_value": "14025",
+      "numeric_correct": true
+    },
+    {
+      "id": "T06",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "321733.3900",
+      "actual_value": "321733.3900",
+      "numeric_correct": true
+    },
+    {
+      "id": "T07",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "350456.0900",
+      "actual_value": "350456.0900",
+      "numeric_correct": true
+    },
+    {
+      "id": "T08",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "128",
+      "actual_value": "128",
+      "numeric_correct": true
+    },
+    {
+      "id": "T09",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "17339",
+      "actual_value": "17339",
+      "numeric_correct": true
+    },
+    {
+      "id": "T10",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "411959.1610",
+      "actual_value": "411959.1610",
+      "numeric_correct": true
+    },
+    {
+      "id": "T11",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "425019.7110",
+      "actual_value": "425019.7110",
+      "numeric_correct": true
+    },
+    {
+      "id": "T12",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "0",
+      "actual_value": "0",
+      "numeric_correct": true
+    },
+    {
+      "id": "T13",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "17667",
+      "actual_value": "17667",
+      "numeric_correct": true
+    },
+    {
+      "id": "T14",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "609953.7800",
+      "actual_value": "609953.7800",
+      "numeric_correct": true
+    },
+    {
+      "id": "T15",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "658767.3100",
+      "actual_value": "658767.3100",
+      "numeric_correct": true
+    },
+    {
+      "id": "T16",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "1653",
+      "actual_value": "1653",
+      "numeric_correct": true
+    },
+    {
+      "id": "T17",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "3754",
+      "actual_value": "3754",
+      "numeric_correct": true
+    },
+    {
+      "id": "T18",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "91013.4400",
+      "actual_value": "91013.4400",
+      "numeric_correct": true
+    },
+    {
+      "id": "T19",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "108332.4900",
+      "actual_value": "108332.4900",
+      "numeric_correct": true
+    },
+    {
+      "id": "T20",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "0",
+      "actual_value": "0",
+      "numeric_correct": true
+    },
+    {
+      "id": "T21",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "5137",
+      "actual_value": "5137",
+      "numeric_correct": true
+    },
+    {
+      "id": "T22",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "548330.7000",
+      "actual_value": "548330.7000",
+      "numeric_correct": true
+    },
+    {
+      "id": "T23",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "554038.0900",
+      "actual_value": "554038.0900",
+      "numeric_correct": true
+    },
+    {
+      "id": "T24",
+      "kind": "numerical",
+      "expected_route": "metric",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ],
+      "expected_value": "0",
+      "actual_value": "0",
+      "numeric_correct": true
+    },
+    {
+      "id": "T25",
+      "kind": "retrieval",
+      "expected_route": "retrieve",
+      "actual_route": "retrieve",
+      "status": "evidence_only",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "retrieve",
+        "compose_and_gate"
+      ]
+    },
+    {
+      "id": "T26",
+      "kind": "retrieval",
+      "expected_route": "retrieve",
+      "actual_route": "retrieve",
+      "status": "evidence_only",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "retrieve",
+        "compose_and_gate"
+      ]
+    },
+    {
+      "id": "T27",
+      "kind": "retrieval",
+      "expected_route": "retrieve",
+      "actual_route": "retrieve",
+      "status": "evidence_only",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "retrieve",
+        "compose_and_gate"
+      ]
+    },
+    {
+      "id": "T28",
+      "kind": "retrieval",
+      "expected_route": "retrieve",
+      "actual_route": "metric",
+      "status": "deterministic_calculation",
+      "tool_calls": 1,
+      "route_correct": false,
+      "trace": [
+        "route",
+        "read_only_metric",
+        "compose_and_gate"
+      ]
+    },
+    {
+      "id": "T29",
+      "kind": "retrieval",
+      "expected_route": "retrieve",
+      "actual_route": "decline",
+      "status": "abstained",
+      "tool_calls": 0,
+      "route_correct": false,
+      "trace": [
+        "route",
+        "abstain"
+      ]
+    },
+    {
+      "id": "T30",
+      "kind": "retrieval",
+      "expected_route": "retrieve",
+      "actual_route": "decline",
+      "status": "abstained",
+      "tool_calls": 0,
+      "route_correct": false,
+      "trace": [
+        "route",
+        "abstain"
+      ]
+    },
+    {
+      "id": "T31",
+      "kind": "retrieval",
+      "expected_route": "retrieve",
+      "actual_route": "decline",
+      "status": "abstained",
+      "tool_calls": 0,
+      "route_correct": false,
+      "trace": [
+        "route",
+        "abstain"
+      ]
+    },
+    {
+      "id": "T32",
+      "kind": "retrieval",
+      "expected_route": "retrieve",
+      "actual_route": "retrieve",
+      "status": "evidence_only",
+      "tool_calls": 1,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "retrieve",
+        "compose_and_gate"
+      ]
+    },
+    {
+      "id": "T33",
+      "kind": "unsupported",
+      "expected_route": "decline",
+      "actual_route": "decline",
+      "status": "abstained",
+      "tool_calls": 0,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "abstain"
+      ]
+    },
+    {
+      "id": "T34",
+      "kind": "unsupported",
+      "expected_route": "decline",
+      "actual_route": "decline",
+      "status": "abstained",
+      "tool_calls": 0,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "abstain"
+      ]
+    },
+    {
+      "id": "T35",
+      "kind": "unsupported",
+      "expected_route": "decline",
+      "actual_route": "decline",
+      "status": "abstained",
+      "tool_calls": 0,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "abstain"
+      ]
+    },
+    {
+      "id": "T36",
+      "kind": "unsupported",
+      "expected_route": "decline",
+      "actual_route": "decline",
+      "status": "abstained",
+      "tool_calls": 0,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "abstain"
+      ]
+    },
+    {
+      "id": "T37",
+      "kind": "unsupported",
+      "expected_route": "decline",
+      "actual_route": "decline",
+      "status": "abstained",
+      "tool_calls": 0,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "abstain"
+      ]
+    },
+    {
+      "id": "T38",
+      "kind": "unsupported",
+      "expected_route": "decline",
+      "actual_route": "decline",
+      "status": "abstained",
+      "tool_calls": 0,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "abstain"
+      ]
+    },
+    {
+      "id": "T39",
+      "kind": "unsupported",
+      "expected_route": "decline",
+      "actual_route": "decline",
+      "status": "abstained",
+      "tool_calls": 0,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "abstain"
+      ]
+    },
+    {
+      "id": "T40",
+      "kind": "unsupported",
+      "expected_route": "decline",
+      "actual_route": "decline",
+      "status": "abstained",
+      "tool_calls": 0,
+      "route_correct": true,
+      "trace": [
+        "route",
+        "abstain"
+      ]
+    }
+  ],
+  "route_correct": 36,
+  "route_total": 40,
+  "numeric_correct": 24,
+  "numeric_total": 24,
+  "evaluation_scope": "Frozen 40-case deterministic routing regression and 24-case SQL oracle comparison; first measured result preserved in 1 November evidence; not a full generated-answer/retrieval-grounding score. AI-authored synthetic questions, no independent human validation.",
+  "routing_policy": "Deterministic allowlist inside LangGraph, not LLM autonomous planning.",
+  "bad_llm_draft_replay": [
+    {
+      "sample": 1,
+      "accepted": false,
+      "reason": "citation_or_extract_format",
+      "answer": null
+    },
+    {
+      "sample": 2,
+      "accepted": false,
+      "reason": "citation_or_extract_format",
+      "answer": null
+    },
+    {
+      "sample": 3,
+      "accepted": false,
+      "reason": "citation_or_extract_format",
+      "answer": null
+    }
+  ],
+  "replay_capture_date": "2026-10-31",
+  "replay_note": "Actual previous local generations replayed; no fresh LLM weights loaded in this CI run.",
+  "latency_ms": {
+    "samples": 40,
+    "p50": 5.289,
+    "p95": 17.871,
+    "all": [
+      11.921,
+      41.663,
+      63.124,
+      17.871,
+      4.262,
+      5.159,
+      7.584,
+      9.46,
+      3.983,
+      5.272,
+      7.81,
+      9.547,
+      3.707,
+      5.289,
+      7.886,
+      9.986,
+      3.912,
+      4.743,
+      6.668,
+      9.498,
+      3.634,
+      4.611,
+      6.705,
+      9.485,
+      16.259,
+      13.729,
+      15.586,
+      9.796,
+      0.727,
+      0.607,
+      0.606,
+      14.329,
+      0.653,
+      0.567,
+      0.717,
+      0.589,
+      0.532,
+      0.544,
+      0.524,
+      0.551
+    ]
+  },
+  "latency_note": "Mixed deterministic routes, SQL and BM25; no model load or generation. CI runner, not laptop end-to-end LLM latency.",
+  "total_seconds": 51.676,
+  "process_peak_rss_mib": 161.75,
+  "versions": {
+    "langgraph": "1.0.1",
+    "duckdb": "1.4.1",
+    "numpy": "1.26.4",
+    "openpyxl": "3.1.5"
+  }
+}

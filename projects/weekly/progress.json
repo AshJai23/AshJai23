@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-02T20:02:53.964Z",
+  "updated_at_utc": "2026-11-02T20:06:08.078Z",
   "status": "in_progress",
   "new_flagships_completed": 0,
   "new_flagship_target": 3,
@@ -47,7 +47,7 @@
         "prior_bad_drafts_replayed": 3,
         "prior_bad_drafts_rejected": 3,
         "fresh_model_inference_run": true,
-        "latest_validation_runtime": "Linux local CPU plus separate baseline/source CI",
+        "latest_validation_runtime": "Linux local CPU fresh-model integration; GitHub Actions baseline/source checks",
         "integrated_hybrid_local_api_run": true,
         "api_development_probes": 5,
         "api_development_probe_checks_passed": 5,
@@ -68,10 +68,11 @@
         "Actual local n8n workflow execution",
         "Final case study/demo and weekly release"
       ],
-      "latest_validation_run": "https://github.com/AshJai23/AshJai23/actions/runs/41344533660",
+      "latest_validation_run": "https://github.com/AshJai23/AshJai23/actions/runs/41515699349",
       "known_failures": [
         "T28: explanation question misrouted to numeric metric",
-        "T29/T30/T31: source explanations unnecessarily declined"
+        "T29/T30/T31: source explanations unnecessarily declined",
+        "2 November: all 3 fresh development model drafts fail strict answer gate and are withheld; not a successful grounded generation result"
       ],
       "next_planned_milestone": 5,
       "open_milestones": [
