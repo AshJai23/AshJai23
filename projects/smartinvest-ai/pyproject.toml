@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "smartinvest-ai-scam-detection"
-version = "0.4.0"
+version = "0.4.1"
 description = "Educational, explainable screening for suspicious investment offers"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -23,3 +23,6 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.setuptools.package-data]
+smartinvest = ["web/*.html", "web/*.js"]

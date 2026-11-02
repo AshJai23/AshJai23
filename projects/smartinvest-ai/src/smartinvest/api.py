@@ -1,20 +1,20 @@
 """FastAPI adapter for the local rule-based detection engine."""
 from fastapi import FastAPI, HTTPException
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, HTMLResponse, Response
 from pydantic import BaseModel, Field, ConfigDict
 
 from .detection import ENGINE_VERSION, scan_offer
 from .batch import screen_csv, MAX_BYTES
 
-app = FastAPI(title="SmartInvest AI research prototype", version=ENGINE_VERSION)
+app = FastAPI(title="SmartInvest AI research prototype", version="0.4.1")
 
 
 @app.exception_handler(RequestValidationError)
 async def validation_error(_request, exc):
     # FastAPI's default errors can include submitted values. Never echo messages,
     # tokens or other user-provided data in validation errors.
-    allowed = {"body", "offer_text", "website_url", "claimed_firm", "csv_text"}
+    allowed = {"body", "offer_text", "website_url", "claimed_firm", "csv_text", "horizon"}
     errors = [{"loc": [x if isinstance(x, int) or x in allowed else "unknown_field" for x in error["loc"]],
                "type": error["type"], "msg": error["msg"]} for error in exc.errors()]
     return JSONResponse(status_code=422, content={"detail": errors})
@@ -70,3 +70,22 @@ def market_research(request: MarketRequest):
         return analyse_prices(request.csv_text.encode('utf-8'), request.horizon)
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+# Fixed packaged assets only: no user-selected filesystem paths or URL fetches.
+from importlib.resources import files as package_files
+
+WEB_HEADERS = {
+    "Cache-Control": "no-store",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "no-referrer",
+    "Content-Security-Policy": "default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'",
+}
+
+@app.get("/", response_class=HTMLResponse, include_in_schema=False)
+def research_workspace():
+    return HTMLResponse(package_files("smartinvest").joinpath("web/index.html").read_text(encoding="utf-8"), headers=WEB_HEADERS)
+
+@app.get("/assets/app.js", include_in_schema=False)
+def workspace_javascript():
+    return Response(package_files("smartinvest").joinpath("web/app.js").read_text(encoding="utf-8"),
+                    media_type="text/javascript", headers=WEB_HEADERS)

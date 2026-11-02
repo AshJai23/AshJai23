@@ -7,7 +7,8 @@ Build an explainable investment-scam *warning* system for individual UK investor
 The app scans user-supplied investment messages and optional URL/firm names. Avoid presenting any output as proof of fraud or legitimacy.
 
 ## Current state
-- Streamlit UI in `app.py`
+- Primary local web workspace served by FastAPI at `/`; assets in `src/smartinvest/web/`
+- Alternative Streamlit UI in `app.py`
 - Explainable, offline deterministic baseline in `src/smartinvest/detection.py`
 - FastAPI route in `src/smartinvest/api.py`
 - Pytest tests in `tests/`

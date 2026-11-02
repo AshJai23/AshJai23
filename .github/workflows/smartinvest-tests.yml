@@ -34,6 +34,10 @@ jobs:
           python -m pip check
       - name: Run research prototype tests
         run: python -m pytest -q
+      - name: Run temporary FastAPI HTTP smoke
+        run: python scripts/smoke_fastapi.py
+      - name: Check FastAPI web client syntax
+        run: node --check src/smartinvest/web/app.js
       - name: Check browser source assets and JavaScript
         run: |
           python browser-demo/verify_source.py
