@@ -1,0 +1,70 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "SmartInvest: create environment",
+      "type": "process",
+      "command": "python3.12",
+      "args": [
+        "-m",
+        "venv",
+        ".venv"
+      ],
+      "windows": {
+        "command": "py",
+        "args": [
+          "-3.12",
+          "-m",
+          "venv",
+          ".venv"
+        ]
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "SmartInvest: install locked dependencies",
+      "type": "process",
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "windows": {
+        "command": "${workspaceFolder}/.venv/Scripts/python.exe"
+      },
+      "args": [
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "requirements.lock.txt"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": "SmartInvest: create environment",
+      "problemMatcher": []
+    },
+    {
+      "label": "SmartInvest: install project",
+      "type": "process",
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "windows": {
+        "command": "${workspaceFolder}/.venv/Scripts/python.exe"
+      },
+      "args": [
+        "-m",
+        "pip",
+        "install",
+        "--no-build-isolation",
+        "--no-deps",
+        "-e",
+        "."
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": "SmartInvest: install locked dependencies",
+      "problemMatcher": []
+    }
+  ]
+}
