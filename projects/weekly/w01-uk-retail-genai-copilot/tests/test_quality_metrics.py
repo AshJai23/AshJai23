@@ -24,4 +24,25 @@ class Measures(unittest.TestCase):
         self.assertEqual(percentile_nearest_rank([5,2,1,3,4],.95),5)
         self.assertEqual(percentile_nearest_rank([5,2,1,3,4],.5),3)
         self.assertIsNone(percentile_nearest_rank([],.95))
+
+class CheckpointGuards(unittest.TestCase):
+    def test_completed_resume_never_claims_new_inference(self):
+        import tempfile
+        from run_quality_eval import check_resume
+        with tempfile.TemporaryDirectory() as directory:
+            Path(directory,'quality-cases.jsonl').write_text('{"id":"a"}\n{"id":"b"}\n')
+            with self.assertRaises(ValueError):check_resume(directory,resume=True,expected_cases=2)
+    def test_partial_run_requires_explicit_resume(self):
+        import tempfile
+        from run_quality_eval import check_resume
+        with tempfile.TemporaryDirectory() as directory:
+            Path(directory,'quality-cases.jsonl').write_text('{"id":"a"}\n')
+            with self.assertRaises(ValueError):check_resume(directory,resume=False,expected_cases=2)
+            self.assertEqual(check_resume(directory,resume=True,expected_cases=2),1)
+    def test_empty_output_is_a_new_run(self):
+        import tempfile
+        from run_quality_eval import check_resume
+        with tempfile.TemporaryDirectory() as directory:
+            self.assertEqual(check_resume(directory,resume=False,expected_cases=2),0)
+
 if __name__=='__main__':unittest.main(verbosity=2)

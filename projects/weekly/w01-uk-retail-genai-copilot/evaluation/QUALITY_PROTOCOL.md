@@ -15,3 +15,11 @@ Frozen SHA-256: `f5d1e06e69a6967a74ac97de0b9d2d59ee42452a75dec9fdfc35ca3da56527f
 Source corpus SHA-256: `6695c93c39af49347e120db619aec03f435b8caad37a84c69148cefe0117d07a`.
 
 Model revisions and licences remain the pinned public Apache-2.0 models in AI_MILESTONE.md. Their current public metadata is checked by model_store.py before download. Raw data/models/index stay out of normal Git. Only contracts, code, manifests and actual validation evidence are published.
+
+## Source-binding erratum — 3 November
+
+CI run 41702778582 correctly failed the corpus/original-file byte checks. The assistant's file materialisation added one trailing newline to canonical inputs. V1's questions, regex labels, source IDs, numerical references and actual first evaluation are preserved; do not silently edit its frozen hash.
+
+`quality_v2.json` corrects only source-byte bindings and records V1 ancestry. All 64 task objects are exactly equal. Every corpus ID/kind/text is identical, and rebuilding produced byte-identical float32 vectors. Ten contract-document metadata source hashes changed. Unchanged source modules were restored to exact GitHub bytes; their only difference was an extra EOF newline. Model, prompt, routing, gate and query parameters are unchanged. Canonical replay is the same test set, not a second independent holdout or extra completed project.
+
+V2 SHA-256: `20127936228d03866b88db9e31d4421503068d72e81d8094dd0f1f941f9444d9`. The erratum and initial failed CI remain in dated evidence. V2 is recorded before canonical replay; no performance result selected its questions or labels.

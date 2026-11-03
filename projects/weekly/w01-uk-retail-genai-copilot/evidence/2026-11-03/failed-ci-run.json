@@ -1,0 +1,13 @@
+{
+  "run_id": 41702778582,
+  "source_commit": "a1c11963146ca73cf401a06fcd07a2aa205b73af",
+  "conclusion": "failure",
+  "failed_stage": "frozen quality source-byte validation",
+  "checks": {
+    "source_corpus_matches_freeze": false,
+    "original_contract_unchanged": false
+  },
+  "source_stage_passed": true,
+  "unit_tests": 43,
+  "explanation": "The source-stage passed=true is not the whole CI result. EOF transport bytes differed from canonical GitHub inputs; corrected without changing any task/reference, prompt, routing or model."
+}

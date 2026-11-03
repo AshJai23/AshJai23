@@ -18,14 +18,16 @@ import time
 from service import build_runtime
 from quality_metrics import retrieval_metrics,percentile_nearest_rank
 
-OUT=Path('evidence/2026-11-03')
+OUT=Path('data/quality-evaluation')
 
 def digest(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def latency(values):return {'samples':len(values),'p50_seconds':statistics.median(values) if values else None,'p95_seconds_nearest_rank':percentile_nearest_rank(values,.95)}
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--resume',action='store_true');args=parser.parse_args()
-    contract_path=Path('evaluation/quality_v1.json');contract=json.loads(contract_path.read_text());contract_hash=digest(contract_path)
+    global OUT
+    parser=argparse.ArgumentParser();parser.add_argument('--resume',action='store_true');parser.add_argument('--contract',default='evaluation/quality_v2.json');parser.add_argument('--out',default='data/quality-evaluation');args=parser.parse_args()
+    OUT=Path(args.out)
+    contract_path=Path(args.contract);contract=json.loads(contract_path.read_text());contract_hash=digest(contract_path)
     assert contract_hash==contract_path.with_suffix('.sha256').read_text().split()[0]
     assert contract['corpus_sha256']==digest('data/corpus.json')
     assert contract['original_tasks_sha256']==digest('evaluation/tasks.json')
@@ -41,6 +43,10 @@ def main():
     rows=[json.loads(line) for line in journal.read_text().splitlines()] if journal.exists() else []
     seen={row['id'] for row in rows}
     assert len(rows)==len(seen),'Duplicate checkpoint IDs'
+    assert seen.issubset({task['id'] for task in contract['tasks']}),'Unknown checkpoint IDs'
+    if len(rows)==len(contract['tasks']):
+        print(json.dumps({'complete_checkpoint_replay':True,'new_inference_performed':False,'note':'Existing capture left unchanged; choose a new --out for fresh inference.'}))
+        return
     started=time.perf_counter();runtime=build_runtime(mode='hybrid',with_generation=True)
     startup=time.perf_counter()-started
     # Use the exact Retriever owned by a separate read-only adapter for all ablations.

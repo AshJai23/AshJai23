@@ -6,12 +6,13 @@ from pathlib import Path
 import duckdb
 
 def main():
-    path=Path('evaluation/quality_v1.json');contract=json.loads(path.read_text())
+    path=Path('evaluation/quality_v2.json');contract=json.loads(path.read_text())
     tasks=contract['tasks'];docs=json.loads(Path('data/corpus.json').read_text());identities={d['id'] for d in docs}
     checksum=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
     checks={'contract_sha256':checksum(path)==path.with_suffix('.sha256').read_text().split()[0],
             'source_corpus_matches_freeze':checksum('data/corpus.json')==contract['corpus_sha256'],
             'original_contract_unchanged':checksum('evaluation/tasks.json')==contract['original_tasks_sha256'],
+            'queries_and_labels_unchanged_by_erratum':tasks==json.loads(Path('evaluation/quality_v1.json').read_text())['tasks'],
             'unique_case_ids':len({t['id'] for t in tasks})==len(tasks)==64,
             'split_counts':sum(t['split']=='new_family_holdout' for t in tasks)==48 and sum(t['split']=='observed_regression' for t in tasks)==16,
             'references_exist':all(t.get('relevant_ids') and set(t['relevant_ids']).issubset(identities) for t in tasks if t['kind']=='retrieval')}
