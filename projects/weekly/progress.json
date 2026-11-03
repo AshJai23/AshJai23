@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-03T19:39:01.208Z",
+  "updated_at_utc": "2026-11-03T20:13:52.867Z",
   "status": "in_progress",
   "new_flagships_completed": 0,
   "new_flagship_target": 3,
@@ -92,7 +92,7 @@
         "Graphical UI review, final reproducibility/demo and case study",
         "Release acceptance before starting another flagship; 5 November target at risk, dates not extended"
       ],
-      "latest_validation_run": "https://github.com/AshJai23/AshJai23/actions/runs/41703716127",
+      "latest_validation_run": "https://github.com/AshJai23/AshJai23/actions/runs/41710210512",
       "known_failures": [
         "Historical first T28/T29/T30/T31 routing failures preserved in first 36/40 result; fixed using observed regression material, later 40/40 is not unseen improvement",
         "56 canonical fresh model generations; all 48 retrieval answers rejected (28 format failures, 20 unknown citations)",
