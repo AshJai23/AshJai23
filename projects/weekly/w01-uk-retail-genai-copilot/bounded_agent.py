@@ -30,8 +30,18 @@ def plan_question(question,countries):
     q=question.casefold()
     if re.search(r'\b(drop|delete|insert|update|execute|password|secret|email|send|ignore)\b',q):
         return {'route':'decline','reason':'Only bounded read-only analysis is supported; no external actions or instruction overrides.'}
-    if re.search(r'\b(today|now|current|live|tomorrow|predict|forecast|profit|costs|inventory|address|real name)\b',q):
+    if re.search(r'\b(today|now|current|live|tomorrow|predict|forecast|costs|inventory|address|real name)\b',q):
         return {'route':'decline','reason':'Historical invoice data cannot establish current trading, future outcomes, private identity, costs or profit.'}
+    # Explicit definition/policy intent precedes metric keyword matches. These
+    # rules address previously observed failures; old scores remain regressions.
+    source_words=r'\b(source|dataset|country|invoice|customer|workbook|sheets|sale_line|signed|timestamps?|timezone|duplicates?|quantity|price|fields)\b'
+    explanation=re.search(r'\b(explain|define|meaning|mean|treated|timezone)\b',q)
+    missing_policy=re.search(r'\b(missing|unknown)\b',q) and re.search(r'\b(disappear|remain|retained|included|excluded)\b',q)
+    profit_definition=re.match(r'\s*(?:is|does)\b',q) and re.search(r'\bsigned\b',q) and re.search(r'\bprofit\b',q)
+    if re.search(source_words,q) and (explanation or missing_policy or profit_definition):
+        return {'route':'retrieve','kind':'project_contract'}
+    if re.search(r'\bprofit\b',q):
+        return {'route':'decline','reason':'No supported profit calculation exists; only source definitions and invoice-line aggregates are available.'}
     patterns=[
         ('missing_customer_count',r'missing_customer_count|(?:missing|unknown|null|without).{0,35}(?:customer|ids?)'),
         ('positive_non_cancel_value',r'positive_non_cancel_value|positive[ _-]non[ _-]cancel'),
@@ -140,3 +150,4 @@ if __name__=='__main__':
         generator=Generator()
     agent=make_agent(warehouse.metric,warehouse.countries,LexicalEvidence(),generator)
     print(json.dumps(agent.invoke({'question':a.question},config={'recursion_limit':8}),indent=2))
+

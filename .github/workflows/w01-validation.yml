@@ -1,4 +1,4 @@
-name: W01 bounded workflow validation
+name: W01 workflow and evaluation validation
 on:
   push:
     branches: [main]
@@ -7,7 +7,7 @@ on:
       - 'projects/weekly/w01-uk-retail-genai-copilot/requirements*.txt'
       - 'projects/weekly/w01-uk-retail-genai-copilot/web/**'
       - 'projects/weekly/w01-uk-retail-genai-copilot/DATA_CONTRACT.md'
-      - 'projects/weekly/w01-uk-retail-genai-copilot/evaluation/tasks.json'
+      - 'projects/weekly/w01-uk-retail-genai-copilot/evaluation/**'
       - '.github/workflows/w01-validation.yml'
   workflow_dispatch:
 permissions:
@@ -35,6 +35,8 @@ jobs:
       - name: Test, rebuild real source and replay gates
         run: python ci_validate.py
 
+      - name: Validate frozen quality references without model inference
+        run: python validate_quality_contract.py
       - name: Explicit BM25 API HTTP smoke without model generation
         run: python smoke_http.py --baseline
       - name: Check web client JavaScript

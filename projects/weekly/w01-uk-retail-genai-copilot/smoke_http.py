@@ -11,7 +11,7 @@ from urllib.request import Request,urlopen
 
 def main():
     import argparse
-    parser=argparse.ArgumentParser();parser.add_argument("--baseline",action="store_true");args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument("--baseline",action="store_true");parser.add_argument("--evidence-dir",default="data/http-smoke");args=parser.parse_args()
     mode="bm25" if args.baseline else "hybrid"
     generation="off" if args.baseline else "on"
     with socket.socket() as sock:
@@ -43,11 +43,12 @@ def main():
         report={'passed':True,'mode':'actual ephemeral Uvicorn HTTP; full historical replay; '+('explicit BM25/no-generation baseline' if args.baseline else 'hybrid retrieval and fresh CPU generation'),
                 'source':health['source'],'response':answer,'wall_seconds':time.perf_counter()-started,
                 'public_deployment':False,'server_stopped_after_smoke':True}
-        Path('evidence/2026-11-02').mkdir(parents=True,exist_ok=True)
-        Path('evidence/2026-11-02/'+('http-smoke-baseline.json' if args.baseline else 'http-smoke.json')).write_text(json.dumps(report,indent=2)+'\n')
+        Path(args.evidence_dir).mkdir(parents=True,exist_ok=True)
+        Path(args.evidence_dir).joinpath('http-smoke-baseline.json' if args.baseline else 'http-smoke.json').write_text(json.dumps(report,indent=2)+'\n')
         print(json.dumps({'passed':True,'fresh_generation':not args.baseline,'status':answer['answer']['status'],'request_seconds':answer['request_seconds']}))
     finally:
         server.terminate()
         try:server.wait(timeout=10)
         except subprocess.TimeoutExpired:server.kill();server.wait(timeout=5)
 if __name__=='__main__':main()
+
