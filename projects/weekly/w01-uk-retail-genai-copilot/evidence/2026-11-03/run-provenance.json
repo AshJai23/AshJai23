@@ -1,0 +1,15 @@
+{
+  "evaluation_implementation_commit": "2e2f6d6e46aaaf7f90ba6285d1fbcc1cadd992f1",
+  "original_question_freeze_commit": "fbaa636dd28d6aaf4f07c29d86756d385b834d9f",
+  "routing_prompt_implementation_commit": "a1c11963146ca73cf401a06fcd07a2aa205b73af",
+  "canonical_binding_commit": "2e2f6d6e46aaaf7f90ba6285d1fbcc1cadd992f1",
+  "canonical_capture_utc": "2026-11-03T19:35:19.898524+00:00",
+  "unique_evaluation_cases": 64,
+  "replay_is_not_an_independent_holdout": true,
+  "no_model_prompt_or_routing_change_after_scores": true,
+  "post_run_change": "API/UI routing-disclaimer wording only; no model, routing, retrieval or gate change.",
+  "original_files_canonical": [
+    "evaluation/tasks.json",
+    "DATA_CONTRACT.md"
+  ]
+}

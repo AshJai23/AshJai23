@@ -4,7 +4,7 @@
 Updated 29 October 2026: prioritise **GenAI, LLM applications, RAG, agents and ML**
 for applied AI / junior ML engineering roles. SQL and data quality support these
 systems. The nine earlier prototypes remain [archived](../30-days/) and are not
-recounted. W01 is **in progress**: full historical warehouse, 5,665-document hybrid retrieval and an integrated local FastAPI/web copilot now run. Fresh generation ran inside the bounded graph; all three development drafts failed the strict answer gate and were withheld. 35 unit tests and actual HTTP replay checks passed. The original frozen routing result stays 36/40 and numerical result 24/24; no routing tuning or unseen improvement is claimed. See [current API/interface milestone](w01-uk-retail-genai-copilot/UI_API_MILESTONE.md). Weekly releases remain **0/3**; broad quality evaluation and n8n execution are unfinished.
+recounted. W01 is **in progress**: full historical warehouse, 5,665-document retrieval and a local FastAPI/web copilot. 46 tests passed. Frozen evaluation covered 48 new-family cases and 16 observed regressions; dense/hybrid/BM25 product Hit@3 was 25/40, 17/40 and 3/40 on selected silver references. All 48 retrieval generations were rejected and withheld. The original first routing result remains 36/40; observed fixes now pass regression, not an unseen improvement. [Quality report and source-binding erratum](w01-uk-retail-genai-copilot/QUALITY_EVALUATION.md). Weekly releases remain **0/3**; generator quality, n8n and final review are unfinished.
 
 | Build week | Project | Main evidence |
 |---|---|---|
@@ -16,7 +16,7 @@ recounted. W01 is **in progress**: full historical warehouse, 5,665-document hyb
 ## Dataset scale and freshness
 
 UCI lists **1,067,371 historical transaction rows** for Online Retail II
-(2009–2011). Actual full-source rebuild on 2 November processed 1,067,371 raw rows
+(2009–2011). Actual full-source rebuild on 3 November processed 1,067,371 raw rows
 and 1,033,036 deduplicated rows, with Decimal reconciliation and unchanged source
 checksum. Retrieval contains 5,665 distinct documents, not millions of passages. Numerical questions use SQL; a million
 transaction rows are not a million RAG documents.
@@ -45,7 +45,7 @@ analytics ideas are unscheduled backlog. These are portfolio demonstrations, not
 a guarantee of a job or claims of production users.
 
 [Plan](plan.json) · [Progress](progress.json) · [Build guide](BUILD_GUIDE.md) ·
-[Feedback](FEEDBACK.md) · [Latest daily progress](logs/2026-11-02.md) · [Dated hiring evidence](UK_MARKET_EVIDENCE.md)
+[Feedback](FEEDBACK.md) · [Latest daily progress](logs/2026-11-03.md) · [Dated hiring evidence](UK_MARKET_EVIDENCE.md)
 
 ## Added stack — 29 October 2026
 

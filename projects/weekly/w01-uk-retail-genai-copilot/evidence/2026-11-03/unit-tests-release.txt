@@ -1,0 +1,55 @@
+/workspace/scratch/5671858b8424/weekly-eval/.venv/lib/python3.12/site-packages/langgraph/cache/base/__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+test_action_injection_never_calls_tool (test_agent.AgentTests.test_action_injection_never_calls_tool) ... ok
+test_ambiguous_or_unknown_scope_declines (test_agent.AgentTests.test_ambiguous_or_unknown_scope_declines) ... ok
+test_empty_and_invalid_evidence_fail (test_agent.AgentTests.test_empty_and_invalid_evidence_fail) ... ok
+test_exact_cited_extract_passes (test_agent.AgentTests.test_exact_cited_extract_passes) ... ok
+test_input_and_date_filter_budgets (test_agent.AgentTests.test_input_and_date_filter_budgets) ... ok
+test_missing_forged_and_unsupported_citations_fail (test_agent.AgentTests.test_missing_forged_and_unsupported_citations_fail) ... ok
+test_numeric_country_alias (test_agent.AgentTests.test_numeric_country_alias) ... ok
+test_numeric_fact_not_rewritten_by_generated_draft (test_agent.AgentTests.test_numeric_fact_not_rewritten_by_generated_draft) ... ok
+test_previous_real_model_failures_replay_as_rejected (test_agent.AgentTests.test_previous_real_model_failures_replay_as_rejected) ... ok
+test_retrieval_only_stays_evidence_only (test_agent.AgentTests.test_retrieval_only_stays_evidence_only) ... ok
+test_supported_extract_is_labelled_not_general_generation (test_agent.AgentTests.test_supported_extract_is_labelled_not_general_generation) ... ok
+test_tool_error_has_no_fabricated_fallback (test_agent.AgentTests.test_tool_error_has_no_fabricated_fallback) ... ok
+test_actual_metric_requests_stay_numerical (test_agent.KnownIntentRegressions.test_actual_metric_requests_stay_numerical) ... ok
+test_definition_word_does_not_override_security_or_future_scope (test_agent.KnownIntentRegressions.test_definition_word_does_not_override_security_or_future_scope) ... ok
+test_source_definitions_not_numerical_requests (test_agent.KnownIntentRegressions.test_source_definitions_not_numerical_requests) ... ok
+test_untrusted_evidence_cannot_select_an_extra_tool (test_agent.KnownIntentRegressions.test_untrusted_evidence_cannot_select_an_extra_tool) ... ok
+test_body_byte_limit (test_api.API.test_body_byte_limit) ... ok
+test_busy_rejected_and_metrics_do_not_store_questions (test_api.API.test_busy_rejected_and_metrics_do_not_store_questions) ... ok
+test_generator_failure_is_reported (test_api.API.test_generator_failure_is_reported) ... ok
+test_numeric_scope_and_fact_survive_invalid_draft (test_api.API.test_numeric_scope_and_fact_survive_invalid_draft) ... ok
+test_page_assets_and_source_label (test_api.API.test_page_assets_and_source_label) ... ok
+test_rejected_retrieval_draft_is_withheld (test_api.API.test_rejected_retrieval_draft_is_withheld) ... ok
+test_startup_failure_is_visible_no_fabrication (test_api.API.test_startup_failure_is_visible_no_fabrication) ... ok
+test_unsupported_actions_abstain_without_tool (test_api.API.test_unsupported_actions_abstain_without_tool) ... ok
+test_validation_omits_private_input (test_api.API.test_validation_omits_private_input) ... ok
+test_both_sheets_are_streamed (test_ingestion.IngestionTests.test_both_sheets_are_streamed) ... {"sheet": "Sheet", "rows": 1}
+{"sheet": "second", "rows": 1}
+ok
+test_duplicate_returns_missingness_and_reload (test_ingestion.IngestionTests.test_duplicate_returns_missingness_and_reload) ... ok
+test_excess_price_precision_rejected (test_ingestion.IngestionTests.test_excess_price_precision_rejected) ... ok
+test_fractional_quantity_rejected (test_ingestion.IngestionTests.test_fractional_quantity_rejected) ... ok
+test_invalid_date_rejected (test_ingestion.IngestionTests.test_invalid_date_rejected) ... ok
+test_money_is_decimal_and_quantity_integral (test_ingestion.IngestionTests.test_money_is_decimal_and_quantity_integral) ... ok
+test_nan_price_rejected (test_ingestion.IngestionTests.test_nan_price_rejected) ... ok
+test_schema_drift_fails_explicitly (test_ingestion.IngestionTests.test_schema_drift_fails_explicitly) ... ok
+test_completed_resume_never_claims_new_inference (test_quality_metrics.CheckpointGuards.test_completed_resume_never_claims_new_inference) ... ok
+test_empty_output_is_a_new_run (test_quality_metrics.CheckpointGuards.test_empty_output_is_a_new_run) ... ok
+test_partial_run_requires_explicit_resume (test_quality_metrics.CheckpointGuards.test_partial_run_requires_explicit_resume) ... ok
+test_invalid_reference_or_duplicates_rejected (test_quality_metrics.Measures.test_invalid_reference_or_duplicates_rejected) ... ok
+test_nearest_rank_latency (test_quality_metrics.Measures.test_nearest_rank_latency) ... ok
+test_no_result_or_no_relevant_result (test_quality_metrics.Measures.test_no_result_or_no_relevant_result) ... ok
+test_recall_precision_and_mrr (test_quality_metrics.Measures.test_recall_precision_and_mrr) ... ok
+test_bm25_relevance_and_no_overlap (test_retrieval.RetrievalTests.test_bm25_relevance_and_no_overlap) ... ok
+test_corpus_index_mismatch_rejected (test_retrieval.RetrievalTests.test_corpus_index_mismatch_rejected) ... ok
+test_empty_lexical_corpus (test_retrieval.RetrievalTests.test_empty_lexical_corpus) ... ok
+test_explicit_charge_and_ambiguous_codes (test_retrieval.RetrievalTests.test_explicit_charge_and_ambiguous_codes) ... ok
+test_invalid_requests_rejected_before_model (test_retrieval.RetrievalTests.test_invalid_requests_rejected_before_model) ... ok
+test_product_shaped_is_only_candidate (test_retrieval.RetrievalTests.test_product_shaped_is_only_candidate) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 0.317s
+
+OK

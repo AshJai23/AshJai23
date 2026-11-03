@@ -63,7 +63,7 @@ class Runtime:
             result['source']=self.source
             result['retrieval_mode']=self.retrieval_mode
             result['request_seconds']=round(time.perf_counter()-start,6)
-            result['evaluation_limit']='Known routing failures remain. Exact cited extraction is not semantic factuality or relevance validation.'
+            result['evaluation_limit']='Routing is heuristic; original first score was 36/40 and later fixes are regression-tested. Exact cited extraction is not semantic factuality or relevance validation.'
             if audit and generated is not None:
                 # Deliberate development CLI evidence only, never enabled by API input.
                 result['_development_generation']=generated

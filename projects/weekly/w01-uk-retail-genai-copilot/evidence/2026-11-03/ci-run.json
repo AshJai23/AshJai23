@@ -1,0 +1,14 @@
+{
+  "run_id": 41703716127,
+  "url": "https://github.com/AshJai23/AshJai23/actions/runs/41703716127",
+  "source_commit": "2e2f6d6e46aaaf7f90ba6285d1fbcc1cadd992f1",
+  "conclusion": "success",
+  "unit_tests": 46,
+  "source_replay_controls": 8,
+  "quality_contract_controls": 8,
+  "original_routing_regression": "40/40 after observed fixes; original first unseen score remains 36/40",
+  "original_numerical_cases": "24/24",
+  "model_inference_in_ci": false,
+  "http_smoke_mode": "BM25/no generation",
+  "note": "Actual 64-case model/ranking evidence is local canonical capture, not this CI."
+}

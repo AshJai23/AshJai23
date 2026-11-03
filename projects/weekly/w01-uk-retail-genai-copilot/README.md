@@ -1,48 +1,72 @@
 # UK Retail GenAI Analytics Copilot — W01
 
-**In progress; not a released weekly flagship or public website.** Target: 5 November 2026. This is a local retail research prototype over actual **2009–2011 historical** UCI transactions, not current UK shop activity.
+**In progress; not a weekly release or public service.** The 5 November target is at risk because the small generator still produces no accepted retrieval answers. Nine archived prototypes remain separate from this programme's **0/3 weekly releases**.
 
-On **2 November** the bounded graph, hybrid retrieval, local generator, FastAPI and web interface ran together. **35 unit tests passed**. Fresh model output still failed **all 3 development answer checks** and was withheld. The earlier frozen routing result remains **36/40**, with **24/24** numerical oracle matches; known routing failures and full quality evaluation remain open.
+On **3 November**, a frozen 64-case evaluation compared retrieval modes and actual local generation. For 40 AI-authored product paraphrases with noisy source-derived silver references, top-three reference hits were **dense 25/40, hybrid 17/40, BM25 3/40**. Eight new numerical answers matched independent SQL; eight observed unsupported requests abstained. **0/48 retrieval generations passed the strict answer gate** and were withheld. Do not interpret this as reliable generated-answer capability.
 
-Start with **[the current API/interface milestone and exact commands](UI_API_MILESTONE.md)**. After starting Uvicorn on your computer, open http://127.0.0.1:8000/; /docs offers API documentation. These local addresses do not represent a deployed site. No public Python host is provisioned.
+**[Read the quality report and reproducibility correction](QUALITY_EVALUATION.md)** · [Frozen contract/protocol](evaluation/QUALITY_PROTOCOL.md) · [Working case study](CASE_STUDY_DRAFT.md).
 
-## What works
+The original first routing result remains **36/40**. Four observed definition-versus-calculation failures were fixed using regression material; repeats now pass 40/40, not an unseen improvement. The new set has 48 product/country-family cases and 16 previously inspected regressions, reported separately. It is AI-authored, not independently human-reviewed.
 
-- Full source acquisition, typed streaming ingestion, auditable deduplication, DuckDB/Parquet and independent numerical controls.
-- Finite LangGraph with one allowlisted SQL aggregate or one bounded evidence lookup. No arbitrary SQL/actions or autonomous LLM tools.
-- BM25/dense/hybrid retrieval over distinct descriptions and source-contract paragraphs.
-- Actual pinned public Hugging Face CPU generation, with strict cited-extract validation and unsupported-draft withholding.
-- Local web workspace showing interpreted scope, deterministic facts, source dates, evidence, generation status, tool trace and readiness.
-- Strict JSON/input/body limits, per-process serial inference, coarse errors and prompt-free in-memory request metrics.
+## Start locally
 
-## Actual scale and provenance
+Use Linux/WSL2 and Python 3.12 from this project directory. Existing resource reporting is Unix-specific; native Windows was not exercised.
+
+```bash
+python -m venv .venv
+. .venv/bin/activate
+python -m pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install -r requirements-ai.txt -r requirements-api.txt
+python -m unittest discover -s tests -v
+python retail.py fetch
+python retail.py build --evidence-dir data/local-evidence
+python -c "import catalogue; catalogue.run(evidence='data/local-evidence')"
+python model_store.py embedding
+python model_store.py llm
+OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 python retrieval.py build
+python -m uvicorn api:app --host 127.0.0.1 --port 8000 --no-access-log
+```
+
+Omit `fetch` if a capture exists; it refuses silent overwrite. Only after starting the process on your computer, open http://127.0.0.1:8000/ or http://127.0.0.1:8000/docs. These are local addresses, not deployed links. Keep the terminal running; Ctrl+C stops the server. No public or always-on host was provisioned. [API/interface runbook](UI_API_MILESTONE.md) records the previous integration milestone; its dated results remain historical.
+
+To reproduce quality testing without changing published evidence, stop the server and run:
+
+```bash
+python validate_quality_contract.py
+python run_quality_eval.py --check-only
+OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 python run_quality_eval.py --out data/my-quality-run
+# For a genuinely interrupted run only, unchanged inputs/environment:
+python run_quality_eval.py --out data/my-quality-run --resume
+```
+
+Completed captures cannot be relabelled as fresh inference. The wrapper checks actual model asset hashes and environment/index identity. A source-binding mismatch must be reviewed, not bypassed by silently rewriting frozen references. Models, raw workbook, full corpus/index and local outputs stay ignored by Git.
+
+## Actual data and scale
 
 | Measure | Observed |
 | --- | --- |
 | Raw / deduplicated invoice rows | 1,067,371 / 1,033,036 |
-| Duplicate rows removed | 34,335; policy assumption, not proof every repetition is erroneous |
+| Exact duplicate rows removed | 34,335; an analysis policy, not proof of erroneous lines |
 | Missing customer IDs retained | 235,151 deduplicated lines |
 | Observation period | 1 December 2009–9 December 2011 |
-| Latest acquisition | 2 November 2026, HTTP 200; checksum unchanged |
-| Distinct indexed documents | 5,655 descriptions + 10 contract paragraphs |
-| Corpus / vector index bytes | 2,213,419 / 8,701,568 |
-| Fresh API development generations | 3; zero accepted answers |
-| Warm generation request latency | n=3, p50 4.996 s, p95 6.289 s; small development smoke only |
+| Latest source capture | 3 November 2026, HTTP 200; archive checksum unchanged |
+| Indexed documents | 5,655 descriptions + 10 source-contract paragraphs |
+| Corpus / vector bytes | 2,213,419 / 8,701,568 |
+| Canonical workflow generation latency | n=56, p50 5.999 s, p95 7.009 s; selected development-host queries |
+| Peak evaluator process RSS | 1,217.18 MiB; includes a second Retriever for ablations |
 
-Transactions are SQL rows, not vector documents. No costs, profit, inventory or current demand exists in this source. Charges/adjustments can be included in line-value metrics; read [DATA_CONTRACT.md](DATA_CONTRACT.md). Deduplication may remove genuinely repeated identical lines. Missing IDs restrict customer-level inference but are retained in aggregate totals.
+These are actual **historical UK-retailer transactions**, not current UK sales. Customer countries include locations outside the UK. Transaction rows are SQL data, not a million RAG documents. No costs, audited profit, current inventory, current demand or ONS context is available. Read [DATA_CONTRACT.md](DATA_CONTRACT.md) before interpreting invoice-line values. Missing IDs restrict customer inference; charge/adjustment codes and legitimate repeated lines complicate interpretation.
 
-Source: Chen, D. (2012), **Online Retail II**, UCI, DOI [10.24432/C5CG6D](https://doi.org/10.24432/C5CG6D), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [Official source](https://archive.ics.uci.edu/dataset/502/online+retail+ii). Full raw data, pseudonymous customer IDs, corpus/index and model weights remain local ignored outputs. [Dated evidence](evidence/2026-11-02/) records capture hashes, parameters, outputs, resources and limitations.
+Source: Chen, D. (2012), **Online Retail II**, UCI, DOI [10.24432/C5CG6D](https://doi.org/10.24432/C5CG6D), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [Official dataset](https://archive.ics.uci.edu/dataset/502/online+retail+ii). Evaluation description excerpts are attributed to this source. Raw workbooks/customer IDs and model weights are not redistributed in ordinary Git.
 
-## Evidence and honest limits
+## Implemented safeguards and honest boundaries
 
-- [Current API/interface milestone](UI_API_MILESTONE.md): fresh local generation, actual HTTP replay, independent SQL, setup/runbook and failures.
-- [1 November workflow milestone](AGENT_MILESTONE.md): original frozen routing/SQL results and 3 bad-draft replays. No routing tuning has been made in this API increment.
-- [31 October AI milestone](AI_MILESTONE.md): initial index and actual CPU model smoke; pretrained inference is not training or fine-tuning.
-- [Evaluation contract](EVALUATION.md): AI-authored, not independent human validation. Forty original tasks remain frozen. New integration probes are development material, not an unseen quality score.
-- [Source validation](evidence/real-source-validation.json): prior full-source controls; new dated profile and API reconciliation are separate captures.
+Fixed read-only SQL, one-tool-call LangGraph, strict input/body limits, serial CPU inference, source/provenance display, no arbitrary URL fetching, no model-selected external actions and prompt-free in-memory metrics are implemented. Deterministic numbers cannot be rewritten by model prose. The local UI renders evidence as text; unsupported drafts are withheld.
 
-The small generator invents unsupported material and omits citations. The gate keeps those drafts out of the UI, but exact source extraction is not broad semantic grounding or source-relevance validation. Evidence-only output is labelled as retrieval, not a successful generated answer. Four known intent errors remain, so inspect interpreted scope even when arithmetic is correct.
+The answer gate checks literal source spans/citation IDs, not semantic truth or sufficiency. Dense retrieval beats the more complex hybrid on this selected silver set, so complexity is not treated as proof of quality. Generation still fails the citation/extract contract. No default or model was retuned after viewing the frozen scores.
 
-**Unfinished:** full held-out relevance/answer evaluation, routing remediation with fresh evaluation, graphical UI review, n8n runtime smoke, final reproducibility, monitoring and case study. ONS monthly context has not been ingested. No training, public deployment, production users, commercial impact, Docker/Power BI execution or independent human review is claimed.
+A transport-added EOF newline caused initial CI source hashes to differ. The first freeze/capture and failed CI are preserved. Corrected V2 bindings retain every task, reference and source text; canonical replay reproduces all routes, rankings, drafts and quality flags. The two captures are **one 64-case set**, not extra holdouts or projects.
 
-Weekly releases complete: **0/3**. The nine earlier prototypes are preserved separately.
+**46 tests passed** locally and in corrected CI, with source/reference consistency and real HTTP smoke evidence. This is not production safety or a successful GenAI answer score. There is no training/fine-tuning, independent human review, n8n execution, graphical UI QA, Docker/Power BI execution, commercial impact or production usage claim. Current model inference is pretrained CPU generation.
+
+Remaining: generator quality, independently reviewed semantic references, actual local n8n workflow, graphical review and final release/case-study demonstration. See [dated actual evidence](evidence/2026-11-03/), [quality report](QUALITY_EVALUATION.md), [original workflow results](AGENT_MILESTONE.md) and [initial model milestone](AI_MILESTONE.md).

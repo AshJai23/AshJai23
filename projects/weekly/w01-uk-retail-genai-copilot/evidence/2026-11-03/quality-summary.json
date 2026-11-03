@@ -1,0 +1,376 @@
+{
+  "captured_at_utc": "2026-11-03T19:26:47.622010+00:00",
+  "contract": {
+    "evaluation_sha256": "f5d1e06e69a6967a74ac97de0b9d2d59ee42452a75dec9fdfc35ca3da56527f0",
+    "code_sha256": {
+      "bounded_agent.py": "5b45a2f06416c047188aa6d111c84f7e51b02dad0c5e4e25487fcf96ae47b852",
+      "local_generate.py": "3378786bcc176c0c3d66d9f0e45ddda58972fff16447ccb908c2cdb4d3830af5",
+      "retrieval.py": "49f149ba82b89ada7e694c477613f6b3e32f86bd2f4c0f6dbe38c7c6821ecaaa",
+      "answer_gate.py": "75c9bd06f50c34a038b42b151145f363d2454cf4784133d9201109ef58a85a0a",
+      "service.py": "b662da49118a9146bfcc559e71b8bc8cabd23267aaaf849cf89d66a365ea886d",
+      "quality_metrics.py": "47f7022e7fd578e80c910cee58c8f03e7404d75361bb4220a37b6fe4cc95fa09",
+      "evaluate_quality.py": "eadc9dbd4ce7a96a418d02b8a48f5208ab36d0ddf08f6488543f484ef37cd01f"
+    },
+    "generator_max_new_tokens": 80,
+    "retrieval_modes": [
+      "bm25",
+      "dense",
+      "hybrid"
+    ],
+    "top_k": 3,
+    "training_performed": false
+  },
+  "authorship": "AI-authored; no independent human review",
+  "holdout_note": "40 product topics and 8 customer-country/metric groups not used in previous development probes; source documents are in the searchable index, as required for retrieval. 16 previously inspected source/safety cases are regressions and reported separately. Same AI author made questions/references and implementation; this is not an independent benchmark.",
+  "completion": {
+    "expected_cases": 64,
+    "recorded_cases": 64,
+    "all_cases_recorded": true
+  },
+  "routing": {
+    "new_family_holdout": {
+      "cases": 48,
+      "correct": 48,
+      "accuracy": 1.0
+    },
+    "observed_regression": {
+      "cases": 16,
+      "correct": 16,
+      "accuracy": 1.0
+    }
+  },
+  "retrieval_all": {
+    "bm25": {
+      "hit_at_3": 0.22916666666666666,
+      "recall_at_3": 0.17801724137931035,
+      "precision_at_3": 0.08333333333333333,
+      "mrr_at_3": 0.1736111111111111,
+      "query_latency": {
+        "samples": 48,
+        "p50_seconds": 0.021965705999946294,
+        "p95_seconds_nearest_rank": 0.02723475899983896
+      },
+      "cases": 48
+    },
+    "dense": {
+      "hit_at_3": 0.6875,
+      "recall_at_3": 0.2105089902894277,
+      "precision_at_3": 0.4513888888888889,
+      "mrr_at_3": 0.6076388888888888,
+      "query_latency": {
+        "samples": 48,
+        "p50_seconds": 0.03481528949998847,
+        "p95_seconds_nearest_rank": 0.044105236999939734
+      },
+      "cases": 48
+    },
+    "hybrid": {
+      "hit_at_3": 0.5208333333333334,
+      "recall_at_3": 0.19198358468610324,
+      "precision_at_3": 0.25,
+      "mrr_at_3": 0.4305555555555556,
+      "query_latency": {
+        "samples": 48,
+        "p50_seconds": 0.03444118950005759,
+        "p95_seconds_nearest_rank": 0.05105392099994788
+      },
+      "cases": 48
+    }
+  },
+  "retrieval_new_product_families": {
+    "bm25": {
+      "hit_at_3": 0.075,
+      "recall_at_3": 0.026120689655172415,
+      "precision_at_3": 0.03333333333333333,
+      "mrr_at_3": 0.05,
+      "query_latency": {
+        "samples": 40,
+        "p50_seconds": 0.022898657499922592,
+        "p95_seconds_nearest_rank": 0.02723475899983896
+      },
+      "cases": 40
+    },
+    "dense": {
+      "hit_at_3": 0.625,
+      "recall_at_3": 0.06511078834731326,
+      "precision_at_3": 0.475,
+      "mrr_at_3": 0.5416666666666666,
+      "query_latency": {
+        "samples": 40,
+        "p50_seconds": 0.03553828999997677,
+        "p95_seconds_nearest_rank": 0.042513031999988016
+      },
+      "cases": 40
+    },
+    "hybrid": {
+      "hit_at_3": 0.425,
+      "recall_at_3": 0.042880301623323874,
+      "precision_at_3": 0.23333333333333334,
+      "mrr_at_3": 0.3416666666666667,
+      "query_latency": {
+        "samples": 40,
+        "p50_seconds": 0.03498999900000399,
+        "p95_seconds_nearest_rank": 0.04378429200005485
+      },
+      "cases": 40
+    }
+  },
+  "retrieval_observed_contract_cases": {
+    "bm25": {
+      "hit_at_3": 1.0,
+      "recall_at_3": 0.9375,
+      "precision_at_3": 0.3333333333333333,
+      "mrr_at_3": 0.7916666666666666,
+      "query_latency": {
+        "samples": 8,
+        "p50_seconds": 0.015245714499883434,
+        "p95_seconds_nearest_rank": 0.01990631300009227
+      },
+      "cases": 8
+    },
+    "dense": {
+      "hit_at_3": 1.0,
+      "recall_at_3": 0.9375,
+      "precision_at_3": 0.3333333333333333,
+      "mrr_at_3": 0.9375,
+      "query_latency": {
+        "samples": 8,
+        "p50_seconds": 0.029282347500043215,
+        "p95_seconds_nearest_rank": 0.049238661999879696
+      },
+      "cases": 8
+    },
+    "hybrid": {
+      "hit_at_3": 1.0,
+      "recall_at_3": 0.9375,
+      "precision_at_3": 0.3333333333333333,
+      "mrr_at_3": 0.875,
+      "query_latency": {
+        "samples": 8,
+        "p50_seconds": 0.02923272900000029,
+        "p95_seconds_nearest_rank": 0.05812806200015075
+      },
+      "cases": 8
+    }
+  },
+  "numerical": {
+    "cases": 8,
+    "correct": 8,
+    "reference": "frozen independent direct SQL over deduplicated base table"
+  },
+  "unsupported": {
+    "cases": 8,
+    "correct_abstentions": 8
+  },
+  "generation": {
+    "samples": 56,
+    "retrieval_cases": 48,
+    "retrieval_extract_gate_accepted": 0,
+    "retrieval_silver_relevant_cited_extracts": 0,
+    "citation_support_definition": "Verbatim extract in supplied evidence, checked by unchanged strict gate; silver relevance requires cited IDs in pre-frozen reference set. Not semantic sufficiency, independent factuality or source truth.",
+    "raw_drafts_exposed_to_api": false,
+    "pretrained_inference_not_training": true
+  },
+  "latency": {
+    "workflow_all": {
+      "samples": 64,
+      "p50_seconds": 5.717457718000105,
+      "p95_seconds_nearest_rank": 7.1192273650001425
+    },
+    "workflow_with_generation": {
+      "samples": 56,
+      "p50_seconds": 5.807110646000069,
+      "p95_seconds_nearest_rank": 7.210853776000022
+    },
+    "runtime_startup_seconds": 3.015963744999908,
+    "note": "Sequential warm development-host calls with two CPU threads; retrieval ablations add work outside measured workflow requests. Extra Retriever is loaded for ablations, so peak memory exceeds serving-only baseline. No production SLA."
+  },
+  "source": {
+    "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+    "download_url": "https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip",
+    "mode": "historical actual transactions; not live",
+    "retrieved_at_utc": "2026-11-03T19:17:17.612346+00:00",
+    "http_status": 200,
+    "bytes": 45622418,
+    "sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb",
+    "download_seconds": 6.755,
+    "last_modified": null,
+    "licence": "CC BY 4.0",
+    "attribution": "Chen, D. (2012). Online Retail II. UCI. https://doi.org/10.24432/C5CG6D"
+  },
+  "raw_rows": 1067371,
+  "deduplicated_rows": 1033036,
+  "index": {
+    "corpus_sha256": "6695c93c39af49347e120db619aec03f435b8caad37a84c69148cefe0117d07a",
+    "documents": 5665,
+    "description_documents": 5655,
+    "contract_documents": 10,
+    "vector_shape": [
+      5665,
+      384
+    ],
+    "vector_bytes": 8701568,
+    "index_type": "exact cosine over normalised float32 vectors, plus in-memory BM25; no ANN service",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "max_tokens_per_document": 128,
+    "batch_size": 64,
+    "threads": 2,
+    "index_build_seconds": 15.22,
+    "process_peak_rss_mib": 630.87,
+    "training_performed": false
+  },
+  "models": {
+    "llm": {
+      "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "licence": "apache-2.0",
+      "gated": false,
+      "downloaded_at_utc": "2026-11-03T19:17:26.911329+00:00",
+      "download_seconds": 71.98,
+      "files": [
+        {
+          "name": "README.md",
+          "bytes": 6772,
+          "sha256": "4f97533ad95b1b2fea15fbc075c01b94578ebdd7c8138888fa43fa3abd530dc4",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/README.md",
+          "status": "downloaded"
+        },
+        {
+          "name": "config.json",
+          "bytes": 861,
+          "sha256": "8eb740e8bbe4cff95ea7b4588d17a2432deb16e8075bc5828ff7ba9be94d982a",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/config.json",
+          "status": "downloaded"
+        },
+        {
+          "name": "generation_config.json",
+          "bytes": 132,
+          "sha256": "87b916edaaab66b3899b9d0dd0752727dff6666686da0504d89ae0a6e055a013",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/generation_config.json",
+          "status": "downloaded"
+        },
+        {
+          "name": "model.safetensors",
+          "bytes": 269060552,
+          "sha256": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/model.safetensors",
+          "status": "downloaded"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "bytes": 655,
+          "sha256": "2b7379f3ae813529281a5c602bc5a11c1d4e0a99107aaa597fe936c1e813ca52",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/special_tokens_map.json",
+          "status": "downloaded"
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 2104556,
+          "sha256": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/tokenizer.json",
+          "status": "downloaded"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 3764,
+          "sha256": "4ec77d44f62efeb38d7e044a1db318f6a939438425312dfa333b8382dbad98df",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/tokenizer_config.json",
+          "status": "downloaded"
+        }
+      ],
+      "total_bytes": 271177292,
+      "training_performed": false,
+      "trust_remote_code": false
+    },
+    "embedding": {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "licence": "apache-2.0",
+      "gated": false,
+      "downloaded_at_utc": "2026-11-03T19:17:20.387247+00:00",
+      "download_seconds": 64.812,
+      "files": [
+        {
+          "name": "README.md",
+          "bytes": 10502,
+          "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+          "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md",
+          "status": "downloaded"
+        },
+        {
+          "name": "config.json",
+          "bytes": 612,
+          "sha256": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41",
+          "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json",
+          "status": "downloaded"
+        },
+        {
+          "name": "model.safetensors",
+          "bytes": 90868376,
+          "sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+          "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/model.safetensors",
+          "status": "downloaded"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "bytes": 112,
+          "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+          "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/special_tokens_map.json",
+          "status": "downloaded"
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 466247,
+          "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+          "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer.json",
+          "status": "downloaded"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 350,
+          "sha256": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b",
+          "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json",
+          "status": "downloaded"
+        },
+        {
+          "name": "vocab.txt",
+          "bytes": 231508,
+          "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+          "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/vocab.txt",
+          "status": "downloaded"
+        }
+      ],
+      "total_bytes": 91577707,
+      "training_performed": false,
+      "trust_remote_code": false
+    }
+  },
+  "hardware": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "visible_cpu_count": 9,
+    "cpu_model": "not exposed by workspace",
+    "torch_threads": 2
+  },
+  "process_peak_rss_mib": 1215.78515625,
+  "packages": {
+    "torch": "2.5.1+cpu",
+    "transformers": "4.57.1",
+    "duckdb": "1.4.1",
+    "langgraph": "1.0.1",
+    "numpy": "1.26.4"
+  },
+  "run_wall_seconds": 338.735072941,
+  "original_first_route_score": "36/40 on 1 November; any repeats after fixes are regression, not unseen improvement",
+  "independent_human_review": false,
+  "n8n_execution_run": false,
+  "weekly_release_complete": false,
+  "limitations": [
+    "Product regex labels are silver and may include bad source descriptions or omit semantically relevant alternatives. Literal source support is not semantic answer correctness. No labels fitted into model weights.",
+    "Product query/reference terms were authored by the same AI; ranking results were not inspected before freeze and were not used for tuning.",
+    "Recall denominator includes every regex-matching description; low Recall@3 is expected for large silver sets, so Hit@3/MRR/Precision@3 also matter.",
+    "Dense/hybrid results are not assumed to beat BM25. No model weights fitted or fine-tuned.",
+    "Original observed source/safety cases are scored separately from new product/country groups."
+  ]
+}

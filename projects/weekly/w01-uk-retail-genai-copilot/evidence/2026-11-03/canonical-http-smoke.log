@@ -1,0 +1,4 @@
+/workspace/scratch/5671858b8424/weekly-eval/.venv/lib/python3.12/site-packages/langgraph/cache/base/__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"passed": true, "fresh_generation": true, "status": "evidence_only", "request_seconds": 7.405265}

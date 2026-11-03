@@ -1,0 +1,475 @@
+{
+  "policy_version": 1,
+  "status": "heuristic audit only; no new merchandise revenue metric",
+  "classes": {
+    "product_code_candidate": {
+      "rows": 1027056,
+      "codes": 5242,
+      "signed_value": "18926266.1800",
+      "positive_non_cancel_value": "19642692.1500"
+    },
+    "charge_adjustment_review": {
+      "rows": 5818,
+      "codes": 25,
+      "signed_value": "-71901.9520",
+      "positive_non_cancel_value": "832398.8280"
+    },
+    "ambiguous_code_review": {
+      "rows": 162,
+      "codes": 37,
+      "signed_value": "1169.4700",
+      "positive_non_cancel_value": "1169.4700"
+    }
+  },
+  "review_codes": [
+    {
+      "code": "ADJUST",
+      "class": "charge_adjustment_review",
+      "rows": 67,
+      "signed_value": "6835.2400",
+      "description_example": "Adjustment by Peter on 24/05/2010 1"
+    },
+    {
+      "code": "ADJUST2",
+      "class": "charge_adjustment_review",
+      "rows": 3,
+      "signed_value": "731.0500",
+      "description_example": "Adjustment by Peter on Jun 25 2010"
+    },
+    {
+      "code": "AMAZONFEE",
+      "class": "charge_adjustment_review",
+      "rows": 36,
+      "signed_value": "-221520.5000",
+      "description_example": "AMAZON FEE"
+    },
+    {
+      "code": "B",
+      "class": "charge_adjustment_review",
+      "rows": 6,
+      "signed_value": "-147614.0800",
+      "description_example": "Adjust bad debt"
+    },
+    {
+      "code": "BANK CHARGES",
+      "class": "charge_adjustment_review",
+      "rows": 100,
+      "signed_value": "-35482.2490",
+      "description_example": "Bank Charges"
+    },
+    {
+      "code": "C2",
+      "class": "charge_adjustment_review",
+      "rows": 277,
+      "signed_value": "13136.0000",
+      "description_example": "CARRIAGE"
+    },
+    {
+      "code": "C3",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "CRUK",
+      "class": "charge_adjustment_review",
+      "rows": 16,
+      "signed_value": "-7933.4300",
+      "description_example": "CRUK Commission"
+    },
+    {
+      "code": "D",
+      "class": "charge_adjustment_review",
+      "rows": 173,
+      "signed_value": "-12879.6300",
+      "description_example": "Discount"
+    },
+    {
+      "code": "DCGS0003",
+      "class": "ambiguous_code_review",
+      "rows": 14,
+      "signed_value": "32.5900",
+      "description_example": "BOXED GLASS ASHTRAY"
+    },
+    {
+      "code": "DCGS0004",
+      "class": "ambiguous_code_review",
+      "rows": 5,
+      "signed_value": "67.9400",
+      "description_example": "HAYNES CAMPER SHOULDER BAG"
+    },
+    {
+      "code": "DCGS0006",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0016",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0027",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0036",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0037",
+      "class": "ambiguous_code_review",
+      "rows": 2,
+      "signed_value": "12.7200",
+      "description_example": "KEY-RING CORKSCREW"
+    },
+    {
+      "code": "DCGS0039",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0041",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "5.0600",
+      "description_example": "HAYNES MINI-COOPER PLAYING CARDS"
+    },
+    {
+      "code": "DCGS0044",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "2.5700",
+      "description_example": "HANDZ-OFF CAR FRESHENER"
+    },
+    {
+      "code": "DCGS0053",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0055",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0056",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0057",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0058",
+      "class": "ambiguous_code_review",
+      "rows": 31,
+      "signed_value": "34.8200",
+      "description_example": "MISO PRETTY  GUM"
+    },
+    {
+      "code": "DCGS0059",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0060",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0062",
+      "class": "ambiguous_code_review",
+      "rows": 2,
+      "signed_value": "2.5100",
+      "description_example": "ROAD-RAGE CAR FRESHENER"
+    },
+    {
+      "code": "DCGS0066N",
+      "class": "ambiguous_code_review",
+      "rows": 4,
+      "signed_value": "17.3000",
+      "description_example": "NAVY CUDDLES DOG HOODIE"
+    },
+    {
+      "code": "DCGS0066P",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0067",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": "ebay"
+    },
+    {
+      "code": "DCGS0068",
+      "class": "ambiguous_code_review",
+      "rows": 3,
+      "signed_value": "17.1200",
+      "description_example": "DOGS NIGHT COLLAR"
+    },
+    {
+      "code": "DCGS0069",
+      "class": "ambiguous_code_review",
+      "rows": 6,
+      "signed_value": "80.3100",
+      "description_example": "OOH LA LA DOGS COLLAR"
+    },
+    {
+      "code": "DCGS0070",
+      "class": "ambiguous_code_review",
+      "rows": 3,
+      "signed_value": "25.4400",
+      "description_example": "CAMOUFLAGE DOG COLLAR"
+    },
+    {
+      "code": "DCGS0071",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0072",
+      "class": "ambiguous_code_review",
+      "rows": 4,
+      "signed_value": "20.6800",
+      "description_example": "CAT CAMOUFLAGUE COLLAR"
+    },
+    {
+      "code": "DCGS0073",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": "ebay"
+    },
+    {
+      "code": "DCGS0074",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGS0075",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "12.7200",
+      "description_example": "CAMOUFLAGUE DOG LEAD"
+    },
+    {
+      "code": "DCGS0076",
+      "class": "ambiguous_code_review",
+      "rows": 14,
+      "signed_value": "275.9600",
+      "description_example": "SUNJAR LED NIGHT NIGHT LIGHT"
+    },
+    {
+      "code": "DCGSLBOY",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGSLGIRL",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "DCGSSBOY",
+      "class": "ambiguous_code_review",
+      "rows": 23,
+      "signed_value": "251.3500",
+      "description_example": "BOYS PARTY BAG"
+    },
+    {
+      "code": "DCGSSGIRL",
+      "class": "ambiguous_code_review",
+      "rows": 25,
+      "signed_value": "295.6300",
+      "description_example": "GIRLS PARTY BAG"
+    },
+    {
+      "code": "DOT",
+      "class": "charge_adjustment_review",
+      "rows": 1425,
+      "signed_value": "309844.1000",
+      "description_example": "DOTCOM POSTAGE"
+    },
+    {
+      "code": "GIFT",
+      "class": "ambiguous_code_review",
+      "rows": 1,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "M",
+      "class": "charge_adjustment_review",
+      "rows": 1387,
+      "signed_value": "-83326.3300",
+      "description_example": "Manual"
+    },
+    {
+      "code": "PADS",
+      "class": "charge_adjustment_review",
+      "rows": 19,
+      "signed_value": "-36.5830",
+      "description_example": "PADS TO MATCH ALL CUSHIONS"
+    },
+    {
+      "code": "POST",
+      "class": "charge_adjustment_review",
+      "rows": 2086,
+      "signed_value": "110430.4100",
+      "description_example": "POSTAGE"
+    },
+    {
+      "code": "S",
+      "class": "charge_adjustment_review",
+      "rows": 101,
+      "signed_value": "-5991.1100",
+      "description_example": "SAMPLES"
+    },
+    {
+      "code": "SP1002",
+      "class": "ambiguous_code_review",
+      "rows": 3,
+      "signed_value": "14.7500",
+      "description_example": "KID'S CHALKBOARD/EASEL"
+    },
+    {
+      "code": "TEST001",
+      "class": "charge_adjustment_review",
+      "rows": 15,
+      "signed_value": "202.5000",
+      "description_example": "This is a test product."
+    },
+    {
+      "code": "TEST002",
+      "class": "charge_adjustment_review",
+      "rows": 2,
+      "signed_value": "1.0000",
+      "description_example": "This is a test product."
+    },
+    {
+      "code": "gift_0001_10",
+      "class": "charge_adjustment_review",
+      "rows": 16,
+      "signed_value": "126.2100",
+      "description_example": "Dotcomgiftshop Gift Voucher \u00a310.00"
+    },
+    {
+      "code": "gift_0001_20",
+      "class": "charge_adjustment_review",
+      "rows": 29,
+      "signed_value": "471.0600",
+      "description_example": "Dotcomgiftshop Gift Voucher \u00a320.00"
+    },
+    {
+      "code": "gift_0001_30",
+      "class": "charge_adjustment_review",
+      "rows": 29,
+      "signed_value": "610.0900",
+      "description_example": "Dotcomgiftshop Gift Voucher \u00a330.00"
+    },
+    {
+      "code": "gift_0001_40",
+      "class": "charge_adjustment_review",
+      "rows": 7,
+      "signed_value": "166.0900",
+      "description_example": "Dotcomgiftshop Gift Voucher \u00a340.00"
+    },
+    {
+      "code": "gift_0001_50",
+      "class": "charge_adjustment_review",
+      "rows": 8,
+      "signed_value": "253.5900",
+      "description_example": "Dotcomgiftshop Gift Voucher \u00a350.00"
+    },
+    {
+      "code": "gift_0001_60",
+      "class": "charge_adjustment_review",
+      "rows": 2,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "gift_0001_70",
+      "class": "charge_adjustment_review",
+      "rows": 3,
+      "signed_value": "59.5700",
+      "description_example": "Dotcomgiftshop Gift Voucher \u00a370.00"
+    },
+    {
+      "code": "gift_0001_80",
+      "class": "charge_adjustment_review",
+      "rows": 4,
+      "signed_value": "0.0000",
+      "description_example": "Dotcomgiftshop Gift Voucher \u00a380.00"
+    },
+    {
+      "code": "gift_0001_90",
+      "class": "charge_adjustment_review",
+      "rows": 2,
+      "signed_value": "0.0000",
+      "description_example": null
+    },
+    {
+      "code": "m",
+      "class": "charge_adjustment_review",
+      "rows": 5,
+      "signed_value": "15.0500",
+      "description_example": "Manual"
+    }
+  ],
+  "total_rows_reconciled": true,
+  "original_metric_definitions_unchanged": true,
+  "description_documents": 5655,
+  "contract_documents": 10,
+  "unique_document_ids": 5665,
+  "total_documents": 5665,
+  "corpus_bytes": 2213419,
+  "corpus_sha256": "6695c93c39af49347e120db619aec03f435b8caad37a84c69148cefe0117d07a",
+  "vector_index_built": false,
+  "limitations": [
+    "Code shape is a heuristic, not a verified merchandise master.",
+    "Manual review category includes gift vouchers, charges, adjustments and unknowns; do not infer profitability.",
+    "Descriptions may be outdated, inconsistent, non-product text or instructions; treat as untrusted.",
+    "No rows removed; signed-value and positive non-cancel baseline totals unchanged."
+  ]
+}

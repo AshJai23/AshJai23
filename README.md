@@ -76,13 +76,13 @@ My work spans fraud detection, cyber threat analysis, time-series forecasting, h
 ### 🚀 Weekly UK AI and ML portfolio
 **GenAI · LLMs · RAG · agents · ML · larger real datasets**
 
-One flagship per week with daily progress. W01 in progress: historical warehouse, 5,665-document hybrid retrieval and an integrated local FastAPI/web copilot. 35 tests passed; all 3 fresh development model drafts were rejected and withheld. Original routing 36/40 and numerical 24/24 remain; quality evaluation and n8n execution are unfinished. 0/3 weekly releases complete. 9 earlier prototypes preserved. [AI-first scopes and data-scale targets](projects/weekly/plan.json).
+One flagship per week with daily progress. W01 in progress: historical warehouse, 5,665-document retrieval and local FastAPI copilot. 46 tests and a frozen 64-case evaluation ran: dense/hybrid/BM25 product Hit@3 25/40, 17/40, 3/40 on silver references; all 48 generated retrieval answers withheld. Original first routing 36/40 preserved. 0/3 weekly releases complete; 9 earlier prototypes preserved. [AI-first scopes and data-scale targets](projects/weekly/plan.json).
 
 **UK niches:** retail · banking · technology · councils · NHS (council/environment and retail-weather prototypes published; further sector work planned).
 
 Separate project repositories requested; [migration status](projects/30-days/REPOSITORIES.json). Existing code remains accessible below.
 
-[Active weekly plan](projects/weekly/) · [Daily progress](projects/weekly/logs/2026-11-02.md) · [Completed prototype archive](projects/30-days/)
+[Active weekly plan](projects/weekly/) · [Daily progress](projects/weekly/logs/2026-11-03.md) · [Completed prototype archive](projects/30-days/)
 
 ### Featured applications
 

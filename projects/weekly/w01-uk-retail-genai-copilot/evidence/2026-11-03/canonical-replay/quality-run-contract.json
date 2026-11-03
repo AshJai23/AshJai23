@@ -1,0 +1,21 @@
+{
+  "evaluation_sha256": "20127936228d03866b88db9e31d4421503068d72e81d8094dd0f1f941f9444d9",
+  "code_sha256": {
+    "bounded_agent.py": "5b45a2f06416c047188aa6d111c84f7e51b02dad0c5e4e25487fcf96ae47b852",
+    "local_generate.py": "3378786bcc176c0c3d66d9f0e45ddda58972fff16447ccb908c2cdb4d3830af5",
+    "retrieval.py": "cee33139a6284aebae6607a53180d701264822b727915096b7c3efb54e43ed9d",
+    "answer_gate.py": "d0d04e9dad9f6bfeeb4551eee82e0585fd1b7533404cf2716c4bdb8ef86225d1",
+    "service.py": "4d065f5ca8b11a42defe1838d591f8a47108cdd2a2ae97bb782cf797584c1e20",
+    "quality_metrics.py": "47f7022e7fd578e80c910cee58c8f03e7404d75361bb4220a37b6fe4cc95fa09",
+    "evaluate_quality.py": "2f407f3a644ee4687417a4a2072cbbccb9b098c94882d9ded7685208eb6dde81"
+  },
+  "generator_max_new_tokens": 80,
+  "retrieval_modes": [
+    "bm25",
+    "dense",
+    "hybrid"
+  ],
+  "top_k": 3,
+  "training_performed": false,
+  "started_at_utc": "2026-11-03T19:29:30.750423+00:00"
+}

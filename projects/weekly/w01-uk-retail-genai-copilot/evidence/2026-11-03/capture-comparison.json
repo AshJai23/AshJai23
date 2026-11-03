@@ -1,0 +1,10 @@
+{
+  "unique_cases": 64,
+  "extra_independent_holdouts_from_replay": 0,
+  "task_objects_identical": true,
+  "changed_routes": [],
+  "changed_ranked_id_lists": [],
+  "changed_raw_model_drafts": [],
+  "changed_case_quality_flags": [],
+  "note": "Actual scores/drafts are retained in both captures. Timing/memory/load timestamps may differ. Replay is not extra unique data or an independent evaluation."
+}

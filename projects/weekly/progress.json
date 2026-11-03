@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-02T20:06:08.078Z",
+  "updated_at_utc": "2026-11-03T19:39:01.208Z",
   "status": "in_progress",
   "new_flagships_completed": 0,
   "new_flagship_target": 3,
@@ -18,12 +18,12 @@
         2,
         4
       ],
-      "current_milestone": 3,
-      "latest_increment": "Integrated FastAPI/web workspace with the existing bounded LangGraph, hybrid retrieval and fresh CPU local generation. 35 unit tests, five development API probes and real Uvicorn HTTP checks passed; independent base-table SQL reconciles UK signed line value. All three fresh development drafts rejected; evidence-only retrieval and deterministic numbers remain the safe output. Original routing 36/40 unchanged; not a weekly release.",
+      "current_milestone": 5,
+      "latest_increment": "Frozen 64-case retrieval/answer evaluation: 48 new-family cases plus 16 observed regressions; preserved original first 36/40 routing result, observed fixes now 40/40 regression. Dense Hit@3 25/40 vs hybrid 17/40 and BM25 3/40 on AI-authored silver product references. 8/8 new numerical controls and 8/8 safety abstentions; 0/48 generated retrieval answers accepted. Canonical replay reproduced all routes/rankings/drafts after explicit EOF source-binding correction. 46 unit tests and corrected CI passed. Not a weekly release.",
       "metrics": {
         "raw_rows": 1067371,
         "deduplicated_rows": 1033036,
-        "unit_tests_passed": 35,
+        "unit_tests_passed": 46,
         "real_source_checks_passed": 6,
         "llm_inference_run": true,
         "rag_documents_indexed": 5665,
@@ -47,38 +47,65 @@
         "prior_bad_drafts_replayed": 3,
         "prior_bad_drafts_rejected": 3,
         "fresh_model_inference_run": true,
-        "latest_validation_runtime": "Linux local CPU fresh-model integration; GitHub Actions baseline/source checks",
+        "latest_validation_runtime": "Linux local CPU quality evaluation plus separate no-generation source/reference CI",
         "integrated_hybrid_local_api_run": true,
         "api_development_probes": 5,
         "api_development_probe_checks_passed": 5,
-        "local_generation_samples_latest_increment": 3,
+        "local_generation_samples_latest_increment": 56,
         "latest_generation_drafts_accepted": 0,
-        "latest_generation_drafts_rejected": 3,
-        "warm_generation_development_samples": 3,
-        "warm_generation_development_p50_seconds": 4.996419716999981,
-        "warm_generation_development_p95_seconds": 6.289428254000086,
-        "process_peak_rss_mib": 1220.953125,
+        "latest_generation_drafts_rejected": 56,
+        "warm_generation_development_samples": 56,
+        "warm_generation_development_p50_seconds": 5.999424288000114,
+        "warm_generation_development_p95_seconds": 7.009325708000006,
+        "process_peak_rss_mib": 1217.18359375,
         "graphical_ui_review_run": false,
-        "source_retrieved_at_utc": "2026-11-02T19:57:08.164142+00:00"
+        "source_retrieved_at_utc": "2026-11-03T19:17:17.612346+00:00",
+        "source_archive_sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb",
+        "frozen_quality_evaluation_unique_cases": 64,
+        "new_family_holdout_cases": 48,
+        "observed_regression_cases": 16,
+        "new_family_route_correct": 48,
+        "observed_regression_route_correct": 16,
+        "original_first_route_score": "36/40, preserved",
+        "original_route_regression_after_observed_fixes": "40/40; not unseen improvement",
+        "product_silver_queries": 40,
+        "bm25_product_hit_at_3": 0.075,
+        "dense_product_hit_at_3": 0.625,
+        "hybrid_product_hit_at_3": 0.425,
+        "new_numerical_controls_correct": 8,
+        "new_numerical_controls_total": 8,
+        "unsupported_abstentions_correct": 8,
+        "unsupported_cases_total": 8,
+        "canonical_generation_samples": 56,
+        "canonical_generated_retrieval_answers_accepted": 0,
+        "canonical_generated_retrieval_answer_cases": 48,
+        "quality_acceptance_passed": false,
+        "frozen_literal_and_silver_grounding_evaluation_run": true,
+        "independent_semantic_grounding_review_run": false,
+        "latest_ci_quality_reference_checks_passed": 8,
+        "canonical_replay_not_an_extra_independent_holdout": true
       },
       "remaining_requirements": [
-        "Resolve known intent ambiguity without laundering original 36/40 routing result; separate fresh evaluation after any tuning",
-        "Full held-out retrieval relevance and generated-answer grounding evaluation; current 0/3 accepted fresh development drafts is an important model-quality failure",
-        "Graphical UI review and final reproducibility/monitoring",
+        "Resolve generator-quality failure: 0/48 accepted retrieval answers on frozen literal/silver evaluation; no launch-ready generated explanations",
+        "Independent human semantic/relevance review and a separately frozen set after any new tuning; do not reuse consumed cases as unseen improvements",
         "Actual local n8n workflow execution",
-        "Final case study/demo and weekly release"
+        "Graphical UI review, final reproducibility/demo and case study",
+        "Release acceptance before starting another flagship; 5 November target at risk, dates not extended"
       ],
-      "latest_validation_run": "https://github.com/AshJai23/AshJai23/actions/runs/41515699349",
+      "latest_validation_run": "https://github.com/AshJai23/AshJai23/actions/runs/41703716127",
       "known_failures": [
-        "T28: explanation question misrouted to numeric metric",
-        "T29/T30/T31: source explanations unnecessarily declined",
-        "2 November: all 3 fresh development model drafts fail strict answer gate and are withheld; not a successful grounded generation result"
+        "Historical first T28/T29/T30/T31 routing failures preserved in first 36/40 result; fixed using observed regression material, later 40/40 is not unseen improvement",
+        "56 canonical fresh model generations; all 48 retrieval answers rejected (28 format failures, 20 unknown citations)",
+        "Hybrid top-three reference hits 17/40 versus dense 25/40 on selected silver paraphrase queries; no post-test default tuning",
+        "Initial CI source-byte failure due added EOF newline; raw failed check/V1 freeze retained, corrected without query/reference/model changes"
       ],
-      "next_planned_milestone": 5,
+      "next_planned_milestone": 6,
       "open_milestones": [
-        3
+        3,
+        5
       ],
-      "latest_validation_evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-02/integrated-api-validation.json"
+      "latest_validation_evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-03/canonical-replay/quality-summary.json",
+      "release_target_status": "at_risk_due_to_generation_quality_and_unfinished_n8n"
     },
     "W02": {
       "status": "planned",
@@ -95,7 +122,7 @@
       "title": "UK Retail Demand ML and MLOps Service"
     }
   },
-  "latest_daily_log": "logs/2026-11-02.md",
+  "latest_daily_log": "logs/2026-11-03.md",
   "pending_feedback": [],
   "repository_creation": "Standalone repositories still pending; publish authorised work in existing profile repository if creation is unavailable, and report that limitation.",
   "priority": "Applied AI / LLM engineering and ML, with GenAI, RAG, agents and measured larger-data engineering"

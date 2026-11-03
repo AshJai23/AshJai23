@@ -1,0 +1,20 @@
+{
+  "corpus_sha256": "4140a0edcc1f0642b8b5206db021328a5c750f8d0c257e216cbbc65bdd49d0b7",
+  "documents": 5665,
+  "description_documents": 5655,
+  "contract_documents": 10,
+  "vector_shape": [
+    5665,
+    384
+  ],
+  "vector_bytes": 8701568,
+  "index_type": "exact cosine over normalised float32 vectors, plus in-memory BM25; no ANN service",
+  "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "max_tokens_per_document": 128,
+  "batch_size": 64,
+  "threads": 2,
+  "index_build_seconds": 20.724,
+  "process_peak_rss_mib": 627.39,
+  "training_performed": false
+}

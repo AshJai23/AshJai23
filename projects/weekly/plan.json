@@ -47,7 +47,7 @@
           "mode": "Actual historical UK retailer transactions, December 2009–December 2011; NOT real-time",
           "licence": "CC BY 4.0; Chen, D. (2012), DOI 10.24432/C5CG6D",
           "catalogue_rows": 1067371,
-          "status": "Fresh HTTP 200 capture 2 November 2026 at 19:57:08 UTC; SHA-256 unchanged. Rebuilt and audited 1,067,371 raw / 1,033,036 deduplicated rows. Observations remain historical 2009–2011."
+          "status": "Fresh HTTP 200 capture 3 November 2026 at 19:17:17 UTC, unchanged archive SHA-256. Rebuilt/audited 1,067,371 raw and 1,033,036 deduplicated rows; observations remain historical 2009–2011."
         },
         {
           "source": "ONS Retail Sales Index",
@@ -96,7 +96,7 @@
           "focus": "Baseline and model/retrieval implementation",
           "status": "in_progress",
           "evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-01/ci-validation.json",
-          "note": "Original first frozen result 36/40 routing and 24/24 numerical remains. API/hybrid model path is now integrated but model quality and full RAG evaluation remain incomplete; no routing rule tuning in 2 November increment."
+          "note": "Original 36/40 preserved. Four observed intent failures fixed and regression now 40/40; no unseen improvement claim. Retrieval/generation evaluated, but zero supported retrieval generations keeps model-quality work open."
         },
         {
           "day": 4,
@@ -110,7 +110,9 @@
           "day": 5,
           "date": "2026-11-03",
           "focus": "Held-out evaluation, scale and failure tests",
-          "status": "planned"
+          "status": "in_progress",
+          "evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-03/canonical-replay/quality-summary.json",
+          "note": "64-case frozen literal/silver evaluation completed and canonically reproduced; dense 25/40, hybrid 17/40, BM25 3/40 product Hit@3. All 48 generated retrieval answers rejected. Semantic human review/generator quality remain unfinished; no release acceptance."
         },
         {
           "day": 6,
