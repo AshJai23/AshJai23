@@ -10,7 +10,7 @@ The original first routing result remains **36/40**. Four observed definition-ve
 
 ## Start locally
 
-Use Linux/WSL2 and Python 3.12 from this project directory. Existing resource reporting is Unix-specific; native Windows was not exercised.
+Validated on Linux/WSL2 with Python 3.12. Memory telemetry is optional on systems without the Unix resource module; native Windows execution has not been tested.
 
 ```bash
 python -m venv .venv
@@ -24,7 +24,7 @@ python -c "import catalogue; catalogue.run(evidence='data/local-evidence')"
 python model_store.py embedding
 python model_store.py llm
 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 python retrieval.py build
-python -m uvicorn api:app --host 127.0.0.1 --port 8000 --no-access-log
+python serve.py
 ```
 
 Omit `fetch` if a capture exists; it refuses silent overwrite. Only after starting the process on your computer, open http://127.0.0.1:8000/ or http://127.0.0.1:8000/docs. These are local addresses, not deployed links. Keep the terminal running; Ctrl+C stops the server. No public or always-on host was provisioned. [API/interface runbook](UI_API_MILESTONE.md) records the previous integration milestone; its dated results remain historical.
@@ -70,3 +70,11 @@ A transport-added EOF newline caused initial CI source hashes to differ. The fir
 **46 tests passed** locally and in corrected CI, with source/reference consistency and real HTTP smoke evidence. This is not production safety or a successful GenAI answer score. There is no training/fine-tuning, independent human review, n8n execution, graphical UI QA, Docker/Power BI execution, commercial impact or production usage claim. Current model inference is pretrained CPU generation.
 
 Remaining: generator quality, independently reviewed semantic references, actual local n8n workflow, graphical review and final release/case-study demonstration. See [dated actual evidence](evidence/2026-11-03/), [quality report](QUALITY_EVALUATION.md), [original workflow results](AGENT_MILESTONE.md) and [initial model milestone](AI_MILESTONE.md).
+
+## Startup fixes — 4 November 2026
+
+After setup, run `python serve.py`. The launcher and runtime use the project directory for warehouse/corpus/model paths even when the terminal is elsewhere. To select BM25 with generation explicitly disabled, use `python serve.py --baseline`. This still requires the real warehouse and corpus. If port 8000 is occupied, add `--port 8001`. Open the printed local address on the computer running the server.
+
+`/v1/health` now includes a setup code and required command when files are missing; no fabricated fallback is supplied. Optional memory reporting no longer prevents imports when the Unix resource module is unavailable, and macOS byte units are handled correctly. In-memory request metrics now use a standard median and nearest-rank p95. Historical model-quality scores and benchmark records remain unchanged.
+
+Validation: 52 unit tests and a real Uvicorn startup from a different temporary folder passed. The latter checked the homepage and truthful missing-warehouse readiness response. No fresh dataset/model inference or native Windows GUI execution was performed for this fix.

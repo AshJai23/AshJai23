@@ -8,6 +8,8 @@ os.environ["LANGSMITH_TRACING"]="false"
 os.environ["LANGCHAIN_TRACING_V2"]="false"
 import threading
 import time
+import statistics
+from quality_metrics import percentile_nearest_rank
 from pathlib import Path
 from bounded_agent import Warehouse, LexicalEvidence, make_agent, PERIOD
 
@@ -79,14 +81,35 @@ class Runtime:
             times=sorted(self.latencies)
             return {'completed_requests':sum(self.counts.values()),'status_counts':dict(self.counts),
                     'latency_window_samples':len(times),
-                    'p50_seconds':times[(len(times)-1)//2] if times else None,
-                    'p95_seconds':times[min(len(times)-1,int(.95*len(times)))] if times else None,
+                    'p50_seconds':statistics.median(times) if times else None,
+                    'p95_seconds':percentile_nearest_rank(times,.95),
                     'scope':'in-memory completed requests, last 100 latencies; no prompts or model drafts stored'}
+
+ROOT=Path(__file__).resolve().parent
+
+class RuntimeSetupError(Exception):
+    def __init__(self, code, action):
+        super().__init__(code)
+        self.code=code
+        self.action=action
+
+def check_runtime_files(root, mode, with_generation):
+    required=[('data/retail.duckdb','warehouse_missing','Run python retail.py fetch, then python retail.py build from the project folder.'),
+              ('data/raw/source_manifest.json','source_manifest_missing','Fetch and build the real source; see README.md.'),
+              ('data/corpus.json','corpus_missing',"Run python -c \"import catalogue; catalogue.run(evidence='data/local-evidence')\" from the project folder.")]
+    if mode=='hybrid':
+        required.extend([('data/retrieval/manifest.json','index_missing','Run python model_store.py embedding, then python retrieval.py build.'),
+                         ('data/retrieval/vectors.npy','index_missing','Run python retrieval.py build.'),
+                         ('models/embedding/manifest.json','embedding_missing','Run python model_store.py embedding.')])
+    if with_generation:required.append(('models/llm/manifest.json','model_missing','Run python model_store.py llm; or explicitly start serve.py --baseline for BM25 without generation.'))
+    for name,code,action in required:
+        if not (Path(root)/name).is_file():raise RuntimeSetupError(code,action)
 
 def build_runtime(mode='hybrid', with_generation=True):
     if mode not in ('bm25','hybrid'):raise ValueError('Choose bm25 or hybrid')
-    warehouse=Warehouse()
-    capture=json.loads(Path('data/raw/source_manifest.json').read_text())
+    check_runtime_files(ROOT,mode,with_generation)
+    warehouse=Warehouse(str(ROOT/'data/retail.duckdb'))
+    capture=json.loads((ROOT/'data/raw/source_manifest.json').read_text())
     import duckdb
     with duckdb.connect(warehouse.database,read_only=True) as con:
         raw=con.execute('SELECT count(*) FROM raw_transactions').fetchone()[0]
@@ -99,12 +122,12 @@ def build_runtime(mode='hybrid', with_generation=True):
             'loaded_at_utc':datetime.now(timezone.utc).isoformat()}
     if mode=='hybrid':
         from retrieval import Retriever
-        retriever=Retriever()
+        retriever=Retriever(corpus=str(ROOT/'data/corpus.json'),index=str(ROOT/'data/retrieval'),model=str(ROOT/'models/embedding'))
         retrieval=lambda question,kind:retriever.search(question,mode='hybrid',kind=kind,k=3)
     else:
-        retrieval=LexicalEvidence()
+        retrieval=LexicalEvidence(corpus=str(ROOT/'data/corpus.json'))
     generator=None
     if with_generation:
         from local_generate import Generator
-        generator=Generator()
+        generator=Generator(model=str(ROOT/'models/llm'))
     return Runtime(warehouse,retrieval,generator,source,mode)

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "mode": "actual Uvicorn from unrelated temporary working directory",
+  "homepage_status": 200,
+  "readiness_status": 503,
+  "readiness_reason": "warehouse_missing",
+  "data_mode": "missing real warehouse; no substitute data or model",
+  "unit_tests_passed": 52,
+  "native_windows_executed": false
+}

@@ -5,7 +5,7 @@ import hashlib
 import json
 import os
 import platform
-import resource
+from platform_stats import peak_rss_mib
 import time
 import urllib.request
 import zipfile
@@ -118,7 +118,7 @@ def main():
     report=build(root/'staging/transactions.csv',root/'retail.duckdb',root/'transactions.parquet')
     report['independent_decimal_reconciliation_passed'] = Decimal(report['raw_signed_value'])==Decimal(controls['python_decimal_raw_signed_value'])
     if not report['independent_decimal_reconciliation_passed']: raise ValueError('Control total mismatch')
-    report.update(controls); report.update({'generated_at_utc':datetime.now(timezone.utc).isoformat(),'ingest_and_profile_seconds':round(time.perf_counter()-started,3),'process_peak_rss_mib':round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,2),'platform':platform.platform(),'python':platform.python_version(),'duckdb':duckdb.__version__,'openpyxl':openpyxl.__version__,'cpu_count_visible':os.cpu_count(),'duckdb_threads':2,'duckdb_memory_limit':'512MB','parquet_bytes':(root/'transactions.parquet').stat().st_size,'database_bytes':(root/'retail.duckdb').stat().st_size,'vector_index_built':False,'rag_documents_indexed':0,'llm_inference_run':False})
+    report.update(controls); report.update({'generated_at_utc':datetime.now(timezone.utc).isoformat(),'ingest_and_profile_seconds':round(time.perf_counter()-started,3),'process_peak_rss_mib':peak_rss_mib(),'platform':platform.platform(),'python':platform.python_version(),'duckdb':duckdb.__version__,'openpyxl':openpyxl.__version__,'cpu_count_visible':os.cpu_count(),'duckdb_threads':2,'duckdb_memory_limit':'512MB','parquet_bytes':(root/'transactions.parquet').stat().st_size,'database_bytes':(root/'retail.duckdb').stat().st_size,'vector_index_built':False,'rag_documents_indexed':0,'llm_inference_run':False})
     (ev/'profile.json').write_text(json.dumps(report,indent=2)+'\n')
     (ev/'source_manifest.json').write_text((root/'raw/source_manifest.json').read_text())
     print(json.dumps(report,indent=2))

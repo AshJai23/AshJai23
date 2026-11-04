@@ -1,6 +1,6 @@
 """Development smoke only, never the frozen held-out agent evaluation."""
 import json
-import resource
+from platform_stats import peak_rss_mib
 import time
 from pathlib import Path
 from decimal import Decimal
@@ -27,7 +27,7 @@ def main():
     audit_report=json.loads((ev/'catalogue-audit.json').read_text())
     evidence={'id':'audit:code-shape','text':'This is a heuristic audit only. Product-shaped codes are candidates, not a verified merchandise master. Charge/adjustment and ambiguous codes require review. No source rows are removed and original metric definitions are unchanged.','source':'catalogue.py audit policy v1','untrusted':True}
     reports.append(generator.generate('Explain what an analyst must check before treating item-code shape as a verified merchandise catalogue.',[evidence]))
-    result={'mode':'development smoke on actual downloaded models and real-source warehouse/corpus','model_training_performed':False,'agent_implemented':False,'held_out_40_task_evaluation_run':False,'samples':reports,'retrieval_examples':retrieval_reports,'llm_generations':len(reports),'generations_with_literal_evidence_citation':sum(bool(r['citation_ids_found']) for r in reports),'citation_check_is_not_grounding_score':True,'peak_combined_process_rss_mib':round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,2),'status':'unverified draft outputs, not final supported answers or launch readiness'}
+    result={'mode':'development smoke on actual downloaded models and real-source warehouse/corpus','model_training_performed':False,'agent_implemented':False,'held_out_40_task_evaluation_run':False,'samples':reports,'retrieval_examples':retrieval_reports,'llm_generations':len(reports),'generations_with_literal_evidence_citation':sum(bool(r['citation_ids_found']) for r in reports),'citation_check_is_not_grounding_score':True,'peak_combined_process_rss_mib':peak_rss_mib(),'status':'unverified draft outputs, not final supported answers or launch readiness'}
     (ev/'ai-smoke.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))
 

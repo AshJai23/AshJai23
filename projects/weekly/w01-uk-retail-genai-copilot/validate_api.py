@@ -9,7 +9,7 @@ import json
 import os
 from pathlib import Path
 import platform
-import resource
+from platform_stats import peak_rss_mib
 import statistics
 import time
 from datetime import datetime, timezone
@@ -84,7 +84,7 @@ def main():
         'latency_note':'Tiny development smoke, not a representative p95 service benchmark. Includes ASGI request, workflow, retrieval/SQL and warm generation; startup shown separately.',
         'generation_samples':samples,'responses':responses,'in_memory_metrics':metrics,
         'hardware':{'platform':platform.platform(),'python':platform.python_version(),'cpu_count_visible':os.cpu_count(),'processor':platform.processor(),'cpu_model':cpu_model(),'torch_threads':2},
-        'process_peak_rss_mib':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,
+        'process_peak_rss_mib':peak_rss_mib(),
         'validation_seconds':time.perf_counter()-started,
         'packages':{name:importlib.metadata.version(name) for name in ('torch','transformers','duckdb','langgraph','fastapi','starlette','numpy')},
         'weekly_release_complete':False,'n8n_execution_run':False,'independent_human_review':False,

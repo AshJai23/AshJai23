@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 from pydantic import BaseModel, ConfigDict, Field, field_validator
-from service import BusyError, build_runtime
+from service import BusyError, RuntimeSetupError, build_runtime
 
 ROOT=Path(__file__).resolve().parent
 HEADERS={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer',
@@ -49,12 +49,16 @@ def create_app(runtime=None, loader=build_runtime):
     async def lifespan(app):
         app.state.runtime=runtime
         app.state.startup_error=None
+        app.state.setup=None
         if runtime is None:
             try:
                 mode=os.environ.get('W01_RETRIEVAL','hybrid')
                 generation=os.environ.get('W01_GENERATION','on')
                 if generation not in ('on','off'):raise ValueError('Invalid generation mode')
                 app.state.runtime=loader(mode=mode,with_generation=generation=='on')
+            except RuntimeSetupError as exc:
+                app.state.startup_error=type(exc).__name__
+                app.state.setup={"code":exc.code,"action":exc.action}
             except Exception as exc:
                 # Keep diagnostics coarse: no user data, filesystem paths or secrets.
                 app.state.startup_error=type(exc).__name__
@@ -77,6 +81,7 @@ def create_app(runtime=None, loader=build_runtime):
             'local_generation_enabled':active.generator is not None if active else False,
             'source':active.source if active else None,
             'error':getattr(app.state,'startup_error',None),
+            'setup':getattr(app.state,'setup',None),
             'notice':'Local historical-data prototype; generation may be rejected. Not live sales.'},headers=HEADERS)
     @app.get('/v1/metrics')
     def metrics():

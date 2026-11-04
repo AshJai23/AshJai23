@@ -5,7 +5,7 @@ import hashlib
 import json
 import math
 import re
-import resource
+from platform_stats import peak_rss_mib
 import time
 from pathlib import Path
 import numpy as np
@@ -51,7 +51,7 @@ def build(corpus='data/corpus.json',out='data/retrieval',model='models/embedding
     started=time.perf_counter();source=Path(corpus);docs=json.loads(source.read_text());target=Path(out);target.mkdir(parents=True,exist_ok=True)
     embedder=Embedder(model);vectors=embedder.encode([x['text'] for x in docs]);np.save(target/'vectors.npy',vectors)
     manifest=json.loads((Path(model)/'manifest.json').read_text())
-    meta={'corpus_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'documents':len(docs),'description_documents':sum(x['kind']=='source_description' for x in docs),'contract_documents':sum(x['kind']=='project_contract' for x in docs),'vector_shape':list(vectors.shape),'vector_bytes':(target/'vectors.npy').stat().st_size,'index_type':'exact cosine over normalised float32 vectors, plus in-memory BM25; no ANN service','model_id':manifest['model_id'],'revision':manifest['revision'],'max_tokens_per_document':128,'batch_size':64,'threads':2,'index_build_seconds':round(time.perf_counter()-started,3),'process_peak_rss_mib':round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,2),'training_performed':False}
+    meta={'corpus_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'documents':len(docs),'description_documents':sum(x['kind']=='source_description' for x in docs),'contract_documents':sum(x['kind']=='project_contract' for x in docs),'vector_shape':list(vectors.shape),'vector_bytes':(target/'vectors.npy').stat().st_size,'index_type':'exact cosine over normalised float32 vectors, plus in-memory BM25; no ANN service','model_id':manifest['model_id'],'revision':manifest['revision'],'max_tokens_per_document':128,'batch_size':64,'threads':2,'index_build_seconds':round(time.perf_counter()-started,3),'process_peak_rss_mib':peak_rss_mib(),'training_performed':False}
     (target/'manifest.json').write_text(json.dumps(meta,indent=2)+'\n');return meta
 
 class Retriever:

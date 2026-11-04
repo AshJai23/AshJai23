@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 import platform
 import re
-import resource
+from platform_stats import peak_rss_mib
 import subprocess
 import sys
 import time
@@ -83,7 +83,7 @@ def run():
                    'bad_llm_draft_replay':gates,'replay_capture_date':'2026-10-31','replay_note':'Actual previous local generations replayed; no fresh LLM weights loaded in this CI run.',
                    'latency_ms':{'samples':len(times),'p50':round(sorted(times)[len(times)//2],3),'p95':round(sorted(times)[int(len(times)*.95)-1],3),'all':[round(x,3) for x in times]},
                    'latency_note':'Mixed deterministic routes, SQL and BM25; no model load or generation. CI runner, not laptop end-to-end LLM latency.',
-                   'total_seconds':round(time.perf_counter()-started,3),'process_peak_rss_mib':round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,2)})
+                   'total_seconds':round(time.perf_counter()-started,3),'process_peak_rss_mib':peak_rss_mib()})
     import importlib.metadata
     report['versions']={x:importlib.metadata.version(x) for x in ['langgraph','duckdb','numpy','openpyxl']}
     print('W01_EVIDENCE_JSON='+json.dumps(report,separators=(',',':')),flush=True)

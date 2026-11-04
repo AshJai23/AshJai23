@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-03T20:13:52.867Z",
+  "updated_at_utc": "2026-11-04T11:58:36.906Z",
   "status": "in_progress",
   "new_flagships_completed": 0,
   "new_flagship_target": 3,
@@ -23,7 +23,7 @@
       "metrics": {
         "raw_rows": 1067371,
         "deduplicated_rows": 1033036,
-        "unit_tests_passed": 46,
+        "unit_tests_passed": 52,
         "real_source_checks_passed": 6,
         "llm_inference_run": true,
         "rag_documents_indexed": 5665,
@@ -105,7 +105,15 @@
         5
       ],
       "latest_validation_evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-03/canonical-replay/quality-summary.json",
-      "release_target_status": "at_risk_due_to_generation_quality_and_unfinished_n8n"
+      "release_target_status": "at_risk_due_to_generation_quality_and_unfinished_n8n",
+      "latest_maintenance": {
+        "date": "2026-11-04",
+        "scope": "Startup paths, missing-file setup hints, optional platform memory telemetry and correct API latency quantiles",
+        "local_unit_tests_passed": 52,
+        "actual_http_startup_checked": true,
+        "model_quality_reevaluated": false,
+        "evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-04/startup-fix-validation.json"
+      }
     },
     "W02": {
       "status": "planned",

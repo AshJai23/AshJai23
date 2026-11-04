@@ -2,7 +2,7 @@
 import argparse
 import json
 import platform
-import resource
+from platform_stats import peak_rss_mib
 import time
 from pathlib import Path
 
@@ -25,7 +25,7 @@ class Generator:
         with self.torch.inference_mode():out=self.model.generate(**batch,max_new_tokens=max_new_tokens,do_sample=False,num_beams=1,pad_token_id=self.tokenizer.eos_token_id)
         ids=out[0,batch['input_ids'].shape[1]:];text=self.tokenizer.decode(ids,skip_special_tokens=True)
         cited=[x['id'] for x in evidence if f"[{x['id']}]" in text]
-        return {'question':question,'draft':text,'status':'unverified AI draft; inspect cited evidence, not a supported final answer','evidence':evidence,'citation_ids_found':cited,'generation_seconds':round(time.perf_counter()-start,3),'input_tokens':int(batch['input_ids'].shape[1]),'generated_tokens':len(ids),'model_id':self.manifest['model_id'],'revision':self.manifest['revision'],'licence':self.manifest['licence'],'parameter_count':sum(p.numel() for p in self.model.parameters()),'dtype':'float32','quantisation':None,'device':'CPU','threads':2,'prompt_version':'extract_v2','settings':{'do_sample':False,'num_beams':1,'max_new_tokens':max_new_tokens},'training_performed':False,'process_peak_rss_mib':round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,2),'platform':platform.platform()}
+        return {'question':question,'draft':text,'status':'unverified AI draft; inspect cited evidence, not a supported final answer','evidence':evidence,'citation_ids_found':cited,'generation_seconds':round(time.perf_counter()-start,3),'input_tokens':int(batch['input_ids'].shape[1]),'generated_tokens':len(ids),'model_id':self.manifest['model_id'],'revision':self.manifest['revision'],'licence':self.manifest['licence'],'parameter_count':sum(p.numel() for p in self.model.parameters()),'dtype':'float32','quantisation':None,'device':'CPU','threads':2,'prompt_version':'extract_v2','settings':{'do_sample':False,'num_beams':1,'max_new_tokens':max_new_tokens},'training_performed':False,'process_peak_rss_mib':peak_rss_mib(),'platform':platform.platform()}
 
 if __name__=='__main__':
     from retrieval import Retriever

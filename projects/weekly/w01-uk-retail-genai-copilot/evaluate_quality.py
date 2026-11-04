@@ -12,7 +12,7 @@ import json
 import os
 from pathlib import Path
 import platform
-import resource
+from platform_stats import peak_rss_mib
 import statistics
 import time
 from service import build_runtime
@@ -109,7 +109,7 @@ def main():
         'source':source,'raw_rows':runtime.source['raw_rows'],'deduplicated_rows':runtime.source['deduplicated_rows'],'index':index,
         'models':{name:json.loads((Path('models')/name/'manifest.json').read_text()) for name in ('llm','embedding')},
         'hardware':{'platform':platform.platform(),'python':platform.python_version(),'visible_cpu_count':os.cpu_count(),'cpu_model':'not exposed by workspace','torch_threads':2},
-        'process_peak_rss_mib':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,
+        'process_peak_rss_mib':peak_rss_mib(),
         'packages':{p:importlib.metadata.version(p) for p in ('torch','transformers','duckdb','langgraph','numpy')},
         'run_wall_seconds':time.perf_counter()-started,'original_first_route_score':'36/40 on 1 November; any repeats after fixes are regression, not unseen improvement',
         'independent_human_review':False,'n8n_execution_run':False,'weekly_release_complete':False,
