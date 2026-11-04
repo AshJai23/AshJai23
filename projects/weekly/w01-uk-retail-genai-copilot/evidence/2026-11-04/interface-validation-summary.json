@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-04",
+  "python_tests_passed": 61,
+  "python_test_result": "OK",
+  "javascript_syntax_passed": true,
+  "encoding_regression": "Explicit UTF-8 web-file reads enforced by patched Path.read_text; returned content types/text verified",
+  "native_windows_execution": false,
+  "graphical_browser_review": false,
+  "preview_error": "sites-preview start/status: preview relay unavailable: No such file or directory",
+  "no_new_model_quality_claim": true
+}

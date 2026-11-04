@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-04",
+  "passed": true,
+  "transport": "FastAPI TestClient ASGI requests; not deployed or graphical browser",
+  "assets": {
+    "/": {
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 8305,
+      "unicode_clean": true
+    },
+    "/assets/app.js": {
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "bytes": 17912,
+      "unicode_clean": true
+    },
+    "/assets/styles.css": {
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "bytes": 14247,
+      "unicode_clean": true
+    }
+  },
+  "forecast_works_without_optional_warehouse": true,
+  "synthetic": {
+    "label": "Synthetic fixture only; not actual shop/model-performance evidence",
+    "days": 365,
+    "forecast_dates": [
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10"
+    ],
+    "weakest_day": "Tuesday",
+    "selected_method": "ridge"
+  },
+  "historical_replay": {
+    "source": "Chen / UCI Online Retail II, CC BY 4.0; previously attributed aggregate fixture",
+    "fresh_source_download": false,
+    "mode": "historical_simulation",
+    "last_completed_date": "2011-12-08",
+    "test_scores": {
+      "ridge": {
+        "mae": 26846.170021102105,
+        "wape_pct": 58.013765099660105
+      },
+      "last_week": {
+        "mae": 11250.169107142858,
+        "wape_pct": 24.311276707262877
+      }
+    }
+  },
+  "native_windows_run": false,
+  "browser_review": false
+}

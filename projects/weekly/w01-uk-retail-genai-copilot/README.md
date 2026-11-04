@@ -2,6 +2,8 @@
 
 The main screen now accepts recent daily store sales and forecasts the seven dates after the last completed day. It shows a predicted weak day, uncertainty, same-day-last-week baseline and action hypotheses. **[Use the forecast panel](DAILY_SALES_FORECAST.md)**. No current store data was provided; old UCI examples are labelled historical simulations.
 
+Interface update, 4 November: responsive CSS dashboard, seven-day forecast chart/table, weak-day and week-to-date cards, labelled fictional sample and CSV export. Explicit UTF-8 asset reads fix the Windows default-encoding path that can display stray `Â` characters. After pulling changes, stop/restart `python serve.py --baseline` and refresh the browser with Ctrl+F5. [Interface changes and verification](INTERFACE_UPDATE.md).
+
 # UK Retail GenAI Analytics Copilot — W01
 
 **In progress; not a weekly release or public service.** The 5 November target is at risk because the small generator still produces no accepted retrieval answers. Nine archived prototypes remain separate from this programme's **0/3 weekly releases**.
@@ -71,7 +73,7 @@ The answer gate checks literal source spans/citation IDs, not semantic truth or 
 
 A transport-added EOF newline caused initial CI source hashes to differ. The first freeze/capture and failed CI are preserved. Corrected V2 bindings retain every task, reference and source text; canonical replay reproduces all routes, rankings, drafts and quality flags. The two captures are **one 64-case set**, not extra holdouts or projects.
 
-**46 tests passed** locally and in corrected CI, with source/reference consistency and real HTTP smoke evidence. This is not production safety or a successful GenAI answer score. There is no LLM training/fine-tuning or independent human review, n8n execution, graphical UI QA, Docker/Power BI execution, commercial impact or production usage claim. Current model inference is pretrained CPU generation.
+**46 tests passed** locally and in corrected CI, with source/reference consistency and real HTTP smoke evidence. This is not production safety or a successful GenAI answer score. There is no training/fine-tuning, independent human review, n8n execution, graphical UI QA, Docker/Power BI execution, commercial impact or production usage claim. Current model inference is pretrained CPU generation.
 
 Remaining: generator quality, independently reviewed semantic references, actual local n8n workflow, graphical review and final release/case-study demonstration. See [dated actual evidence](evidence/2026-11-03/), [quality report](QUALITY_EVALUATION.md), [original workflow results](AGENT_MILESTONE.md) and [initial model milestone](AI_MILESTONE.md).
 

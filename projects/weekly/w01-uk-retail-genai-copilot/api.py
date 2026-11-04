@@ -12,7 +12,7 @@ from service import BusyError, RuntimeSetupError, build_runtime
 
 ROOT=Path(__file__).resolve().parent
 HEADERS={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer',
-         'Content-Security-Policy':"default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"}
+         'Content-Security-Policy':"default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"}
 class RequestLimit:
     """Reject oversized HTTP bodies before JSON/Pydantic parsing, including chunked requests."""
     def __init__(self,app):self.app=app
@@ -80,9 +80,11 @@ def create_app(runtime=None, loader=build_runtime):
             return JSONResponse(status_code=422,content={'detail':'Provide a daily CSV and GBP, EUR or USD currency; unexpected fields are not supported.'},headers=HEADERS)
         return JSONResponse(status_code=422,content={'detail':'Invalid request: provide only a nonblank question of at most 500 characters.'},headers=HEADERS)
     @app.get('/',response_class=HTMLResponse,include_in_schema=False)
-    def home():return HTMLResponse((ROOT/'web/index.html').read_text(),headers=HEADERS)
+    def home():return HTMLResponse((ROOT/'web/index.html').read_text(encoding='utf-8'),headers=HEADERS)
     @app.get('/assets/app.js',include_in_schema=False)
-    def javascript():return Response((ROOT/'web/app.js').read_text(),media_type='text/javascript',headers=HEADERS)
+    def javascript():return Response((ROOT/'web/app.js').read_text(encoding='utf-8'),media_type='text/javascript',headers=HEADERS)
+    @app.get('/assets/styles.css',include_in_schema=False)
+    def stylesheet():return Response((ROOT/'web/styles.css').read_text(encoding='utf-8'),media_type='text/css',headers=HEADERS)
     @app.get('/v1/health')
     def health():
         active=getattr(app.state,'runtime',None)

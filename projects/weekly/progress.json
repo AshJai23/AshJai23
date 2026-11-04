@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-04T12:38:41.542Z",
+  "updated_at_utc": "2026-11-04T13:00:37.164Z",
   "status": "in_progress",
   "new_flagships_completed": 0,
   "new_flagship_target": 3,
@@ -23,7 +23,7 @@
       "metrics": {
         "raw_rows": 1067371,
         "deduplicated_rows": 1033036,
-        "unit_tests_passed": 60,
+        "unit_tests_passed": 61,
         "real_source_checks_passed": 6,
         "llm_inference_run": true,
         "rag_documents_indexed": 5665,
@@ -128,6 +128,17 @@
         "selection": "last-week baseline selected on calibration only",
         "tests_passed": 60,
         "evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-04/daily-forecast-real-source.json"
+      },
+      "latest_interface_update": {
+        "date": "2026-11-04",
+        "scope": "Explicit UTF-8 web reads on Windows, responsive external CSS dashboard, accessible chart, forecast summary cards and labelled synthetic sample",
+        "python_tests_passed": 61,
+        "dom_checks_passed": true,
+        "synthetic_and_historical_api_replays_passed": true,
+        "graphical_browser_review": false,
+        "native_windows_execution": false,
+        "preview_blocker": "Managed preview relay unavailable",
+        "evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-04/interface-http-validation.json"
       }
     },
     "W02": {
@@ -145,7 +156,7 @@
       "title": "UK Retail Demand ML and MLOps Service"
     }
   },
-  "latest_daily_log": "logs/2026-11-03.md",
+  "latest_daily_log": "logs/2026-11-04.md",
   "pending_feedback": [],
   "repository_creation": "Standalone repositories still pending; publish authorised work in existing profile repository if creation is unavailable, and report that limitation.",
   "priority": "Applied AI / LLM engineering and ML, with GenAI, RAG, agents and measured larger-data engineering"

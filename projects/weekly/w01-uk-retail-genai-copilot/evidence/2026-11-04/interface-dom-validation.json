@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "unique_html_ids": 30,
+  "all_js_ids_resolve": true,
+  "seven_table_rows": true,
+  "seven_svg_points": true,
+  "three_summary_cards": true,
+  "synthetic_label": true,
+  "research_navigation_opens_panel": true,
+  "runtime": "Linkedom DOM + actual HTML/JS, not a graphical browser",
+  "browser_preview": "Unavailable: managed preview relay missing"
+}

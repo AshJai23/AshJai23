@@ -35,3 +35,7 @@ Recent FastAPI/VS Code assistance concerned the separate SmartInvest project; it
 ## 4 November — actionable retail forecasting priority
 
 User: "predict the future for the retail ... if the sales is low in this week, on which day the sales is weak ... make that day some other ideas". Reframed the W01 main interface around an uploaded recent aggregate daily sales CSV, next-seven-date forecasts, weak-day uncertainty and action hypotheses. Historical public data is retained for reproducible backtests, never presented as the user's current store forecast. A fitted aggregate Ridge method is compared with repeating last week, with calibration-only selection and held-out errors. W03 remains distinct product-week ML/PyTorch/MLOps work; this feature does not count as another completed project. No dates or quotas added.
+
+## 4 November — encoding fix and clearer interface
+
+User reported stray `Â` characters and requested a better CSS/JavaScript interface. Web files are now explicitly decoded as UTF-8 rather than the host default; this addresses the Windows cp1252 mojibake path without deleting valid currency symbols. Reworked the forecast workspace with responsive external CSS, seven-day chart/table, summary cards, uncertainty and action ideas. Added an explicitly fictional 365-day sample and source-labelled CSV export. No current-store data or new model-quality improvement is claimed. Browser preview infrastructure was unavailable; DOM/API checks do not replace graphical or native Windows review.

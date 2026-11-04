@@ -3,6 +3,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import unittest
+from unittest.mock import patch
 from fastapi.testclient import TestClient
 from api import create_app
 from service import Runtime
@@ -16,6 +17,27 @@ class GeneratorFixture:
 def fixture(generator=None):return Runtime(WarehouseFixture(),lambda q,k:EVIDENCE,generator,{'mode':'synthetic unit fixture'})
 
 class API(unittest.TestCase):
+    def test_web_files_explicit_utf8_on_non_utf8_hosts(self):
+        # Windows may default to cp1252: decoding UTF-8 this way produces mojibake.
+        original=Path.read_text
+        reads=[]
+        def require_utf8(path,*args,**kwargs):
+            if path.parent.name=='web':
+                self.assertEqual(kwargs.get('encoding'),'utf-8')
+                reads.append(path.name)
+            return original(path,*args,**kwargs)
+        with patch.object(Path,'read_text',require_utf8), TestClient(create_app(fixture())) as client:
+            html=client.get('/');js=client.get('/assets/app.js');css=client.get('/assets/styles.css')
+            for response in [html,js,css]:
+                self.assertEqual(response.status_code,200)
+                self.assertIn('charset=utf-8',response.headers['content-type'])
+                self.assertNotIn('Â',response.text)
+                self.assertNotIn('â€',response.text)
+            self.assertIn('£',html.text)
+            self.assertIn('…',js.text)
+            self.assertIn('text/css',css.headers['content-type'])
+            self.assertIn("style-src 'self'",css.headers['content-security-policy'])
+            self.assertEqual(reads,['index.html','app.js','styles.css'])
     def test_page_assets_and_source_label(self):
         with TestClient(create_app(fixture())) as c:
             r=c.get('/');self.assertEqual(r.status_code,200)
