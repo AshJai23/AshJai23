@@ -6,6 +6,8 @@ from fastapi import FastAPI, HTTPException
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 from pydantic import BaseModel, ConfigDict, Field, field_validator
+from typing import Literal
+from sales_forecast import analyse_daily
 from service import BusyError, RuntimeSetupError, build_runtime
 
 ROOT=Path(__file__).resolve().parent
@@ -15,15 +17,16 @@ class RequestLimit:
     """Reject oversized HTTP bodies before JSON/Pydantic parsing, including chunked requests."""
     def __init__(self,app):self.app=app
     async def __call__(self,scope,receive,send):
-        if scope['type']!='http' or scope.get('method')!='POST' or scope.get('path')!='/v1/ask':
+        if scope['type']!='http' or scope.get('method')!='POST' or scope.get('path') not in ('/v1/ask','/v1/retail-forecast'):
             return await self.app(scope,receive,send)
+        limit=8192 if scope['path']=='/v1/ask' else 2*1024*1024
         chunks=[];total=0
         while True:
             message=await receive()
             if message['type']=='http.disconnect':return
             block=message.get('body',b'');total+=len(block)
-            if total>8192:
-                return await JSONResponse(status_code=413,content={'detail':'Request body exceeds 8 KiB'},headers=HEADERS)(scope,receive,send)
+            if total>limit:
+                return await JSONResponse(status_code=413,content={'detail':'Request body exceeds the route size limit'},headers=HEADERS)(scope,receive,send)
             chunks.append(block)
             if not message.get('more_body',False):break
         sent=False
@@ -43,6 +46,11 @@ class Ask(BaseModel):
     def nonblank(cls,value):
         if not value.strip():raise ValueError('Question cannot be blank')
         return value
+
+class ForecastInput(BaseModel):
+    model_config=ConfigDict(extra='forbid',strict=True)
+    csv_text:str=Field(max_length=2*1024*1024)
+    currency:Literal['GBP','EUR','USD']='GBP'
 
 def create_app(runtime=None, loader=build_runtime):
     @asynccontextmanager
@@ -68,6 +76,8 @@ def create_app(runtime=None, loader=build_runtime):
     app.add_middleware(RequestLimit)
     @app.exception_handler(RequestValidationError)
     async def invalid(_request,exc):
+        if _request.url.path=='/v1/retail-forecast':
+            return JSONResponse(status_code=422,content={'detail':'Provide a daily CSV and GBP, EUR or USD currency; unexpected fields are not supported.'},headers=HEADERS)
         return JSONResponse(status_code=422,content={'detail':'Invalid request: provide only a nonblank question of at most 500 characters.'},headers=HEADERS)
     @app.get('/',response_class=HTMLResponse,include_in_schema=False)
     def home():return HTMLResponse((ROOT/'web/index.html').read_text(),headers=HEADERS)
@@ -83,6 +93,19 @@ def create_app(runtime=None, loader=build_runtime):
             'error':getattr(app.state,'startup_error',None),
             'setup':getattr(app.state,'setup',None),
             'notice':'Local historical-data prototype; generation may be rejected. Not live sales.'},headers=HEADERS)
+    @app.post('/v1/retail-forecast')
+    def forecast(request:ForecastInput):
+        try:
+            result=analyse_daily(request.csv_text.encode('utf-8'))
+            result['currency']=request.currency
+            return JSONResponse(result,headers=HEADERS)
+        except ValueError as exc:raise HTTPException(422,str(exc))
+    @app.get('/v1/options')
+    def options():
+        active=getattr(app.state,'runtime',None)
+        if active is None:raise HTTPException(503,'Finish setup before choosing a question')
+        return JSONResponse({'countries':sorted(active.warehouse.countries),
+                             'metrics':['line_count','signed_value','positive_non_cancel_value','missing_customer_count']},headers=HEADERS)
     @app.get('/v1/metrics')
     def metrics():
         active=getattr(app.state,'runtime',None)

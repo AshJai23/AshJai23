@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-04T11:58:36.906Z",
+  "updated_at_utc": "2026-11-04T12:38:41.542Z",
   "status": "in_progress",
   "new_flagships_completed": 0,
   "new_flagship_target": 3,
@@ -23,12 +23,12 @@
       "metrics": {
         "raw_rows": 1067371,
         "deduplicated_rows": 1033036,
-        "unit_tests_passed": 52,
+        "unit_tests_passed": 60,
         "real_source_checks_passed": 6,
         "llm_inference_run": true,
         "rag_documents_indexed": 5665,
         "integrity_replay_checks_passed": 13,
-        "model_training_performed": false,
+        "model_training_performed": true,
         "description_documents": 5655,
         "contract_documents": 10,
         "embedding_dimensions": 384,
@@ -83,7 +83,10 @@
         "frozen_literal_and_silver_grounding_evaluation_run": true,
         "independent_semantic_grounding_review_run": false,
         "latest_ci_quality_reference_checks_passed": 8,
-        "canonical_replay_not_an_extra_independent_holdout": true
+        "canonical_replay_not_an_extra_independent_holdout": true,
+        "aggregate_daily_forecast_fitted": true,
+        "model_training_scope": "Aggregate daily numerical Ridge only; no LLM training/fine-tuning or W03 neural fit",
+        "llm_training_performed": false
       },
       "remaining_requirements": [
         "Resolve generator-quality failure: 0/48 accepted retrieval answers on frozen literal/silver evaluation; no launch-ready generated explanations",
@@ -113,6 +116,18 @@
         "actual_http_startup_checked": true,
         "model_quality_reevaluated": false,
         "evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-04/startup-fix-validation.json"
+      },
+      "latest_business_feature": {
+        "date": "2026-11-04",
+        "scope": "Next-seven-date aggregate daily forecasting, weak-day view and action hypotheses from uploaded recent store sales",
+        "currency_user_declared": true,
+        "current_store_data_provided": false,
+        "historical_replay_days": 737,
+        "ridge_test_mae": 26846.170021102105,
+        "last_week_test_mae": 11250.169107142858,
+        "selection": "last-week baseline selected on calibration only",
+        "tests_passed": 60,
+        "evidence": "projects/weekly/w01-uk-retail-genai-copilot/evidence/2026-11-04/daily-forecast-real-source.json"
       }
     },
     "W02": {

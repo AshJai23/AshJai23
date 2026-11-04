@@ -1,0 +1,17 @@
+{
+  "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+  "download_url": "https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip",
+  "mode": "historical actual transactions; not live",
+  "retrieved_at_utc": "2026-11-04T12:32:26.306350+00:00",
+  "http_status": 200,
+  "bytes": 45622418,
+  "sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb",
+  "download_seconds": 6.846,
+  "last_modified": null,
+  "licence": "CC BY 4.0",
+  "attribution": "Chen, D. (2012). Online Retail II. UCI. https://doi.org/10.24432/C5CG6D",
+  "derived_file": "examples/historical-daily-sales-proxy.csv",
+  "derived_sha256": "433108b3b588ddff3ce63f43a03af40495cf54aa27c1fe71b398f0d9de7c4bcb",
+  "derived_days": 737,
+  "transformation": "Deduplicated positive non-cancel invoice-line value per calendar day; all countries; exclude first/last source dates; missing eligible archive dates become explicit zero recorded proxy value. This does not establish closure/zero demand."
+}

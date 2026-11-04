@@ -26,7 +26,7 @@
         "Applied AI Engineer",
         "Python Developer"
       ],
-      "business_question": "Can a retail manager ask plain-English questions and receive reconciled numerical answers and evidence-backed explanations?",
+      "business_question": "Can a retail manager forecast the next seven daily sales values from recent store data, identify a potentially weak weekday, test action ideas and inspect reconciled SQL/source evidence?",
       "tools": [
         "Python",
         "LangGraph",
@@ -62,7 +62,8 @@
         "Runnable API/UI showing query evidence, source dates and abstention",
         "Held-out task evaluation against deterministic SQL/lexical baselines, with accuracy, grounding, failure and latency results",
         "CI, replay fixtures, source register, model licence/version, monitoring and beginner/interview case study",
-        "n8n workflow export for manual/scheduled ingestion or freshness checks calling the local API, with idempotence, retries and run evidence"
+        "n8n workflow export for manual/scheduled ingestion or freshness checks calling the local API, with idempotence, retries and run evidence",
+        "Aggregate daily forecast decision-support panel: recent user CSV, causal fitted Ridge versus same-weekday-last-week, calibration-only method selection, temporal held-out errors, uncertainty and weak-day action hypotheses. Distinct from W03 product-week ML/PyTorch/MLOps service."
       ],
       "acceptance": [
         "Target full 1,067,371 source rows; report actual raw/clean counts and exclusions, missing customers and cancellation handling",

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "mode": "actual temporary Uvicorn HTTP; real UCI historical replay",
+  "forecast_days": 7,
+  "selected_method": "last_week",
+  "observation_last_date": "2011-12-08",
+  "no_current_store_data_provided": true,
+  "native_windows_browser_qa": false
+}

@@ -1,0 +1,885 @@
+{
+  "mode": "historical_simulation",
+  "complete_through_yesterday": false,
+  "last_completed_date": "2011-12-08",
+  "history_days": 737,
+  "observation_age_days": 5445,
+  "stale_history": true,
+  "selected_method": "last_week",
+  "selection_basis": "28 calibration days only; test results did not select the method",
+  "calibration_scores": {
+    "ridge": {
+      "mae": 18097.12844927286,
+      "wape_pct": 46.82483054984265
+    },
+    "last_week": {
+      "mae": 17902.757142857143,
+      "wape_pct": 46.32191079038031
+    }
+  },
+  "test_scores": {
+    "ridge": {
+      "mae": 26846.170021102105,
+      "wape_pct": 58.013765099660105
+    },
+    "last_week": {
+      "mae": 11250.169107142858,
+      "wape_pct": 24.311276707262877
+    }
+  },
+  "selected_test_score": {
+    "mae": 11250.169107142858,
+    "wape_pct": 24.311276707262877
+  },
+  "training": {
+    "initial_last_date": "2011-09-15",
+    "initial_rows": 625,
+    "calibration_days": 28,
+    "test_days": 56,
+    "test_first_date": "2011-10-14",
+    "causal_features": "weekday indicators, log lag 7/14, log rolling means 7/28; recursive weekly projection",
+    "final_refit_on_all_known_history": false,
+    "initial_model": {
+      "means": [
+        0.1424,
+        0.1424,
+        0.144,
+        0.144,
+        0.1424,
+        0.1424,
+        0.1424,
+        8.249639008629917,
+        8.248556578846596,
+        8.274955975565781,
+        8.26262851995788
+      ],
+      "scales": [
+        0.3494599261717992,
+        0.3494599261717992,
+        0.3510897321198667,
+        0.3510897321198667,
+        0.3494599261717992,
+        0.3494599261717992,
+        0.3494599261717992,
+        4.048047800527967,
+        4.04774148084249,
+        1.5344608510873754,
+        0.9200257585419268
+      ],
+      "coefficients": [
+        0.30386890822067786,
+        0.7070855368572785,
+        0.6224052077248042,
+        0.6995343407313916,
+        0.43214352179918836,
+        -3.0401710176423586,
+        0.268968260524122,
+        -0.14603963470077486,
+        -0.09068913295364023,
+        1.1008780603402077,
+        -0.18103038610505576
+      ],
+      "intercept": 8.336088039684665,
+      "alpha": 10,
+      "training_rows": 625
+    },
+    "final_model": null
+  },
+  "forecast": [
+    {
+      "date": "2011-12-09",
+      "weekday": "Friday",
+      "predicted_sales": 57476.48,
+      "band_low": 2993.880000000012,
+      "band_high": 111959.07999999999
+    },
+    {
+      "date": "2011-12-10",
+      "weekday": "Saturday",
+      "predicted_sales": 0.0,
+      "band_low": 0.0,
+      "band_high": 54482.59999999999
+    },
+    {
+      "date": "2011-12-11",
+      "weekday": "Sunday",
+      "predicted_sales": 24477.47,
+      "band_low": 0.0,
+      "band_high": 78960.06999999999
+    },
+    {
+      "date": "2011-12-12",
+      "weekday": "Monday",
+      "predicted_sales": 88620.84,
+      "band_low": 34138.240000000005,
+      "band_high": 143103.44
+    },
+    {
+      "date": "2011-12-13",
+      "weekday": "Tuesday",
+      "predicted_sales": 56558.83,
+      "band_low": 2076.2300000000105,
+      "band_high": 111041.43
+    },
+    {
+      "date": "2011-12-14",
+      "weekday": "Wednesday",
+      "predicted_sales": 75315.55,
+      "band_low": 20832.95000000001,
+      "band_high": 129798.15
+    },
+    {
+      "date": "2011-12-15",
+      "weekday": "Thursday",
+      "predicted_sales": 82371.55,
+      "band_low": 27888.95000000001,
+      "band_high": 136854.15
+    }
+  ],
+  "weakest_predicted_day": {
+    "date": "2011-12-10",
+    "weekday": "Saturday",
+    "predicted_sales": 0.0,
+    "band_low": 0.0,
+    "band_high": 54482.59999999999
+  },
+  "weekday_history": [
+    {
+      "weekday": "Monday",
+      "mean_last_8_weeks": 69099.05625
+    },
+    {
+      "weekday": "Tuesday",
+      "mean_last_8_weeks": 53317.54125
+    },
+    {
+      "weekday": "Wednesday",
+      "mean_last_8_weeks": 59078.48625
+    },
+    {
+      "weekday": "Thursday",
+      "mean_last_8_weeks": 62320.6375
+    },
+    {
+      "weekday": "Friday",
+      "mean_last_8_weeks": 52115.37
+    },
+    {
+      "weekday": "Saturday",
+      "mean_last_8_weeks": 0.0
+    },
+    {
+      "weekday": "Sunday",
+      "mean_last_8_weeks": 27997.53125
+    }
+  ],
+  "week_to_date": {
+    "reported_days": 4,
+    "sales": 302866.77,
+    "same_days_previous_week_sales": 241444.75,
+    "change_pct": 25.439368634024984
+  },
+  "uncertainty": {
+    "method": "90th-percentile absolute calibration residual band; empirical, no guaranteed future coverage",
+    "test_coverage": 0.9821428571428571,
+    "calibration_samples": 28
+  },
+  "backtest_predictions": [
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-15",
+      "date": "2011-09-16",
+      "actual": 27720.27,
+      "ridge": 21208.664929888568,
+      "last_week": 30016.33
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-15",
+      "date": "2011-09-17",
+      "actual": 0.0,
+      "ridge": 0.8212630471634209,
+      "last_week": 0.0
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-15",
+      "date": "2011-09-18",
+      "actual": 15639.55,
+      "ridge": 13766.587632041146,
+      "last_week": 35206.92
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-15",
+      "date": "2011-09-19",
+      "actual": 49250.87,
+      "ridge": 13670.571109134075,
+      "last_week": 29526.29
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-15",
+      "date": "2011-09-20",
+      "actual": 109553.9,
+      "ridge": 39610.04034903514,
+      "last_week": 55071.3
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-15",
+      "date": "2011-09-21",
+      "actual": 48529.72,
+      "ridge": 30507.956795804734,
+      "last_week": 23578.78
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-15",
+      "date": "2011-09-22",
+      "actual": 59220.41,
+      "ridge": 37695.56651946063,
+      "last_week": 78151.97
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-22",
+      "date": "2011-09-23",
+      "actual": 40574.4,
+      "ridge": 22604.87844183509,
+      "last_week": 27720.27
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-22",
+      "date": "2011-09-24",
+      "actual": 0.0,
+      "ridge": 0.9537481345773158,
+      "last_week": 0.0
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-22",
+      "date": "2011-09-25",
+      "actual": 31164.781,
+      "ridge": 15062.211971084485,
+      "last_week": 15639.55
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-22",
+      "date": "2011-09-26",
+      "actual": 29270.841,
+      "ridge": 15932.420639196805,
+      "last_week": 49250.87
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-22",
+      "date": "2011-09-27",
+      "actual": 36260.91,
+      "ridge": 40275.839354611664,
+      "last_week": 109553.9
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-22",
+      "date": "2011-09-28",
+      "actual": 43693.08,
+      "ridge": 29646.006470008706,
+      "last_week": 48529.72
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-22",
+      "date": "2011-09-29",
+      "actual": 46343.35,
+      "ridge": 33898.82951579443,
+      "last_week": 59220.41
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-29",
+      "date": "2011-09-30",
+      "actual": 44347.06,
+      "ridge": 18617.27354763261,
+      "last_week": 40574.4
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-29",
+      "date": "2011-10-01",
+      "actual": 0.0,
+      "ridge": 0.5427810448889685,
+      "last_week": 0.0
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-29",
+      "date": "2011-10-02",
+      "actual": 11531.56,
+      "ridge": 11550.945024706469,
+      "last_week": 31164.781
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-29",
+      "date": "2011-10-03",
+      "actual": 66243.94,
+      "ridge": 11293.31129386676,
+      "last_week": 29270.841
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-29",
+      "date": "2011-10-04",
+      "actual": 48652.54,
+      "ridge": 31918.089143038433,
+      "last_week": 36260.91
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-29",
+      "date": "2011-10-05",
+      "actual": 75460.77,
+      "ridge": 24783.55641823671,
+      "last_week": 43693.08
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-09-29",
+      "date": "2011-10-06",
+      "actual": 62761.92,
+      "ridge": 29005.386757564887,
+      "last_week": 46343.35
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-10-06",
+      "date": "2011-10-07",
+      "actual": 53692.5,
+      "ridge": 20156.90427242671,
+      "last_week": 44347.06
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-10-06",
+      "date": "2011-10-08",
+      "actual": 0.0,
+      "ridge": 0.6834693837452243,
+      "last_week": 0.0
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-10-06",
+      "date": "2011-10-09",
+      "actual": 12273.1,
+      "ridge": 12972.0393028358,
+      "last_week": 11531.56
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-10-06",
+      "date": "2011-10-10",
+      "actual": 48121.66,
+      "ridge": 13736.906638592982,
+      "last_week": 66243.94
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-10-06",
+      "date": "2011-10-11",
+      "actual": 52537.31,
+      "ridge": 37503.534107582935,
+      "last_week": 48652.54
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-10-06",
+      "date": "2011-10-12",
+      "actual": 32083.11,
+      "ridge": 27934.273522016396,
+      "last_week": 75460.77
+    },
+    {
+      "split": "calibration",
+      "origin_date": "2011-10-06",
+      "date": "2011-10-13",
+      "actual": 37232.47,
+      "ridge": 31558.14028988206,
+      "last_week": 62761.92
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-13",
+      "date": "2011-10-14",
+      "actual": 36294.58,
+      "ridge": 17423.866509929667,
+      "last_week": 53692.5
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-13",
+      "date": "2011-10-15",
+      "actual": 0.0,
+      "ridge": 0.41904274062292357,
+      "last_week": 0.0
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-13",
+      "date": "2011-10-16",
+      "actual": 21767.94,
+      "ridge": 10975.013804485649,
+      "last_week": 12273.1
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-13",
+      "date": "2011-10-17",
+      "actual": 51925.61,
+      "ridge": 11001.880857212625,
+      "last_week": 48121.66
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-13",
+      "date": "2011-10-18",
+      "actual": 45277.92,
+      "ridge": 30416.869227570707,
+      "last_week": 52537.31
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-13",
+      "date": "2011-10-19",
+      "actual": 42467.72,
+      "ridge": 22767.903551363466,
+      "last_week": 32083.11
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-13",
+      "date": "2011-10-20",
+      "actual": 60969.14,
+      "ridge": 27494.068642027254,
+      "last_week": 37232.47
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-20",
+      "date": "2011-10-21",
+      "actual": 63173.39,
+      "ridge": 19307.174649249828,
+      "last_week": 36294.58
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-20",
+      "date": "2011-10-22",
+      "actual": 0.0,
+      "ridge": 0.6411206293714116,
+      "last_week": 0.0
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-20",
+      "date": "2011-10-23",
+      "actual": 12156.57,
+      "ridge": 12589.23366911544,
+      "last_week": 21767.94
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-20",
+      "date": "2011-10-24",
+      "actual": 48335.52,
+      "ridge": 12440.86601212369,
+      "last_week": 51925.61
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-20",
+      "date": "2011-10-25",
+      "actual": 41192.55,
+      "ridge": 34378.044636470026,
+      "last_week": 45277.92
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-20",
+      "date": "2011-10-26",
+      "actual": 37729.47,
+      "ridge": 26372.827894361144,
+      "last_week": 42467.72
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-20",
+      "date": "2011-10-27",
+      "actual": 57201.78,
+      "ridge": 30887.928228509205,
+      "last_week": 60969.14
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-27",
+      "date": "2011-10-28",
+      "actual": 40455.26,
+      "ridge": 18343.763767056167,
+      "last_week": 63173.39
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-27",
+      "date": "2011-10-29",
+      "actual": 0.0,
+      "ridge": 0.4834237832560656,
+      "last_week": 0.0
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-27",
+      "date": "2011-10-30",
+      "actual": 34397.95,
+      "ridge": 11362.74979131524,
+      "last_week": 12156.57
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-27",
+      "date": "2011-10-31",
+      "actual": 57327.45,
+      "ridge": 11636.23656450846,
+      "last_week": 48335.52
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-27",
+      "date": "2011-11-01",
+      "actual": 29091.9,
+      "ridge": 32561.227694675268,
+      "last_week": 41192.55
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-27",
+      "date": "2011-11-02",
+      "actual": 45690.08,
+      "ridge": 24924.57527932784,
+      "last_week": 37729.47
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-10-27",
+      "date": "2011-11-03",
+      "actual": 63425.47,
+      "ridge": 29304.028097357044,
+      "last_week": 57201.78
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-03",
+      "date": "2011-11-04",
+      "actual": 62594.59,
+      "ridge": 19825.50124877462,
+      "last_week": 40455.26
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-03",
+      "date": "2011-11-05",
+      "actual": 0.0,
+      "ridge": 0.6867494718303191,
+      "last_week": 0.0
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-03",
+      "date": "2011-11-06",
+      "actual": 42513.59,
+      "ridge": 12763.534163210628,
+      "last_week": 34397.95
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-03",
+      "date": "2011-11-07",
+      "actual": 85705.3,
+      "ridge": 12124.48803907328,
+      "last_week": 57327.45
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-03",
+      "date": "2011-11-08",
+      "actual": 57557.03,
+      "ridge": 34043.19873957858,
+      "last_week": 29091.9
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-03",
+      "date": "2011-11-09",
+      "actual": 65879.97,
+      "ridge": 26625.669660101918,
+      "last_week": 45690.08
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-03",
+      "date": "2011-11-10",
+      "actual": 70868.0,
+      "ridge": 30764.954926534134,
+      "last_week": 63425.47
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-10",
+      "date": "2011-11-11",
+      "actual": 55107.87,
+      "ridge": 24133.434248569683,
+      "last_week": 62594.59
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-10",
+      "date": "2011-11-12",
+      "actual": 0.0,
+      "ridge": 1.0066529454511008,
+      "last_week": 0.0
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-10",
+      "date": "2011-11-13",
+      "actual": 33878.15,
+      "ridge": 14967.822728023943,
+      "last_week": 42513.59
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-10",
+      "date": "2011-11-14",
+      "actual": 114237.4,
+      "ridge": 14363.320525732528,
+      "last_week": 85705.3
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-10",
+      "date": "2011-11-15",
+      "actual": 60613.8,
+      "ridge": 39412.15108487089,
+      "last_week": 57557.03
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-10",
+      "date": "2011-11-16",
+      "actual": 65672.53,
+      "ridge": 29097.60218015296,
+      "last_week": 65879.97
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-10",
+      "date": "2011-11-17",
+      "actual": 60901.32,
+      "ridge": 33091.25498153027,
+      "last_week": 70868.0
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-17",
+      "date": "2011-11-18",
+      "actual": 51130.39,
+      "ridge": 23203.33563705231,
+      "last_week": 55107.87
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-17",
+      "date": "2011-11-19",
+      "actual": 0.0,
+      "ridge": 0.9651129942469074,
+      "last_week": 0.0
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-17",
+      "date": "2011-11-20",
+      "actual": 34509.21,
+      "ridge": 14679.197686856909,
+      "last_week": 33878.15
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-17",
+      "date": "2011-11-21",
+      "actual": 49674.6,
+      "ridge": 14009.027965479707,
+      "last_week": 114237.4
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-17",
+      "date": "2011-11-22",
+      "actual": 63863.48,
+      "ridge": 37299.586528853964,
+      "last_week": 60613.8
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-17",
+      "date": "2011-11-23",
+      "actual": 79847.0,
+      "ridge": 27478.519600827654,
+      "last_week": 65672.53
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-17",
+      "date": "2011-11-24",
+      "actual": 50759.21,
+      "ridge": 31409.554681198748,
+      "last_week": 60901.32
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-24",
+      "date": "2011-11-25",
+      "actual": 50690.4,
+      "ridge": 21154.990212706045,
+      "last_week": 51130.39
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-24",
+      "date": "2011-11-26",
+      "actual": 0.0,
+      "ridge": 0.7741130345287629,
+      "last_week": 0.0
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-24",
+      "date": "2011-11-27",
+      "actual": 20279.37,
+      "ridge": 13181.766901550296,
+      "last_week": 34509.21
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-24",
+      "date": "2011-11-28",
+      "actual": 56965.73,
+      "ridge": 12761.550111335826,
+      "last_week": 49674.6
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-24",
+      "date": "2011-11-29",
+      "actual": 72384.82,
+      "ridge": 35756.14015198469,
+      "last_week": 63863.48
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-24",
+      "date": "2011-11-30",
+      "actual": 60025.57,
+      "ridge": 25929.369210948193,
+      "last_week": 79847.0
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-11-24",
+      "date": "2011-12-01",
+      "actual": 52068.63,
+      "ridge": 29423.897406115073,
+      "last_week": 50759.21
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-12-01",
+      "date": "2011-12-02",
+      "actual": 57476.48,
+      "ridge": 19964.745648664564,
+      "last_week": 50690.4
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-12-01",
+      "date": "2011-12-03",
+      "actual": 0.0,
+      "ridge": 0.6683425080340999,
+      "last_week": 0.0
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-12-01",
+      "date": "2011-12-04",
+      "actual": 24477.47,
+      "ridge": 12556.739814926872,
+      "last_week": 20279.37
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-12-01",
+      "date": "2011-12-05",
+      "actual": 88620.84,
+      "ridge": 12732.423354133476,
+      "last_week": 56965.73
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-12-01",
+      "date": "2011-12-06",
+      "actual": 56558.83,
+      "ridge": 34591.27978902106,
+      "last_week": 72384.82
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-12-01",
+      "date": "2011-12-07",
+      "actual": 75315.55,
+      "ridge": 25094.68160017719,
+      "last_week": 60025.57
+    },
+    {
+      "split": "test",
+      "origin_date": "2011-12-01",
+      "date": "2011-12-08",
+      "actual": 82371.55,
+      "ridge": 29225.088399326152,
+      "last_week": 52068.63
+    }
+  ],
+  "action_ideas": [
+    {
+      "idea": "Check opening hours, footfall, stock availability and past promotions for the predicted weak day.",
+      "why": "The sales series alone cannot identify the cause."
+    },
+    {
+      "idea": "Test a small, margin-checked offer or local promotion on that weekday.",
+      "why": "Compare with similar untreated days or stores; no sales lift has been estimated."
+    },
+    {
+      "idea": "Review staffing and replenishment plans against the uncertainty range.",
+      "why": "A forecast is an estimate; confirm service levels and supplier constraints before changing operations."
+    }
+  ],
+  "limitations": [
+    "Uploaded sales definition, currency and completeness are user-supplied and unverified.",
+    "Weak-day ranking may be unreliable when uncertainty bands overlap; calibration errors come from an earlier fit and may change after final refitting.",
+    "No weather, public holidays, advertising, stockouts, costs or promotion effects are included.",
+    "Action ideas are hypotheses to test; no causal improvement, profit or ROI is predicted.",
+    "Historical replay dates remain in the past; recent store data is required for a current operational forecast."
+  ],
+  "validation_seconds": 0.024913910000122996,
+  "python": "3.12.14",
+  "source_note": "Actual UCI historical positive non-cancel invoice-line value proxy, deduplicated, all customer countries, includes possible charges. Explicit archive-calendar zero assumption; no inference of store closure. First/last archive boundary days excluded."
+}

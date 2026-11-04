@@ -31,3 +31,7 @@ Incorporated the user's additional stack requests into the existing three weekly
 ## 2 November — runnable local delivery
 
 Recent FastAPI/VS Code assistance concerned the separate SmartInvest project; it does not replace W01, change the weekly schedule or add trading features to this programme. W01 already planned FastAPI. Its new runbook now makes the local-versus-deployed URL distinction explicit, gives exact start/stop commands and keeps unsupported model drafts out of the interface. No public service or operation on the user's own computer is claimed.
+
+## 4 November — actionable retail forecasting priority
+
+User: "predict the future for the retail ... if the sales is low in this week, on which day the sales is weak ... make that day some other ideas". Reframed the W01 main interface around an uploaded recent aggregate daily sales CSV, next-seven-date forecasts, weak-day uncertainty and action hypotheses. Historical public data is retained for reproducible backtests, never presented as the user's current store forecast. A fitted aggregate Ridge method is compared with repeating last week, with calibration-only selection and held-out errors. W03 remains distinct product-week ML/PyTorch/MLOps work; this feature does not count as another completed project. No dates or quotas added.

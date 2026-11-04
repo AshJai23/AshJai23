@@ -24,6 +24,16 @@ class API(unittest.TestCase):
             self.assertEqual(c.get('/assets/app.js').status_code,200)
             self.assertEqual(c.get('/assets/api.py').status_code,404)
             self.assertEqual(c.get('/v1/health').json()['source']['mode'],'synthetic unit fixture')
+    def test_options_use_actual_runtime_countries(self):
+        with TestClient(create_app(fixture())) as c:
+            response=c.get('/v1/options')
+            self.assertEqual(response.status_code,200)
+            self.assertEqual(response.json()['countries'],['France'])
+            self.assertEqual(len(response.json()['metrics']),4)
+    def test_options_fail_when_runtime_is_missing(self):
+        def broken(**kwargs):raise FileNotFoundError('synthetic unavailable source')
+        with TestClient(create_app(loader=broken)) as c:
+            self.assertEqual(c.get('/v1/options').status_code,503)
     def test_numeric_scope_and_fact_survive_invalid_draft(self):
         with TestClient(create_app(fixture(GeneratorFixture()))) as c:
             r=c.post('/v1/ask',json={'question':'signed_value for France'})

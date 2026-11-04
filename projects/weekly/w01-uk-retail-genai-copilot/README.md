@@ -1,3 +1,7 @@
+# New priority: retail forecasting and weak-day decisions
+
+The main screen now accepts recent daily store sales and forecasts the seven dates after the last completed day. It shows a predicted weak day, uncertainty, same-day-last-week baseline and action hypotheses. **[Use the forecast panel](DAILY_SALES_FORECAST.md)**. No current store data was provided; old UCI examples are labelled historical simulations.
+
 # UK Retail GenAI Analytics Copilot — W01
 
 **In progress; not a weekly release or public service.** The 5 November target is at risk because the small generator still produces no accepted retrieval answers. Nine archived prototypes remain separate from this programme's **0/3 weekly releases**.
@@ -67,7 +71,7 @@ The answer gate checks literal source spans/citation IDs, not semantic truth or 
 
 A transport-added EOF newline caused initial CI source hashes to differ. The first freeze/capture and failed CI are preserved. Corrected V2 bindings retain every task, reference and source text; canonical replay reproduces all routes, rankings, drafts and quality flags. The two captures are **one 64-case set**, not extra holdouts or projects.
 
-**46 tests passed** locally and in corrected CI, with source/reference consistency and real HTTP smoke evidence. This is not production safety or a successful GenAI answer score. There is no training/fine-tuning, independent human review, n8n execution, graphical UI QA, Docker/Power BI execution, commercial impact or production usage claim. Current model inference is pretrained CPU generation.
+**46 tests passed** locally and in corrected CI, with source/reference consistency and real HTTP smoke evidence. This is not production safety or a successful GenAI answer score. There is no LLM training/fine-tuning or independent human review, n8n execution, graphical UI QA, Docker/Power BI execution, commercial impact or production usage claim. Current model inference is pretrained CPU generation.
 
 Remaining: generator quality, independently reviewed semantic references, actual local n8n workflow, graphical review and final release/case-study demonstration. See [dated actual evidence](evidence/2026-11-03/), [quality report](QUALITY_EVALUATION.md), [original workflow results](AGENT_MILESTONE.md) and [initial model milestone](AI_MILESTONE.md).
 
@@ -78,3 +82,7 @@ After setup, run `python serve.py`. The launcher and runtime use the project dir
 `/v1/health` now includes a setup code and required command when files are missing; no fabricated fallback is supplied. Optional memory reporting no longer prevents imports when the Unix resource module is unavailable, and macOS byte units are handled correctly. In-memory request metrics now use a standard median and nearest-rank p95. Historical model-quality scores and benchmark records remain unchanged.
 
 Validation: 52 unit tests and a real Uvicorn startup from a different temporary folder passed. The latter checked the homepage and truthful missing-warehouse readiness response. No fresh dataset/model inference or native Windows GUI execution was performed for this fix.
+
+## Using the page
+
+Start with [the plain-language guide](SIMPLE_GUIDE.md). The interface has a guided measure/country calculation form and a separate source-search mode. Setup readiness disables requests until the server and country options are loaded. Baseline mode explicitly shows LLM off; source passages are normal successful search results. Raw SQL/trace details are expandable.
